@@ -1,7 +1,7 @@
 ﻿
 namespace Desktop_App
 {
-    partial class Form1
+    partial class FormLogin
     {
         /// <summary>
         /// Required designer variable.
@@ -29,10 +29,12 @@ namespace Desktop_App
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormLogin));
             this.panelSuperior = new System.Windows.Forms.Panel();
+            this.labelIniciarSesion = new System.Windows.Forms.Label();
             this.pictureBoxIconoIniciarSesion = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.labelMinimize = new System.Windows.Forms.Label();
             this.labelClose = new System.Windows.Forms.Label();
             this.labelUsuario = new System.Windows.Forms.Label();
             this.labelContrasena = new System.Windows.Forms.Label();
@@ -42,8 +44,6 @@ namespace Desktop_App
             this.linkLabelContasenaOlvidada = new System.Windows.Forms.LinkLabel();
             this.linkLabelRegistrarte = new System.Windows.Forms.LinkLabel();
             this.panelPrincipal = new System.Windows.Forms.Panel();
-            this.labelIniciarSesion = new System.Windows.Forms.Label();
-            this.labelMinimize = new System.Windows.Forms.Label();
             this.pictureBoxLogo = new System.Windows.Forms.PictureBox();
             this.panelSuperior.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxIconoIniciarSesion)).BeginInit();
@@ -62,6 +62,17 @@ namespace Desktop_App
             this.panelSuperior.Name = "panelSuperior";
             this.panelSuperior.Size = new System.Drawing.Size(533, 54);
             this.panelSuperior.TabIndex = 0;
+            // 
+            // labelIniciarSesion
+            // 
+            this.labelIniciarSesion.AutoSize = true;
+            this.labelIniciarSesion.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelIniciarSesion.ForeColor = System.Drawing.Color.White;
+            this.labelIniciarSesion.Location = new System.Drawing.Point(63, 10);
+            this.labelIniciarSesion.Name = "labelIniciarSesion";
+            this.labelIniciarSesion.Size = new System.Drawing.Size(166, 32);
+            this.labelIniciarSesion.TabIndex = 3;
+            this.labelIniciarSesion.Text = "Iniciar sesión";
             // 
             // pictureBoxIconoIniciarSesion
             // 
@@ -84,6 +95,18 @@ namespace Desktop_App
             this.panel2.Size = new System.Drawing.Size(105, 51);
             this.panel2.TabIndex = 1;
             // 
+            // labelMinimize
+            // 
+            this.labelMinimize.AutoSize = true;
+            this.labelMinimize.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelMinimize.ForeColor = System.Drawing.Color.White;
+            this.labelMinimize.Location = new System.Drawing.Point(21, 1);
+            this.labelMinimize.Name = "labelMinimize";
+            this.labelMinimize.Size = new System.Drawing.Size(35, 32);
+            this.labelMinimize.TabIndex = 1;
+            this.labelMinimize.Text = "__";
+            this.labelMinimize.Click += new System.EventHandler(this.labelMinimize_Click);
+            // 
             // labelClose
             // 
             this.labelClose.AutoSize = true;
@@ -94,6 +117,7 @@ namespace Desktop_App
             this.labelClose.Size = new System.Drawing.Size(31, 32);
             this.labelClose.TabIndex = 0;
             this.labelClose.Text = "X";
+            this.labelClose.Click += new System.EventHandler(this.labelClose_Click);
             // 
             // labelUsuario
             // 
@@ -160,6 +184,7 @@ namespace Desktop_App
             this.linkLabelContasenaOlvidada.TabIndex = 7;
             this.linkLabelContasenaOlvidada.TabStop = true;
             this.linkLabelContasenaOlvidada.Text = "He olvidado mi contraseña";
+            this.linkLabelContasenaOlvidada.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabelContasenaOlvidada_LinkClicked);
             // 
             // linkLabelRegistrarte
             // 
@@ -188,28 +213,6 @@ namespace Desktop_App
             this.panelPrincipal.Size = new System.Drawing.Size(502, 551);
             this.panelPrincipal.TabIndex = 9;
             // 
-            // labelIniciarSesion
-            // 
-            this.labelIniciarSesion.AutoSize = true;
-            this.labelIniciarSesion.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelIniciarSesion.ForeColor = System.Drawing.Color.White;
-            this.labelIniciarSesion.Location = new System.Drawing.Point(63, 10);
-            this.labelIniciarSesion.Name = "labelIniciarSesion";
-            this.labelIniciarSesion.Size = new System.Drawing.Size(166, 32);
-            this.labelIniciarSesion.TabIndex = 3;
-            this.labelIniciarSesion.Text = "Iniciar sesión";
-            // 
-            // labelMinimize
-            // 
-            this.labelMinimize.AutoSize = true;
-            this.labelMinimize.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelMinimize.ForeColor = System.Drawing.Color.White;
-            this.labelMinimize.Location = new System.Drawing.Point(21, 1);
-            this.labelMinimize.Name = "labelMinimize";
-            this.labelMinimize.Size = new System.Drawing.Size(35, 32);
-            this.labelMinimize.TabIndex = 1;
-            this.labelMinimize.Text = "__";
-            // 
             // pictureBoxLogo
             // 
             this.pictureBoxLogo.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxLogo.Image")));
@@ -220,7 +223,7 @@ namespace Desktop_App
             this.pictureBoxLogo.TabIndex = 9;
             this.pictureBoxLogo.TabStop = false;
             // 
-            // Form1
+            // FormLogin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -228,8 +231,8 @@ namespace Desktop_App
             this.Controls.Add(this.panelPrincipal);
             this.Controls.Add(this.panelSuperior);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "Form1";
-            this.Text = "Form1";
+            this.Name = "FormLogin";
+            this.Text = "Form";
             this.panelSuperior.ResumeLayout(false);
             this.panelSuperior.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxIconoIniciarSesion)).EndInit();
