@@ -80,7 +80,9 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Icons\candadoLogin.png" />
+    <Content Include="Icons\logoLogin.png" />
+    <Content Include="Icons\padlock.png" />
+    <Content Include="Icons\shield.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
