@@ -31,8 +31,10 @@ namespace Desktop_App
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.panelSuperior = new System.Windows.Forms.Panel();
+            this.labelIniciarSesion = new System.Windows.Forms.Label();
             this.pictureBoxIconoIniciarSesion = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.labelMinimize = new System.Windows.Forms.Label();
             this.labelClose = new System.Windows.Forms.Label();
             this.labelUsuario = new System.Windows.Forms.Label();
             this.labelContrasena = new System.Windows.Forms.Label();
@@ -42,8 +44,6 @@ namespace Desktop_App
             this.linkLabelContasenaOlvidada = new System.Windows.Forms.LinkLabel();
             this.linkLabelRegistrarte = new System.Windows.Forms.LinkLabel();
             this.panelPrincipal = new System.Windows.Forms.Panel();
-            this.labelIniciarSesion = new System.Windows.Forms.Label();
-            this.labelMinimize = new System.Windows.Forms.Label();
             this.pictureBoxLogo = new System.Windows.Forms.PictureBox();
             this.panelSuperior.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxIconoIniciarSesion)).BeginInit();
@@ -62,6 +62,17 @@ namespace Desktop_App
             this.panelSuperior.Name = "panelSuperior";
             this.panelSuperior.Size = new System.Drawing.Size(533, 54);
             this.panelSuperior.TabIndex = 0;
+            // 
+            // labelIniciarSesion
+            // 
+            this.labelIniciarSesion.AutoSize = true;
+            this.labelIniciarSesion.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelIniciarSesion.ForeColor = System.Drawing.Color.White;
+            this.labelIniciarSesion.Location = new System.Drawing.Point(63, 10);
+            this.labelIniciarSesion.Name = "labelIniciarSesion";
+            this.labelIniciarSesion.Size = new System.Drawing.Size(166, 32);
+            this.labelIniciarSesion.TabIndex = 3;
+            this.labelIniciarSesion.Text = "Iniciar sesión";
             // 
             // pictureBoxIconoIniciarSesion
             // 
@@ -83,6 +94,17 @@ namespace Desktop_App
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(105, 51);
             this.panel2.TabIndex = 1;
+            // 
+            // labelMinimize
+            // 
+            this.labelMinimize.AutoSize = true;
+            this.labelMinimize.Font = new System.Drawing.Font("Segoe UI", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelMinimize.ForeColor = System.Drawing.Color.White;
+            this.labelMinimize.Location = new System.Drawing.Point(16, 4);
+            this.labelMinimize.Name = "labelMinimize";
+            this.labelMinimize.Size = new System.Drawing.Size(29, 40);
+            this.labelMinimize.TabIndex = 1;
+            this.labelMinimize.Text = "-";
             // 
             // labelClose
             // 
@@ -188,34 +210,12 @@ namespace Desktop_App
             this.panelPrincipal.Size = new System.Drawing.Size(502, 551);
             this.panelPrincipal.TabIndex = 9;
             // 
-            // labelIniciarSesion
-            // 
-            this.labelIniciarSesion.AutoSize = true;
-            this.labelIniciarSesion.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelIniciarSesion.ForeColor = System.Drawing.Color.White;
-            this.labelIniciarSesion.Location = new System.Drawing.Point(63, 10);
-            this.labelIniciarSesion.Name = "labelIniciarSesion";
-            this.labelIniciarSesion.Size = new System.Drawing.Size(166, 32);
-            this.labelIniciarSesion.TabIndex = 3;
-            this.labelIniciarSesion.Text = "Iniciar sesión";
-            // 
-            // labelMinimize
-            // 
-            this.labelMinimize.AutoSize = true;
-            this.labelMinimize.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelMinimize.ForeColor = System.Drawing.Color.White;
-            this.labelMinimize.Location = new System.Drawing.Point(21, 1);
-            this.labelMinimize.Name = "labelMinimize";
-            this.labelMinimize.Size = new System.Drawing.Size(35, 32);
-            this.labelMinimize.TabIndex = 1;
-            this.labelMinimize.Text = "__";
-            // 
             // pictureBoxLogo
             // 
             this.pictureBoxLogo.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxLogo.Image")));
             this.pictureBoxLogo.Location = new System.Drawing.Point(83, 12);
             this.pictureBoxLogo.Name = "pictureBoxLogo";
-            this.pictureBoxLogo.Size = new System.Drawing.Size(327, 154);
+            this.pictureBoxLogo.Size = new System.Drawing.Size(327, 144);
             this.pictureBoxLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBoxLogo.TabIndex = 9;
             this.pictureBoxLogo.TabStop = false;
