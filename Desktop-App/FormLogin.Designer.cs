@@ -106,6 +106,13 @@ namespace Desktop_App
             this.labelMinimize.TabIndex = 1;
             this.labelMinimize.Text = "__";
             this.labelMinimize.Click += new System.EventHandler(this.labelMinimize_Click);
+            this.labelMinimize.Font = new System.Drawing.Font("Segoe UI", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelMinimize.ForeColor = System.Drawing.Color.White;
+            this.labelMinimize.Location = new System.Drawing.Point(16, 4);
+            this.labelMinimize.Name = "labelMinimize";
+            this.labelMinimize.Size = new System.Drawing.Size(29, 40);
+            this.labelMinimize.TabIndex = 1;
+            this.labelMinimize.Text = "-";
             // 
             // labelClose
             // 
@@ -218,7 +225,7 @@ namespace Desktop_App
             this.pictureBoxLogo.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxLogo.Image")));
             this.pictureBoxLogo.Location = new System.Drawing.Point(83, 12);
             this.pictureBoxLogo.Name = "pictureBoxLogo";
-            this.pictureBoxLogo.Size = new System.Drawing.Size(327, 154);
+            this.pictureBoxLogo.Size = new System.Drawing.Size(327, 144);
             this.pictureBoxLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBoxLogo.TabIndex = 9;
             this.pictureBoxLogo.TabStop = false;

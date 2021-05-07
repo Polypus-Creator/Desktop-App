@@ -59,6 +59,12 @@
       <DependentUpon>FormLogin.cs</DependentUpon>
     </Compile>
     <Compile Include="GestionDB\GestionDB.cs" />
+    <Compile Include="Form2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form2.Designer.cs">
+      <DependentUpon>Form2.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="FormContrasenaOlvidada.resx">
@@ -66,6 +72,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormLogin.resx">
       <DependentUpon>FormLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form2.resx">
+      <DependentUpon>Form2.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -75,6 +84,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -92,9 +102,18 @@
   <ItemGroup>
     <Content Include="Icons\back-arrow.png" />
     <Content Include="Icons\bombilla.png" />
+    <Content Include="Icons\arrow-right.png" />
+    <Content Include="Icons\dashboard-icon-menu.png" />
+    <Content Include="Icons\dashboard.png" />
+    <None Include="Icons\dashboardIcon.png" />
+    <Content Include="Icons\information.png" />
+    <Content Include="Icons\layers.png" />
+    <Content Include="Icons\left-arrow.png" />
     <Content Include="Icons\logoLogin.png" />
     <Content Include="Icons\olvido.png" />
     <Content Include="Icons\padlock.png" />
+    <Content Include="Icons\palette.png" />
+    <Content Include="Icons\settings.png" />
     <Content Include="Icons\shield.png" />
   </ItemGroup>
   <ItemGroup />
