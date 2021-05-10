@@ -434,6 +434,8 @@ namespace Desktop_App
             // 
             // panel3
             // 
+            this.panel3.Controls.Add(this.panel8);
+            this.panel3.Controls.Add(this.panel11);
             this.panel3.Controls.Add(this.panel12);
             this.panel3.Controls.Add(this.panel10);
             this.panel3.Controls.Add(this.panel7);
@@ -820,11 +822,10 @@ namespace Desktop_App
             // panel7
             // 
             this.panel7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(48)))), ((int)(((byte)(45)))));
-            this.panel7.Controls.Add(this.panel8);
             this.panel7.Controls.Add(this.label17);
             this.panel7.Location = new System.Drawing.Point(18, 55);
             this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(505, 52);
+            this.panel7.Size = new System.Drawing.Size(435, 52);
             this.panel7.TabIndex = 8;
             // 
             // label17
@@ -841,28 +842,29 @@ namespace Desktop_App
             // panel8
             // 
             this.panel8.BackColor = System.Drawing.Color.CornflowerBlue;
-            this.panel8.Location = new System.Drawing.Point(371, 12);
+            this.panel8.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.panel8.Location = new System.Drawing.Point(462, 55);
             this.panel8.Name = "panel8";
-            this.panel8.Size = new System.Drawing.Size(121, 30);
+            this.panel8.Size = new System.Drawing.Size(61, 52);
             this.panel8.TabIndex = 9;
             this.panel8.Click += new System.EventHandler(this.panelColorPrincipal_Click);
             // 
             // panel10
             // 
             this.panel10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(96)))), ((int)(((byte)(71)))), ((int)(((byte)(71)))));
-            this.panel10.Controls.Add(this.panel11);
             this.panel10.Controls.Add(this.label18);
             this.panel10.Location = new System.Drawing.Point(18, 127);
             this.panel10.Name = "panel10";
-            this.panel10.Size = new System.Drawing.Size(505, 52);
+            this.panel10.Size = new System.Drawing.Size(435, 52);
             this.panel10.TabIndex = 10;
             // 
             // panel11
             // 
             this.panel11.BackColor = System.Drawing.Color.Lime;
-            this.panel11.Location = new System.Drawing.Point(371, 12);
+            this.panel11.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.panel11.Location = new System.Drawing.Point(462, 127);
             this.panel11.Name = "panel11";
-            this.panel11.Size = new System.Drawing.Size(121, 30);
+            this.panel11.Size = new System.Drawing.Size(61, 52);
             this.panel11.TabIndex = 9;
             this.panel11.Click += new System.EventHandler(this.panel11_Click);
             // 
