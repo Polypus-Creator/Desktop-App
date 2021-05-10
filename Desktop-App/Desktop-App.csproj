@@ -132,6 +132,8 @@
     <Content Include="Icons\arrow-right.png" />
     <Content Include="Icons\dashboard-icon-menu.png" />
     <Content Include="Icons\dashboard.png" />
+    <Content Include="Icons\off.png" />
+    <Content Include="Icons\on.png" />
     <Content Include="Icons\trash.png" />
     <None Include="Icons\dashboardIcon.png" />
     <Content Include="Icons\editar.png" />

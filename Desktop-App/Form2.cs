@@ -13,6 +13,7 @@ namespace Desktop_App
     public partial class Form2 : Form
     {
         Boolean extendedLeftBar = true;
+        Boolean stayLogged = false;
         int fullWidth = Screen.PrimaryScreen.Bounds.Width;
         int fullHeight = Screen.PrimaryScreen.Bounds.Height;
 
@@ -39,7 +40,6 @@ namespace Desktop_App
             tabControl.Width = fullWidth - 225;
             tabControl.Height = fullHeight - 45;
             tabControl.Location = new Point(223, 30);
-
 
         }
 
@@ -240,6 +240,49 @@ namespace Desktop_App
         private void panel1_Paint(object sender, PaintEventArgs e)
         {
 
+        }
+
+        private void radioStayLogged_Click(object sender, EventArgs e)
+        {
+            if(stayLogged == false)
+            {
+                radioStayLogged.Image = Desktop_App.Properties.Resources.on;
+                stayLogged = true;
+            }
+            else
+            {
+                radioStayLogged.Image = Desktop_App.Properties.Resources.off;
+                stayLogged = false;
+            }
+            
+        }
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panelColorPrincipal_Click(object sender, EventArgs e)
+        {
+            changeColor(sender);
+        }
+
+        private void changeColor(object sender)
+        {
+            ColorDialog colorPicker = new ColorDialog();
+            if (colorPicker.ShowDialog() == DialogResult.OK)
+            {
+                if(sender is Panel)
+                {
+                    ((Panel)sender).BackColor = colorPicker.Color;
+
+                }
+            }
+        }
+
+        private void panel11_Click(object sender, EventArgs e)
+        {
+            changeColor(sender);
         }
     }
 }

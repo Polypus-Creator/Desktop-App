@@ -59,13 +59,17 @@ namespace Desktop_App
             this.label7 = new System.Windows.Forms.Label();
             this.panel5 = new System.Windows.Forms.Panel();
             this.label8 = new System.Windows.Forms.Label();
-            this.panel7 = new System.Windows.Forms.Panel();
+            this.panelAj = new System.Windows.Forms.Panel();
             this.label9 = new System.Windows.Forms.Label();
             this.panel9 = new System.Windows.Forms.Panel();
             this.label10 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.label11 = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
+            this.panel6 = new System.Windows.Forms.Panel();
+            this.label12 = new System.Windows.Forms.Label();
+            this.panelSesion = new System.Windows.Forms.Panel();
+            this.label13 = new System.Windows.Forms.Label();
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
@@ -76,8 +80,24 @@ namespace Desktop_App
             this.pictureBox10 = new System.Windows.Forms.PictureBox();
             this.pictureBox8 = new System.Windows.Forms.PictureBox();
             this.pictureBox7 = new System.Windows.Forms.PictureBox();
-            this.panel6 = new System.Windows.Forms.Panel();
-            this.label12 = new System.Windows.Forms.Label();
+            this.radioStayLogged = new System.Windows.Forms.PictureBox();
+            this.panelNube = new System.Windows.Forms.Panel();
+            this.pictureBox9 = new System.Windows.Forms.PictureBox();
+            this.label14 = new System.Windows.Forms.Label();
+            this.panelTemp2 = new System.Windows.Forms.Panel();
+            this.pictureBox11 = new System.Windows.Forms.PictureBox();
+            this.label15 = new System.Windows.Forms.Label();
+            this.panelTemp1 = new System.Windows.Forms.Panel();
+            this.pictureBox12 = new System.Windows.Forms.PictureBox();
+            this.label16 = new System.Windows.Forms.Label();
+            this.panel7 = new System.Windows.Forms.Panel();
+            this.label17 = new System.Windows.Forms.Label();
+            this.panel8 = new System.Windows.Forms.Panel();
+            this.panel10 = new System.Windows.Forms.Panel();
+            this.panel11 = new System.Windows.Forms.Panel();
+            this.label18 = new System.Windows.Forms.Label();
+            this.panel12 = new System.Windows.Forms.Panel();
+            this.label19 = new System.Windows.Forms.Label();
             this.panelSuperior.SuspendLayout();
             this.windowControlButtons.SuspendLayout();
             this.panelLeftBar.SuspendLayout();
@@ -96,10 +116,12 @@ namespace Desktop_App
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel5.SuspendLayout();
-            this.panel7.SuspendLayout();
+            this.panelAj.SuspendLayout();
             this.panel9.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel4.SuspendLayout();
+            this.panel6.SuspendLayout();
+            this.panelSesion.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
@@ -110,7 +132,16 @@ namespace Desktop_App
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
-            this.panel6.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.radioStayLogged)).BeginInit();
+            this.panelNube.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).BeginInit();
+            this.panelTemp2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).BeginInit();
+            this.panelTemp1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox12)).BeginInit();
+            this.panel7.SuspendLayout();
+            this.panel10.SuspendLayout();
+            this.panel12.SuspendLayout();
             this.SuspendLayout();
             // 
             // panelSuperior
@@ -121,7 +152,7 @@ namespace Desktop_App
             this.panelSuperior.Controls.Add(this.windowControlButtons);
             this.panelSuperior.Location = new System.Drawing.Point(0, 0);
             this.panelSuperior.Name = "panelSuperior";
-            this.panelSuperior.Size = new System.Drawing.Size(824, 54);
+            this.panelSuperior.Size = new System.Drawing.Size(823, 54);
             this.panelSuperior.TabIndex = 1;
             // 
             // labelIniciarSesion
@@ -361,7 +392,7 @@ namespace Desktop_App
             // 
             // ajustes
             // 
-            this.ajustes.Controls.Add(this.panel7);
+            this.ajustes.Controls.Add(this.panelAj);
             this.ajustes.Location = new System.Drawing.Point(4, 22);
             this.ajustes.Name = "ajustes";
             this.ajustes.Size = new System.Drawing.Size(576, 451);
@@ -403,6 +434,9 @@ namespace Desktop_App
             // 
             // panel3
             // 
+            this.panel3.Controls.Add(this.panel12);
+            this.panel3.Controls.Add(this.panel10);
+            this.panel3.Controls.Add(this.panel7);
             this.panel3.Controls.Add(this.label7);
             this.panel3.Location = new System.Drawing.Point(15, 14);
             this.panel3.Name = "panel3";
@@ -443,13 +477,17 @@ namespace Desktop_App
             this.label8.TabIndex = 5;
             this.label8.Text = "Constructor";
             // 
-            // panel7
+            // panelAj
             // 
-            this.panel7.Controls.Add(this.label9);
-            this.panel7.Location = new System.Drawing.Point(16, 14);
-            this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(544, 363);
-            this.panel7.TabIndex = 3;
+            this.panelAj.Controls.Add(this.panelTemp2);
+            this.panelAj.Controls.Add(this.panelTemp1);
+            this.panelAj.Controls.Add(this.panelNube);
+            this.panelAj.Controls.Add(this.panelSesion);
+            this.panelAj.Controls.Add(this.label9);
+            this.panelAj.Location = new System.Drawing.Point(16, 14);
+            this.panelAj.Name = "panelAj";
+            this.panelAj.Size = new System.Drawing.Size(544, 415);
+            this.panelAj.TabIndex = 3;
             // 
             // label9
             // 
@@ -512,6 +550,48 @@ namespace Desktop_App
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(131, 45);
             this.panel4.TabIndex = 7;
+            // 
+            // panel6
+            // 
+            this.panel6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
+            this.panel6.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel6.Controls.Add(this.label12);
+            this.panel6.Controls.Add(this.panel4);
+            this.panel6.Location = new System.Drawing.Point(18, 194);
+            this.panel6.Name = "panel6";
+            this.panel6.Size = new System.Drawing.Size(505, 130);
+            this.panel6.TabIndex = 7;
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.Location = new System.Drawing.Point(5, 6);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(70, 21);
+            this.label12.TabIndex = 0;
+            this.label12.Text = "HEADER";
+            // 
+            // panelSesion
+            // 
+            this.panelSesion.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(48)))), ((int)(((byte)(45)))));
+            this.panelSesion.Controls.Add(this.radioStayLogged);
+            this.panelSesion.Controls.Add(this.label13);
+            this.panelSesion.Location = new System.Drawing.Point(18, 54);
+            this.panelSesion.Name = "panelSesion";
+            this.panelSesion.Size = new System.Drawing.Size(505, 52);
+            this.panelSesion.TabIndex = 7;
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label13.ForeColor = System.Drawing.Color.White;
+            this.label13.Location = new System.Drawing.Point(13, 15);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(252, 21);
+            this.label13.TabIndex = 0;
+            this.label13.Text = "Permanecer con la sesión iniciada";
             // 
             // pictureBox6
             // 
@@ -629,26 +709,193 @@ namespace Desktop_App
             this.pictureBox7.TabIndex = 6;
             this.pictureBox7.TabStop = false;
             // 
-            // panel6
+            // radioStayLogged
             // 
-            this.panel6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
-            this.panel6.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel6.Controls.Add(this.label12);
-            this.panel6.Controls.Add(this.panel4);
-            this.panel6.Location = new System.Drawing.Point(18, 194);
-            this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(505, 130);
-            this.panel6.TabIndex = 7;
+            this.radioStayLogged.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.radioStayLogged.Image = global::Desktop_App.Properties.Resources.off;
+            this.radioStayLogged.Location = new System.Drawing.Point(457, 7);
+            this.radioStayLogged.Name = "radioStayLogged";
+            this.radioStayLogged.Size = new System.Drawing.Size(40, 40);
+            this.radioStayLogged.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.radioStayLogged.TabIndex = 6;
+            this.radioStayLogged.TabStop = false;
+            this.radioStayLogged.Click += new System.EventHandler(this.radioStayLogged_Click);
             // 
-            // label12
+            // panelNube
             // 
-            this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.Location = new System.Drawing.Point(5, 6);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(70, 21);
-            this.label12.TabIndex = 0;
-            this.label12.Text = "HEADER";
+            this.panelNube.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(48)))), ((int)(((byte)(45)))));
+            this.panelNube.Controls.Add(this.pictureBox9);
+            this.panelNube.Controls.Add(this.label14);
+            this.panelNube.Location = new System.Drawing.Point(18, 134);
+            this.panelNube.Name = "panelNube";
+            this.panelNube.Size = new System.Drawing.Size(505, 52);
+            this.panelNube.TabIndex = 8;
+            // 
+            // pictureBox9
+            // 
+            this.pictureBox9.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pictureBox9.Image = global::Desktop_App.Properties.Resources.off;
+            this.pictureBox9.Location = new System.Drawing.Point(457, 7);
+            this.pictureBox9.Name = "pictureBox9";
+            this.pictureBox9.Size = new System.Drawing.Size(40, 40);
+            this.pictureBox9.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox9.TabIndex = 6;
+            this.pictureBox9.TabStop = false;
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label14.ForeColor = System.Drawing.Color.White;
+            this.label14.Location = new System.Drawing.Point(13, 15);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(192, 21);
+            this.label14.TabIndex = 0;
+            this.label14.Text = "Guardar datos en la nube";
+            // 
+            // panelTemp2
+            // 
+            this.panelTemp2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(48)))), ((int)(((byte)(45)))));
+            this.panelTemp2.Controls.Add(this.pictureBox11);
+            this.panelTemp2.Controls.Add(this.label15);
+            this.panelTemp2.Location = new System.Drawing.Point(18, 300);
+            this.panelTemp2.Name = "panelTemp2";
+            this.panelTemp2.Size = new System.Drawing.Size(505, 52);
+            this.panelTemp2.TabIndex = 10;
+            // 
+            // pictureBox11
+            // 
+            this.pictureBox11.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pictureBox11.Image = global::Desktop_App.Properties.Resources.off;
+            this.pictureBox11.Location = new System.Drawing.Point(457, 7);
+            this.pictureBox11.Name = "pictureBox11";
+            this.pictureBox11.Size = new System.Drawing.Size(40, 40);
+            this.pictureBox11.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox11.TabIndex = 6;
+            this.pictureBox11.TabStop = false;
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label15.ForeColor = System.Drawing.Color.White;
+            this.label15.Location = new System.Drawing.Point(13, 15);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(192, 21);
+            this.label15.TabIndex = 0;
+            this.label15.Text = "Guardar datos en la nube";
+            // 
+            // panelTemp1
+            // 
+            this.panelTemp1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(48)))), ((int)(((byte)(45)))));
+            this.panelTemp1.Controls.Add(this.pictureBox12);
+            this.panelTemp1.Controls.Add(this.label16);
+            this.panelTemp1.Location = new System.Drawing.Point(18, 220);
+            this.panelTemp1.Name = "panelTemp1";
+            this.panelTemp1.Size = new System.Drawing.Size(505, 52);
+            this.panelTemp1.TabIndex = 9;
+            // 
+            // pictureBox12
+            // 
+            this.pictureBox12.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pictureBox12.Image = global::Desktop_App.Properties.Resources.off;
+            this.pictureBox12.Location = new System.Drawing.Point(457, 7);
+            this.pictureBox12.Name = "pictureBox12";
+            this.pictureBox12.Size = new System.Drawing.Size(40, 40);
+            this.pictureBox12.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox12.TabIndex = 6;
+            this.pictureBox12.TabStop = false;
+            // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label16.ForeColor = System.Drawing.Color.White;
+            this.label16.Location = new System.Drawing.Point(13, 15);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(252, 21);
+            this.label16.TabIndex = 0;
+            this.label16.Text = "Permanecer con la sesión iniciada";
+            // 
+            // panel7
+            // 
+            this.panel7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(48)))), ((int)(((byte)(45)))));
+            this.panel7.Controls.Add(this.panel8);
+            this.panel7.Controls.Add(this.label17);
+            this.panel7.Location = new System.Drawing.Point(18, 55);
+            this.panel7.Name = "panel7";
+            this.panel7.Size = new System.Drawing.Size(505, 52);
+            this.panel7.TabIndex = 8;
+            // 
+            // label17
+            // 
+            this.label17.AutoSize = true;
+            this.label17.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label17.ForeColor = System.Drawing.Color.White;
+            this.label17.Location = new System.Drawing.Point(13, 15);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(117, 21);
+            this.label17.TabIndex = 0;
+            this.label17.Text = "Color principal";
+            // 
+            // panel8
+            // 
+            this.panel8.BackColor = System.Drawing.Color.CornflowerBlue;
+            this.panel8.Location = new System.Drawing.Point(371, 12);
+            this.panel8.Name = "panel8";
+            this.panel8.Size = new System.Drawing.Size(121, 30);
+            this.panel8.TabIndex = 9;
+            this.panel8.Click += new System.EventHandler(this.panelColorPrincipal_Click);
+            // 
+            // panel10
+            // 
+            this.panel10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(96)))), ((int)(((byte)(71)))), ((int)(((byte)(71)))));
+            this.panel10.Controls.Add(this.panel11);
+            this.panel10.Controls.Add(this.label18);
+            this.panel10.Location = new System.Drawing.Point(18, 127);
+            this.panel10.Name = "panel10";
+            this.panel10.Size = new System.Drawing.Size(505, 52);
+            this.panel10.TabIndex = 10;
+            // 
+            // panel11
+            // 
+            this.panel11.BackColor = System.Drawing.Color.Lime;
+            this.panel11.Location = new System.Drawing.Point(371, 12);
+            this.panel11.Name = "panel11";
+            this.panel11.Size = new System.Drawing.Size(121, 30);
+            this.panel11.TabIndex = 9;
+            this.panel11.Click += new System.EventHandler(this.panel11_Click);
+            // 
+            // label18
+            // 
+            this.label18.AutoSize = true;
+            this.label18.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label18.ForeColor = System.Drawing.Color.White;
+            this.label18.Location = new System.Drawing.Point(13, 15);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(134, 21);
+            this.label18.TabIndex = 0;
+            this.label18.Text = "Color secundario";
+            // 
+            // panel12
+            // 
+            this.panel12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(48)))), ((int)(((byte)(45)))));
+            this.panel12.Controls.Add(this.label19);
+            this.panel12.Location = new System.Drawing.Point(18, 198);
+            this.panel12.Name = "panel12";
+            this.panel12.Size = new System.Drawing.Size(505, 52);
+            this.panel12.TabIndex = 11;
+            // 
+            // label19
+            // 
+            this.label19.AutoSize = true;
+            this.label19.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label19.ForeColor = System.Drawing.Color.White;
+            this.label19.Location = new System.Drawing.Point(13, 15);
+            this.label19.Name = "label19";
+            this.label19.Size = new System.Drawing.Size(115, 21);
+            this.label19.TabIndex = 0;
+            this.label19.Text = "Tipo de fondo";
             // 
             // Form2
             // 
@@ -690,13 +937,17 @@ namespace Desktop_App
             this.panel3.PerformLayout();
             this.panel5.ResumeLayout(false);
             this.panel5.PerformLayout();
-            this.panel7.ResumeLayout(false);
-            this.panel7.PerformLayout();
+            this.panelAj.ResumeLayout(false);
+            this.panelAj.PerformLayout();
             this.panel9.ResumeLayout(false);
             this.panel9.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             this.panel4.ResumeLayout(false);
+            this.panel6.ResumeLayout(false);
+            this.panel6.PerformLayout();
+            this.panelSesion.ResumeLayout(false);
+            this.panelSesion.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
@@ -707,8 +958,22 @@ namespace Desktop_App
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
-            this.panel6.ResumeLayout(false);
-            this.panel6.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.radioStayLogged)).EndInit();
+            this.panelNube.ResumeLayout(false);
+            this.panelNube.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).EndInit();
+            this.panelTemp2.ResumeLayout(false);
+            this.panelTemp2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).EndInit();
+            this.panelTemp1.ResumeLayout(false);
+            this.panelTemp1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox12)).EndInit();
+            this.panel7.ResumeLayout(false);
+            this.panel7.PerformLayout();
+            this.panel10.ResumeLayout(false);
+            this.panel10.PerformLayout();
+            this.panel12.ResumeLayout(false);
+            this.panel12.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -751,7 +1016,7 @@ namespace Desktop_App
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Panel panel7;
+        private System.Windows.Forms.Panel panelAj;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Panel panel9;
         private System.Windows.Forms.Label label10;
@@ -763,5 +1028,25 @@ namespace Desktop_App
         private System.Windows.Forms.PictureBox pictureBox10;
         private System.Windows.Forms.Panel panel6;
         private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.Panel panelSesion;
+        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.PictureBox radioStayLogged;
+        private System.Windows.Forms.Panel panelNube;
+        private System.Windows.Forms.PictureBox pictureBox9;
+        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.Panel panelTemp2;
+        private System.Windows.Forms.PictureBox pictureBox11;
+        private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.Panel panelTemp1;
+        private System.Windows.Forms.PictureBox pictureBox12;
+        private System.Windows.Forms.Label label16;
+        private System.Windows.Forms.Panel panel7;
+        private System.Windows.Forms.Panel panel8;
+        private System.Windows.Forms.Label label17;
+        private System.Windows.Forms.Panel panel10;
+        private System.Windows.Forms.Panel panel11;
+        private System.Windows.Forms.Label label18;
+        private System.Windows.Forms.Panel panel12;
+        private System.Windows.Forms.Label label19;
     }
 }
