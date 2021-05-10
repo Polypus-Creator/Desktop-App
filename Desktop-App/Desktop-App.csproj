@@ -132,7 +132,9 @@
     <Content Include="Icons\arrow-right.png" />
     <Content Include="Icons\dashboard-icon-menu.png" />
     <Content Include="Icons\dashboard.png" />
+    <Content Include="Icons\trash.png" />
     <None Include="Icons\dashboardIcon.png" />
+    <Content Include="Icons\editar.png" />
     <Content Include="Icons\eyeCl.png" />
     <Content Include="Icons\eyeOp.png" />
     <Content Include="Icons\information.png" />

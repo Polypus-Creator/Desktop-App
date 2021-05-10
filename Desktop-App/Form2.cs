@@ -13,6 +13,8 @@ namespace Desktop_App
     public partial class Form2 : Form
     {
         Boolean extendedLeftBar = true;
+        int fullWidth = Screen.PrimaryScreen.Bounds.Width;
+        int fullHeight = Screen.PrimaryScreen.Bounds.Height;
 
         public Form2()
         {
@@ -27,14 +29,16 @@ namespace Desktop_App
 
         private void initConfig()
         {
-            int fullWidth = Screen.PrimaryScreen.Bounds.Width;
-            int fullHeight = Screen.PrimaryScreen.Bounds.Height;
+            
             this.Width = fullWidth;
             this.Height = fullHeight - 1;
             this.Location = new Point(0, 0);
             panelSuperior.Width = fullWidth;
             windowControlButtons.Location = new Point(fullWidth-100, 0);
             panelLeftBar.Height = fullHeight - 5;
+            tabControl.Width = fullWidth - 225;
+            tabControl.Height = fullHeight - 45;
+            tabControl.Location = new Point(223, 30);
 
 
         }
@@ -74,6 +78,8 @@ namespace Desktop_App
                 extendedLeftBar = false;
                 panelLeftBar.Width = 50;
                 hideShowBar.Location = new Point(15, 14);
+                tabControl.Location = new Point(58,30);
+                tabControl.Width = fullWidth - 62;
 
 
             }
@@ -83,6 +89,8 @@ namespace Desktop_App
                 extendedLeftBar = true;
                 panelLeftBar.Width = 216;
                 hideShowBar.Location = new Point(panelWidth - 35,14);
+                tabControl.Location = new Point(223, 30);
+                tabControl.Width = fullWidth - 227;
             }
             
         }
@@ -101,6 +109,7 @@ namespace Desktop_App
                 panelConstructor.BackColor = Color.FromArgb(49, 48, 45);
                 panelAjustes.BackColor = Color.FromArgb(49, 48, 45);
                 panelAyuda.BackColor = Color.FromArgb(49, 48, 45);
+                tabControl.SelectedTab = dashboard;
             }
             if (option == 2)
             {
@@ -109,6 +118,7 @@ namespace Desktop_App
                 panelConstructor.BackColor = Color.FromArgb(49, 48, 45);
                 panelAjustes.BackColor = Color.FromArgb(49, 48, 45);
                 panelAyuda.BackColor = Color.FromArgb(49, 48, 45);
+                tabControl.SelectedTab = disenyo;
             }
             if (option == 3)
             {
@@ -117,6 +127,7 @@ namespace Desktop_App
                 panelConstructor.BackColor = Color.FromArgb(96, 71, 71);
                 panelAjustes.BackColor = Color.FromArgb(49, 48, 45);
                 panelAyuda.BackColor = Color.FromArgb(49, 48, 45);
+                tabControl.SelectedTab = constructor;
             }
             if (option == 4)
             {
@@ -125,6 +136,7 @@ namespace Desktop_App
                 panelConstructor.BackColor = Color.FromArgb(49, 48, 45);
                 panelAjustes.BackColor = Color.FromArgb(96, 71, 71);
                 panelAyuda.BackColor = Color.FromArgb(49, 48, 45);
+                tabControl.SelectedTab = ajustes;
             }
             if (option == 5)
             {
@@ -133,6 +145,7 @@ namespace Desktop_App
                 panelConstructor.BackColor = Color.FromArgb(49, 48, 45);
                 panelAjustes.BackColor = Color.FromArgb(49, 48, 45);
                 panelAyuda.BackColor = Color.FromArgb(96, 71, 71);
+                tabControl.SelectedTab = ayuda;
             }
 
         }
@@ -207,6 +220,26 @@ namespace Desktop_App
         private void pictureBox6_Click(object sender, EventArgs e)
         {
             sideBarColors(5);
+        }
+
+        private void panelDashboard_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void dashboard_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void ayuda_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

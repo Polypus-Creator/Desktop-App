@@ -43,10 +43,10 @@ namespace Desktop_App
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.textBoxUser = new System.Windows.Forms.TextBox();
+            this.timerOjo = new System.Windows.Forms.Timer(this.components);
             this.pictureBoxOjo2 = new System.Windows.Forms.PictureBox();
             this.pictureBoxOjo1 = new System.Windows.Forms.PictureBox();
             this.pictureBoxVolver = new System.Windows.Forms.PictureBox();
-            this.timerOjo = new System.Windows.Forms.Timer(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxOjo2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxOjo1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxVolver)).BeginInit();
@@ -177,6 +177,7 @@ namespace Desktop_App
             // 
             // pictureBoxOjo2
             // 
+            this.pictureBoxOjo2.Image = global::Desktop_App.Properties.Resources.eyeOp;
             this.pictureBoxOjo2.Location = new System.Drawing.Point(360, 355);
             this.pictureBoxOjo2.Name = "pictureBoxOjo2";
             this.pictureBoxOjo2.Size = new System.Drawing.Size(23, 21);
@@ -186,6 +187,7 @@ namespace Desktop_App
             // 
             // pictureBoxOjo1
             // 
+            this.pictureBoxOjo1.Image = global::Desktop_App.Properties.Resources.eyeOp;
             this.pictureBoxOjo1.Location = new System.Drawing.Point(360, 249);
             this.pictureBoxOjo1.Name = "pictureBoxOjo1";
             this.pictureBoxOjo1.Size = new System.Drawing.Size(23, 21);
