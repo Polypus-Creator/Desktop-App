@@ -40,7 +40,11 @@ namespace Desktop_App
             tabControl.Width = fullWidth - 225;
             tabControl.Height = fullHeight - 45;
             tabControl.Location = new Point(223, 30);
-
+            panelDash.Width = fullWidth/2 + 540;
+            panelDise.Width = fullWidth / 2 + 540;
+            panelConst.Width = fullWidth / 2 + 540;
+            panelAj.Width = fullWidth / 2 + 540;
+            panelAyud.Width = fullWidth / 2 + 540;
         }
 
         private void labelClose_Click(object sender, EventArgs e)

@@ -53,15 +53,15 @@ namespace Desktop_App
             this.constructor = new System.Windows.Forms.TabPage();
             this.ajustes = new System.Windows.Forms.TabPage();
             this.ayuda = new System.Windows.Forms.TabPage();
-            this.panel1 = new System.Windows.Forms.Panel();
+            this.panelDash = new System.Windows.Forms.Panel();
             this.label6 = new System.Windows.Forms.Label();
-            this.panel3 = new System.Windows.Forms.Panel();
+            this.panelDise = new System.Windows.Forms.Panel();
             this.label7 = new System.Windows.Forms.Label();
-            this.panel5 = new System.Windows.Forms.Panel();
+            this.panelConst = new System.Windows.Forms.Panel();
             this.label8 = new System.Windows.Forms.Label();
             this.panelAj = new System.Windows.Forms.Panel();
             this.label9 = new System.Windows.Forms.Label();
-            this.panel9 = new System.Windows.Forms.Panel();
+            this.panelAyud = new System.Windows.Forms.Panel();
             this.label10 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.label11 = new System.Windows.Forms.Label();
@@ -113,11 +113,11 @@ namespace Desktop_App
             this.constructor.SuspendLayout();
             this.ajustes.SuspendLayout();
             this.ayuda.SuspendLayout();
-            this.panel1.SuspendLayout();
-            this.panel3.SuspendLayout();
-            this.panel5.SuspendLayout();
+            this.panelDash.SuspendLayout();
+            this.panelDise.SuspendLayout();
+            this.panelConst.SuspendLayout();
             this.panelAj.SuspendLayout();
-            this.panel9.SuspendLayout();
+            this.panelAyud.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel4.SuspendLayout();
             this.panel6.SuspendLayout();
@@ -359,7 +359,7 @@ namespace Desktop_App
             // 
             // dashboard
             // 
-            this.dashboard.Controls.Add(this.panel1);
+            this.dashboard.Controls.Add(this.panelDash);
             this.dashboard.Location = new System.Drawing.Point(4, 22);
             this.dashboard.Name = "dashboard";
             this.dashboard.Padding = new System.Windows.Forms.Padding(3);
@@ -371,7 +371,7 @@ namespace Desktop_App
             // 
             // disenyo
             // 
-            this.disenyo.Controls.Add(this.panel3);
+            this.disenyo.Controls.Add(this.panelDise);
             this.disenyo.Location = new System.Drawing.Point(4, 22);
             this.disenyo.Name = "disenyo";
             this.disenyo.Padding = new System.Windows.Forms.Padding(3);
@@ -382,7 +382,7 @@ namespace Desktop_App
             // 
             // constructor
             // 
-            this.constructor.Controls.Add(this.panel5);
+            this.constructor.Controls.Add(this.panelConst);
             this.constructor.Location = new System.Drawing.Point(4, 22);
             this.constructor.Name = "constructor";
             this.constructor.Size = new System.Drawing.Size(576, 451);
@@ -402,7 +402,7 @@ namespace Desktop_App
             // 
             // ayuda
             // 
-            this.ayuda.Controls.Add(this.panel9);
+            this.ayuda.Controls.Add(this.panelAyud);
             this.ayuda.Location = new System.Drawing.Point(4, 22);
             this.ayuda.Name = "ayuda";
             this.ayuda.Size = new System.Drawing.Size(576, 451);
@@ -411,14 +411,15 @@ namespace Desktop_App
             this.ayuda.UseVisualStyleBackColor = true;
             this.ayuda.Click += new System.EventHandler(this.ayuda_Click);
             // 
-            // panel1
+            // panelDash
             // 
-            this.panel1.Controls.Add(this.label6);
-            this.panel1.Location = new System.Drawing.Point(15, 14);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(544, 363);
-            this.panel1.TabIndex = 0;
-            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
+            this.panelDash.BackColor = System.Drawing.Color.Transparent;
+            this.panelDash.Controls.Add(this.label6);
+            this.panelDash.Location = new System.Drawing.Point(15, 14);
+            this.panelDash.Name = "panelDash";
+            this.panelDash.Size = new System.Drawing.Size(544, 363);
+            this.panelDash.TabIndex = 0;
+            this.panelDash.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
             // label6
             // 
@@ -432,18 +433,19 @@ namespace Desktop_App
             this.label6.TabIndex = 5;
             this.label6.Text = "Dashboard";
             // 
-            // panel3
+            // panelDise
             // 
-            this.panel3.Controls.Add(this.panel8);
-            this.panel3.Controls.Add(this.panel11);
-            this.panel3.Controls.Add(this.panel12);
-            this.panel3.Controls.Add(this.panel10);
-            this.panel3.Controls.Add(this.panel7);
-            this.panel3.Controls.Add(this.label7);
-            this.panel3.Location = new System.Drawing.Point(15, 14);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(544, 363);
-            this.panel3.TabIndex = 1;
+            this.panelDise.BackColor = System.Drawing.Color.Transparent;
+            this.panelDise.Controls.Add(this.panel8);
+            this.panelDise.Controls.Add(this.panel11);
+            this.panelDise.Controls.Add(this.panel12);
+            this.panelDise.Controls.Add(this.panel10);
+            this.panelDise.Controls.Add(this.panel7);
+            this.panelDise.Controls.Add(this.label7);
+            this.panelDise.Location = new System.Drawing.Point(15, 14);
+            this.panelDise.Name = "panelDise";
+            this.panelDise.Size = new System.Drawing.Size(544, 363);
+            this.panelDise.TabIndex = 1;
             // 
             // label7
             // 
@@ -457,15 +459,15 @@ namespace Desktop_App
             this.label7.TabIndex = 5;
             this.label7.Text = "Diseño";
             // 
-            // panel5
+            // panelConst
             // 
-            this.panel5.Controls.Add(this.panel6);
-            this.panel5.Controls.Add(this.panel2);
-            this.panel5.Controls.Add(this.label8);
-            this.panel5.Location = new System.Drawing.Point(13, 14);
-            this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(544, 363);
-            this.panel5.TabIndex = 2;
+            this.panelConst.Controls.Add(this.panel6);
+            this.panelConst.Controls.Add(this.panel2);
+            this.panelConst.Controls.Add(this.label8);
+            this.panelConst.Location = new System.Drawing.Point(13, 14);
+            this.panelConst.Name = "panelConst";
+            this.panelConst.Size = new System.Drawing.Size(544, 363);
+            this.panelConst.TabIndex = 2;
             // 
             // label8
             // 
@@ -503,13 +505,13 @@ namespace Desktop_App
             this.label9.TabIndex = 5;
             this.label9.Text = "Ajustes";
             // 
-            // panel9
+            // panelAyud
             // 
-            this.panel9.Controls.Add(this.label10);
-            this.panel9.Location = new System.Drawing.Point(16, 14);
-            this.panel9.Name = "panel9";
-            this.panel9.Size = new System.Drawing.Size(544, 363);
-            this.panel9.TabIndex = 3;
+            this.panelAyud.Controls.Add(this.label10);
+            this.panelAyud.Location = new System.Drawing.Point(16, 14);
+            this.panelAyud.Name = "panelAyud";
+            this.panelAyud.Size = new System.Drawing.Size(544, 363);
+            this.panelAyud.TabIndex = 3;
             // 
             // label10
             // 
@@ -933,16 +935,16 @@ namespace Desktop_App
             this.constructor.ResumeLayout(false);
             this.ajustes.ResumeLayout(false);
             this.ayuda.ResumeLayout(false);
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
-            this.panel3.ResumeLayout(false);
-            this.panel3.PerformLayout();
-            this.panel5.ResumeLayout(false);
-            this.panel5.PerformLayout();
+            this.panelDash.ResumeLayout(false);
+            this.panelDash.PerformLayout();
+            this.panelDise.ResumeLayout(false);
+            this.panelDise.PerformLayout();
+            this.panelConst.ResumeLayout(false);
+            this.panelConst.PerformLayout();
             this.panelAj.ResumeLayout(false);
             this.panelAj.PerformLayout();
-            this.panel9.ResumeLayout(false);
-            this.panel9.PerformLayout();
+            this.panelAyud.ResumeLayout(false);
+            this.panelAyud.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             this.panel4.ResumeLayout(false);
@@ -1012,15 +1014,15 @@ namespace Desktop_App
         private System.Windows.Forms.TabPage constructor;
         private System.Windows.Forms.TabPage ajustes;
         private System.Windows.Forms.TabPage ayuda;
-        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel panelDash;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.Panel panelDise;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Panel panel5;
+        private System.Windows.Forms.Panel panelConst;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Panel panelAj;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.Panel panel9;
+        private System.Windows.Forms.Panel panelAyud;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label label11;
