@@ -46,6 +46,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="FAboutUs.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FAboutUs.Designer.cs">
+      <DependentUpon>FAboutUs.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FInfo.Designer.cs">
+      <DependentUpon>FInfo.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormContrasenaOlvidada.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -58,6 +70,12 @@
     <Compile Include="FormLogin.Designer.cs">
       <DependentUpon>FormLogin.cs</DependentUpon>
     </Compile>
+    <Compile Include="FRegis.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FRegis.Designer.cs">
+      <DependentUpon>FRegis.cs</DependentUpon>
+    </Compile>
     <Compile Include="GestionDB\GestionDB.cs" />
     <Compile Include="Form2.cs">
       <SubType>Form</SubType>
@@ -67,6 +85,12 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="FAboutUs.resx">
+      <DependentUpon>FAboutUs.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FInfo.resx">
+      <DependentUpon>FInfo.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormContrasenaOlvidada.resx">
       <DependentUpon>FormContrasenaOlvidada.cs</DependentUpon>
     </EmbeddedResource>
@@ -75,6 +99,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Form2.resx">
       <DependentUpon>Form2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FRegis.resx">
+      <DependentUpon>FRegis.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -106,6 +133,8 @@
     <Content Include="Icons\dashboard-icon-menu.png" />
     <Content Include="Icons\dashboard.png" />
     <None Include="Icons\dashboardIcon.png" />
+    <Content Include="Icons\eyeCl.png" />
+    <Content Include="Icons\eyeOp.png" />
     <Content Include="Icons\information.png" />
     <Content Include="Icons\layers.png" />
     <Content Include="Icons\left-arrow.png" />
