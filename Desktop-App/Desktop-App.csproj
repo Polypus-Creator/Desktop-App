@@ -138,6 +138,7 @@
     <Content Include="Icons\information.png" />
     <Content Include="Icons\layers.png" />
     <Content Include="Icons\left-arrow.png" />
+    <None Include="Icons\Logo.png" />
     <Content Include="Icons\logoLogin.png" />
     <Content Include="Icons\olvido.png" />
     <Content Include="Icons\padlock.png" />

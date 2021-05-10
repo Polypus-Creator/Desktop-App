@@ -29,5 +29,15 @@ namespace Desktop_App
             panelMin.Location = new Point(fullWidth - 80, 3);
             webBrowserWeb.Size = new Size(fullWidth - 20, fullHeight - 80);
         }
+
+        private void panelMin_MouseClick(object sender, MouseEventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
+        }
+
+        private void panelClose_MouseClick(object sender, MouseEventArgs e)
+        {
+            this.Close();
+        }
     }
 }
