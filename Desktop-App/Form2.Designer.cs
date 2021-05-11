@@ -74,7 +74,7 @@ namespace Desktop_App
             this.panel6 = new System.Windows.Forms.Panel();
             this.label12 = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
-            this.panel2 = new System.Windows.Forms.Panel();
+            this.panelAdd = new System.Windows.Forms.Panel();
             this.label11 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.ajustes = new System.Windows.Forms.TabPage();
@@ -97,13 +97,6 @@ namespace Desktop_App
             this.label21 = new System.Windows.Forms.Label();
             this.panelFaqs = new System.Windows.Forms.Panel();
             this.label22 = new System.Windows.Forms.Label();
-            this.pictureBox6 = new System.Windows.Forms.PictureBox();
-            this.pictureBox5 = new System.Windows.Forms.PictureBox();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.hideShowBar = new System.Windows.Forms.PictureBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pictureBox10 = new System.Windows.Forms.PictureBox();
             this.pictureBox8 = new System.Windows.Forms.PictureBox();
             this.pictureBox7 = new System.Windows.Forms.PictureBox();
@@ -141,7 +134,7 @@ namespace Desktop_App
             this.panelConst.SuspendLayout();
             this.panel6.SuspendLayout();
             this.panel4.SuspendLayout();
-            this.panel2.SuspendLayout();
+            this.panelAdd.SuspendLayout();
             this.ajustes.SuspendLayout();
             this.panelAj.SuspendLayout();
             this.panelTemp2.SuspendLayout();
@@ -633,7 +626,7 @@ namespace Desktop_App
             // panelConst
             // 
             this.panelConst.Controls.Add(this.panel6);
-            this.panelConst.Controls.Add(this.panel2);
+            this.panelConst.Controls.Add(this.panelAdd);
             this.panelConst.Controls.Add(this.label8);
             this.panelConst.Location = new System.Drawing.Point(13, 14);
             this.panelConst.Name = "panelConst";
@@ -674,12 +667,12 @@ namespace Desktop_App
             // 
             // panel2
             // 
-            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
-            this.panel2.Controls.Add(this.label11);
-            this.panel2.Location = new System.Drawing.Point(18, 54);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(505, 52);
-            this.panel2.TabIndex = 6;
+            this.panelAdd.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
+            this.panelAdd.Controls.Add(this.label11);
+            this.panelAdd.Location = new System.Drawing.Point(18, 54);
+            this.panelAdd.Name = "panel2";
+            this.panelAdd.Size = new System.Drawing.Size(505, 52);
+            this.panelAdd.TabIndex = 6;
             // 
             // label11
             // 
@@ -1159,8 +1152,8 @@ namespace Desktop_App
             this.panel6.ResumeLayout(false);
             this.panel6.PerformLayout();
             this.panel4.ResumeLayout(false);
-            this.panel2.ResumeLayout(false);
-            this.panel2.PerformLayout();
+            this.panelAdd.ResumeLayout(false);
+            this.panelAdd.PerformLayout();
             this.ajustes.ResumeLayout(false);
             this.panelAj.ResumeLayout(false);
             this.panelAj.PerformLayout();
