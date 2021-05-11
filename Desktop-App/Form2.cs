@@ -16,6 +16,7 @@ namespace Desktop_App
         private int fullWidth = Screen.PrimaryScreen.Bounds.Width;
         private int fullHeight = Screen.PrimaryScreen.Bounds.Height;
         private List<ClassCreatePanel> paneles = new List<ClassCreatePanel>();
+        private int ypanels = 150;
 
         public Form2()
         {
@@ -40,6 +41,10 @@ namespace Desktop_App
             tabControl.Width = fullWidth - 225;
             tabControl.Height = fullHeight - 45;
             tabControl.Location = new Point(223, 30);
+            panelConst.Height = fullHeight - 100;
+            panelConst.Width = fullWidth / 2;
+            flowScroll.Width = panelAdd.Width+40;
+            flowScroll.Height = fullHeight / 2;
         }
 
         private void labelClose_Click(object sender, EventArgs e)
@@ -251,10 +256,11 @@ namespace Desktop_App
             options.Add("Options");
             options.Add("Blog");
             string title = "HEADER";
-            ClassCreatePanel ejempo = new ClassCreatePanel(this.Width, this.Height, 6, title, options);
+            ClassCreatePanel ejempo = new ClassCreatePanel(flowScroll.Width, 6, title, options);
             paneles.Add(ejempo);
-            panel5.Controls.Add(ejempo.PanelGol);
-            ejempo.PanelGol.Location = new Point(0,150);
+            flowScroll.Controls.Add(ejempo.PanelGol);
+            ejempo.PanelGol.Location = new Point(0,ypanels);
+            ypanels += 150;
         }
 
         

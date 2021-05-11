@@ -12,7 +12,6 @@ namespace Desktop_App
     {
         private string _id;
         private int _maxW;
-        private int _maxH;
         private int _maxOp = 6;
         private string _title;
         private Label _labelTitle = new Label();
@@ -29,10 +28,9 @@ namespace Desktop_App
         private List<Label> _labelOptions = new List<Label>();
         private List<PictureBox> _butonsOptions = new List<PictureBox>();
 
-        public ClassCreatePanel(int maxW, int maxH, int maxOp, string title, List<string> options)
+        public ClassCreatePanel(int maxW, int maxOp, string title, List<string> options)
         {
-            this.MaxW = maxW;
-            this.MaxH = maxH;
+            this.MaxW = maxW-40;
             this.MaxOp = maxOp;
             this.Title = title;
             this.Id = title;
@@ -43,7 +41,6 @@ namespace Desktop_App
 
         public string Id { get => _id; set => _id = value; }
         public int MaxW { get => _maxW; set => _maxW = value; }
-        public int MaxH { get => _maxH; set => _maxH = value; }
         public int MaxOp { get => _maxOp; set => _maxOp = value; }
         public string Title { get => _title; set => _title = value; }
         public Label LabelTitle { get => _labelTitle; set => _labelTitle = value; }
@@ -65,7 +62,7 @@ namespace Desktop_App
         {
 
             PanelGol.Location = new Point(15,3);
-            PanelGol.Size = new Size(505, 130);
+            PanelGol.Size = new Size(MaxW, 130);
             PanelGol.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             PanelGol.BackColor = Color.FromArgb(240,240,240);
             PanelGol.Visible = true;
@@ -133,7 +130,7 @@ namespace Desktop_App
             PbDe.SizeMode = PictureBoxSizeMode.StretchImage;
             PbDe.Image = Desktop_App.Properties.Resources.trash;
             PbDe.Visible = true;
-            PanelOption.Controls.Add(PbDe);
+            PanelDe.Controls.Add(PbDe);
 
             createOption();
         }
@@ -215,6 +212,7 @@ namespace Desktop_App
                     editar.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
                     editar.Cursor = Cursors.Hand;
                     editar.Image = Desktop_App.Properties.Resources.editar;
+                    editar.SizeMode = PictureBoxSizeMode.StretchImage;
                     editar.Visible = true;
                     _butonsOptions.Add(editar);
                     PanelGol.Controls.Add(editar);
@@ -227,6 +225,7 @@ namespace Desktop_App
                     delete.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
                     delete.Cursor = Cursors.Hand;
                     delete.Image = Desktop_App.Properties.Resources.trash;
+                    delete.SizeMode = PictureBoxSizeMode.StretchImage;
                     delete.Visible = true;
                     PanelGol.Controls.Add(delete);
                     _butonsOptions.Add(delete);

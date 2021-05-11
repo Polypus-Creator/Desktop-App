@@ -62,7 +62,7 @@ namespace Desktop_App
             this.panel3 = new System.Windows.Forms.Panel();
             this.label7 = new System.Windows.Forms.Label();
             this.constructor = new System.Windows.Forms.TabPage();
-            this.panel5 = new System.Windows.Forms.Panel();
+            this.panelConst = new System.Windows.Forms.Panel();
             this.panelAdd = new System.Windows.Forms.Panel();
             this.label11 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
@@ -72,6 +72,7 @@ namespace Desktop_App
             this.ayuda = new System.Windows.Forms.TabPage();
             this.panel9 = new System.Windows.Forms.Panel();
             this.label10 = new System.Windows.Forms.Label();
+            this.flowScroll = new System.Windows.Forms.FlowLayoutPanel();
             this.panelSuperior.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.windowControlButtons.SuspendLayout();
@@ -94,7 +95,7 @@ namespace Desktop_App
             this.disenyo.SuspendLayout();
             this.panel3.SuspendLayout();
             this.constructor.SuspendLayout();
-            this.panel5.SuspendLayout();
+            this.panelConst.SuspendLayout();
             this.panelAdd.SuspendLayout();
             this.ajustes.SuspendLayout();
             this.panel7.SuspendLayout();
@@ -464,7 +465,7 @@ namespace Desktop_App
             // 
             // constructor
             // 
-            this.constructor.Controls.Add(this.panel5);
+            this.constructor.Controls.Add(this.panelConst);
             this.constructor.Location = new System.Drawing.Point(4, 22);
             this.constructor.Name = "constructor";
             this.constructor.Size = new System.Drawing.Size(576, 451);
@@ -472,19 +473,21 @@ namespace Desktop_App
             this.constructor.Text = "tabPage3";
             this.constructor.UseVisualStyleBackColor = true;
             // 
-            // panel5
+            // panelConst
             // 
-            this.panel5.Controls.Add(this.panelAdd);
-            this.panel5.Controls.Add(this.label8);
-            this.panel5.Location = new System.Drawing.Point(13, 14);
-            this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(544, 362);
-            this.panel5.TabIndex = 2;
+            this.panelConst.Controls.Add(this.flowScroll);
+            this.panelConst.Controls.Add(this.panelAdd);
+            this.panelConst.Controls.Add(this.label8);
+            this.panelConst.Location = new System.Drawing.Point(13, 14);
+            this.panelConst.Name = "panelConst";
+            this.panelConst.Size = new System.Drawing.Size(544, 362);
+            this.panelConst.TabIndex = 2;
             // 
             // panelAdd
             // 
             this.panelAdd.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
             this.panelAdd.Controls.Add(this.label11);
+            this.panelAdd.Cursor = System.Windows.Forms.Cursors.Hand;
             this.panelAdd.Location = new System.Drawing.Point(18, 54);
             this.panelAdd.Name = "panelAdd";
             this.panelAdd.Size = new System.Drawing.Size(505, 52);
@@ -574,6 +577,15 @@ namespace Desktop_App
             this.label10.TabIndex = 5;
             this.label10.Text = "Ayuda";
             // 
+            // flowScroll
+            // 
+            this.flowScroll.AutoScroll = true;
+            this.flowScroll.BackColor = System.Drawing.Color.DimGray;
+            this.flowScroll.Location = new System.Drawing.Point(18, 113);
+            this.flowScroll.Name = "flowScroll";
+            this.flowScroll.Size = new System.Drawing.Size(505, 239);
+            this.flowScroll.TabIndex = 7;
+            // 
             // Form2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -617,8 +629,8 @@ namespace Desktop_App
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
             this.constructor.ResumeLayout(false);
-            this.panel5.ResumeLayout(false);
-            this.panel5.PerformLayout();
+            this.panelConst.ResumeLayout(false);
+            this.panelConst.PerformLayout();
             this.panelAdd.ResumeLayout(false);
             this.panelAdd.PerformLayout();
             this.ajustes.ResumeLayout(false);
@@ -667,7 +679,7 @@ namespace Desktop_App
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Panel panel5;
+        private System.Windows.Forms.Panel panelConst;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Panel panel7;
         private System.Windows.Forms.Label label9;
@@ -675,5 +687,6 @@ namespace Desktop_App
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Panel panelAdd;
         private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.FlowLayoutPanel flowScroll;
     }
 }
