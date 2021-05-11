@@ -127,6 +127,8 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Icons\arrow-down.png" />
+    <Content Include="Icons\arrow-up.png" />
     <Content Include="Icons\back-arrow.png" />
     <Content Include="Icons\bombilla.png" />
     <Content Include="Icons\arrow-right.png" />
@@ -134,6 +136,7 @@
     <Content Include="Icons\dashboard.png" />
     <Content Include="Icons\off.png" />
     <Content Include="Icons\on.png" />
+    <Content Include="Icons\save.png" />
     <Content Include="Icons\trash.png" />
     <None Include="Icons\dashboardIcon.png" />
     <Content Include="Icons\editar.png" />

@@ -49,27 +49,47 @@ namespace Desktop_App
             this.label1 = new System.Windows.Forms.Label();
             this.tabControl = new System.Windows.Forms.TabControl();
             this.dashboard = new System.Windows.Forms.TabPage();
-            this.disenyo = new System.Windows.Forms.TabPage();
-            this.constructor = new System.Windows.Forms.TabPage();
-            this.ajustes = new System.Windows.Forms.TabPage();
-            this.ayuda = new System.Windows.Forms.TabPage();
             this.panelDash = new System.Windows.Forms.Panel();
             this.label6 = new System.Windows.Forms.Label();
+            this.disenyo = new System.Windows.Forms.TabPage();
             this.panelDise = new System.Windows.Forms.Panel();
+            this.panel8 = new System.Windows.Forms.Panel();
+            this.panel11 = new System.Windows.Forms.Panel();
+            this.panel12 = new System.Windows.Forms.Panel();
+            this.label19 = new System.Windows.Forms.Label();
+            this.panel10 = new System.Windows.Forms.Panel();
+            this.label18 = new System.Windows.Forms.Label();
+            this.panel7 = new System.Windows.Forms.Panel();
+            this.label17 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
+            this.constructor = new System.Windows.Forms.TabPage();
             this.panelConst = new System.Windows.Forms.Panel();
-            this.label8 = new System.Windows.Forms.Label();
-            this.panelAj = new System.Windows.Forms.Panel();
-            this.label9 = new System.Windows.Forms.Label();
-            this.panelAyud = new System.Windows.Forms.Panel();
-            this.label10 = new System.Windows.Forms.Label();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.label11 = new System.Windows.Forms.Label();
-            this.panel4 = new System.Windows.Forms.Panel();
             this.panel6 = new System.Windows.Forms.Panel();
             this.label12 = new System.Windows.Forms.Label();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.label11 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.ajustes = new System.Windows.Forms.TabPage();
+            this.panelAj = new System.Windows.Forms.Panel();
+            this.panelTemp2 = new System.Windows.Forms.Panel();
+            this.label15 = new System.Windows.Forms.Label();
+            this.panelTemp1 = new System.Windows.Forms.Panel();
+            this.label16 = new System.Windows.Forms.Label();
+            this.panelNube = new System.Windows.Forms.Panel();
+            this.label14 = new System.Windows.Forms.Label();
             this.panelSesion = new System.Windows.Forms.Panel();
             this.label13 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.ayuda = new System.Windows.Forms.TabPage();
+            this.panelAyud = new System.Windows.Forms.Panel();
+            this.label10 = new System.Windows.Forms.Label();
+            this.panelSave = new System.Windows.Forms.Panel();
+            this.label20 = new System.Windows.Forms.Label();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.label21 = new System.Windows.Forms.Label();
+            this.panelFaqs = new System.Windows.Forms.Panel();
+            this.label22 = new System.Windows.Forms.Label();
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
@@ -80,24 +100,12 @@ namespace Desktop_App
             this.pictureBox10 = new System.Windows.Forms.PictureBox();
             this.pictureBox8 = new System.Windows.Forms.PictureBox();
             this.pictureBox7 = new System.Windows.Forms.PictureBox();
-            this.radioStayLogged = new System.Windows.Forms.PictureBox();
-            this.panelNube = new System.Windows.Forms.Panel();
-            this.pictureBox9 = new System.Windows.Forms.PictureBox();
-            this.label14 = new System.Windows.Forms.Label();
-            this.panelTemp2 = new System.Windows.Forms.Panel();
+            this.pictureBox13 = new System.Windows.Forms.PictureBox();
             this.pictureBox11 = new System.Windows.Forms.PictureBox();
-            this.label15 = new System.Windows.Forms.Label();
-            this.panelTemp1 = new System.Windows.Forms.Panel();
             this.pictureBox12 = new System.Windows.Forms.PictureBox();
-            this.label16 = new System.Windows.Forms.Label();
-            this.panel7 = new System.Windows.Forms.Panel();
-            this.label17 = new System.Windows.Forms.Label();
-            this.panel8 = new System.Windows.Forms.Panel();
-            this.panel10 = new System.Windows.Forms.Panel();
-            this.panel11 = new System.Windows.Forms.Panel();
-            this.label18 = new System.Windows.Forms.Label();
-            this.panel12 = new System.Windows.Forms.Panel();
-            this.label19 = new System.Windows.Forms.Label();
+            this.pictureBox9 = new System.Windows.Forms.PictureBox();
+            this.radioStayLogged = new System.Windows.Forms.PictureBox();
+            this.showHideFaqs = new System.Windows.Forms.PictureBox();
             this.panelSuperior.SuspendLayout();
             this.windowControlButtons.SuspendLayout();
             this.panelLeftBar.SuspendLayout();
@@ -109,19 +117,28 @@ namespace Desktop_App
             this.panelDashboard.SuspendLayout();
             this.tabControl.SuspendLayout();
             this.dashboard.SuspendLayout();
-            this.disenyo.SuspendLayout();
-            this.constructor.SuspendLayout();
-            this.ajustes.SuspendLayout();
-            this.ayuda.SuspendLayout();
             this.panelDash.SuspendLayout();
+            this.disenyo.SuspendLayout();
             this.panelDise.SuspendLayout();
+            this.panel12.SuspendLayout();
+            this.panel10.SuspendLayout();
+            this.panel7.SuspendLayout();
+            this.constructor.SuspendLayout();
             this.panelConst.SuspendLayout();
-            this.panelAj.SuspendLayout();
-            this.panelAyud.SuspendLayout();
-            this.panel2.SuspendLayout();
-            this.panel4.SuspendLayout();
             this.panel6.SuspendLayout();
+            this.panel4.SuspendLayout();
+            this.panel2.SuspendLayout();
+            this.ajustes.SuspendLayout();
+            this.panelAj.SuspendLayout();
+            this.panelTemp2.SuspendLayout();
+            this.panelTemp1.SuspendLayout();
+            this.panelNube.SuspendLayout();
             this.panelSesion.SuspendLayout();
+            this.ayuda.SuspendLayout();
+            this.panelAyud.SuspendLayout();
+            this.panelSave.SuspendLayout();
+            this.panel1.SuspendLayout();
+            this.panelFaqs.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
@@ -132,16 +149,12 @@ namespace Desktop_App
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.radioStayLogged)).BeginInit();
-            this.panelNube.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).BeginInit();
-            this.panelTemp2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox13)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).BeginInit();
-            this.panelTemp1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox12)).BeginInit();
-            this.panel7.SuspendLayout();
-            this.panel10.SuspendLayout();
-            this.panel12.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radioStayLogged)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.showHideFaqs)).BeginInit();
             this.SuspendLayout();
             // 
             // panelSuperior
@@ -297,6 +310,7 @@ namespace Desktop_App
             this.panelDisenyo.Size = new System.Drawing.Size(216, 73);
             this.panelDisenyo.TabIndex = 6;
             this.panelDisenyo.Click += new System.EventHandler(this.panelDisenyo_Click);
+            this.panelDisenyo.Paint += new System.Windows.Forms.PaintEventHandler(this.panelDisenyo_Paint);
             // 
             // label2
             // 
@@ -369,48 +383,6 @@ namespace Desktop_App
             this.dashboard.UseVisualStyleBackColor = true;
             this.dashboard.Click += new System.EventHandler(this.dashboard_Click);
             // 
-            // disenyo
-            // 
-            this.disenyo.Controls.Add(this.panelDise);
-            this.disenyo.Location = new System.Drawing.Point(4, 22);
-            this.disenyo.Name = "disenyo";
-            this.disenyo.Padding = new System.Windows.Forms.Padding(3);
-            this.disenyo.Size = new System.Drawing.Size(576, 451);
-            this.disenyo.TabIndex = 1;
-            this.disenyo.Text = "tabPage2";
-            this.disenyo.UseVisualStyleBackColor = true;
-            // 
-            // constructor
-            // 
-            this.constructor.Controls.Add(this.panelConst);
-            this.constructor.Location = new System.Drawing.Point(4, 22);
-            this.constructor.Name = "constructor";
-            this.constructor.Size = new System.Drawing.Size(576, 451);
-            this.constructor.TabIndex = 2;
-            this.constructor.Text = "tabPage3";
-            this.constructor.UseVisualStyleBackColor = true;
-            // 
-            // ajustes
-            // 
-            this.ajustes.Controls.Add(this.panelAj);
-            this.ajustes.Location = new System.Drawing.Point(4, 22);
-            this.ajustes.Name = "ajustes";
-            this.ajustes.Size = new System.Drawing.Size(576, 451);
-            this.ajustes.TabIndex = 3;
-            this.ajustes.Text = "tabPage4";
-            this.ajustes.UseVisualStyleBackColor = true;
-            // 
-            // ayuda
-            // 
-            this.ayuda.Controls.Add(this.panelAyud);
-            this.ayuda.Location = new System.Drawing.Point(4, 22);
-            this.ayuda.Name = "ayuda";
-            this.ayuda.Size = new System.Drawing.Size(576, 451);
-            this.ayuda.TabIndex = 4;
-            this.ayuda.Text = "tabPage5";
-            this.ayuda.UseVisualStyleBackColor = true;
-            this.ayuda.Click += new System.EventHandler(this.ayuda_Click);
-            // 
             // panelDash
             // 
             this.panelDash.BackColor = System.Drawing.Color.Transparent;
@@ -433,6 +405,17 @@ namespace Desktop_App
             this.label6.TabIndex = 5;
             this.label6.Text = "Dashboard";
             // 
+            // disenyo
+            // 
+            this.disenyo.Controls.Add(this.panelDise);
+            this.disenyo.Location = new System.Drawing.Point(4, 22);
+            this.disenyo.Name = "disenyo";
+            this.disenyo.Padding = new System.Windows.Forms.Padding(3);
+            this.disenyo.Size = new System.Drawing.Size(576, 451);
+            this.disenyo.TabIndex = 1;
+            this.disenyo.Text = "tabPage2";
+            this.disenyo.UseVisualStyleBackColor = true;
+            // 
             // panelDise
             // 
             this.panelDise.BackColor = System.Drawing.Color.Transparent;
@@ -447,6 +430,87 @@ namespace Desktop_App
             this.panelDise.Size = new System.Drawing.Size(544, 363);
             this.panelDise.TabIndex = 1;
             // 
+            // panel8
+            // 
+            this.panel8.BackColor = System.Drawing.Color.CornflowerBlue;
+            this.panel8.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.panel8.Location = new System.Drawing.Point(462, 55);
+            this.panel8.Name = "panel8";
+            this.panel8.Size = new System.Drawing.Size(61, 52);
+            this.panel8.TabIndex = 9;
+            this.panel8.Click += new System.EventHandler(this.panelColorPrincipal_Click);
+            // 
+            // panel11
+            // 
+            this.panel11.BackColor = System.Drawing.Color.Lime;
+            this.panel11.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.panel11.Location = new System.Drawing.Point(462, 127);
+            this.panel11.Name = "panel11";
+            this.panel11.Size = new System.Drawing.Size(61, 52);
+            this.panel11.TabIndex = 9;
+            this.panel11.Click += new System.EventHandler(this.panel11_Click);
+            // 
+            // panel12
+            // 
+            this.panel12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(48)))), ((int)(((byte)(45)))));
+            this.panel12.Controls.Add(this.label19);
+            this.panel12.Location = new System.Drawing.Point(18, 198);
+            this.panel12.Name = "panel12";
+            this.panel12.Size = new System.Drawing.Size(505, 52);
+            this.panel12.TabIndex = 11;
+            // 
+            // label19
+            // 
+            this.label19.AutoSize = true;
+            this.label19.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label19.ForeColor = System.Drawing.Color.White;
+            this.label19.Location = new System.Drawing.Point(13, 15);
+            this.label19.Name = "label19";
+            this.label19.Size = new System.Drawing.Size(120, 21);
+            this.label19.TabIndex = 0;
+            this.label19.Text = "Fuente de letra";
+            this.label19.Click += new System.EventHandler(this.label19_Click);
+            // 
+            // panel10
+            // 
+            this.panel10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(96)))), ((int)(((byte)(71)))), ((int)(((byte)(71)))));
+            this.panel10.Controls.Add(this.label18);
+            this.panel10.Location = new System.Drawing.Point(18, 127);
+            this.panel10.Name = "panel10";
+            this.panel10.Size = new System.Drawing.Size(435, 52);
+            this.panel10.TabIndex = 10;
+            // 
+            // label18
+            // 
+            this.label18.AutoSize = true;
+            this.label18.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label18.ForeColor = System.Drawing.Color.White;
+            this.label18.Location = new System.Drawing.Point(13, 15);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(134, 21);
+            this.label18.TabIndex = 0;
+            this.label18.Text = "Color secundario";
+            // 
+            // panel7
+            // 
+            this.panel7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(48)))), ((int)(((byte)(45)))));
+            this.panel7.Controls.Add(this.label17);
+            this.panel7.Location = new System.Drawing.Point(18, 55);
+            this.panel7.Name = "panel7";
+            this.panel7.Size = new System.Drawing.Size(435, 52);
+            this.panel7.TabIndex = 8;
+            // 
+            // label17
+            // 
+            this.label17.AutoSize = true;
+            this.label17.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label17.ForeColor = System.Drawing.Color.White;
+            this.label17.Location = new System.Drawing.Point(13, 15);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(117, 21);
+            this.label17.TabIndex = 0;
+            this.label17.Text = "Color principal";
+            // 
             // label7
             // 
             this.label7.AutoSize = true;
@@ -459,6 +523,16 @@ namespace Desktop_App
             this.label7.TabIndex = 5;
             this.label7.Text = "Diseño";
             // 
+            // constructor
+            // 
+            this.constructor.Controls.Add(this.panelConst);
+            this.constructor.Location = new System.Drawing.Point(4, 22);
+            this.constructor.Name = "constructor";
+            this.constructor.Size = new System.Drawing.Size(576, 451);
+            this.constructor.TabIndex = 2;
+            this.constructor.Text = "tabPage3";
+            this.constructor.UseVisualStyleBackColor = true;
+            // 
             // panelConst
             // 
             this.panelConst.Controls.Add(this.panel6);
@@ -468,92 +542,6 @@ namespace Desktop_App
             this.panelConst.Name = "panelConst";
             this.panelConst.Size = new System.Drawing.Size(544, 363);
             this.panelConst.TabIndex = 2;
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.BackColor = System.Drawing.Color.White;
-            this.label8.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(48)))), ((int)(((byte)(45)))));
-            this.label8.Location = new System.Drawing.Point(13, 12);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(113, 25);
-            this.label8.TabIndex = 5;
-            this.label8.Text = "Constructor";
-            // 
-            // panelAj
-            // 
-            this.panelAj.Controls.Add(this.panelTemp2);
-            this.panelAj.Controls.Add(this.panelTemp1);
-            this.panelAj.Controls.Add(this.panelNube);
-            this.panelAj.Controls.Add(this.panelSesion);
-            this.panelAj.Controls.Add(this.label9);
-            this.panelAj.Location = new System.Drawing.Point(16, 14);
-            this.panelAj.Name = "panelAj";
-            this.panelAj.Size = new System.Drawing.Size(544, 415);
-            this.panelAj.TabIndex = 3;
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.BackColor = System.Drawing.Color.White;
-            this.label9.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(48)))), ((int)(((byte)(45)))));
-            this.label9.Location = new System.Drawing.Point(13, 12);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(74, 25);
-            this.label9.TabIndex = 5;
-            this.label9.Text = "Ajustes";
-            // 
-            // panelAyud
-            // 
-            this.panelAyud.Controls.Add(this.label10);
-            this.panelAyud.Location = new System.Drawing.Point(16, 14);
-            this.panelAyud.Name = "panelAyud";
-            this.panelAyud.Size = new System.Drawing.Size(544, 363);
-            this.panelAyud.TabIndex = 3;
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.BackColor = System.Drawing.Color.White;
-            this.label10.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(48)))), ((int)(((byte)(45)))));
-            this.label10.Location = new System.Drawing.Point(13, 12);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(67, 25);
-            this.label10.TabIndex = 5;
-            this.label10.Text = "Ayuda";
-            // 
-            // panel2
-            // 
-            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
-            this.panel2.Controls.Add(this.label11);
-            this.panel2.Location = new System.Drawing.Point(18, 54);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(505, 52);
-            this.panel2.TabIndex = 6;
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(13, 15);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(146, 21);
-            this.label11.TabIndex = 0;
-            this.label11.Text = "+ Añadir Elemento";
-            // 
-            // panel4
-            // 
-            this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(96)))), ((int)(((byte)(71)))), ((int)(((byte)(71)))));
-            this.panel4.Controls.Add(this.pictureBox10);
-            this.panel4.Controls.Add(this.pictureBox8);
-            this.panel4.Controls.Add(this.pictureBox7);
-            this.panel4.Location = new System.Drawing.Point(372, 0);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(131, 45);
-            this.panel4.TabIndex = 7;
             // 
             // panel6
             // 
@@ -576,6 +564,135 @@ namespace Desktop_App
             this.label12.TabIndex = 0;
             this.label12.Text = "HEADER";
             // 
+            // panel4
+            // 
+            this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(96)))), ((int)(((byte)(71)))), ((int)(((byte)(71)))));
+            this.panel4.Controls.Add(this.pictureBox10);
+            this.panel4.Controls.Add(this.pictureBox8);
+            this.panel4.Controls.Add(this.pictureBox7);
+            this.panel4.Location = new System.Drawing.Point(372, 0);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(131, 45);
+            this.panel4.TabIndex = 7;
+            // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
+            this.panel2.Controls.Add(this.label11);
+            this.panel2.Location = new System.Drawing.Point(18, 54);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(505, 52);
+            this.panel2.TabIndex = 6;
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.Location = new System.Drawing.Point(13, 15);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(146, 21);
+            this.label11.TabIndex = 0;
+            this.label11.Text = "+ Añadir Elemento";
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.BackColor = System.Drawing.Color.White;
+            this.label8.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(48)))), ((int)(((byte)(45)))));
+            this.label8.Location = new System.Drawing.Point(13, 12);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(113, 25);
+            this.label8.TabIndex = 5;
+            this.label8.Text = "Constructor";
+            // 
+            // ajustes
+            // 
+            this.ajustes.Controls.Add(this.panelAj);
+            this.ajustes.Location = new System.Drawing.Point(4, 22);
+            this.ajustes.Name = "ajustes";
+            this.ajustes.Size = new System.Drawing.Size(576, 451);
+            this.ajustes.TabIndex = 3;
+            this.ajustes.Text = "tabPage4";
+            this.ajustes.UseVisualStyleBackColor = true;
+            // 
+            // panelAj
+            // 
+            this.panelAj.BackColor = System.Drawing.Color.White;
+            this.panelAj.Controls.Add(this.panelSave);
+            this.panelAj.Controls.Add(this.panelTemp2);
+            this.panelAj.Controls.Add(this.panelTemp1);
+            this.panelAj.Controls.Add(this.panelNube);
+            this.panelAj.Controls.Add(this.panelSesion);
+            this.panelAj.Controls.Add(this.label9);
+            this.panelAj.Location = new System.Drawing.Point(16, 14);
+            this.panelAj.Name = "panelAj";
+            this.panelAj.Size = new System.Drawing.Size(544, 453);
+            this.panelAj.TabIndex = 3;
+            // 
+            // panelTemp2
+            // 
+            this.panelTemp2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(96)))), ((int)(((byte)(71)))), ((int)(((byte)(71)))));
+            this.panelTemp2.Controls.Add(this.pictureBox11);
+            this.panelTemp2.Controls.Add(this.label15);
+            this.panelTemp2.Location = new System.Drawing.Point(18, 307);
+            this.panelTemp2.Name = "panelTemp2";
+            this.panelTemp2.Size = new System.Drawing.Size(505, 52);
+            this.panelTemp2.TabIndex = 10;
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label15.ForeColor = System.Drawing.Color.White;
+            this.label15.Location = new System.Drawing.Point(13, 15);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(192, 21);
+            this.label15.TabIndex = 0;
+            this.label15.Text = "Guardar datos en la nube";
+            // 
+            // panelTemp1
+            // 
+            this.panelTemp1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(48)))), ((int)(((byte)(45)))));
+            this.panelTemp1.Controls.Add(this.pictureBox12);
+            this.panelTemp1.Controls.Add(this.label16);
+            this.panelTemp1.Location = new System.Drawing.Point(18, 227);
+            this.panelTemp1.Name = "panelTemp1";
+            this.panelTemp1.Size = new System.Drawing.Size(505, 52);
+            this.panelTemp1.TabIndex = 9;
+            // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label16.ForeColor = System.Drawing.Color.White;
+            this.label16.Location = new System.Drawing.Point(13, 15);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(252, 21);
+            this.label16.TabIndex = 0;
+            this.label16.Text = "Permanecer con la sesión iniciada";
+            // 
+            // panelNube
+            // 
+            this.panelNube.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(96)))), ((int)(((byte)(71)))), ((int)(((byte)(71)))));
+            this.panelNube.Controls.Add(this.pictureBox9);
+            this.panelNube.Controls.Add(this.label14);
+            this.panelNube.Location = new System.Drawing.Point(18, 141);
+            this.panelNube.Name = "panelNube";
+            this.panelNube.Size = new System.Drawing.Size(505, 52);
+            this.panelNube.TabIndex = 8;
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label14.ForeColor = System.Drawing.Color.White;
+            this.label14.Location = new System.Drawing.Point(13, 15);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(192, 21);
+            this.label14.TabIndex = 0;
+            this.label14.Text = "Guardar datos en la nube";
+            // 
             // panelSesion
             // 
             this.panelSesion.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(48)))), ((int)(((byte)(45)))));
@@ -596,6 +713,116 @@ namespace Desktop_App
             this.label13.Size = new System.Drawing.Size(252, 21);
             this.label13.TabIndex = 0;
             this.label13.Text = "Permanecer con la sesión iniciada";
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.BackColor = System.Drawing.Color.White;
+            this.label9.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(48)))), ((int)(((byte)(45)))));
+            this.label9.Location = new System.Drawing.Point(13, 12);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(74, 25);
+            this.label9.TabIndex = 5;
+            this.label9.Text = "Ajustes";
+            // 
+            // ayuda
+            // 
+            this.ayuda.Controls.Add(this.panelAyud);
+            this.ayuda.Location = new System.Drawing.Point(4, 22);
+            this.ayuda.Name = "ayuda";
+            this.ayuda.Size = new System.Drawing.Size(576, 451);
+            this.ayuda.TabIndex = 4;
+            this.ayuda.Text = "tabPage5";
+            this.ayuda.UseVisualStyleBackColor = true;
+            this.ayuda.Click += new System.EventHandler(this.ayuda_Click);
+            // 
+            // panelAyud
+            // 
+            this.panelAyud.Controls.Add(this.panelFaqs);
+            this.panelAyud.Controls.Add(this.panel1);
+            this.panelAyud.Controls.Add(this.label10);
+            this.panelAyud.Location = new System.Drawing.Point(16, 14);
+            this.panelAyud.Name = "panelAyud";
+            this.panelAyud.Size = new System.Drawing.Size(544, 363);
+            this.panelAyud.TabIndex = 3;
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.BackColor = System.Drawing.Color.White;
+            this.label10.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(48)))), ((int)(((byte)(45)))));
+            this.label10.Location = new System.Drawing.Point(13, 12);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(67, 25);
+            this.label10.TabIndex = 5;
+            this.label10.Text = "Ayuda";
+            // 
+            // panelSave
+            // 
+            this.panelSave.Controls.Add(this.label20);
+            this.panelSave.Controls.Add(this.pictureBox13);
+            this.panelSave.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.panelSave.Location = new System.Drawing.Point(315, 370);
+            this.panelSave.Name = "panelSave";
+            this.panelSave.Size = new System.Drawing.Size(143, 45);
+            this.panelSave.TabIndex = 7;
+            // 
+            // label20
+            // 
+            this.label20.AutoSize = true;
+            this.label20.BackColor = System.Drawing.Color.White;
+            this.label20.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label20.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(48)))), ((int)(((byte)(45)))));
+            this.label20.Location = new System.Drawing.Point(47, 11);
+            this.label20.Name = "label20";
+            this.label20.Size = new System.Drawing.Size(81, 25);
+            this.label20.TabIndex = 11;
+            this.label20.Text = "Guardar";
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(48)))), ((int)(((byte)(45)))));
+            this.panel1.Controls.Add(this.showHideFaqs);
+            this.panel1.Controls.Add(this.label21);
+            this.panel1.Location = new System.Drawing.Point(18, 54);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(505, 52);
+            this.panel1.TabIndex = 8;
+            // 
+            // label21
+            // 
+            this.label21.AutoSize = true;
+            this.label21.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label21.ForeColor = System.Drawing.Color.White;
+            this.label21.Location = new System.Drawing.Point(13, 15);
+            this.label21.Name = "label21";
+            this.label21.Size = new System.Drawing.Size(49, 21);
+            this.label21.TabIndex = 0;
+            this.label21.Text = "FAQS";
+            // 
+            // panelFaqs
+            // 
+            this.panelFaqs.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
+            this.panelFaqs.Controls.Add(this.label22);
+            this.panelFaqs.Location = new System.Drawing.Point(18, 101);
+            this.panelFaqs.Name = "panelFaqs";
+            this.panelFaqs.Size = new System.Drawing.Size(505, 233);
+            this.panelFaqs.TabIndex = 9;
+            this.panelFaqs.Visible = false;
+            // 
+            // label22
+            // 
+            this.label22.AutoSize = true;
+            this.label22.BackColor = System.Drawing.Color.Transparent;
+            this.label22.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label22.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(48)))), ((int)(((byte)(45)))));
+            this.label22.Location = new System.Drawing.Point(13, 15);
+            this.label22.Name = "label22";
+            this.label22.Size = new System.Drawing.Size(305, 21);
+            this.label22.TabIndex = 0;
+            this.label22.Text = "1 - Cual es la finalidad de esta aplicación?";
             // 
             // pictureBox6
             // 
@@ -713,59 +940,16 @@ namespace Desktop_App
             this.pictureBox7.TabIndex = 6;
             this.pictureBox7.TabStop = false;
             // 
-            // radioStayLogged
+            // pictureBox13
             // 
-            this.radioStayLogged.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.radioStayLogged.Image = global::Desktop_App.Properties.Resources.off;
-            this.radioStayLogged.Location = new System.Drawing.Point(457, 7);
-            this.radioStayLogged.Name = "radioStayLogged";
-            this.radioStayLogged.Size = new System.Drawing.Size(40, 40);
-            this.radioStayLogged.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.radioStayLogged.TabIndex = 6;
-            this.radioStayLogged.TabStop = false;
-            this.radioStayLogged.Click += new System.EventHandler(this.radioStayLogged_Click);
-            // 
-            // panelNube
-            // 
-            this.panelNube.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(48)))), ((int)(((byte)(45)))));
-            this.panelNube.Controls.Add(this.pictureBox9);
-            this.panelNube.Controls.Add(this.label14);
-            this.panelNube.Location = new System.Drawing.Point(18, 134);
-            this.panelNube.Name = "panelNube";
-            this.panelNube.Size = new System.Drawing.Size(505, 52);
-            this.panelNube.TabIndex = 8;
-            // 
-            // pictureBox9
-            // 
-            this.pictureBox9.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pictureBox9.Image = global::Desktop_App.Properties.Resources.off;
-            this.pictureBox9.Location = new System.Drawing.Point(457, 7);
-            this.pictureBox9.Name = "pictureBox9";
-            this.pictureBox9.Size = new System.Drawing.Size(40, 40);
-            this.pictureBox9.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox9.TabIndex = 6;
-            this.pictureBox9.TabStop = false;
-            // 
-            // label14
-            // 
-            this.label14.AutoSize = true;
-            this.label14.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.ForeColor = System.Drawing.Color.White;
-            this.label14.Location = new System.Drawing.Point(13, 15);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(192, 21);
-            this.label14.TabIndex = 0;
-            this.label14.Text = "Guardar datos en la nube";
-            // 
-            // panelTemp2
-            // 
-            this.panelTemp2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(48)))), ((int)(((byte)(45)))));
-            this.panelTemp2.Controls.Add(this.pictureBox11);
-            this.panelTemp2.Controls.Add(this.label15);
-            this.panelTemp2.Location = new System.Drawing.Point(18, 300);
-            this.panelTemp2.Name = "panelTemp2";
-            this.panelTemp2.Size = new System.Drawing.Size(505, 52);
-            this.panelTemp2.TabIndex = 10;
+            this.pictureBox13.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pictureBox13.Image = global::Desktop_App.Properties.Resources.save;
+            this.pictureBox13.Location = new System.Drawing.Point(13, 8);
+            this.pictureBox13.Name = "pictureBox13";
+            this.pictureBox13.Size = new System.Drawing.Size(30, 30);
+            this.pictureBox13.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox13.TabIndex = 7;
+            this.pictureBox13.TabStop = false;
             // 
             // pictureBox11
             // 
@@ -778,27 +962,6 @@ namespace Desktop_App
             this.pictureBox11.TabIndex = 6;
             this.pictureBox11.TabStop = false;
             // 
-            // label15
-            // 
-            this.label15.AutoSize = true;
-            this.label15.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label15.ForeColor = System.Drawing.Color.White;
-            this.label15.Location = new System.Drawing.Point(13, 15);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(192, 21);
-            this.label15.TabIndex = 0;
-            this.label15.Text = "Guardar datos en la nube";
-            // 
-            // panelTemp1
-            // 
-            this.panelTemp1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(48)))), ((int)(((byte)(45)))));
-            this.panelTemp1.Controls.Add(this.pictureBox12);
-            this.panelTemp1.Controls.Add(this.label16);
-            this.panelTemp1.Location = new System.Drawing.Point(18, 220);
-            this.panelTemp1.Name = "panelTemp1";
-            this.panelTemp1.Size = new System.Drawing.Size(505, 52);
-            this.panelTemp1.TabIndex = 9;
-            // 
             // pictureBox12
             // 
             this.pictureBox12.Cursor = System.Windows.Forms.Cursors.Hand;
@@ -810,96 +973,40 @@ namespace Desktop_App
             this.pictureBox12.TabIndex = 6;
             this.pictureBox12.TabStop = false;
             // 
-            // label16
+            // pictureBox9
             // 
-            this.label16.AutoSize = true;
-            this.label16.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label16.ForeColor = System.Drawing.Color.White;
-            this.label16.Location = new System.Drawing.Point(13, 15);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(252, 21);
-            this.label16.TabIndex = 0;
-            this.label16.Text = "Permanecer con la sesión iniciada";
+            this.pictureBox9.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pictureBox9.Image = global::Desktop_App.Properties.Resources.off;
+            this.pictureBox9.Location = new System.Drawing.Point(457, 7);
+            this.pictureBox9.Name = "pictureBox9";
+            this.pictureBox9.Size = new System.Drawing.Size(40, 40);
+            this.pictureBox9.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox9.TabIndex = 6;
+            this.pictureBox9.TabStop = false;
             // 
-            // panel7
+            // radioStayLogged
             // 
-            this.panel7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(48)))), ((int)(((byte)(45)))));
-            this.panel7.Controls.Add(this.label17);
-            this.panel7.Location = new System.Drawing.Point(18, 55);
-            this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(435, 52);
-            this.panel7.TabIndex = 8;
+            this.radioStayLogged.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.radioStayLogged.Image = global::Desktop_App.Properties.Resources.off;
+            this.radioStayLogged.Location = new System.Drawing.Point(457, 7);
+            this.radioStayLogged.Name = "radioStayLogged";
+            this.radioStayLogged.Size = new System.Drawing.Size(40, 40);
+            this.radioStayLogged.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.radioStayLogged.TabIndex = 6;
+            this.radioStayLogged.TabStop = false;
+            this.radioStayLogged.Click += new System.EventHandler(this.radioStayLogged_Click);
             // 
-            // label17
+            // showHideFaqs
             // 
-            this.label17.AutoSize = true;
-            this.label17.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label17.ForeColor = System.Drawing.Color.White;
-            this.label17.Location = new System.Drawing.Point(13, 15);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(117, 21);
-            this.label17.TabIndex = 0;
-            this.label17.Text = "Color principal";
-            // 
-            // panel8
-            // 
-            this.panel8.BackColor = System.Drawing.Color.CornflowerBlue;
-            this.panel8.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.panel8.Location = new System.Drawing.Point(462, 55);
-            this.panel8.Name = "panel8";
-            this.panel8.Size = new System.Drawing.Size(61, 52);
-            this.panel8.TabIndex = 9;
-            this.panel8.Click += new System.EventHandler(this.panelColorPrincipal_Click);
-            // 
-            // panel10
-            // 
-            this.panel10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(96)))), ((int)(((byte)(71)))), ((int)(((byte)(71)))));
-            this.panel10.Controls.Add(this.label18);
-            this.panel10.Location = new System.Drawing.Point(18, 127);
-            this.panel10.Name = "panel10";
-            this.panel10.Size = new System.Drawing.Size(435, 52);
-            this.panel10.TabIndex = 10;
-            // 
-            // panel11
-            // 
-            this.panel11.BackColor = System.Drawing.Color.Lime;
-            this.panel11.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.panel11.Location = new System.Drawing.Point(462, 127);
-            this.panel11.Name = "panel11";
-            this.panel11.Size = new System.Drawing.Size(61, 52);
-            this.panel11.TabIndex = 9;
-            this.panel11.Click += new System.EventHandler(this.panel11_Click);
-            // 
-            // label18
-            // 
-            this.label18.AutoSize = true;
-            this.label18.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label18.ForeColor = System.Drawing.Color.White;
-            this.label18.Location = new System.Drawing.Point(13, 15);
-            this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(134, 21);
-            this.label18.TabIndex = 0;
-            this.label18.Text = "Color secundario";
-            // 
-            // panel12
-            // 
-            this.panel12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(48)))), ((int)(((byte)(45)))));
-            this.panel12.Controls.Add(this.label19);
-            this.panel12.Location = new System.Drawing.Point(18, 198);
-            this.panel12.Name = "panel12";
-            this.panel12.Size = new System.Drawing.Size(505, 52);
-            this.panel12.TabIndex = 11;
-            // 
-            // label19
-            // 
-            this.label19.AutoSize = true;
-            this.label19.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label19.ForeColor = System.Drawing.Color.White;
-            this.label19.Location = new System.Drawing.Point(13, 15);
-            this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(115, 21);
-            this.label19.TabIndex = 0;
-            this.label19.Text = "Tipo de fondo";
+            this.showHideFaqs.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.showHideFaqs.Image = global::Desktop_App.Properties.Resources.arrow_down;
+            this.showHideFaqs.Location = new System.Drawing.Point(472, 19);
+            this.showHideFaqs.Name = "showHideFaqs";
+            this.showHideFaqs.Size = new System.Drawing.Size(17, 17);
+            this.showHideFaqs.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.showHideFaqs.TabIndex = 6;
+            this.showHideFaqs.TabStop = false;
+            this.showHideFaqs.Click += new System.EventHandler(this.showHideFaqs_Click);
             // 
             // Form2
             // 
@@ -931,27 +1038,45 @@ namespace Desktop_App
             this.panelDashboard.PerformLayout();
             this.tabControl.ResumeLayout(false);
             this.dashboard.ResumeLayout(false);
-            this.disenyo.ResumeLayout(false);
-            this.constructor.ResumeLayout(false);
-            this.ajustes.ResumeLayout(false);
-            this.ayuda.ResumeLayout(false);
             this.panelDash.ResumeLayout(false);
             this.panelDash.PerformLayout();
+            this.disenyo.ResumeLayout(false);
             this.panelDise.ResumeLayout(false);
             this.panelDise.PerformLayout();
+            this.panel12.ResumeLayout(false);
+            this.panel12.PerformLayout();
+            this.panel10.ResumeLayout(false);
+            this.panel10.PerformLayout();
+            this.panel7.ResumeLayout(false);
+            this.panel7.PerformLayout();
+            this.constructor.ResumeLayout(false);
             this.panelConst.ResumeLayout(false);
             this.panelConst.PerformLayout();
-            this.panelAj.ResumeLayout(false);
-            this.panelAj.PerformLayout();
-            this.panelAyud.ResumeLayout(false);
-            this.panelAyud.PerformLayout();
-            this.panel2.ResumeLayout(false);
-            this.panel2.PerformLayout();
-            this.panel4.ResumeLayout(false);
             this.panel6.ResumeLayout(false);
             this.panel6.PerformLayout();
+            this.panel4.ResumeLayout(false);
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
+            this.ajustes.ResumeLayout(false);
+            this.panelAj.ResumeLayout(false);
+            this.panelAj.PerformLayout();
+            this.panelTemp2.ResumeLayout(false);
+            this.panelTemp2.PerformLayout();
+            this.panelTemp1.ResumeLayout(false);
+            this.panelTemp1.PerformLayout();
+            this.panelNube.ResumeLayout(false);
+            this.panelNube.PerformLayout();
             this.panelSesion.ResumeLayout(false);
             this.panelSesion.PerformLayout();
+            this.ayuda.ResumeLayout(false);
+            this.panelAyud.ResumeLayout(false);
+            this.panelAyud.PerformLayout();
+            this.panelSave.ResumeLayout(false);
+            this.panelSave.PerformLayout();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
+            this.panelFaqs.ResumeLayout(false);
+            this.panelFaqs.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
@@ -962,22 +1087,12 @@ namespace Desktop_App
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.radioStayLogged)).EndInit();
-            this.panelNube.ResumeLayout(false);
-            this.panelNube.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).EndInit();
-            this.panelTemp2.ResumeLayout(false);
-            this.panelTemp2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox13)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).EndInit();
-            this.panelTemp1.ResumeLayout(false);
-            this.panelTemp1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox12)).EndInit();
-            this.panel7.ResumeLayout(false);
-            this.panel7.PerformLayout();
-            this.panel10.ResumeLayout(false);
-            this.panel10.PerformLayout();
-            this.panel12.ResumeLayout(false);
-            this.panel12.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radioStayLogged)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.showHideFaqs)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -1052,5 +1167,13 @@ namespace Desktop_App
         private System.Windows.Forms.Label label18;
         private System.Windows.Forms.Panel panel12;
         private System.Windows.Forms.Label label19;
+        private System.Windows.Forms.PictureBox pictureBox13;
+        private System.Windows.Forms.Panel panelSave;
+        private System.Windows.Forms.Label label20;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.PictureBox showHideFaqs;
+        private System.Windows.Forms.Label label21;
+        private System.Windows.Forms.Panel panelFaqs;
+        private System.Windows.Forms.Label label22;
     }
 }

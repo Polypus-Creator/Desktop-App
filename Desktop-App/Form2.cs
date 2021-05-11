@@ -13,6 +13,7 @@ namespace Desktop_App
     public partial class Form2 : Form
     {
         Boolean extendedLeftBar = true;
+        Boolean displayFaqs = false;
         Boolean stayLogged = false;
         int fullWidth = Screen.PrimaryScreen.Bounds.Width;
         int fullHeight = Screen.PrimaryScreen.Bounds.Height;
@@ -44,7 +45,11 @@ namespace Desktop_App
             panelDise.Width = fullWidth / 2 + 540;
             panelConst.Width = fullWidth / 2 + 540;
             panelAj.Width = fullWidth / 2 + 540;
+            panelAj.Height = fullHeight - 100;
             panelAyud.Width = fullWidth / 2 + 540;
+            panelSave.Location = new Point(10, fullHeight - 190);
+            panelSesion.Width = fullWidth - 390 ;
+            radioStayLogged.Location = new Point(panelSesion.Width - 50, 6);
         }
 
         private void labelClose_Click(object sender, EventArgs e)
@@ -287,6 +292,39 @@ namespace Desktop_App
         private void panel11_Click(object sender, EventArgs e)
         {
             changeColor(sender);
+        }
+
+        private void panelDisenyo_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void label19_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void showHideFaqs_Click(object sender, EventArgs e)
+        {
+            if(displayFaqs == false)
+            {
+                panelFaqs.Visible = true;
+                showHideFaqs.Image = Desktop_App.Properties.Resources.arrow_up;
+                displayFaqs = true;
+            }
+            else
+            {
+                panelFaqs.Visible = false;
+                showHideFaqs.Image = Desktop_App.Properties.Resources.arrow_down;
+                displayFaqs = false;
+            }
+
+
         }
     }
 }
