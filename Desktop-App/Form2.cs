@@ -12,9 +12,10 @@ namespace Desktop_App
 {
     public partial class Form2 : Form
     {
-        Boolean extendedLeftBar = true;
-        int fullWidth = Screen.PrimaryScreen.Bounds.Width;
-        int fullHeight = Screen.PrimaryScreen.Bounds.Height;
+        private Boolean extendedLeftBar = true;
+        private int fullWidth = Screen.PrimaryScreen.Bounds.Width;
+        private int fullHeight = Screen.PrimaryScreen.Bounds.Height;
+        private List<ClassCreatePanel> paneles = new List<ClassCreatePanel>();
 
         public Form2()
         {
@@ -39,8 +40,6 @@ namespace Desktop_App
             tabControl.Width = fullWidth - 225;
             tabControl.Height = fullHeight - 45;
             tabControl.Location = new Point(223, 30);
-
-
         }
 
         private void labelClose_Click(object sender, EventArgs e)
@@ -241,5 +240,23 @@ namespace Desktop_App
         {
 
         }
+
+        private void panelAdd_MouseClick(object sender, MouseEventArgs e)
+        {
+            List<string> options = new List<string>();
+            options.Add("Home");
+            options.Add("Perfil");
+            options.Add("Menu");
+            options.Add("News");
+            options.Add("Options");
+            options.Add("Blog");
+            string title = "HEADER";
+            ClassCreatePanel ejempo = new ClassCreatePanel(this.Width, this.Height, 6, title, options);
+            paneles.Add(ejempo);
+            panel5.Controls.Add(ejempo.PanelGol);
+            ejempo.PanelGol.Location = new Point(0,150);
+        }
+
+        
     }
 }
