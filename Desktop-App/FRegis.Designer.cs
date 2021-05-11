@@ -47,9 +47,20 @@ namespace Desktop_App
             this.pictureBoxOjo2 = new System.Windows.Forms.PictureBox();
             this.pictureBoxOjo1 = new System.Windows.Forms.PictureBox();
             this.pictureBoxVolver = new System.Windows.Forms.PictureBox();
+            this.panelSuperior = new System.Windows.Forms.Panel();
+            this.labelIniciarSesion = new System.Windows.Forms.Label();
+            this.pictureBoxIconoIniciarSesion = new System.Windows.Forms.PictureBox();
+            this.panelClose = new System.Windows.Forms.Panel();
+            this.labelMin = new System.Windows.Forms.Label();
+            this.labelClose = new System.Windows.Forms.Label();
+            this.panelMin = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxOjo2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxOjo1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxVolver)).BeginInit();
+            this.panelSuperior.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxIconoIniciarSesion)).BeginInit();
+            this.panelClose.SuspendLayout();
+            this.panelMin.SuspendLayout();
             this.SuspendLayout();
             // 
             // buttonRegis
@@ -149,7 +160,7 @@ namespace Desktop_App
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
-            this.label5.Location = new System.Drawing.Point(63, 60);
+            this.label5.Location = new System.Drawing.Point(63, 63);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(59, 21);
             this.label5.TabIndex = 22;
@@ -175,41 +186,125 @@ namespace Desktop_App
             this.textBoxUser.Size = new System.Drawing.Size(308, 35);
             this.textBoxUser.TabIndex = 21;
             // 
+            // timerOjo
+            // 
+            this.timerOjo.Tick += new System.EventHandler(this.timerOjo_Tick);
+            // 
             // pictureBoxOjo2
             // 
-            this.pictureBoxOjo2.Image = global::Desktop_App.Properties.Resources.eyeOp;
+            this.pictureBoxOjo2.Image = global::Desktop_App.Properties.Resources.eyeCl;
             this.pictureBoxOjo2.Location = new System.Drawing.Point(360, 355);
             this.pictureBoxOjo2.Name = "pictureBoxOjo2";
             this.pictureBoxOjo2.Size = new System.Drawing.Size(23, 21);
             this.pictureBoxOjo2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBoxOjo2.TabIndex = 33;
             this.pictureBoxOjo2.TabStop = false;
+            this.pictureBoxOjo2.Click += new System.EventHandler(this.pictureBoxOjo2_Click);
             // 
             // pictureBoxOjo1
             // 
-            this.pictureBoxOjo1.Image = global::Desktop_App.Properties.Resources.eyeOp;
+            this.pictureBoxOjo1.Image = global::Desktop_App.Properties.Resources.eyeCl;
             this.pictureBoxOjo1.Location = new System.Drawing.Point(360, 249);
             this.pictureBoxOjo1.Name = "pictureBoxOjo1";
             this.pictureBoxOjo1.Size = new System.Drawing.Size(23, 21);
             this.pictureBoxOjo1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBoxOjo1.TabIndex = 32;
             this.pictureBoxOjo1.TabStop = false;
+            this.pictureBoxOjo1.Click += new System.EventHandler(this.pictureBoxOjo1_Click);
             // 
             // pictureBoxVolver
             // 
             this.pictureBoxVolver.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxVolver.Image")));
-            this.pictureBoxVolver.Location = new System.Drawing.Point(26, 60);
+            this.pictureBoxVolver.Location = new System.Drawing.Point(26, 63);
             this.pictureBoxVolver.Name = "pictureBoxVolver";
             this.pictureBoxVolver.Size = new System.Drawing.Size(23, 21);
             this.pictureBoxVolver.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBoxVolver.TabIndex = 19;
             this.pictureBoxVolver.TabStop = false;
             // 
+            // panelSuperior
+            // 
+            this.panelSuperior.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(48)))), ((int)(((byte)(45)))));
+            this.panelSuperior.Controls.Add(this.panelMin);
+            this.panelSuperior.Controls.Add(this.labelIniciarSesion);
+            this.panelSuperior.Controls.Add(this.pictureBoxIconoIniciarSesion);
+            this.panelSuperior.Controls.Add(this.panelClose);
+            this.panelSuperior.Location = new System.Drawing.Point(0, 3);
+            this.panelSuperior.Name = "panelSuperior";
+            this.panelSuperior.Size = new System.Drawing.Size(800, 54);
+            this.panelSuperior.TabIndex = 34;
+            // 
+            // labelIniciarSesion
+            // 
+            this.labelIniciarSesion.AutoSize = true;
+            this.labelIniciarSesion.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelIniciarSesion.ForeColor = System.Drawing.Color.White;
+            this.labelIniciarSesion.Location = new System.Drawing.Point(63, 10);
+            this.labelIniciarSesion.Name = "labelIniciarSesion";
+            this.labelIniciarSesion.Size = new System.Drawing.Size(125, 32);
+            this.labelIniciarSesion.TabIndex = 3;
+            this.labelIniciarSesion.Text = "Registrar ";
+            // 
+            // pictureBoxIconoIniciarSesion
+            // 
+            this.pictureBoxIconoIniciarSesion.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(48)))), ((int)(((byte)(45)))));
+            this.pictureBoxIconoIniciarSesion.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxIconoIniciarSesion.Image")));
+            this.pictureBoxIconoIniciarSesion.Location = new System.Drawing.Point(12, 5);
+            this.pictureBoxIconoIniciarSesion.Name = "pictureBoxIconoIniciarSesion";
+            this.pictureBoxIconoIniciarSesion.Size = new System.Drawing.Size(44, 44);
+            this.pictureBoxIconoIniciarSesion.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBoxIconoIniciarSesion.TabIndex = 2;
+            this.pictureBoxIconoIniciarSesion.TabStop = false;
+            // 
+            // panelClose
+            // 
+            this.panelClose.Controls.Add(this.labelClose);
+            this.panelClose.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.panelClose.Location = new System.Drawing.Point(751, 0);
+            this.panelClose.Name = "panelClose";
+            this.panelClose.Size = new System.Drawing.Size(49, 51);
+            this.panelClose.TabIndex = 1;
+            this.panelClose.MouseClick += new System.Windows.Forms.MouseEventHandler(this.panelClose_MouseClick);
+            // 
+            // labelMin
+            // 
+            this.labelMin.AutoSize = true;
+            this.labelMin.Font = new System.Drawing.Font("Segoe UI", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelMin.ForeColor = System.Drawing.Color.White;
+            this.labelMin.Location = new System.Drawing.Point(12, 6);
+            this.labelMin.Name = "labelMin";
+            this.labelMin.Size = new System.Drawing.Size(29, 40);
+            this.labelMin.TabIndex = 1;
+            this.labelMin.Text = "-";
+            this.labelMin.MouseClick += new System.Windows.Forms.MouseEventHandler(this.panelMin_MouseClick);
+            // 
+            // labelClose
+            // 
+            this.labelClose.AutoSize = true;
+            this.labelClose.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelClose.ForeColor = System.Drawing.Color.White;
+            this.labelClose.Location = new System.Drawing.Point(11, 10);
+            this.labelClose.Name = "labelClose";
+            this.labelClose.Size = new System.Drawing.Size(31, 32);
+            this.labelClose.TabIndex = 0;
+            this.labelClose.Text = "X";
+            this.labelClose.MouseClick += new System.Windows.Forms.MouseEventHandler(this.panelClose_MouseClick);
+            // 
+            // panelMin
+            // 
+            this.panelMin.Controls.Add(this.labelMin);
+            this.panelMin.Location = new System.Drawing.Point(700, 0);
+            this.panelMin.Name = "panelMin";
+            this.panelMin.Size = new System.Drawing.Size(47, 54);
+            this.panelMin.TabIndex = 4;
+            this.panelMin.MouseClick += new System.Windows.Forms.MouseEventHandler(this.panelMin_MouseClick);
+            // 
             // FRegis
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.panelSuperior);
             this.Controls.Add(this.pictureBoxOjo2);
             this.Controls.Add(this.pictureBoxOjo1);
             this.Controls.Add(this.buttonRegis);
@@ -225,11 +320,19 @@ namespace Desktop_App
             this.Controls.Add(this.label4);
             this.Controls.Add(this.textBoxUser);
             this.Controls.Add(this.pictureBoxVolver);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FRegis";
             this.Text = "FRegis";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxOjo2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxOjo1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxVolver)).EndInit();
+            this.panelSuperior.ResumeLayout(false);
+            this.panelSuperior.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxIconoIniciarSesion)).EndInit();
+            this.panelClose.ResumeLayout(false);
+            this.panelClose.PerformLayout();
+            this.panelMin.ResumeLayout(false);
+            this.panelMin.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -253,5 +356,12 @@ namespace Desktop_App
         private System.Windows.Forms.TextBox textBoxUser;
         private System.Windows.Forms.PictureBox pictureBoxVolver;
         private System.Windows.Forms.Timer timerOjo;
+        private System.Windows.Forms.Panel panelSuperior;
+        private System.Windows.Forms.Panel panelMin;
+        private System.Windows.Forms.Label labelMin;
+        private System.Windows.Forms.Label labelIniciarSesion;
+        private System.Windows.Forms.PictureBox pictureBoxIconoIniciarSesion;
+        private System.Windows.Forms.Panel panelClose;
+        private System.Windows.Forms.Label labelClose;
     }
 }

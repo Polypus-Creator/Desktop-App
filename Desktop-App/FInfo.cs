@@ -21,5 +21,14 @@ namespace Desktop_App
         {
             this.CenterToScreen();
         }
+        private void panelMin_MouseClick(object sender, MouseEventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
+        }
+
+        private void panelClose_MouseClick(object sender, MouseEventArgs e)
+        {
+            this.Close();
+        }
     }
 }
