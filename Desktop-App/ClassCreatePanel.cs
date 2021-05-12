@@ -28,6 +28,7 @@ namespace Desktop_App
         private List<Label> _labelOptions = new List<Label>();
         private List<PictureBox> _butonsOptions = new List<PictureBox>();
 
+
         public ClassCreatePanel(int maxW, int maxOp, string title, List<string> options)
         {
             this.MaxW = maxW-40;
