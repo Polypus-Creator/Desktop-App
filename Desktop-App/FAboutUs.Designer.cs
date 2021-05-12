@@ -29,7 +29,6 @@ namespace Desktop_App
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FAboutUs));
             this.webBrowserWeb = new System.Windows.Forms.WebBrowser();
             this.panelHeader = new System.Windows.Forms.Panel();
             this.panelMin = new System.Windows.Forms.Panel();
@@ -87,7 +86,7 @@ namespace Desktop_App
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Image = global::Desktop_App.Properties.Resources.Logo;
             this.pictureBox1.Location = new System.Drawing.Point(11, 12);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(30, 30);
