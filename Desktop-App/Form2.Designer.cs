@@ -57,6 +57,26 @@ namespace Desktop_App
             this.tabControl = new System.Windows.Forms.TabControl();
             this.dashboard = new System.Windows.Forms.TabPage();
             this.panelDash = new System.Windows.Forms.Panel();
+            this.panelFirstLogin = new System.Windows.Forms.Panel();
+            this.pictureBoxLogo = new System.Windows.Forms.PictureBox();
+            this.buttonVolver = new System.Windows.Forms.Button();
+            this.labelWebEjemplo = new System.Windows.Forms.Label();
+            this.pictureBoxWebEjemplo = new System.Windows.Forms.PictureBox();
+            this.buttonGenerarLogoAleatorio = new System.Windows.Forms.Button();
+            this.buttonSelecionarLogo = new System.Windows.Forms.Button();
+            this.labelTuLogo = new System.Windows.Forms.Label();
+            this.buttonCrearPlantillaPorDefecto = new System.Windows.Forms.Button();
+            this.labelPlantillaPorDefecto = new System.Windows.Forms.Label();
+            this.buttonEmpezar = new System.Windows.Forms.Button();
+            this.comboBoxCategoria = new System.Windows.Forms.ComboBox();
+            this.labelCategoria = new System.Windows.Forms.Label();
+            this.labelBreveDescripcion = new System.Windows.Forms.Label();
+            this.textBoxBreveDescripcion = new System.Windows.Forms.TextBox();
+            this.labelNombre = new System.Windows.Forms.Label();
+            this.textBoxNombre = new System.Windows.Forms.TextBox();
+            this.labelTitulo3 = new System.Windows.Forms.Label();
+            this.labelTitulo2 = new System.Windows.Forms.Label();
+            this.labelTitulo = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.disenyo = new System.Windows.Forms.TabPage();
             this.panelDise = new System.Windows.Forms.Panel();
@@ -118,26 +138,6 @@ namespace Desktop_App
             this.label25 = new System.Windows.Forms.Label();
             this.pictureBox15 = new System.Windows.Forms.PictureBox();
             this.label23 = new System.Windows.Forms.Label();
-            this.panelFirstLogin = new System.Windows.Forms.Panel();
-            this.pictureBoxLogo = new System.Windows.Forms.PictureBox();
-            this.buttonVolver = new System.Windows.Forms.Button();
-            this.labelWebEjemplo = new System.Windows.Forms.Label();
-            this.pictureBoxWebEjemplo = new System.Windows.Forms.PictureBox();
-            this.buttonGenerarLogoAleatorio = new System.Windows.Forms.Button();
-            this.buttonSelecionarLogo = new System.Windows.Forms.Button();
-            this.labelTuLogo = new System.Windows.Forms.Label();
-            this.buttonCrearPlantillaPorDefecto = new System.Windows.Forms.Button();
-            this.labelPlantillaPorDefecto = new System.Windows.Forms.Label();
-            this.buttonEmpezar = new System.Windows.Forms.Button();
-            this.comboBoxCategoria = new System.Windows.Forms.ComboBox();
-            this.labelCategoria = new System.Windows.Forms.Label();
-            this.labelBreveDescripcion = new System.Windows.Forms.Label();
-            this.textBoxBreveDescripcion = new System.Windows.Forms.TextBox();
-            this.labelNombre = new System.Windows.Forms.Label();
-            this.textBoxNombre = new System.Windows.Forms.TextBox();
-            this.labelTitulo3 = new System.Windows.Forms.Label();
-            this.labelTitulo2 = new System.Windows.Forms.Label();
-            this.labelTitulo = new System.Windows.Forms.Label();
             this.panelSuperior.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.windowControlButtons.SuspendLayout();
@@ -157,6 +157,9 @@ namespace Desktop_App
             this.tabControl.SuspendLayout();
             this.dashboard.SuspendLayout();
             this.panelDash.SuspendLayout();
+            this.panelFirstLogin.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLogo)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxWebEjemplo)).BeginInit();
             this.disenyo.SuspendLayout();
             this.panelDise.SuspendLayout();
             this.panel12.SuspendLayout();
@@ -195,9 +198,6 @@ namespace Desktop_App
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox14)).BeginInit();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox15)).BeginInit();
-            this.panelFirstLogin.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLogo)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxWebEjemplo)).BeginInit();
             this.SuspendLayout();
             // 
             // panelSuperior
@@ -298,7 +298,7 @@ namespace Desktop_App
             // pictureBox6
             // 
             this.pictureBox6.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pictureBox6.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox6.Image")));
+            this.pictureBox6.Image = global::Desktop_App.Properties.Resources.information;
             this.pictureBox6.Location = new System.Drawing.Point(11, 26);
             this.pictureBox6.Name = "pictureBox6";
             this.pictureBox6.Size = new System.Drawing.Size(23, 23);
@@ -520,6 +520,271 @@ namespace Desktop_App
             this.panelDash.TabIndex = 0;
             this.panelDash.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
+            // panelFirstLogin
+            // 
+            this.panelFirstLogin.Controls.Add(this.pictureBoxLogo);
+            this.panelFirstLogin.Controls.Add(this.buttonVolver);
+            this.panelFirstLogin.Controls.Add(this.labelWebEjemplo);
+            this.panelFirstLogin.Controls.Add(this.pictureBoxWebEjemplo);
+            this.panelFirstLogin.Controls.Add(this.buttonGenerarLogoAleatorio);
+            this.panelFirstLogin.Controls.Add(this.buttonSelecionarLogo);
+            this.panelFirstLogin.Controls.Add(this.labelTuLogo);
+            this.panelFirstLogin.Controls.Add(this.buttonCrearPlantillaPorDefecto);
+            this.panelFirstLogin.Controls.Add(this.labelPlantillaPorDefecto);
+            this.panelFirstLogin.Controls.Add(this.buttonEmpezar);
+            this.panelFirstLogin.Controls.Add(this.comboBoxCategoria);
+            this.panelFirstLogin.Controls.Add(this.labelCategoria);
+            this.panelFirstLogin.Controls.Add(this.labelBreveDescripcion);
+            this.panelFirstLogin.Controls.Add(this.textBoxBreveDescripcion);
+            this.panelFirstLogin.Controls.Add(this.labelNombre);
+            this.panelFirstLogin.Controls.Add(this.textBoxNombre);
+            this.panelFirstLogin.Controls.Add(this.labelTitulo3);
+            this.panelFirstLogin.Controls.Add(this.labelTitulo2);
+            this.panelFirstLogin.Controls.Add(this.labelTitulo);
+            this.panelFirstLogin.Location = new System.Drawing.Point(-7, 54);
+            this.panelFirstLogin.Name = "panelFirstLogin";
+            this.panelFirstLogin.Size = new System.Drawing.Size(1111, 659);
+            this.panelFirstLogin.TabIndex = 7;
+            // 
+            // pictureBoxLogo
+            // 
+            this.pictureBoxLogo.BackColor = System.Drawing.Color.LightGray;
+            this.pictureBoxLogo.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pictureBoxLogo.Location = new System.Drawing.Point(594, 199);
+            this.pictureBoxLogo.Name = "pictureBoxLogo";
+            this.pictureBoxLogo.Size = new System.Drawing.Size(109, 97);
+            this.pictureBoxLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBoxLogo.TabIndex = 37;
+            this.pictureBoxLogo.TabStop = false;
+            // 
+            // buttonVolver
+            // 
+            this.buttonVolver.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(131)))), ((int)(((byte)(72)))));
+            this.buttonVolver.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.buttonVolver.FlatAppearance.BorderSize = 0;
+            this.buttonVolver.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonVolver.Font = new System.Drawing.Font("Segoe UI Black", 10.15F, System.Drawing.FontStyle.Bold);
+            this.buttonVolver.ForeColor = System.Drawing.Color.White;
+            this.buttonVolver.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.buttonVolver.Location = new System.Drawing.Point(25, 578);
+            this.buttonVolver.Name = "buttonVolver";
+            this.buttonVolver.Size = new System.Drawing.Size(461, 32);
+            this.buttonVolver.TabIndex = 36;
+            this.buttonVolver.Text = "VOLVER";
+            this.buttonVolver.UseVisualStyleBackColor = false;
+            // 
+            // labelWebEjemplo
+            // 
+            this.labelWebEjemplo.AutoSize = true;
+            this.labelWebEjemplo.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelWebEjemplo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(48)))), ((int)(((byte)(45)))));
+            this.labelWebEjemplo.Location = new System.Drawing.Point(589, 325);
+            this.labelWebEjemplo.Name = "labelWebEjemplo";
+            this.labelWebEjemplo.Size = new System.Drawing.Size(353, 30);
+            this.labelWebEjemplo.TabIndex = 35;
+            this.labelWebEjemplo.Text = "Podrás hacer webs similares a esta:";
+            // 
+            // pictureBoxWebEjemplo
+            // 
+            this.pictureBoxWebEjemplo.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxWebEjemplo.Image")));
+            this.pictureBoxWebEjemplo.Location = new System.Drawing.Point(673, 358);
+            this.pictureBoxWebEjemplo.Name = "pictureBoxWebEjemplo";
+            this.pictureBoxWebEjemplo.Size = new System.Drawing.Size(339, 169);
+            this.pictureBoxWebEjemplo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBoxWebEjemplo.TabIndex = 34;
+            this.pictureBoxWebEjemplo.TabStop = false;
+            // 
+            // buttonGenerarLogoAleatorio
+            // 
+            this.buttonGenerarLogoAleatorio.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(131)))), ((int)(((byte)(72)))));
+            this.buttonGenerarLogoAleatorio.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.buttonGenerarLogoAleatorio.FlatAppearance.BorderSize = 0;
+            this.buttonGenerarLogoAleatorio.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonGenerarLogoAleatorio.Font = new System.Drawing.Font("Segoe UI Black", 10.15F, System.Drawing.FontStyle.Bold);
+            this.buttonGenerarLogoAleatorio.ForeColor = System.Drawing.Color.White;
+            this.buttonGenerarLogoAleatorio.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.buttonGenerarLogoAleatorio.Location = new System.Drawing.Point(721, 254);
+            this.buttonGenerarLogoAleatorio.Name = "buttonGenerarLogoAleatorio";
+            this.buttonGenerarLogoAleatorio.Size = new System.Drawing.Size(345, 32);
+            this.buttonGenerarLogoAleatorio.TabIndex = 33;
+            this.buttonGenerarLogoAleatorio.Text = "GENERAR LOGO ALEATORIO";
+            this.buttonGenerarLogoAleatorio.UseVisualStyleBackColor = false;
+            // 
+            // buttonSelecionarLogo
+            // 
+            this.buttonSelecionarLogo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(131)))), ((int)(((byte)(72)))));
+            this.buttonSelecionarLogo.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.buttonSelecionarLogo.FlatAppearance.BorderSize = 0;
+            this.buttonSelecionarLogo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonSelecionarLogo.Font = new System.Drawing.Font("Segoe UI Black", 10.15F, System.Drawing.FontStyle.Bold);
+            this.buttonSelecionarLogo.ForeColor = System.Drawing.Color.White;
+            this.buttonSelecionarLogo.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.buttonSelecionarLogo.Location = new System.Drawing.Point(721, 216);
+            this.buttonSelecionarLogo.Name = "buttonSelecionarLogo";
+            this.buttonSelecionarLogo.Size = new System.Drawing.Size(345, 32);
+            this.buttonSelecionarLogo.TabIndex = 32;
+            this.buttonSelecionarLogo.Text = "SELECCIONAR LOGO";
+            this.buttonSelecionarLogo.UseVisualStyleBackColor = false;
+            this.buttonSelecionarLogo.Click += new System.EventHandler(this.buttonSelecionarLogo_Click);
+            // 
+            // labelTuLogo
+            // 
+            this.labelTuLogo.AutoSize = true;
+            this.labelTuLogo.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelTuLogo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(48)))), ((int)(((byte)(45)))));
+            this.labelTuLogo.Location = new System.Drawing.Point(589, 160);
+            this.labelTuLogo.Name = "labelTuLogo";
+            this.labelTuLogo.Size = new System.Drawing.Size(94, 30);
+            this.labelTuLogo.TabIndex = 30;
+            this.labelTuLogo.Text = "Tu logo:";
+            // 
+            // buttonCrearPlantillaPorDefecto
+            // 
+            this.buttonCrearPlantillaPorDefecto.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(131)))), ((int)(((byte)(72)))));
+            this.buttonCrearPlantillaPorDefecto.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.buttonCrearPlantillaPorDefecto.FlatAppearance.BorderSize = 0;
+            this.buttonCrearPlantillaPorDefecto.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonCrearPlantillaPorDefecto.Font = new System.Drawing.Font("Segoe UI Black", 10.15F, System.Drawing.FontStyle.Bold);
+            this.buttonCrearPlantillaPorDefecto.ForeColor = System.Drawing.Color.White;
+            this.buttonCrearPlantillaPorDefecto.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.buttonCrearPlantillaPorDefecto.Location = new System.Drawing.Point(594, 578);
+            this.buttonCrearPlantillaPorDefecto.Name = "buttonCrearPlantillaPorDefecto";
+            this.buttonCrearPlantillaPorDefecto.Size = new System.Drawing.Size(472, 32);
+            this.buttonCrearPlantillaPorDefecto.TabIndex = 29;
+            this.buttonCrearPlantillaPorDefecto.Text = "CREAR PLANTILLA POR DEFECTO";
+            this.buttonCrearPlantillaPorDefecto.UseVisualStyleBackColor = false;
+            // 
+            // labelPlantillaPorDefecto
+            // 
+            this.labelPlantillaPorDefecto.AutoSize = true;
+            this.labelPlantillaPorDefecto.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelPlantillaPorDefecto.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(48)))), ((int)(((byte)(45)))));
+            this.labelPlantillaPorDefecto.Location = new System.Drawing.Point(599, 551);
+            this.labelPlantillaPorDefecto.Name = "labelPlantillaPorDefecto";
+            this.labelPlantillaPorDefecto.Size = new System.Drawing.Size(458, 21);
+            this.labelPlantillaPorDefecto.TabIndex = 28;
+            this.labelPlantillaPorDefecto.Text = "¿No quieres una plantilla personalizada? ¡No te preocupes!";
+            // 
+            // buttonEmpezar
+            // 
+            this.buttonEmpezar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(152)))), ((int)(((byte)(219)))));
+            this.buttonEmpezar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.buttonEmpezar.FlatAppearance.BorderSize = 0;
+            this.buttonEmpezar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonEmpezar.Font = new System.Drawing.Font("Segoe UI Black", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonEmpezar.ForeColor = System.Drawing.Color.White;
+            this.buttonEmpezar.Location = new System.Drawing.Point(25, 513);
+            this.buttonEmpezar.Name = "buttonEmpezar";
+            this.buttonEmpezar.Size = new System.Drawing.Size(461, 59);
+            this.buttonEmpezar.TabIndex = 27;
+            this.buttonEmpezar.Text = "EMPEZAR A CREAR";
+            this.buttonEmpezar.UseVisualStyleBackColor = false;
+            // 
+            // comboBoxCategoria
+            // 
+            this.comboBoxCategoria.Font = new System.Drawing.Font("Segoe UI Light", 15.75F);
+            this.comboBoxCategoria.FormattingEnabled = true;
+            this.comboBoxCategoria.Items.AddRange(new object[] {
+            "Alimentación",
+            "Deporte",
+            "Comercio",
+            "Electronica",
+            "Informática",
+            "Música",
+            "Blog"});
+            this.comboBoxCategoria.Location = new System.Drawing.Point(25, 441);
+            this.comboBoxCategoria.Name = "comboBoxCategoria";
+            this.comboBoxCategoria.Size = new System.Drawing.Size(461, 38);
+            this.comboBoxCategoria.TabIndex = 26;
+            // 
+            // labelCategoria
+            // 
+            this.labelCategoria.AutoSize = true;
+            this.labelCategoria.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelCategoria.Location = new System.Drawing.Point(20, 408);
+            this.labelCategoria.Name = "labelCategoria";
+            this.labelCategoria.Size = new System.Drawing.Size(113, 30);
+            this.labelCategoria.TabIndex = 25;
+            this.labelCategoria.Text = "Categoría:";
+            // 
+            // labelBreveDescripcion
+            // 
+            this.labelBreveDescripcion.AutoSize = true;
+            this.labelBreveDescripcion.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelBreveDescripcion.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(48)))), ((int)(((byte)(45)))));
+            this.labelBreveDescripcion.Location = new System.Drawing.Point(20, 252);
+            this.labelBreveDescripcion.Name = "labelBreveDescripcion";
+            this.labelBreveDescripcion.Size = new System.Drawing.Size(191, 30);
+            this.labelBreveDescripcion.TabIndex = 23;
+            this.labelBreveDescripcion.Text = "Breve descripción:";
+            // 
+            // textBoxBreveDescripcion
+            // 
+            this.textBoxBreveDescripcion.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.textBoxBreveDescripcion.Font = new System.Drawing.Font("Segoe UI Light", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxBreveDescripcion.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(86)))), ((int)(((byte)(101)))), ((int)(((byte)(115)))));
+            this.textBoxBreveDescripcion.Location = new System.Drawing.Point(25, 291);
+            this.textBoxBreveDescripcion.Multiline = true;
+            this.textBoxBreveDescripcion.Name = "textBoxBreveDescripcion";
+            this.textBoxBreveDescripcion.Size = new System.Drawing.Size(461, 94);
+            this.textBoxBreveDescripcion.TabIndex = 24;
+            // 
+            // labelNombre
+            // 
+            this.labelNombre.AutoSize = true;
+            this.labelNombre.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelNombre.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(48)))), ((int)(((byte)(45)))));
+            this.labelNombre.Location = new System.Drawing.Point(20, 160);
+            this.labelNombre.Name = "labelNombre";
+            this.labelNombre.Size = new System.Drawing.Size(307, 30);
+            this.labelNombre.TabIndex = 21;
+            this.labelNombre.Text = "Nombre de la empresa o web:";
+            // 
+            // textBoxNombre
+            // 
+            this.textBoxNombre.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.textBoxNombre.Font = new System.Drawing.Font("Segoe UI Light", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxNombre.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(86)))), ((int)(((byte)(101)))), ((int)(((byte)(115)))));
+            this.textBoxNombre.Location = new System.Drawing.Point(25, 199);
+            this.textBoxNombre.Name = "textBoxNombre";
+            this.textBoxNombre.Size = new System.Drawing.Size(461, 35);
+            this.textBoxNombre.TabIndex = 22;
+            // 
+            // labelTitulo3
+            // 
+            this.labelTitulo3.AutoSize = true;
+            this.labelTitulo3.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelTitulo3.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.labelTitulo3.Location = new System.Drawing.Point(21, 109);
+            this.labelTitulo3.Name = "labelTitulo3";
+            this.labelTitulo3.Size = new System.Drawing.Size(1045, 21);
+            this.labelTitulo3.TabIndex = 20;
+            this.labelTitulo3.Text = "Rellena el formulario que te dejamos a continuación. Con eso, te crearemos una pl" +
+    "antilla personalizada basada en la temática de tu web";
+            // 
+            // labelTitulo2
+            // 
+            this.labelTitulo2.AutoSize = true;
+            this.labelTitulo2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelTitulo2.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.labelTitulo2.Location = new System.Drawing.Point(21, 88);
+            this.labelTitulo2.Name = "labelTitulo2";
+            this.labelTitulo2.Size = new System.Drawing.Size(767, 21);
+            this.labelTitulo2.TabIndex = 19;
+            this.labelTitulo2.Text = "Es tu primera vez utilizando nuestra herramienta. Déjanos ayudarte a obtener la m" +
+    "ejor web posible.";
+            // 
+            // labelTitulo
+            // 
+            this.labelTitulo.AutoSize = true;
+            this.labelTitulo.Font = new System.Drawing.Font("Segoe UI", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelTitulo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(152)))), ((int)(((byte)(219)))));
+            this.labelTitulo.Location = new System.Drawing.Point(16, 28);
+            this.labelTitulo.Name = "labelTitulo";
+            this.labelTitulo.Size = new System.Drawing.Size(559, 50);
+            this.labelTitulo.TabIndex = 18;
+            this.labelTitulo.Text = "Bienvenid@ a Polypus Creator!";
+            // 
             // label6
             // 
             this.label6.AutoSize = true;
@@ -538,7 +803,7 @@ namespace Desktop_App
             this.disenyo.Location = new System.Drawing.Point(4, 22);
             this.disenyo.Name = "disenyo";
             this.disenyo.Padding = new System.Windows.Forms.Padding(3);
-            this.disenyo.Size = new System.Drawing.Size(576, 451);
+            this.disenyo.Size = new System.Drawing.Size(1051, 693);
             this.disenyo.TabIndex = 1;
             this.disenyo.Text = "tabPage2";
             this.disenyo.UseVisualStyleBackColor = true;
@@ -655,7 +920,7 @@ namespace Desktop_App
             this.constructor.Controls.Add(this.panelConst);
             this.constructor.Location = new System.Drawing.Point(4, 22);
             this.constructor.Name = "constructor";
-            this.constructor.Size = new System.Drawing.Size(576, 451);
+            this.constructor.Size = new System.Drawing.Size(1051, 693);
             this.constructor.TabIndex = 2;
             this.constructor.Text = "tabPage3";
             this.constructor.UseVisualStyleBackColor = true;
@@ -773,7 +1038,7 @@ namespace Desktop_App
             this.ajustes.Controls.Add(this.panelAj);
             this.ajustes.Location = new System.Drawing.Point(4, 22);
             this.ajustes.Name = "ajustes";
-            this.ajustes.Size = new System.Drawing.Size(576, 451);
+            this.ajustes.Size = new System.Drawing.Size(1051, 693);
             this.ajustes.TabIndex = 3;
             this.ajustes.Text = "tabPage4";
             this.ajustes.UseVisualStyleBackColor = true;
@@ -971,7 +1236,7 @@ namespace Desktop_App
             this.ayuda.Controls.Add(this.panelAyud);
             this.ayuda.Location = new System.Drawing.Point(4, 22);
             this.ayuda.Name = "ayuda";
-            this.ayuda.Size = new System.Drawing.Size(576, 451);
+            this.ayuda.Size = new System.Drawing.Size(1051, 693);
             this.ayuda.TabIndex = 4;
             this.ayuda.Text = "tabPage5";
             this.ayuda.UseVisualStyleBackColor = true;
@@ -1186,263 +1451,6 @@ namespace Desktop_App
             this.label23.TabIndex = 6;
             this.label23.Text = "Elementos";
             // 
-            // panelFirstLogin
-            // 
-            this.panelFirstLogin.Controls.Add(this.pictureBoxLogo);
-            this.panelFirstLogin.Controls.Add(this.buttonVolver);
-            this.panelFirstLogin.Controls.Add(this.labelWebEjemplo);
-            this.panelFirstLogin.Controls.Add(this.pictureBoxWebEjemplo);
-            this.panelFirstLogin.Controls.Add(this.buttonGenerarLogoAleatorio);
-            this.panelFirstLogin.Controls.Add(this.buttonSelecionarLogo);
-            this.panelFirstLogin.Controls.Add(this.labelTuLogo);
-            this.panelFirstLogin.Controls.Add(this.buttonCrearPlantillaPorDefecto);
-            this.panelFirstLogin.Controls.Add(this.labelPlantillaPorDefecto);
-            this.panelFirstLogin.Controls.Add(this.buttonEmpezar);
-            this.panelFirstLogin.Controls.Add(this.comboBoxCategoria);
-            this.panelFirstLogin.Controls.Add(this.labelCategoria);
-            this.panelFirstLogin.Controls.Add(this.labelBreveDescripcion);
-            this.panelFirstLogin.Controls.Add(this.textBoxBreveDescripcion);
-            this.panelFirstLogin.Controls.Add(this.labelNombre);
-            this.panelFirstLogin.Controls.Add(this.textBoxNombre);
-            this.panelFirstLogin.Controls.Add(this.labelTitulo3);
-            this.panelFirstLogin.Controls.Add(this.labelTitulo2);
-            this.panelFirstLogin.Controls.Add(this.labelTitulo);
-            this.panelFirstLogin.Location = new System.Drawing.Point(16, 60);
-            this.panelFirstLogin.Name = "panelFirstLogin";
-            this.panelFirstLogin.Size = new System.Drawing.Size(1111, 659);
-            this.panelFirstLogin.TabIndex = 7;
-            // 
-            // pictureBoxLogo
-            // 
-            this.pictureBoxLogo.BackColor = System.Drawing.Color.LightGray;
-            this.pictureBoxLogo.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pictureBoxLogo.Location = new System.Drawing.Point(594, 199);
-            this.pictureBoxLogo.Name = "pictureBoxLogo";
-            this.pictureBoxLogo.Size = new System.Drawing.Size(109, 97);
-            this.pictureBoxLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBoxLogo.TabIndex = 37;
-            this.pictureBoxLogo.TabStop = false;
-            // 
-            // buttonVolver
-            // 
-            this.buttonVolver.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(131)))), ((int)(((byte)(72)))));
-            this.buttonVolver.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.buttonVolver.FlatAppearance.BorderSize = 0;
-            this.buttonVolver.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonVolver.Font = new System.Drawing.Font("Segoe UI Black", 10.15F, System.Drawing.FontStyle.Bold);
-            this.buttonVolver.ForeColor = System.Drawing.Color.White;
-            this.buttonVolver.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonVolver.Location = new System.Drawing.Point(25, 578);
-            this.buttonVolver.Name = "buttonVolver";
-            this.buttonVolver.Size = new System.Drawing.Size(461, 32);
-            this.buttonVolver.TabIndex = 36;
-            this.buttonVolver.Text = "VOLVER";
-            this.buttonVolver.UseVisualStyleBackColor = false;
-            // 
-            // labelWebEjemplo
-            // 
-            this.labelWebEjemplo.AutoSize = true;
-            this.labelWebEjemplo.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelWebEjemplo.Location = new System.Drawing.Point(589, 325);
-            this.labelWebEjemplo.Name = "labelWebEjemplo";
-            this.labelWebEjemplo.Size = new System.Drawing.Size(353, 30);
-            this.labelWebEjemplo.TabIndex = 35;
-            this.labelWebEjemplo.Text = "Podrás hacer webs similares a esta:";
-            // 
-            // pictureBoxWebEjemplo
-            // 
-            this.pictureBoxWebEjemplo.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxWebEjemplo.Image")));
-            this.pictureBoxWebEjemplo.Location = new System.Drawing.Point(673, 358);
-            this.pictureBoxWebEjemplo.Name = "pictureBoxWebEjemplo";
-            this.pictureBoxWebEjemplo.Size = new System.Drawing.Size(339, 169);
-            this.pictureBoxWebEjemplo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBoxWebEjemplo.TabIndex = 34;
-            this.pictureBoxWebEjemplo.TabStop = false;
-            // 
-            // buttonGenerarLogoAleatorio
-            // 
-            this.buttonGenerarLogoAleatorio.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(131)))), ((int)(((byte)(72)))));
-            this.buttonGenerarLogoAleatorio.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.buttonGenerarLogoAleatorio.FlatAppearance.BorderSize = 0;
-            this.buttonGenerarLogoAleatorio.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonGenerarLogoAleatorio.Font = new System.Drawing.Font("Segoe UI Black", 10.15F, System.Drawing.FontStyle.Bold);
-            this.buttonGenerarLogoAleatorio.ForeColor = System.Drawing.Color.White;
-            this.buttonGenerarLogoAleatorio.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonGenerarLogoAleatorio.Location = new System.Drawing.Point(721, 254);
-            this.buttonGenerarLogoAleatorio.Name = "buttonGenerarLogoAleatorio";
-            this.buttonGenerarLogoAleatorio.Size = new System.Drawing.Size(345, 32);
-            this.buttonGenerarLogoAleatorio.TabIndex = 33;
-            this.buttonGenerarLogoAleatorio.Text = "GENERAR LOGO ALEATORIO";
-            this.buttonGenerarLogoAleatorio.UseVisualStyleBackColor = false;
-            // 
-            // buttonSelecionarLogo
-            // 
-            this.buttonSelecionarLogo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(131)))), ((int)(((byte)(72)))));
-            this.buttonSelecionarLogo.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.buttonSelecionarLogo.FlatAppearance.BorderSize = 0;
-            this.buttonSelecionarLogo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonSelecionarLogo.Font = new System.Drawing.Font("Segoe UI Black", 10.15F, System.Drawing.FontStyle.Bold);
-            this.buttonSelecionarLogo.ForeColor = System.Drawing.Color.White;
-            this.buttonSelecionarLogo.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonSelecionarLogo.Location = new System.Drawing.Point(721, 216);
-            this.buttonSelecionarLogo.Name = "buttonSelecionarLogo";
-            this.buttonSelecionarLogo.Size = new System.Drawing.Size(345, 32);
-            this.buttonSelecionarLogo.TabIndex = 32;
-            this.buttonSelecionarLogo.Text = "SELECCIONAR LOGO";
-            this.buttonSelecionarLogo.UseVisualStyleBackColor = false;
-            this.buttonSelecionarLogo.Click += new System.EventHandler(this.buttonSelecionarLogo_Click);
-            // 
-            // labelTuLogo
-            // 
-            this.labelTuLogo.AutoSize = true;
-            this.labelTuLogo.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelTuLogo.Location = new System.Drawing.Point(589, 160);
-            this.labelTuLogo.Name = "labelTuLogo";
-            this.labelTuLogo.Size = new System.Drawing.Size(94, 30);
-            this.labelTuLogo.TabIndex = 30;
-            this.labelTuLogo.Text = "Tu logo:";
-            // 
-            // buttonCrearPlantillaPorDefecto
-            // 
-            this.buttonCrearPlantillaPorDefecto.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(131)))), ((int)(((byte)(72)))));
-            this.buttonCrearPlantillaPorDefecto.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.buttonCrearPlantillaPorDefecto.FlatAppearance.BorderSize = 0;
-            this.buttonCrearPlantillaPorDefecto.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonCrearPlantillaPorDefecto.Font = new System.Drawing.Font("Segoe UI Black", 10.15F, System.Drawing.FontStyle.Bold);
-            this.buttonCrearPlantillaPorDefecto.ForeColor = System.Drawing.Color.White;
-            this.buttonCrearPlantillaPorDefecto.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonCrearPlantillaPorDefecto.Location = new System.Drawing.Point(594, 578);
-            this.buttonCrearPlantillaPorDefecto.Name = "buttonCrearPlantillaPorDefecto";
-            this.buttonCrearPlantillaPorDefecto.Size = new System.Drawing.Size(472, 32);
-            this.buttonCrearPlantillaPorDefecto.TabIndex = 29;
-            this.buttonCrearPlantillaPorDefecto.Text = "CREAR PLANTILLA POR DEFECTO";
-            this.buttonCrearPlantillaPorDefecto.UseVisualStyleBackColor = false;
-            // 
-            // labelPlantillaPorDefecto
-            // 
-            this.labelPlantillaPorDefecto.AutoSize = true;
-            this.labelPlantillaPorDefecto.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelPlantillaPorDefecto.Location = new System.Drawing.Point(599, 551);
-            this.labelPlantillaPorDefecto.Name = "labelPlantillaPorDefecto";
-            this.labelPlantillaPorDefecto.Size = new System.Drawing.Size(458, 21);
-            this.labelPlantillaPorDefecto.TabIndex = 28;
-            this.labelPlantillaPorDefecto.Text = "¿No quieres una plantilla personalizada? ¡No te preocupes!";
-            // 
-            // buttonEmpezar
-            // 
-            this.buttonEmpezar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(152)))), ((int)(((byte)(219)))));
-            this.buttonEmpezar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.buttonEmpezar.FlatAppearance.BorderSize = 0;
-            this.buttonEmpezar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonEmpezar.Font = new System.Drawing.Font("Segoe UI Black", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonEmpezar.ForeColor = System.Drawing.Color.White;
-            this.buttonEmpezar.Location = new System.Drawing.Point(25, 513);
-            this.buttonEmpezar.Name = "buttonEmpezar";
-            this.buttonEmpezar.Size = new System.Drawing.Size(461, 59);
-            this.buttonEmpezar.TabIndex = 27;
-            this.buttonEmpezar.Text = "EMPEZAR A CREAR";
-            this.buttonEmpezar.UseVisualStyleBackColor = false;
-            // 
-            // comboBoxCategoria
-            // 
-            this.comboBoxCategoria.Font = new System.Drawing.Font("Segoe UI Light", 15.75F);
-            this.comboBoxCategoria.FormattingEnabled = true;
-            this.comboBoxCategoria.Items.AddRange(new object[] {
-            "Alimentación",
-            "Deporte",
-            "Comercio",
-            "Electronica",
-            "Informática",
-            "Música",
-            "Blog"});
-            this.comboBoxCategoria.Location = new System.Drawing.Point(25, 441);
-            this.comboBoxCategoria.Name = "comboBoxCategoria";
-            this.comboBoxCategoria.Size = new System.Drawing.Size(461, 38);
-            this.comboBoxCategoria.TabIndex = 26;
-            // 
-            // labelCategoria
-            // 
-            this.labelCategoria.AutoSize = true;
-            this.labelCategoria.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelCategoria.Location = new System.Drawing.Point(20, 408);
-            this.labelCategoria.Name = "labelCategoria";
-            this.labelCategoria.Size = new System.Drawing.Size(113, 30);
-            this.labelCategoria.TabIndex = 25;
-            this.labelCategoria.Text = "Categoría:";
-            // 
-            // labelBreveDescripcion
-            // 
-            this.labelBreveDescripcion.AutoSize = true;
-            this.labelBreveDescripcion.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelBreveDescripcion.Location = new System.Drawing.Point(20, 252);
-            this.labelBreveDescripcion.Name = "labelBreveDescripcion";
-            this.labelBreveDescripcion.Size = new System.Drawing.Size(191, 30);
-            this.labelBreveDescripcion.TabIndex = 23;
-            this.labelBreveDescripcion.Text = "Breve descripción:";
-            // 
-            // textBoxBreveDescripcion
-            // 
-            this.textBoxBreveDescripcion.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBoxBreveDescripcion.Font = new System.Drawing.Font("Segoe UI Light", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxBreveDescripcion.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(86)))), ((int)(((byte)(101)))), ((int)(((byte)(115)))));
-            this.textBoxBreveDescripcion.Location = new System.Drawing.Point(25, 291);
-            this.textBoxBreveDescripcion.Multiline = true;
-            this.textBoxBreveDescripcion.Name = "textBoxBreveDescripcion";
-            this.textBoxBreveDescripcion.Size = new System.Drawing.Size(461, 94);
-            this.textBoxBreveDescripcion.TabIndex = 24;
-            // 
-            // labelNombre
-            // 
-            this.labelNombre.AutoSize = true;
-            this.labelNombre.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelNombre.Location = new System.Drawing.Point(20, 160);
-            this.labelNombre.Name = "labelNombre";
-            this.labelNombre.Size = new System.Drawing.Size(307, 30);
-            this.labelNombre.TabIndex = 21;
-            this.labelNombre.Text = "Nombre de la empresa o web:";
-            // 
-            // textBoxNombre
-            // 
-            this.textBoxNombre.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBoxNombre.Font = new System.Drawing.Font("Segoe UI Light", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxNombre.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(86)))), ((int)(((byte)(101)))), ((int)(((byte)(115)))));
-            this.textBoxNombre.Location = new System.Drawing.Point(25, 199);
-            this.textBoxNombre.Name = "textBoxNombre";
-            this.textBoxNombre.Size = new System.Drawing.Size(461, 35);
-            this.textBoxNombre.TabIndex = 22;
-            // 
-            // labelTitulo3
-            // 
-            this.labelTitulo3.AutoSize = true;
-            this.labelTitulo3.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelTitulo3.Location = new System.Drawing.Point(21, 109);
-            this.labelTitulo3.Name = "labelTitulo3";
-            this.labelTitulo3.Size = new System.Drawing.Size(1045, 21);
-            this.labelTitulo3.TabIndex = 20;
-            this.labelTitulo3.Text = "Rellena el formulario que te dejamos a continuación. Con eso, te crearemos una pl" +
-    "antilla personalizada basada en la temática de tu web";
-            // 
-            // labelTitulo2
-            // 
-            this.labelTitulo2.AutoSize = true;
-            this.labelTitulo2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelTitulo2.Location = new System.Drawing.Point(21, 88);
-            this.labelTitulo2.Name = "labelTitulo2";
-            this.labelTitulo2.Size = new System.Drawing.Size(767, 21);
-            this.labelTitulo2.TabIndex = 19;
-            this.labelTitulo2.Text = "Es tu primera vez utilizando nuestra herramienta. Déjanos ayudarte a obtener la m" +
-    "ejor web posible.";
-            // 
-            // labelTitulo
-            // 
-            this.labelTitulo.AutoSize = true;
-            this.labelTitulo.Font = new System.Drawing.Font("Segoe UI", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelTitulo.Location = new System.Drawing.Point(16, 28);
-            this.labelTitulo.Name = "labelTitulo";
-            this.labelTitulo.Size = new System.Drawing.Size(559, 50);
-            this.labelTitulo.TabIndex = 18;
-            this.labelTitulo.Text = "Bienvenid@ a Polypus Creator!";
-            // 
             // Form2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1483,6 +1491,10 @@ namespace Desktop_App
             this.dashboard.ResumeLayout(false);
             this.panelDash.ResumeLayout(false);
             this.panelDash.PerformLayout();
+            this.panelFirstLogin.ResumeLayout(false);
+            this.panelFirstLogin.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLogo)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxWebEjemplo)).EndInit();
             this.disenyo.ResumeLayout(false);
             this.panelDise.ResumeLayout(false);
             this.panelDise.PerformLayout();
@@ -1541,10 +1553,6 @@ namespace Desktop_App
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox15)).EndInit();
-            this.panelFirstLogin.ResumeLayout(false);
-            this.panelFirstLogin.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLogo)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxWebEjemplo)).EndInit();
             this.ResumeLayout(false);
 
         }

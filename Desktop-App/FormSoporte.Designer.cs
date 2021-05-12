@@ -32,7 +32,6 @@ namespace Desktop_App
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormSoporte));
             this.panelSuperior = new System.Windows.Forms.Panel();
             this.labelContrasenaOlvidada = new System.Windows.Forms.Label();
-            this.pictureBoxIconoContrasenaOlvidada = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.labelMinimize = new System.Windows.Forms.Label();
             this.labelClose = new System.Windows.Forms.Label();
@@ -47,29 +46,30 @@ namespace Desktop_App
             this.labelTitulo2 = new System.Windows.Forms.Label();
             this.labelNuestrasOficinas = new System.Windows.Forms.Label();
             this.buttonEnviar = new System.Windows.Forms.Button();
-            this.pictureBoxLogo = new System.Windows.Forms.PictureBox();
-            this.labelDireccion = new System.Windows.Forms.Label();
-            this.labelTelefonoContacto = new System.Windows.Forms.Label();
-            this.labelHorarioLV = new System.Windows.Forms.Label();
             this.buttonVolver = new System.Windows.Forms.Button();
             this.labelHorarioSD = new System.Windows.Forms.Label();
-            this.labelWeb = new System.Windows.Forms.Label();
             this.buttonVerMapaEnNavegador = new System.Windows.Forms.Button();
             this.buttonAbrirWeb = new System.Windows.Forms.Button();
             this.labelCaptcha = new System.Windows.Forms.Label();
             this.labelTituloCaptcha = new System.Windows.Forms.Label();
             this.textBoxCaptcha = new System.Windows.Forms.TextBox();
+            this.labelWeb = new System.Windows.Forms.Label();
+            this.labelHorarioLV = new System.Windows.Forms.Label();
+            this.labelTelefonoContacto = new System.Windows.Forms.Label();
+            this.labelDireccion = new System.Windows.Forms.Label();
+            this.pictureBoxLogo = new System.Windows.Forms.PictureBox();
+            this.pictureBox6 = new System.Windows.Forms.PictureBox();
             this.panelSuperior.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxIconoContrasenaOlvidada)).BeginInit();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLogo)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             this.SuspendLayout();
             // 
             // panelSuperior
             // 
             this.panelSuperior.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(48)))), ((int)(((byte)(45)))));
+            this.panelSuperior.Controls.Add(this.pictureBox6);
             this.panelSuperior.Controls.Add(this.labelContrasenaOlvidada);
-            this.panelSuperior.Controls.Add(this.pictureBoxIconoContrasenaOlvidada);
             this.panelSuperior.Controls.Add(this.panel2);
             this.panelSuperior.Location = new System.Drawing.Point(0, 0);
             this.panelSuperior.Name = "panelSuperior";
@@ -81,22 +81,11 @@ namespace Desktop_App
             this.labelContrasenaOlvidada.AutoSize = true;
             this.labelContrasenaOlvidada.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelContrasenaOlvidada.ForeColor = System.Drawing.Color.White;
-            this.labelContrasenaOlvidada.Location = new System.Drawing.Point(63, 10);
+            this.labelContrasenaOlvidada.Location = new System.Drawing.Point(45, 9);
             this.labelContrasenaOlvidada.Name = "labelContrasenaOlvidada";
             this.labelContrasenaOlvidada.Size = new System.Drawing.Size(118, 32);
             this.labelContrasenaOlvidada.TabIndex = 3;
             this.labelContrasenaOlvidada.Text = "Contacto";
-            // 
-            // pictureBoxIconoContrasenaOlvidada
-            // 
-            this.pictureBoxIconoContrasenaOlvidada.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(48)))), ((int)(((byte)(45)))));
-            this.pictureBoxIconoContrasenaOlvidada.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxIconoContrasenaOlvidada.Image")));
-            this.pictureBoxIconoContrasenaOlvidada.Location = new System.Drawing.Point(12, 5);
-            this.pictureBoxIconoContrasenaOlvidada.Name = "pictureBoxIconoContrasenaOlvidada";
-            this.pictureBoxIconoContrasenaOlvidada.Size = new System.Drawing.Size(44, 44);
-            this.pictureBoxIconoContrasenaOlvidada.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBoxIconoContrasenaOlvidada.TabIndex = 2;
-            this.pictureBoxIconoContrasenaOlvidada.TabStop = false;
             // 
             // panel2
             // 
@@ -136,6 +125,7 @@ namespace Desktop_App
             // 
             this.labelNombre.AutoSize = true;
             this.labelNombre.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelNombre.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(48)))), ((int)(((byte)(45)))));
             this.labelNombre.Location = new System.Drawing.Point(39, 182);
             this.labelNombre.Name = "labelNombre";
             this.labelNombre.Size = new System.Drawing.Size(100, 30);
@@ -156,6 +146,7 @@ namespace Desktop_App
             // 
             this.labelEmail.AutoSize = true;
             this.labelEmail.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelEmail.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(48)))), ((int)(((byte)(45)))));
             this.labelEmail.Location = new System.Drawing.Point(39, 277);
             this.labelEmail.Name = "labelEmail";
             this.labelEmail.Size = new System.Drawing.Size(72, 30);
@@ -176,6 +167,7 @@ namespace Desktop_App
             // 
             this.labelMensaje.AutoSize = true;
             this.labelMensaje.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelMensaje.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(48)))), ((int)(((byte)(45)))));
             this.labelMensaje.Location = new System.Drawing.Point(39, 381);
             this.labelMensaje.Name = "labelMensaje";
             this.labelMensaje.Size = new System.Drawing.Size(100, 30);
@@ -207,10 +199,11 @@ namespace Desktop_App
             // labelTitulo
             // 
             this.labelTitulo.AutoSize = true;
-            this.labelTitulo.Font = new System.Drawing.Font("Segoe UI", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelTitulo.Location = new System.Drawing.Point(35, 74);
+            this.labelTitulo.Font = new System.Drawing.Font("Segoe UI", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelTitulo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(152)))), ((int)(((byte)(219)))));
+            this.labelTitulo.Location = new System.Drawing.Point(35, 80);
             this.labelTitulo.Name = "labelTitulo";
-            this.labelTitulo.Size = new System.Drawing.Size(621, 50);
+            this.labelTitulo.Size = new System.Drawing.Size(494, 40);
             this.labelTitulo.TabIndex = 16;
             this.labelTitulo.Text = "¿Tienes alguna duda o sugerencia?";
             // 
@@ -218,6 +211,7 @@ namespace Desktop_App
             // 
             this.labelTitulo2.AutoSize = true;
             this.labelTitulo2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelTitulo2.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
             this.labelTitulo2.Location = new System.Drawing.Point(40, 124);
             this.labelTitulo2.Name = "labelTitulo2";
             this.labelTitulo2.Size = new System.Drawing.Size(831, 21);
@@ -228,10 +222,11 @@ namespace Desktop_App
             // labelNuestrasOficinas
             // 
             this.labelNuestrasOficinas.AutoSize = true;
-            this.labelNuestrasOficinas.Font = new System.Drawing.Font("Segoe UI", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelNuestrasOficinas.Location = new System.Drawing.Point(599, 209);
+            this.labelNuestrasOficinas.Font = new System.Drawing.Font("Segoe UI", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelNuestrasOficinas.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(152)))), ((int)(((byte)(219)))));
+            this.labelNuestrasOficinas.Location = new System.Drawing.Point(599, 223);
             this.labelNuestrasOficinas.Name = "labelNuestrasOficinas";
-            this.labelNuestrasOficinas.Size = new System.Drawing.Size(307, 47);
+            this.labelNuestrasOficinas.Size = new System.Drawing.Size(257, 40);
             this.labelNuestrasOficinas.TabIndex = 18;
             this.labelNuestrasOficinas.Text = "Nuestras Oficinas";
             // 
@@ -250,53 +245,6 @@ namespace Desktop_App
             this.buttonEnviar.Text = "ENVIAR";
             this.buttonEnviar.UseVisualStyleBackColor = false;
             this.buttonEnviar.Click += new System.EventHandler(this.buttonEnviar_Click);
-            // 
-            // pictureBoxLogo
-            // 
-            this.pictureBoxLogo.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxLogo.Image")));
-            this.pictureBoxLogo.Location = new System.Drawing.Point(1251, 74);
-            this.pictureBoxLogo.Name = "pictureBoxLogo";
-            this.pictureBoxLogo.Size = new System.Drawing.Size(97, 81);
-            this.pictureBoxLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBoxLogo.TabIndex = 20;
-            this.pictureBoxLogo.TabStop = false;
-            // 
-            // labelDireccion
-            // 
-            this.labelDireccion.AutoSize = true;
-            this.labelDireccion.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelDireccion.Image = ((System.Drawing.Image)(resources.GetObject("labelDireccion.Image")));
-            this.labelDireccion.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.labelDireccion.Location = new System.Drawing.Point(603, 606);
-            this.labelDireccion.Name = "labelDireccion";
-            this.labelDireccion.Size = new System.Drawing.Size(397, 21);
-            this.labelDireccion.TabIndex = 21;
-            this.labelDireccion.Text = "     Dirección : Carrer de Monlau, 6, 08027 Barcelona";
-            this.labelDireccion.Click += new System.EventHandler(this.label6_Click);
-            // 
-            // labelTelefonoContacto
-            // 
-            this.labelTelefonoContacto.AutoSize = true;
-            this.labelTelefonoContacto.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelTelefonoContacto.Image = ((System.Drawing.Image)(resources.GetObject("labelTelefonoContacto.Image")));
-            this.labelTelefonoContacto.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.labelTelefonoContacto.Location = new System.Drawing.Point(603, 638);
-            this.labelTelefonoContacto.Name = "labelTelefonoContacto";
-            this.labelTelefonoContacto.Size = new System.Drawing.Size(288, 21);
-            this.labelTelefonoContacto.TabIndex = 22;
-            this.labelTelefonoContacto.Text = "     Teléfono de contacto: 900 000 000";
-            // 
-            // labelHorarioLV
-            // 
-            this.labelHorarioLV.AutoSize = true;
-            this.labelHorarioLV.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelHorarioLV.Image = ((System.Drawing.Image)(resources.GetObject("labelHorarioLV.Image")));
-            this.labelHorarioLV.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.labelHorarioLV.Location = new System.Drawing.Point(603, 674);
-            this.labelHorarioLV.Name = "labelHorarioLV";
-            this.labelHorarioLV.Size = new System.Drawing.Size(235, 21);
-            this.labelHorarioLV.TabIndex = 23;
-            this.labelHorarioLV.Text = "     Horarios: L-V / 8:00 a 17:00 ";
             // 
             // buttonVolver
             // 
@@ -324,18 +272,6 @@ namespace Desktop_App
             this.labelHorarioSD.Size = new System.Drawing.Size(218, 21);
             this.labelHorarioSD.TabIndex = 25;
             this.labelHorarioSD.Text = "Sábado y Domingo cerrado";
-            // 
-            // labelWeb
-            // 
-            this.labelWeb.AutoSize = true;
-            this.labelWeb.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelWeb.Image = ((System.Drawing.Image)(resources.GetObject("labelWeb.Image")));
-            this.labelWeb.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.labelWeb.Location = new System.Drawing.Point(603, 710);
-            this.labelWeb.Name = "labelWeb";
-            this.labelWeb.Size = new System.Drawing.Size(175, 21);
-            this.labelWeb.TabIndex = 26;
-            this.labelWeb.Text = "     www.example.com";
             // 
             // buttonVerMapaEnNavegador
             // 
@@ -383,6 +319,7 @@ namespace Desktop_App
             // 
             this.labelTituloCaptcha.AutoSize = true;
             this.labelTituloCaptcha.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelTituloCaptcha.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(48)))), ((int)(((byte)(45)))));
             this.labelTituloCaptcha.Location = new System.Drawing.Point(220, 564);
             this.labelTituloCaptcha.Name = "labelTituloCaptcha";
             this.labelTituloCaptcha.Size = new System.Drawing.Size(98, 30);
@@ -398,6 +335,80 @@ namespace Desktop_App
             this.textBoxCaptcha.Name = "textBoxCaptcha";
             this.textBoxCaptcha.Size = new System.Drawing.Size(280, 35);
             this.textBoxCaptcha.TabIndex = 31;
+            // 
+            // labelWeb
+            // 
+            this.labelWeb.AutoSize = true;
+            this.labelWeb.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelWeb.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(48)))), ((int)(((byte)(45)))));
+            this.labelWeb.Image = ((System.Drawing.Image)(resources.GetObject("labelWeb.Image")));
+            this.labelWeb.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.labelWeb.Location = new System.Drawing.Point(603, 710);
+            this.labelWeb.Name = "labelWeb";
+            this.labelWeb.Size = new System.Drawing.Size(175, 21);
+            this.labelWeb.TabIndex = 26;
+            this.labelWeb.Text = "     www.example.com";
+            // 
+            // labelHorarioLV
+            // 
+            this.labelHorarioLV.AutoSize = true;
+            this.labelHorarioLV.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelHorarioLV.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(48)))), ((int)(((byte)(45)))));
+            this.labelHorarioLV.Image = ((System.Drawing.Image)(resources.GetObject("labelHorarioLV.Image")));
+            this.labelHorarioLV.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.labelHorarioLV.Location = new System.Drawing.Point(603, 674);
+            this.labelHorarioLV.Name = "labelHorarioLV";
+            this.labelHorarioLV.Size = new System.Drawing.Size(235, 21);
+            this.labelHorarioLV.TabIndex = 23;
+            this.labelHorarioLV.Text = "     Horarios: L-V / 8:00 a 17:00 ";
+            // 
+            // labelTelefonoContacto
+            // 
+            this.labelTelefonoContacto.AutoSize = true;
+            this.labelTelefonoContacto.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelTelefonoContacto.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(48)))), ((int)(((byte)(45)))));
+            this.labelTelefonoContacto.Image = ((System.Drawing.Image)(resources.GetObject("labelTelefonoContacto.Image")));
+            this.labelTelefonoContacto.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.labelTelefonoContacto.Location = new System.Drawing.Point(603, 638);
+            this.labelTelefonoContacto.Name = "labelTelefonoContacto";
+            this.labelTelefonoContacto.Size = new System.Drawing.Size(288, 21);
+            this.labelTelefonoContacto.TabIndex = 22;
+            this.labelTelefonoContacto.Text = "     Teléfono de contacto: 900 000 000";
+            // 
+            // labelDireccion
+            // 
+            this.labelDireccion.AutoSize = true;
+            this.labelDireccion.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelDireccion.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(48)))), ((int)(((byte)(45)))));
+            this.labelDireccion.Image = ((System.Drawing.Image)(resources.GetObject("labelDireccion.Image")));
+            this.labelDireccion.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.labelDireccion.Location = new System.Drawing.Point(603, 606);
+            this.labelDireccion.Name = "labelDireccion";
+            this.labelDireccion.Size = new System.Drawing.Size(397, 21);
+            this.labelDireccion.TabIndex = 21;
+            this.labelDireccion.Text = "     Dirección : Carrer de Monlau, 6, 08027 Barcelona";
+            this.labelDireccion.Click += new System.EventHandler(this.label6_Click);
+            // 
+            // pictureBoxLogo
+            // 
+            this.pictureBoxLogo.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxLogo.Image")));
+            this.pictureBoxLogo.Location = new System.Drawing.Point(1251, 74);
+            this.pictureBoxLogo.Name = "pictureBoxLogo";
+            this.pictureBoxLogo.Size = new System.Drawing.Size(97, 81);
+            this.pictureBoxLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBoxLogo.TabIndex = 20;
+            this.pictureBoxLogo.TabStop = false;
+            // 
+            // pictureBox6
+            // 
+            this.pictureBox6.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pictureBox6.Image = global::Desktop_App.Properties.Resources.information;
+            this.pictureBox6.Location = new System.Drawing.Point(14, 13);
+            this.pictureBox6.Name = "pictureBox6";
+            this.pictureBox6.Size = new System.Drawing.Size(26, 26);
+            this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox6.TabIndex = 6;
+            this.pictureBox6.TabStop = false;
             // 
             // FormSoporte
             // 
@@ -433,10 +444,10 @@ namespace Desktop_App
             this.Text = "FormSoporte";
             this.panelSuperior.ResumeLayout(false);
             this.panelSuperior.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxIconoContrasenaOlvidada)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLogo)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -446,7 +457,6 @@ namespace Desktop_App
 
         private System.Windows.Forms.Panel panelSuperior;
         private System.Windows.Forms.Label labelContrasenaOlvidada;
-        private System.Windows.Forms.PictureBox pictureBoxIconoContrasenaOlvidada;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label labelMinimize;
         private System.Windows.Forms.Label labelClose;
@@ -473,5 +483,6 @@ namespace Desktop_App
         private System.Windows.Forms.Label labelCaptcha;
         private System.Windows.Forms.Label labelTituloCaptcha;
         private System.Windows.Forms.TextBox textBoxCaptcha;
+        private System.Windows.Forms.PictureBox pictureBox6;
     }
 }

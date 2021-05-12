@@ -125,6 +125,7 @@ namespace Desktop_App
                 panelAjustes.BackColor = Color.FromArgb(49, 48, 45);
                 panelAyuda.BackColor = Color.FromArgb(49, 48, 45);
                 tabControl.SelectedTab = dashboard;
+                panelAddElements.Visible = false;
             }
             if (option == 2)
             {
@@ -134,6 +135,7 @@ namespace Desktop_App
                 panelAjustes.BackColor = Color.FromArgb(49, 48, 45);
                 panelAyuda.BackColor = Color.FromArgb(49, 48, 45);
                 tabControl.SelectedTab = disenyo;
+                panelAddElements.Visible = false;
             }
             if (option == 3)
             {
@@ -152,6 +154,7 @@ namespace Desktop_App
                 panelAjustes.BackColor = Color.FromArgb(96, 71, 71);
                 panelAyuda.BackColor = Color.FromArgb(49, 48, 45);
                 tabControl.SelectedTab = ajustes;
+                panelAddElements.Visible = false;
             }
             if (option == 5)
             {
@@ -161,6 +164,7 @@ namespace Desktop_App
                 panelAjustes.BackColor = Color.FromArgb(49, 48, 45);
                 panelAyuda.BackColor = Color.FromArgb(96, 71, 71);
                 tabControl.SelectedTab = ayuda;
+                panelAddElements.Visible = false;
             }
 
         }
