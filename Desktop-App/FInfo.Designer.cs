@@ -34,25 +34,25 @@ namespace Desktop_App
             System.Windows.Forms.Label label5;
             System.Windows.Forms.Label label4;
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FInfo));
-            this.pictureBoxPulpo = new System.Windows.Forms.PictureBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panelSuperior = new System.Windows.Forms.Panel();
-            this.panelMin = new System.Windows.Forms.Panel();
-            this.labelMin = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.labelIniciarSesion = new System.Windows.Forms.Label();
             this.windowControlButtons = new System.Windows.Forms.Panel();
             this.labelClose = new System.Windows.Forms.Label();
+            this.panelMin = new System.Windows.Forms.Panel();
+            this.labelMin = new System.Windows.Forms.Label();
             label1 = new System.Windows.Forms.Label();
             label2 = new System.Windows.Forms.Label();
             label5 = new System.Windows.Forms.Label();
             label4 = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxPulpo)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.panel1.SuspendLayout();
             this.panelSuperior.SuspendLayout();
-            this.panelMin.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.windowControlButtons.SuspendLayout();
+            this.panelMin.SuspendLayout();
             this.SuspendLayout();
             // 
             // label1
@@ -60,7 +60,7 @@ namespace Desktop_App
             label1.AutoSize = true;
             label1.Font = new System.Drawing.Font("Segoe UI", 20.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(152)))), ((int)(((byte)(219)))));
-            label1.Location = new System.Drawing.Point(3, 62);
+            label1.Location = new System.Drawing.Point(3, 61);
             label1.Name = "label1";
             label1.Size = new System.Drawing.Size(220, 37);
             label1.TabIndex = 8;
@@ -99,22 +99,22 @@ namespace Desktop_App
             label4.TabIndex = 6;
             label4.Text = "Versión 0.0.0";
             // 
-            // pictureBoxPulpo
+            // pictureBox2
             // 
-            this.pictureBoxPulpo.Image = global::Desktop_App.Properties.Resources.Logo;
-            this.pictureBoxPulpo.Location = new System.Drawing.Point(229, 102);
-            this.pictureBoxPulpo.Name = "pictureBoxPulpo";
-            this.pictureBoxPulpo.Size = new System.Drawing.Size(115, 97);
-            this.pictureBoxPulpo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBoxPulpo.TabIndex = 9;
-            this.pictureBoxPulpo.TabStop = false;
+            this.pictureBox2.Image = global::Desktop_App.Properties.Resources.Logo;
+            this.pictureBox2.Location = new System.Drawing.Point(229, 101);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(115, 97);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox2.TabIndex = 9;
+            this.pictureBox2.TabStop = false;
             // 
             // panel1
             // 
             this.panel1.Controls.Add(label5);
             this.panel1.Controls.Add(label4);
             this.panel1.Controls.Add(label2);
-            this.panel1.Location = new System.Drawing.Point(10, 102);
+            this.panel1.Location = new System.Drawing.Point(10, 101);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(213, 97);
             this.panel1.TabIndex = 7;
@@ -130,27 +130,6 @@ namespace Desktop_App
             this.panelSuperior.Name = "panelSuperior";
             this.panelSuperior.Size = new System.Drawing.Size(342, 54);
             this.panelSuperior.TabIndex = 10;
-            // 
-            // panelMin
-            // 
-            this.panelMin.Controls.Add(this.labelMin);
-            this.panelMin.Location = new System.Drawing.Point(260, 1);
-            this.panelMin.Name = "panelMin";
-            this.panelMin.Size = new System.Drawing.Size(41, 51);
-            this.panelMin.TabIndex = 4;
-            this.panelMin.MouseClick += new System.Windows.Forms.MouseEventHandler(this.panelMin_MouseClick);
-            // 
-            // labelMin
-            // 
-            this.labelMin.AutoSize = true;
-            this.labelMin.Font = new System.Drawing.Font("Segoe UI", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelMin.ForeColor = System.Drawing.Color.White;
-            this.labelMin.Location = new System.Drawing.Point(6, 5);
-            this.labelMin.Name = "labelMin";
-            this.labelMin.Size = new System.Drawing.Size(29, 40);
-            this.labelMin.TabIndex = 2;
-            this.labelMin.Text = "-";
-            this.labelMin.MouseClick += new System.Windows.Forms.MouseEventHandler(this.panelMin_MouseClick);
             // 
             // pictureBox1
             // 
@@ -195,6 +174,27 @@ namespace Desktop_App
             this.labelClose.Text = "X";
             this.labelClose.MouseClick += new System.Windows.Forms.MouseEventHandler(this.panelClose_MouseClick);
             // 
+            // panelMin
+            // 
+            this.panelMin.Controls.Add(this.labelMin);
+            this.panelMin.Location = new System.Drawing.Point(260, 1);
+            this.panelMin.Name = "panelMin";
+            this.panelMin.Size = new System.Drawing.Size(41, 51);
+            this.panelMin.TabIndex = 4;
+            this.panelMin.MouseClick += new System.Windows.Forms.MouseEventHandler(this.panelMin_MouseClick);
+            // 
+            // labelMin
+            // 
+            this.labelMin.AutoSize = true;
+            this.labelMin.Font = new System.Drawing.Font("Segoe UI", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelMin.ForeColor = System.Drawing.Color.White;
+            this.labelMin.Location = new System.Drawing.Point(6, 5);
+            this.labelMin.Name = "labelMin";
+            this.labelMin.Size = new System.Drawing.Size(29, 40);
+            this.labelMin.TabIndex = 2;
+            this.labelMin.Text = "-";
+            this.labelMin.MouseClick += new System.Windows.Forms.MouseEventHandler(this.panelMin_MouseClick);
+            // 
             // FInfo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -202,28 +202,28 @@ namespace Desktop_App
             this.ClientSize = new System.Drawing.Size(345, 233);
             this.Controls.Add(this.panelSuperior);
             this.Controls.Add(label1);
-            this.Controls.Add(this.pictureBoxPulpo);
+            this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FInfo";
             this.Text = "FInfo";
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxPulpo)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panelSuperior.ResumeLayout(false);
             this.panelSuperior.PerformLayout();
-            this.panelMin.ResumeLayout(false);
-            this.panelMin.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.windowControlButtons.ResumeLayout(false);
             this.windowControlButtons.PerformLayout();
+            this.panelMin.ResumeLayout(false);
+            this.panelMin.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-        private System.Windows.Forms.PictureBox pictureBoxPulpo;
+        private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panelSuperior;
         private System.Windows.Forms.Panel panelMin;

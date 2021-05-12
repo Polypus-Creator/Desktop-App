@@ -27,7 +27,7 @@ namespace Desktop_App
             panelHeader.Width = fullWidth;
             panelClose.Location = new Point(fullWidth - 50, 3);
             panelMin.Location = new Point(fullWidth - 80, 3);
-            webBWeb.Size = new Size(fullWidth - 20, fullHeight - 80);
+            webBrowserWeb.Size = new Size(fullWidth - 20, fullHeight - 80);
         }
 
         private void panelMin_MouseClick(object sender, MouseEventArgs e)
@@ -40,4 +40,4 @@ namespace Desktop_App
             this.Close();
         }
     }
-} 
+}
