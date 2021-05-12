@@ -13,6 +13,10 @@ namespace Desktop_App
     public partial class Form2 : Form
     {
         Boolean extendedLeftBar = true;
+        Boolean displayFaqs = false;
+        Boolean stayLogged = false;
+        int fullWidth = Screen.PrimaryScreen.Bounds.Width;
+        int fullHeight = Screen.PrimaryScreen.Bounds.Height;
 
         public Form2()
         {
@@ -27,16 +31,25 @@ namespace Desktop_App
 
         private void initConfig()
         {
-            int fullWidth = Screen.PrimaryScreen.Bounds.Width;
-            int fullHeight = Screen.PrimaryScreen.Bounds.Height;
+            
             this.Width = fullWidth;
             this.Height = fullHeight - 1;
             this.Location = new Point(0, 0);
             panelSuperior.Width = fullWidth;
             windowControlButtons.Location = new Point(fullWidth-100, 0);
             panelLeftBar.Height = fullHeight - 5;
-
-
+            tabControl.Width = fullWidth - 225;
+            tabControl.Height = fullHeight - 45;
+            tabControl.Location = new Point(223, 30);
+            panelDash.Width = fullWidth/2 + 540;
+            panelDise.Width = fullWidth / 2 + 540;
+            panelConst.Width = fullWidth / 2 + 540;
+            panelAj.Width = fullWidth / 2 + 540;
+            panelAj.Height = fullHeight - 100;
+            panelAyud.Width = fullWidth / 2 + 540;
+            panelSave.Location = new Point(10, fullHeight - 190);
+            panelSesion.Width = fullWidth - 390 ;
+            radioStayLogged.Location = new Point(panelSesion.Width - 50, 6);
         }
 
         private void labelClose_Click(object sender, EventArgs e)
@@ -74,6 +87,8 @@ namespace Desktop_App
                 extendedLeftBar = false;
                 panelLeftBar.Width = 50;
                 hideShowBar.Location = new Point(15, 14);
+                tabControl.Location = new Point(58,30);
+                tabControl.Width = fullWidth - 62;
 
 
             }
@@ -83,6 +98,8 @@ namespace Desktop_App
                 extendedLeftBar = true;
                 panelLeftBar.Width = 216;
                 hideShowBar.Location = new Point(panelWidth - 35,14);
+                tabControl.Location = new Point(223, 30);
+                tabControl.Width = fullWidth - 227;
             }
             
         }
@@ -101,6 +118,7 @@ namespace Desktop_App
                 panelConstructor.BackColor = Color.FromArgb(49, 48, 45);
                 panelAjustes.BackColor = Color.FromArgb(49, 48, 45);
                 panelAyuda.BackColor = Color.FromArgb(49, 48, 45);
+                tabControl.SelectedTab = dashboard;
             }
             if (option == 2)
             {
@@ -109,6 +127,7 @@ namespace Desktop_App
                 panelConstructor.BackColor = Color.FromArgb(49, 48, 45);
                 panelAjustes.BackColor = Color.FromArgb(49, 48, 45);
                 panelAyuda.BackColor = Color.FromArgb(49, 48, 45);
+                tabControl.SelectedTab = disenyo;
             }
             if (option == 3)
             {
@@ -117,6 +136,7 @@ namespace Desktop_App
                 panelConstructor.BackColor = Color.FromArgb(96, 71, 71);
                 panelAjustes.BackColor = Color.FromArgb(49, 48, 45);
                 panelAyuda.BackColor = Color.FromArgb(49, 48, 45);
+                tabControl.SelectedTab = constructor;
             }
             if (option == 4)
             {
@@ -125,6 +145,7 @@ namespace Desktop_App
                 panelConstructor.BackColor = Color.FromArgb(49, 48, 45);
                 panelAjustes.BackColor = Color.FromArgb(96, 71, 71);
                 panelAyuda.BackColor = Color.FromArgb(49, 48, 45);
+                tabControl.SelectedTab = ajustes;
             }
             if (option == 5)
             {
@@ -133,6 +154,7 @@ namespace Desktop_App
                 panelConstructor.BackColor = Color.FromArgb(49, 48, 45);
                 panelAjustes.BackColor = Color.FromArgb(49, 48, 45);
                 panelAyuda.BackColor = Color.FromArgb(96, 71, 71);
+                tabControl.SelectedTab = ayuda;
             }
 
         }
@@ -207,6 +229,102 @@ namespace Desktop_App
         private void pictureBox6_Click(object sender, EventArgs e)
         {
             sideBarColors(5);
+        }
+
+        private void panelDashboard_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void dashboard_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void ayuda_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void radioStayLogged_Click(object sender, EventArgs e)
+        {
+            if(stayLogged == false)
+            {
+                radioStayLogged.Image = Desktop_App.Properties.Resources.on;
+                stayLogged = true;
+            }
+            else
+            {
+                radioStayLogged.Image = Desktop_App.Properties.Resources.off;
+                stayLogged = false;
+            }
+            
+        }
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panelColorPrincipal_Click(object sender, EventArgs e)
+        {
+            changeColor(sender);
+        }
+
+        private void changeColor(object sender)
+        {
+            ColorDialog colorPicker = new ColorDialog();
+            if (colorPicker.ShowDialog() == DialogResult.OK)
+            {
+                if(sender is Panel)
+                {
+                    ((Panel)sender).BackColor = colorPicker.Color;
+
+                }
+            }
+        }
+
+        private void panel11_Click(object sender, EventArgs e)
+        {
+            changeColor(sender);
+        }
+
+        private void panelDisenyo_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void label19_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void showHideFaqs_Click(object sender, EventArgs e)
+        {
+            if(displayFaqs == false)
+            {
+                panelFaqs.Visible = true;
+                showHideFaqs.Image = Desktop_App.Properties.Resources.arrow_up;
+                displayFaqs = true;
+            }
+            else
+            {
+                panelFaqs.Visible = false;
+                showHideFaqs.Image = Desktop_App.Properties.Resources.arrow_down;
+                displayFaqs = false;
+            }
+
+
         }
     }
 }

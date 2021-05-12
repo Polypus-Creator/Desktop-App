@@ -127,18 +127,24 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Icons\arrow-down.png" />
+    <Content Include="Icons\arrow-up.png" />
     <Content Include="Icons\back-arrow.png" />
     <Content Include="Icons\bombilla.png" />
     <Content Include="Icons\arrow-right.png" />
     <Content Include="Icons\dashboard-icon-menu.png" />
     <Content Include="Icons\dashboard.png" />
+    <Content Include="Icons\off.png" />
+    <Content Include="Icons\on.png" />
+    <Content Include="Icons\save.png" />
+    <Content Include="Icons\trash.png" />
     <None Include="Icons\dashboardIcon.png" />
+    <Content Include="Icons\editar.png" />
     <Content Include="Icons\eyeCl.png" />
     <Content Include="Icons\eyeOp.png" />
     <Content Include="Icons\information.png" />
     <Content Include="Icons\layers.png" />
     <Content Include="Icons\left-arrow.png" />
-    <None Include="Icons\Logo.png" />
     <Content Include="Icons\logoLogin.png" />
     <Content Include="Icons\olvido.png" />
     <Content Include="Icons\padlock.png" />
