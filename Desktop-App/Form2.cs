@@ -45,6 +45,8 @@ namespace Desktop_App
             panelDash.Width = fullWidth/2 + 540;
             panelDise.Width = fullWidth / 2 + 540;
             panelConst.Width = fullWidth / 2 + 540;
+            panelConst.Height = fullHeight - 10;
+            flowLayoutPanelCurrentElements.Height = fullHeight/2+200;
             panelAj.Width = fullWidth / 2 + 540;
             panelAj.Height = fullHeight - 100;
             panelAyud.Width = fullWidth / 2 + 540;
@@ -353,6 +355,19 @@ namespace Desktop_App
             openFileDialog.ShowDialog();
             String filename = openFileDialog.FileName;
             pictureBoxLogo.Image = Image.FromFile(filename);
+        }
+
+        private void panel31_MouseClick(object sender, MouseEventArgs e)
+        {
+            Panel panelGlobal = new Panel();
+            panelGlobal.Size = new Size(482, 150);
+            flowLayoutPanelCurrentElements.Controls.Add(panelGlobal);
+            List<string> options = new List<string>();
+            options.Add("ejemplo");
+            options.Add("ejemplo");
+            options.Add("ejemplo");
+            ClassCreatePanel panelElement = new ClassCreatePanel(panelGlobal.Width,3,"NavBar", options);
+            panelGlobal.Controls.Add(panelElement.PanelGol);
         }
     }
 }

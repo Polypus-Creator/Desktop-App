@@ -91,12 +91,6 @@ namespace Desktop_App
             this.label7 = new System.Windows.Forms.Label();
             this.constructor = new System.Windows.Forms.TabPage();
             this.panelConst = new System.Windows.Forms.Panel();
-            this.panel6 = new System.Windows.Forms.Panel();
-            this.label12 = new System.Windows.Forms.Label();
-            this.panel4 = new System.Windows.Forms.Panel();
-            this.pictureBox10 = new System.Windows.Forms.PictureBox();
-            this.pictureBox8 = new System.Windows.Forms.PictureBox();
-            this.pictureBox7 = new System.Windows.Forms.PictureBox();
             this.panelAddElement = new System.Windows.Forms.Panel();
             this.label11 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
@@ -138,6 +132,7 @@ namespace Desktop_App
             this.label25 = new System.Windows.Forms.Label();
             this.pictureBox15 = new System.Windows.Forms.PictureBox();
             this.label23 = new System.Windows.Forms.Label();
+            this.flowLayoutPanelCurrentElements = new System.Windows.Forms.FlowLayoutPanel();
             this.panelSuperior.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.windowControlButtons.SuspendLayout();
@@ -167,11 +162,6 @@ namespace Desktop_App
             this.panel7.SuspendLayout();
             this.constructor.SuspendLayout();
             this.panelConst.SuspendLayout();
-            this.panel6.SuspendLayout();
-            this.panel4.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
             this.panelAddElement.SuspendLayout();
             this.ajustes.SuspendLayout();
             this.panelAj.SuspendLayout();
@@ -927,78 +917,13 @@ namespace Desktop_App
             // 
             // panelConst
             // 
-            this.panelConst.Controls.Add(this.panel6);
+            this.panelConst.Controls.Add(this.flowLayoutPanelCurrentElements);
             this.panelConst.Controls.Add(this.panelAddElement);
             this.panelConst.Controls.Add(this.label8);
             this.panelConst.Location = new System.Drawing.Point(13, 14);
             this.panelConst.Name = "panelConst";
             this.panelConst.Size = new System.Drawing.Size(544, 363);
             this.panelConst.TabIndex = 2;
-            // 
-            // panel6
-            // 
-            this.panel6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
-            this.panel6.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel6.Controls.Add(this.label12);
-            this.panel6.Controls.Add(this.panel4);
-            this.panel6.Location = new System.Drawing.Point(18, 194);
-            this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(505, 130);
-            this.panel6.TabIndex = 7;
-            // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.Location = new System.Drawing.Point(5, 6);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(70, 21);
-            this.label12.TabIndex = 0;
-            this.label12.Text = "HEADER";
-            // 
-            // panel4
-            // 
-            this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(96)))), ((int)(((byte)(71)))), ((int)(((byte)(71)))));
-            this.panel4.Controls.Add(this.pictureBox10);
-            this.panel4.Controls.Add(this.pictureBox8);
-            this.panel4.Controls.Add(this.pictureBox7);
-            this.panel4.Location = new System.Drawing.Point(372, 0);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(131, 45);
-            this.panel4.TabIndex = 7;
-            // 
-            // pictureBox10
-            // 
-            this.pictureBox10.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pictureBox10.Image = global::Desktop_App.Properties.Resources.trash;
-            this.pictureBox10.Location = new System.Drawing.Point(92, 11);
-            this.pictureBox10.Name = "pictureBox10";
-            this.pictureBox10.Size = new System.Drawing.Size(23, 23);
-            this.pictureBox10.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox10.TabIndex = 9;
-            this.pictureBox10.TabStop = false;
-            // 
-            // pictureBox8
-            // 
-            this.pictureBox8.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pictureBox8.Image = global::Desktop_App.Properties.Resources.editar;
-            this.pictureBox8.Location = new System.Drawing.Point(51, 11);
-            this.pictureBox8.Name = "pictureBox8";
-            this.pictureBox8.Size = new System.Drawing.Size(23, 23);
-            this.pictureBox8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox8.TabIndex = 7;
-            this.pictureBox8.TabStop = false;
-            // 
-            // pictureBox7
-            // 
-            this.pictureBox7.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pictureBox7.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox7.Image")));
-            this.pictureBox7.Location = new System.Drawing.Point(11, 12);
-            this.pictureBox7.Name = "pictureBox7";
-            this.pictureBox7.Size = new System.Drawing.Size(23, 23);
-            this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox7.TabIndex = 6;
-            this.pictureBox7.TabStop = false;
             // 
             // panelAddElement
             // 
@@ -1351,6 +1276,7 @@ namespace Desktop_App
             this.panel31.Name = "panel31";
             this.panel31.Size = new System.Drawing.Size(88, 116);
             this.panel31.TabIndex = 26;
+            this.panel31.MouseClick += new System.Windows.Forms.MouseEventHandler(this.panel31_MouseClick);
             // 
             // label46
             // 
@@ -1363,6 +1289,7 @@ namespace Desktop_App
             this.label46.Size = new System.Drawing.Size(57, 20);
             this.label46.TabIndex = 6;
             this.label46.Text = "NavBar";
+            this.label46.MouseClick += new System.Windows.Forms.MouseEventHandler(this.panel31_MouseClick);
             // 
             // pictureBox36
             // 
@@ -1373,6 +1300,7 @@ namespace Desktop_App
             this.pictureBox36.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox36.TabIndex = 0;
             this.pictureBox36.TabStop = false;
+            this.pictureBox36.MouseClick += new System.Windows.Forms.MouseEventHandler(this.panel31_MouseClick);
             // 
             // panel2
             // 
@@ -1451,6 +1379,14 @@ namespace Desktop_App
             this.label23.TabIndex = 6;
             this.label23.Text = "Elementos";
             // 
+            // flowLayoutPanelCurrentElements
+            // 
+            this.flowLayoutPanelCurrentElements.AutoScroll = true;
+            this.flowLayoutPanelCurrentElements.Location = new System.Drawing.Point(18, 112);
+            this.flowLayoutPanelCurrentElements.Name = "flowLayoutPanelCurrentElements";
+            this.flowLayoutPanelCurrentElements.Size = new System.Drawing.Size(505, 240);
+            this.flowLayoutPanelCurrentElements.TabIndex = 7;
+            // 
             // Form2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1507,12 +1443,6 @@ namespace Desktop_App
             this.constructor.ResumeLayout(false);
             this.panelConst.ResumeLayout(false);
             this.panelConst.PerformLayout();
-            this.panel6.ResumeLayout(false);
-            this.panel6.PerformLayout();
-            this.panel4.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
             this.panelAddElement.ResumeLayout(false);
             this.panelAddElement.PerformLayout();
             this.ajustes.ResumeLayout(false);
@@ -1601,12 +1531,6 @@ namespace Desktop_App
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Panel panelAddElement;
         private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.Panel panel4;
-        private System.Windows.Forms.PictureBox pictureBox8;
-        private System.Windows.Forms.PictureBox pictureBox7;
-        private System.Windows.Forms.PictureBox pictureBox10;
-        private System.Windows.Forms.Panel panel6;
-        private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Panel panelSesion;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.PictureBox radioStayLogged;
@@ -1667,5 +1591,6 @@ namespace Desktop_App
         private System.Windows.Forms.Label labelTitulo3;
         private System.Windows.Forms.Label labelTitulo2;
         private System.Windows.Forms.Label labelTitulo;
+        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanelCurrentElements;
     }
 }

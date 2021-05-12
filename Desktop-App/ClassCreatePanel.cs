@@ -31,7 +31,7 @@ namespace Desktop_App
 
         public ClassCreatePanel(int maxW, int maxOp, string title, List<string> options)
         {
-            this.MaxW = maxW-40;
+            this.MaxW = maxW;
             this.MaxOp = maxOp;
             this.Title = title;
             this.Id = title;
@@ -62,9 +62,9 @@ namespace Desktop_App
         private void createView()
         {
 
-            PanelGol.Location = new Point(15,3);
+            PanelGol.Location = new Point(0,3);
             PanelGol.Size = new Size(MaxW, 130);
-            PanelGol.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            PanelGol.BorderStyle = System.Windows.Forms.BorderStyle.None;
             PanelGol.BackColor = Color.FromArgb(240,240,240);
             PanelGol.Visible = true;
 
@@ -75,38 +75,38 @@ namespace Desktop_App
             LabelTitle.Visible = true;
             PanelGol.Controls.Add(LabelTitle);
 
-            PanelOption.Location = new Point(372, 0);
+            PanelOption.Location = new Point(349, 0);
             PanelOption.Size = new Size(131, 45);
             PanelOption.BackColor = Color.FromArgb(96, 71, 71);
-            PanelOption.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            PanelOption.BorderStyle = System.Windows.Forms.BorderStyle.None;
             PanelOption.Visible = true;
             PanelGol.Controls.Add(PanelOption);
 
             PanelEd.Location = new Point(0, 0);
             PanelEd.Size = new Size(43, 45);
             PanelEd.BackColor = Color.FromArgb(96, 71, 71);
-            PanelEd.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            PanelEd.BorderStyle = System.Windows.Forms.BorderStyle.None;
             PanelEd.Visible = true;
             PanelOption.Controls.Add(PanelEd);
 
             PanelHe.Location = new Point(43, 0);
             PanelHe.Size = new Size(43, 45);
             PanelHe.BackColor = Color.FromArgb(96, 71, 71);
-            PanelHe.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            PanelHe.BorderStyle = System.Windows.Forms.BorderStyle.None;
             PanelHe.Visible = true;
             PanelOption.Controls.Add(PanelHe);
 
             PanelDe.Location = new Point(86, 0);
             PanelDe.Size = new Size(43, 45);
             PanelDe.BackColor = Color.FromArgb(96, 71, 71);
-            PanelDe.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            PanelDe.BorderStyle = System.Windows.Forms.BorderStyle.None;
             PanelDe.Visible = true;
             PanelOption.Controls.Add(PanelDe);
 
             PbEd.Location = new Point(11, 11);
             PbEd.Size = new Size(23, 23);
             PbEd.BackColor = Color.FromArgb(96, 71, 71);
-            PbEd.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            PbEd.BorderStyle = System.Windows.Forms.BorderStyle.None;
             PbEd.Cursor = Cursors.Hand;
             PbEd.Image = Desktop_App.Properties.Resources.editar;
             PbEd.Visible = true;
@@ -116,7 +116,7 @@ namespace Desktop_App
             PbHe.Location = new Point(11, 11);
             PbHe.Size = new Size(23, 23);
             PbHe.BackColor = Color.FromArgb(96, 71, 71);
-            PbHe.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            PbHe.BorderStyle = System.Windows.Forms.BorderStyle.None;
             PbHe.Cursor = Cursors.Hand;
             PbHe.Image = Desktop_App.Properties.Resources.settings;
             PbHe.Visible = true;
@@ -126,7 +126,7 @@ namespace Desktop_App
             PbDe.Location = new Point(11, 11);
             PbDe.Size = new Size(23, 23);
             PbDe.BackColor = Color.FromArgb(96, 71, 71);
-            PbDe.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            PbDe.BorderStyle = System.Windows.Forms.BorderStyle.None;
             PbDe.Cursor = Cursors.Hand;
             PbDe.SizeMode = PictureBoxSizeMode.StretchImage;
             PbDe.Image = Desktop_App.Properties.Resources.trash;
@@ -165,7 +165,7 @@ namespace Desktop_App
                     editar.Location = new Point(x1b + 128 * count, y1b);
                     editar.Size = new Size(20, 20);
                     editar.BackColor = Color.FromArgb(96, 71, 71);
-                    editar.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+                    editar.BorderStyle = System.Windows.Forms.BorderStyle.None;
                     editar.SizeMode = PictureBoxSizeMode.StretchImage;
                     editar.Cursor = Cursors.Hand;
                     editar.Image = Desktop_App.Properties.Resources.editar;
@@ -178,7 +178,7 @@ namespace Desktop_App
                     delete.Location = new Point(x2b + 128 * count, y1b);
                     delete.Size = new Size(20, 20);
                     delete.BackColor = Color.FromArgb(96, 71, 71);
-                    delete.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+                    delete.BorderStyle = System.Windows.Forms.BorderStyle.None;
                     delete.Cursor = Cursors.Hand;
                     delete.Image = Desktop_App.Properties.Resources.trash;
                     delete.SizeMode = PictureBoxSizeMode.StretchImage;
@@ -210,7 +210,7 @@ namespace Desktop_App
                     editar.Location = new Point(x1b + 128 * count, y2b);
                     editar.Size = new Size(20, 20);
                     editar.BackColor = Color.FromArgb(96, 71, 71);
-                    editar.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+                    editar.BorderStyle = System.Windows.Forms.BorderStyle.None;
                     editar.Cursor = Cursors.Hand;
                     editar.Image = Desktop_App.Properties.Resources.editar;
                     editar.SizeMode = PictureBoxSizeMode.StretchImage;
@@ -223,7 +223,7 @@ namespace Desktop_App
                     delete.Location = new Point(x2b + 128 * count, y2b);
                     delete.Size = new Size(20, 20);
                     delete.BackColor = Color.FromArgb(96, 71, 71);
-                    delete.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+                    delete.BorderStyle = System.Windows.Forms.BorderStyle.None;
                     delete.Cursor = Cursors.Hand;
                     delete.Image = Desktop_App.Properties.Resources.trash;
                     delete.SizeMode = PictureBoxSizeMode.StretchImage;
