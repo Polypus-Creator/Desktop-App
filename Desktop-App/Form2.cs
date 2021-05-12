@@ -17,6 +17,7 @@ namespace Desktop_App
         Boolean stayLogged = false;
         int fullWidth = Screen.PrimaryScreen.Bounds.Width;
         int fullHeight = Screen.PrimaryScreen.Bounds.Height;
+        List<String> listFiles = new List<String>();
 
         public Form2()
         {
@@ -53,6 +54,8 @@ namespace Desktop_App
             panelAddElements.Location = new Point(fullWidth - 208, 54);
             panelAddElements.Height = fullHeight - 1;
             flowLayoutPanel1.Height = fullHeight - 10;
+            panelFirstLogin.Height = fullWidth / 2 + 540;
+            panelDash.Height = fullWidth / 2 + 540;
         }
 
         private void labelClose_Click(object sender, EventArgs e)
@@ -338,6 +341,14 @@ namespace Desktop_App
         private void label25_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void buttonSelecionarLogo_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog openFileDialog = new OpenFileDialog();
+            openFileDialog.ShowDialog();
+            String filename = openFileDialog.FileName;
+            pictureBoxLogo.Image = Image.FromFile(filename);
         }
     }
 }
