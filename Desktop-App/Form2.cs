@@ -50,6 +50,9 @@ namespace Desktop_App
             panelSave.Location = new Point(10, fullHeight - 190);
             panelSesion.Width = fullWidth - 390 ;
             radioStayLogged.Location = new Point(panelSesion.Width - 50, 6);
+            panelAddElements.Location = new Point(fullWidth - 208, 54);
+            panelAddElements.Height = fullHeight - 1;
+            flowLayoutPanel1.Height = fullHeight - 10;
         }
 
         private void labelClose_Click(object sender, EventArgs e)
@@ -324,6 +327,16 @@ namespace Desktop_App
                 displayFaqs = false;
             }
 
+
+        }
+
+        private void panelAddElement_MouseClick(object sender, MouseEventArgs e)
+        {
+            panelAddElements.Visible = true;
+        }
+
+        private void label25_Click(object sender, EventArgs e)
+        {
 
         }
     }

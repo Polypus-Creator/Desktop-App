@@ -133,8 +133,20 @@
     <Content Include="Icons\back-arrow.png" />
     <Content Include="Icons\bombilla.png" />
     <Content Include="Icons\arrow-right.png" />
+    <Content Include="Icons\callToActionIcon.png" />
     <Content Include="Icons\dashboard-icon-menu.png" />
     <Content Include="Icons\dashboard.png" />
+    <Content Include="Icons\headerIcon.png" />
+    <Content Include="Icons\navbarIcon.png" />
+    <Content Include="Icons\separatorIcon.png" />
+    <Content Include="Polypus\Config\Blocks\Body\CallToActionLeft.html" />
+    <Content Include="Polypus\Config\Blocks\Body\CallToActionMiddle.html" />
+    <Content Include="Polypus\Config\Blocks\Body\Divider.html" />
+    <Content Include="Polypus\Config\Blocks\Header\Logo&amp;BrandNameNav.html" />
+    <Content Include="Polypus\Config\Blocks\Header\Logo&amp;ItemsNav.html" />
+    <Content Include="Polypus\Config\Blocks\Header\OnlyLogoNav.html" />
+    <Content Include="Polypus\Config\Blocks\Structure\BottomStructure.html" />
+    <Content Include="Polypus\Config\Blocks\Structure\TopStructure.html" />
     <None Include="Icons\Logo.png" />
     <Content Include="Icons\off.png" />
     <Content Include="Icons\on.png" />
@@ -154,6 +166,10 @@
     <Content Include="Icons\settings.png" />
     <Content Include="Icons\shield.png" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="Polypus\Config\Blocks\Footer\" />
+    <Folder Include="Polypus\Config\Templates\" />
+    <Folder Include="Polypus\YourWebsites\" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
