@@ -30,7 +30,7 @@ namespace Desktop_App
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FAboutUs));
-            this.webBrowserWeb = new System.Windows.Forms.WebBrowser();
+            this.webBWeb = new System.Windows.Forms.WebBrowser();
             this.panelHeader = new System.Windows.Forms.Panel();
             this.panelMin = new System.Windows.Forms.Panel();
             this.labelMin = new System.Windows.Forms.Label();
@@ -44,13 +44,13 @@ namespace Desktop_App
             this.panelClose.SuspendLayout();
             this.SuspendLayout();
             // 
-            // webBrowserWeb
+            // webBWeb
             // 
-            this.webBrowserWeb.Location = new System.Drawing.Point(7, 63);
-            this.webBrowserWeb.MinimumSize = new System.Drawing.Size(20, 20);
-            this.webBrowserWeb.Name = "webBrowserWeb";
-            this.webBrowserWeb.Size = new System.Drawing.Size(787, 370);
-            this.webBrowserWeb.TabIndex = 3;
+            this.webBWeb.Location = new System.Drawing.Point(7, 64);
+            this.webBWeb.MinimumSize = new System.Drawing.Size(20, 20);
+            this.webBWeb.Name = "webBWeb";
+            this.webBWeb.Size = new System.Drawing.Size(787, 370);
+            this.webBWeb.TabIndex = 3;
             // 
             // panelHeader
             // 
@@ -134,7 +134,7 @@ namespace Desktop_App
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.panelHeader);
-            this.Controls.Add(this.webBrowserWeb);
+            this.Controls.Add(this.webBWeb);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FAboutUs";
             this.Text = "FAboutUs";
@@ -151,7 +151,7 @@ namespace Desktop_App
 
         #endregion
 
-        private System.Windows.Forms.WebBrowser webBrowserWeb;
+        private System.Windows.Forms.WebBrowser webBWeb;
         private System.Windows.Forms.Panel panelHeader;
         private System.Windows.Forms.Panel panelMin;
         private System.Windows.Forms.Label labelMin;

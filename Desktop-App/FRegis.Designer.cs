@@ -46,21 +46,21 @@ namespace Desktop_App
             this.timerOjo = new System.Windows.Forms.Timer(this.components);
             this.pictureBoxOjo2 = new System.Windows.Forms.PictureBox();
             this.pictureBoxOjo1 = new System.Windows.Forms.PictureBox();
-            this.pictureBoxVolver = new System.Windows.Forms.PictureBox();
+            this.pictureBoxVol = new System.Windows.Forms.PictureBox();
             this.panelSuperior = new System.Windows.Forms.Panel();
+            this.panelMin = new System.Windows.Forms.Panel();
+            this.labelMin = new System.Windows.Forms.Label();
             this.labelIniciarSesion = new System.Windows.Forms.Label();
             this.pictureBoxIconoIniciarSesion = new System.Windows.Forms.PictureBox();
             this.panelClose = new System.Windows.Forms.Panel();
-            this.labelMin = new System.Windows.Forms.Label();
             this.labelClose = new System.Windows.Forms.Label();
-            this.panelMin = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxOjo2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxOjo1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxVolver)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxVol)).BeginInit();
             this.panelSuperior.SuspendLayout();
+            this.panelMin.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxIconoIniciarSesion)).BeginInit();
             this.panelClose.SuspendLayout();
-            this.panelMin.SuspendLayout();
             this.SuspendLayout();
             // 
             // buttonRegis
@@ -160,7 +160,7 @@ namespace Desktop_App
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
-            this.label5.Location = new System.Drawing.Point(63, 63);
+            this.label5.Location = new System.Drawing.Point(63, 64);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(59, 21);
             this.label5.TabIndex = 22;
@@ -212,15 +212,15 @@ namespace Desktop_App
             this.pictureBoxOjo1.TabStop = false;
             this.pictureBoxOjo1.Click += new System.EventHandler(this.pictureBoxOjo1_Click);
             // 
-            // pictureBoxVolver
+            // pictureBoxVol
             // 
-            this.pictureBoxVolver.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxVolver.Image")));
-            this.pictureBoxVolver.Location = new System.Drawing.Point(26, 63);
-            this.pictureBoxVolver.Name = "pictureBoxVolver";
-            this.pictureBoxVolver.Size = new System.Drawing.Size(23, 21);
-            this.pictureBoxVolver.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBoxVolver.TabIndex = 19;
-            this.pictureBoxVolver.TabStop = false;
+            this.pictureBoxVol.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxVol.Image")));
+            this.pictureBoxVol.Location = new System.Drawing.Point(26, 64);
+            this.pictureBoxVol.Name = "pictureBoxVol";
+            this.pictureBoxVol.Size = new System.Drawing.Size(23, 21);
+            this.pictureBoxVol.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBoxVol.TabIndex = 19;
+            this.pictureBoxVol.TabStop = false;
             // 
             // panelSuperior
             // 
@@ -233,6 +233,27 @@ namespace Desktop_App
             this.panelSuperior.Name = "panelSuperior";
             this.panelSuperior.Size = new System.Drawing.Size(800, 54);
             this.panelSuperior.TabIndex = 34;
+            // 
+            // panelMin
+            // 
+            this.panelMin.Controls.Add(this.labelMin);
+            this.panelMin.Location = new System.Drawing.Point(700, 0);
+            this.panelMin.Name = "panelMin";
+            this.panelMin.Size = new System.Drawing.Size(47, 54);
+            this.panelMin.TabIndex = 4;
+            this.panelMin.MouseClick += new System.Windows.Forms.MouseEventHandler(this.panelMin_MouseClick);
+            // 
+            // labelMin
+            // 
+            this.labelMin.AutoSize = true;
+            this.labelMin.Font = new System.Drawing.Font("Segoe UI", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelMin.ForeColor = System.Drawing.Color.White;
+            this.labelMin.Location = new System.Drawing.Point(12, 6);
+            this.labelMin.Name = "labelMin";
+            this.labelMin.Size = new System.Drawing.Size(29, 40);
+            this.labelMin.TabIndex = 1;
+            this.labelMin.Text = "-";
+            this.labelMin.MouseClick += new System.Windows.Forms.MouseEventHandler(this.panelMin_MouseClick);
             // 
             // labelIniciarSesion
             // 
@@ -266,18 +287,6 @@ namespace Desktop_App
             this.panelClose.TabIndex = 1;
             this.panelClose.MouseClick += new System.Windows.Forms.MouseEventHandler(this.panelClose_MouseClick);
             // 
-            // labelMin
-            // 
-            this.labelMin.AutoSize = true;
-            this.labelMin.Font = new System.Drawing.Font("Segoe UI", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelMin.ForeColor = System.Drawing.Color.White;
-            this.labelMin.Location = new System.Drawing.Point(12, 6);
-            this.labelMin.Name = "labelMin";
-            this.labelMin.Size = new System.Drawing.Size(29, 40);
-            this.labelMin.TabIndex = 1;
-            this.labelMin.Text = "-";
-            this.labelMin.MouseClick += new System.Windows.Forms.MouseEventHandler(this.panelMin_MouseClick);
-            // 
             // labelClose
             // 
             this.labelClose.AutoSize = true;
@@ -289,15 +298,6 @@ namespace Desktop_App
             this.labelClose.TabIndex = 0;
             this.labelClose.Text = "X";
             this.labelClose.MouseClick += new System.Windows.Forms.MouseEventHandler(this.panelClose_MouseClick);
-            // 
-            // panelMin
-            // 
-            this.panelMin.Controls.Add(this.labelMin);
-            this.panelMin.Location = new System.Drawing.Point(700, 0);
-            this.panelMin.Name = "panelMin";
-            this.panelMin.Size = new System.Drawing.Size(47, 54);
-            this.panelMin.TabIndex = 4;
-            this.panelMin.MouseClick += new System.Windows.Forms.MouseEventHandler(this.panelMin_MouseClick);
             // 
             // FRegis
             // 
@@ -319,20 +319,20 @@ namespace Desktop_App
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.textBoxUser);
-            this.Controls.Add(this.pictureBoxVolver);
+            this.Controls.Add(this.pictureBoxVol);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FRegis";
             this.Text = "FRegis";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxOjo2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxOjo1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxVolver)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxVol)).EndInit();
             this.panelSuperior.ResumeLayout(false);
             this.panelSuperior.PerformLayout();
+            this.panelMin.ResumeLayout(false);
+            this.panelMin.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxIconoIniciarSesion)).EndInit();
             this.panelClose.ResumeLayout(false);
             this.panelClose.PerformLayout();
-            this.panelMin.ResumeLayout(false);
-            this.panelMin.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -354,7 +354,7 @@ namespace Desktop_App
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox textBoxUser;
-        private System.Windows.Forms.PictureBox pictureBoxVolver;
+        private System.Windows.Forms.PictureBox pictureBoxVol;
         private System.Windows.Forms.Timer timerOjo;
         private System.Windows.Forms.Panel panelSuperior;
         private System.Windows.Forms.Panel panelMin;
