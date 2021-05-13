@@ -157,6 +157,17 @@
     <Content Include="Polypus\Config\Blocks\Header\OnlyLogoNav.html" />
     <Content Include="Polypus\Config\Blocks\Structure\BottomStructure.html" />
     <Content Include="Polypus\Config\Blocks\Structure\TopStructure.html" />
+    <Content Include="Resources\saveIconLight.png" />
+    <None Include="Resources\textIcon.png" />
+    <None Include="Resources\tex&amp;PhotoIcon.png" />
+    <None Include="Resources\randomIcon.png" />
+    <None Include="Resources\pictureIcon.png" />
+    <None Include="Resources\paintbrushIcon.png" />
+    <None Include="Resources\ourMembersIcon.png" />
+    <None Include="Resources\footerIcon.png" />
+    <None Include="Resources\carrouseIcon.png" />
+    <None Include="Resources\browserIcon.png" />
+    <None Include="Resources\addNewIconWhite.png" />
     <None Include="Icons\Logo.png" />
     <Content Include="Icons\off.png" />
     <Content Include="Icons\on.png" />

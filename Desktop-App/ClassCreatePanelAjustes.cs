@@ -51,7 +51,7 @@ namespace Desktop_App
             PanelGlo.Location = new Point(23, 42);
             PanelGlo.Size = new Size(MaxW, MaxH);
             PanelGlo.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            PanelGlo.BackColor = Color.Gray;
+            PanelGlo.BackColor = Color.FromArgb(96, 71, 71);
             PanelGlo.Visible = true;
 
             LabelTitle.Size = new Size(75, 25);
@@ -72,7 +72,7 @@ namespace Desktop_App
             PanelTextos.Location = new Point(20, 69);
             PanelTextos.Size = new Size(366, 184);
             PanelTextos.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            PanelTextos.BackColor = Color.Gray;
+            PanelTextos.BackColor = Color.FromArgb(96, 71, 71);
             PanelTextos.Visible = true;
             PanelGlo.Controls.Add(PanelTextos);
 
@@ -87,7 +87,7 @@ namespace Desktop_App
             PanelSave.Location = new Point(237, 247);
             PanelSave.Size = new Size(143, 45);
             PanelSave.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            PanelSave.BackColor = Color.Gray;
+            PanelSave.BackColor = Color.FromArgb(96, 71, 71);
             PanelSave.Visible = true;
             PanelSave.Cursor = Cursors.Hand;
             PanelGlo.Controls.Add(PanelSave);
@@ -97,7 +97,7 @@ namespace Desktop_App
             Save.BackColor = Color.Transparent;
             Save.BorderStyle = System.Windows.Forms.BorderStyle.None;
             Save.Cursor = Cursors.Hand;
-            Save.Image = Desktop_App.Properties.Resources.save;
+            Save.Image = Desktop_App.Properties.Resources.saveIconLight;
             Save.Visible = true;
             Save.SizeMode = PictureBoxSizeMode.StretchImage;
             PanelSave.Controls.Add(Save);

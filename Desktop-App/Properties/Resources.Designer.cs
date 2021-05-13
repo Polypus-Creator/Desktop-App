@@ -63,6 +63,16 @@ namespace Desktop_App.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap addNewIconWhite {
+            get {
+                object obj = ResourceManager.GetObject("addNewIconWhite", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap arrow_down {
             get {
                 object obj = ResourceManager.GetObject("arrow-down", resourceCulture);
@@ -93,9 +103,29 @@ namespace Desktop_App.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap browserIcon {
+            get {
+                object obj = ResourceManager.GetObject("browserIcon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap callToActionIcon {
             get {
                 object obj = ResourceManager.GetObject("callToActionIcon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap carrouseIcon {
+            get {
+                object obj = ResourceManager.GetObject("carrouseIcon", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -146,6 +176,16 @@ namespace Desktop_App.Properties {
         internal static System.Drawing.Bitmap eyeOp {
             get {
                 object obj = ResourceManager.GetObject("eyeOp", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap footerIcon {
+            get {
+                object obj = ResourceManager.GetObject("footerIcon", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -233,6 +273,16 @@ namespace Desktop_App.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap ourMembersIcon {
+            get {
+                object obj = ResourceManager.GetObject("ourMembersIcon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap padlock {
             get {
                 object obj = ResourceManager.GetObject("padlock", resourceCulture);
@@ -243,9 +293,49 @@ namespace Desktop_App.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap paintbrushIcon {
+            get {
+                object obj = ResourceManager.GetObject("paintbrushIcon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap pictureIcon {
+            get {
+                object obj = ResourceManager.GetObject("pictureIcon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap randomIcon {
+            get {
+                object obj = ResourceManager.GetObject("randomIcon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap save {
             get {
                 object obj = ResourceManager.GetObject("save", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap saveIconLight {
+            get {
+                object obj = ResourceManager.GetObject("saveIconLight", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -276,6 +366,26 @@ namespace Desktop_App.Properties {
         internal static System.Drawing.Bitmap shield {
             get {
                 object obj = ResourceManager.GetObject("shield", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap tex_PhotoIcon {
+            get {
+                object obj = ResourceManager.GetObject("tex&PhotoIcon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap textIcon {
+            get {
+                object obj = ResourceManager.GetObject("textIcon", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

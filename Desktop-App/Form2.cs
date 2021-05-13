@@ -19,6 +19,7 @@ namespace Desktop_App
         int fullHeight = Screen.PrimaryScreen.Bounds.Height;
         List<String> listFiles = new List<String>();
         List<Panel> panelesFlow = new List<Panel>();
+        Boolean isHeaderAlreadyOn = false;
 
         public Form2()
         {
@@ -360,6 +361,11 @@ namespace Desktop_App
 
         private void panel31_MouseClick(object sender, MouseEventArgs e)
         {
+            if(isHeaderAlreadyOn == false)
+            {
+                panel31.Enabled = false;
+                isHeaderAlreadyOn = true;            
+            }
             string title = "NavBar";
             Panel panelGlobal = new Panel();
             panelGlobal.Size = new Size(482, 150);
@@ -384,6 +390,7 @@ namespace Desktop_App
             colorOne.BackColor = panel8.BackColor;
             colorOne.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             colorOne.Visible = true;
+            colorOne.MouseClick += new System.Windows.Forms.MouseEventHandler(panelColorPrincipal_Click);
             panelElement.PanelGol.Controls.Add(colorOne);
 
             colorTwo.Location = new Point(324, 0);
@@ -391,11 +398,28 @@ namespace Desktop_App
             colorTwo.BackColor = panel11.BackColor;
             colorTwo.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             colorTwo.Visible = true;
+            colorTwo.MouseClick += new System.Windows.Forms.MouseEventHandler(panelColorPrincipal_Click);
             panelElement.PanelGol.Controls.Add(colorTwo);
-            
+
+            panelElement.PanelDe.MouseClick += new System.Windows.Forms.MouseEventHandler(PanelDe_MouseClicked);
+            panelElement.PbDe.MouseClick += new System.Windows.Forms.MouseEventHandler(PanelDe_MouseClicked);
+
+
             panelElement.PanelEd.MouseClick += new System.Windows.Forms.MouseEventHandler(PanelEd_MouseClick);
             panelElement.PbEd.MouseClick += new System.Windows.Forms.MouseEventHandler(PanelEd_MouseClick);
         }
+        private void PanelDe_MouseClicked(Object sender, MouseEventArgs e)
+        {
+            
+                flowLayoutPanelCurrentElements.Controls.Remove(panelesFlow[0]);
+                isHeaderAlreadyOn = false;
+            panelesFlow.Remove(panelesFlow[0]);
+                panel31.Enabled = true;
+
+
+
+        }
+
 
         private void PanelEd_MouseClick(Object sender, MouseEventArgs e)
         {
