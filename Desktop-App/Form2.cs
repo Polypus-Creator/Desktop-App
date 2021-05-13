@@ -18,6 +18,7 @@ namespace Desktop_App
         int fullWidth = Screen.PrimaryScreen.Bounds.Width;
         int fullHeight = Screen.PrimaryScreen.Bounds.Height;
         List<String> listFiles = new List<String>();
+        List<Panel> panelesFlow = new List<Panel>();
 
         public Form2()
         {
@@ -359,6 +360,7 @@ namespace Desktop_App
 
         private void panel31_MouseClick(object sender, MouseEventArgs e)
         {
+            string title = "NavBar";
             Panel panelGlobal = new Panel();
             panelGlobal.Size = new Size(482, 150);
             flowLayoutPanelCurrentElements.Controls.Add(panelGlobal);
@@ -366,8 +368,48 @@ namespace Desktop_App
             options.Add("ejemplo");
             options.Add("ejemplo");
             options.Add("ejemplo");
-            ClassCreatePanel panelElement = new ClassCreatePanel(panelGlobal.Width,3,"NavBar", options);
+            options.Add("ejemplo");
+            options.Add("ejemplo");
+            options.Add("ejemplo");
+            ClassCreatePanelElement panelElement = new ClassCreatePanelElement(panelGlobal.Width,6,title, options);
             panelGlobal.Controls.Add(panelElement.PanelGol);
+            panelesFlow.Add(panelGlobal);
+            panelGlobal.Name="panel" + panelesFlow.Count;
+
+            Panel colorOne = new Panel();
+            Panel colorTwo = new Panel();
+
+            colorOne.Location = new Point(299, 0);
+            colorOne.Size = new Size(25, 25);
+            colorOne.BackColor = panel8.BackColor;
+            colorOne.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            colorOne.Visible = true;
+            panelElement.PanelGol.Controls.Add(colorOne);
+
+            colorTwo.Location = new Point(324, 0);
+            colorTwo.Size = new Size(25, 25);
+            colorTwo.BackColor = panel11.BackColor;
+            colorTwo.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            colorTwo.Visible = true;
+            panelElement.PanelGol.Controls.Add(colorTwo);
+            
+            panelElement.PanelEd.MouseClick += new System.Windows.Forms.MouseEventHandler(PanelEd_MouseClick);
+            panelElement.PbEd.MouseClick += new System.Windows.Forms.MouseEventHandler(PanelEd_MouseClick);
         }
+
+        private void PanelEd_MouseClick(Object sender, MouseEventArgs e)
+        {
+            string title = "NavBar";
+            List<string> options = new List<string>();
+            options.Add("ejemplo");
+            options.Add("ejemplo");
+            options.Add("ejemplo");
+            options.Add("ejemplo");
+            options.Add("ejemplo");
+            options.Add("ejemplo");
+            ClassCreatePanelAjustes ajuste = new ClassCreatePanelAjustes(410, 310, title, options);
+            panel4.Controls.Add(ajuste.PanelGlo);
+        }
+
     }
 }

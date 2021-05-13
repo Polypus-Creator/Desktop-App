@@ -92,8 +92,6 @@ namespace Desktop_App
             this.constructor = new System.Windows.Forms.TabPage();
             this.panelConst = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
-            this.panel5 = new System.Windows.Forms.Panel();
-            this.label26 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             this.flowLayoutPanelCurrentElements = new System.Windows.Forms.FlowLayoutPanel();
             this.panelAddElement = new System.Windows.Forms.Panel();
@@ -137,15 +135,6 @@ namespace Desktop_App
             this.label25 = new System.Windows.Forms.Label();
             this.pictureBox15 = new System.Windows.Forms.PictureBox();
             this.label23 = new System.Windows.Forms.Label();
-            this.panel6 = new System.Windows.Forms.Panel();
-            this.panel9 = new System.Windows.Forms.Panel();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.label27 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.textBox6 = new System.Windows.Forms.TextBox();
             this.panelSuperior.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.windowControlButtons.SuspendLayout();
@@ -176,7 +165,6 @@ namespace Desktop_App
             this.constructor.SuspendLayout();
             this.panelConst.SuspendLayout();
             this.panel4.SuspendLayout();
-            this.panel5.SuspendLayout();
             this.panelAddElement.SuspendLayout();
             this.ajustes.SuspendLayout();
             this.panelAj.SuspendLayout();
@@ -203,7 +191,6 @@ namespace Desktop_App
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox14)).BeginInit();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox15)).BeginInit();
-            this.panel9.SuspendLayout();
             this.SuspendLayout();
             // 
             // panelSuperior
@@ -944,35 +931,11 @@ namespace Desktop_App
             // 
             // panel4
             // 
-            this.panel4.Controls.Add(this.panel5);
             this.panel4.Controls.Add(this.label12);
             this.panel4.Location = new System.Drawing.Point(542, 12);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(456, 340);
             this.panel4.TabIndex = 8;
-            // 
-            // panel5
-            // 
-            this.panel5.BackColor = System.Drawing.Color.Gray;
-            this.panel5.Controls.Add(this.panel9);
-            this.panel5.Controls.Add(this.panel6);
-            this.panel5.Controls.Add(this.label26);
-            this.panel5.Location = new System.Drawing.Point(23, 42);
-            this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(410, 280);
-            this.panel5.TabIndex = 7;
-            // 
-            // label26
-            // 
-            this.label26.AutoSize = true;
-            this.label26.BackColor = System.Drawing.Color.Transparent;
-            this.label26.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label26.ForeColor = System.Drawing.Color.White;
-            this.label26.Location = new System.Drawing.Point(15, 13);
-            this.label26.Name = "label26";
-            this.label26.Size = new System.Drawing.Size(75, 25);
-            this.label26.TabIndex = 8;
-            this.label26.Text = "NavBar";
             // 
             // label12
             // 
@@ -1448,82 +1411,6 @@ namespace Desktop_App
             this.label23.TabIndex = 6;
             this.label23.Text = "Elementos";
             // 
-            // panel6
-            // 
-            this.panel6.BackColor = System.Drawing.Color.White;
-            this.panel6.Location = new System.Drawing.Point(20, 44);
-            this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(366, 3);
-            this.panel6.TabIndex = 9;
-            // 
-            // panel9
-            // 
-            this.panel9.Controls.Add(this.textBox5);
-            this.panel9.Controls.Add(this.textBox6);
-            this.panel9.Controls.Add(this.textBox3);
-            this.panel9.Controls.Add(this.textBox4);
-            this.panel9.Controls.Add(this.textBox2);
-            this.panel9.Controls.Add(this.label27);
-            this.panel9.Controls.Add(this.textBox1);
-            this.panel9.Location = new System.Drawing.Point(20, 69);
-            this.panel9.Name = "panel9";
-            this.panel9.Size = new System.Drawing.Size(366, 184);
-            this.panel9.TabIndex = 10;
-            // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(21, 57);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(149, 20);
-            this.textBox1.TabIndex = 0;
-            // 
-            // label27
-            // 
-            this.label27.AutoSize = true;
-            this.label27.BackColor = System.Drawing.Color.Transparent;
-            this.label27.Font = new System.Drawing.Font("Segoe UI Semilight", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label27.ForeColor = System.Drawing.Color.White;
-            this.label27.Location = new System.Drawing.Point(17, 17);
-            this.label27.Name = "label27";
-            this.label27.Size = new System.Drawing.Size(45, 20);
-            this.label27.TabIndex = 11;
-            this.label27.Text = "Items";
-            // 
-            // textBox2
-            // 
-            this.textBox2.Location = new System.Drawing.Point(193, 57);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(149, 20);
-            this.textBox2.TabIndex = 12;
-            // 
-            // textBox3
-            // 
-            this.textBox3.Location = new System.Drawing.Point(193, 101);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(149, 20);
-            this.textBox3.TabIndex = 14;
-            // 
-            // textBox4
-            // 
-            this.textBox4.Location = new System.Drawing.Point(21, 101);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(149, 20);
-            this.textBox4.TabIndex = 13;
-            // 
-            // textBox5
-            // 
-            this.textBox5.Location = new System.Drawing.Point(193, 142);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(149, 20);
-            this.textBox5.TabIndex = 16;
-            // 
-            // textBox6
-            // 
-            this.textBox6.Location = new System.Drawing.Point(21, 142);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(149, 20);
-            this.textBox6.TabIndex = 15;
-            // 
             // Form2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1582,8 +1469,6 @@ namespace Desktop_App
             this.panelConst.PerformLayout();
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
-            this.panel5.ResumeLayout(false);
-            this.panel5.PerformLayout();
             this.panelAddElement.ResumeLayout(false);
             this.panelAddElement.PerformLayout();
             this.ajustes.ResumeLayout(false);
@@ -1624,8 +1509,6 @@ namespace Desktop_App
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox15)).EndInit();
-            this.panel9.ResumeLayout(false);
-            this.panel9.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -1736,17 +1619,6 @@ namespace Desktop_App
         private System.Windows.Forms.Label labelTitulo;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanelCurrentElements;
         private System.Windows.Forms.Panel panel4;
-        private System.Windows.Forms.Panel panel5;
-        private System.Windows.Forms.Label label26;
         private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.Panel panel6;
-        private System.Windows.Forms.Panel panel9;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.TextBox textBox6;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.Label label27;
-        private System.Windows.Forms.TextBox textBox1;
     }
 }

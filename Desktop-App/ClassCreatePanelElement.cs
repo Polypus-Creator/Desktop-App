@@ -8,7 +8,7 @@ using System.Windows.Forms;
 
 namespace Desktop_App
 {
-    class ClassCreatePanel
+    class ClassCreatePanelElement
     {
         private string _id;
         private int _maxW;
@@ -27,9 +27,10 @@ namespace Desktop_App
         private List<string> _options = new List<string>();
         private List<Label> _labelOptions = new List<Label>();
         private List<PictureBox> _butonsOptions = new List<PictureBox>();
+        
 
 
-        public ClassCreatePanel(int maxW, int maxOp, string title, List<string> options)
+        public ClassCreatePanelElement(int maxW, int maxOp, string title, List<string> options)
         {
             this.MaxW = maxW;
             this.MaxOp = maxOp;
@@ -75,6 +76,7 @@ namespace Desktop_App
             LabelTitle.Visible = true;
             PanelGol.Controls.Add(LabelTitle);
 
+
             PanelOption.Location = new Point(349, 0);
             PanelOption.Size = new Size(131, 45);
             PanelOption.BackColor = Color.FromArgb(96, 71, 71);
@@ -87,6 +89,7 @@ namespace Desktop_App
             PanelEd.BackColor = Color.FromArgb(96, 71, 71);
             PanelEd.BorderStyle = System.Windows.Forms.BorderStyle.None;
             PanelEd.Visible = true;
+            PanelEd.Cursor = Cursors.Hand;
             PanelOption.Controls.Add(PanelEd);
 
             PanelHe.Location = new Point(43, 0);
@@ -94,11 +97,13 @@ namespace Desktop_App
             PanelHe.BackColor = Color.FromArgb(96, 71, 71);
             PanelHe.BorderStyle = System.Windows.Forms.BorderStyle.None;
             PanelHe.Visible = true;
+            PanelHe.Cursor = Cursors.Hand;
             PanelOption.Controls.Add(PanelHe);
 
             PanelDe.Location = new Point(86, 0);
             PanelDe.Size = new Size(43, 45);
             PanelDe.BackColor = Color.FromArgb(96, 71, 71);
+            PanelDe.Cursor = Cursors.Hand;
             PanelDe.BorderStyle = System.Windows.Forms.BorderStyle.None;
             PanelDe.Visible = true;
             PanelOption.Controls.Add(PanelDe);

@@ -46,7 +46,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ClassCreatePanel.cs" />
+    <Compile Include="ClassCreatePanelAjustes.cs" />
+    <Compile Include="ClassCreatePanelElement.cs" />
     <Compile Include="FAboutUs.cs">
       <SubType>Form</SubType>
     </Compile>
