@@ -1,7 +1,7 @@
 ﻿
 namespace Desktop_App
 {
-    partial class Form2
+    partial class FormPrincipal
     {
         /// <summary>
         /// Required designer variable.
@@ -29,7 +29,7 @@ namespace Desktop_App
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form2));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormPrincipal));
             this.panelSuperior = new System.Windows.Forms.Panel();
             this.labelIniciarSesion = new System.Windows.Forms.Label();
             this.windowControlButtons = new System.Windows.Forms.Panel();
@@ -865,6 +865,7 @@ namespace Desktop_App
             this.panelAddElement.Name = "panelAddElement";
             this.panelAddElement.Size = new System.Drawing.Size(505, 52);
             this.panelAddElement.TabIndex = 6;
+            this.panelAddElement.Paint += new System.Windows.Forms.PaintEventHandler(this.panelAddElement_Paint);
             this.panelAddElement.MouseClick += new System.Windows.Forms.MouseEventHandler(this.panelAddElement_MouseClick);
             // 
             // label11
@@ -1426,7 +1427,7 @@ namespace Desktop_App
             this.showHideFaqs.TabStop = false;
             this.showHideFaqs.Click += new System.EventHandler(this.showHideFaqs_Click);
             // 
-            // Form2
+            // FormPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -1437,7 +1438,7 @@ namespace Desktop_App
             this.Controls.Add(this.panelSuperior);
             this.Controls.Add(this.tabControl);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "Form2";
+            this.Name = "FormPrincipal";
             this.Text = "Form2";
             this.panelSuperior.ResumeLayout(false);
             this.panelSuperior.PerformLayout();

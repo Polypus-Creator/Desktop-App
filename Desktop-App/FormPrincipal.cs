@@ -10,7 +10,7 @@ using System.Windows.Forms;
 
 namespace Desktop_App
 {
-    public partial class Form2 : Form
+    public partial class FormPrincipal : Form
     {
         Boolean extendedLeftBar = true;
         Boolean displayFaqs = false;
@@ -20,8 +20,9 @@ namespace Desktop_App
         List<String> listFiles = new List<String>();
         List<Panel> panelesFlow = new List<Panel>();
         Boolean isHeaderAlreadyOn = false;
+        String currentEditingElement = null;
 
-        public Form2()
+        public FormPrincipal()
         {
             InitializeComponent();
             initConfig();
@@ -367,16 +368,17 @@ namespace Desktop_App
                 isHeaderAlreadyOn = true;            
             }
             string title = "NavBar";
+            currentEditingElement = title;
             Panel panelGlobal = new Panel();
             panelGlobal.Size = new Size(482, 150);
             flowLayoutPanelCurrentElements.Controls.Add(panelGlobal);
             List<string> options = new List<string>();
-            options.Add("ejemplo");
-            options.Add("ejemplo");
-            options.Add("ejemplo");
-            options.Add("ejemplo");
-            options.Add("ejemplo");
-            options.Add("ejemplo");
+            options.Add("");
+            options.Add("");
+            options.Add("");
+            options.Add("");
+            options.Add("");
+            options.Add("");
             ClassCreatePanelElement panelElement = new ClassCreatePanelElement(panelGlobal.Width,6,title, options);
             panelGlobal.Controls.Add(panelElement.PanelGol);
             panelesFlow.Add(panelGlobal);
@@ -413,8 +415,9 @@ namespace Desktop_App
             
                 flowLayoutPanelCurrentElements.Controls.Remove(panelesFlow[0]);
                 isHeaderAlreadyOn = false;
-            panelesFlow.Remove(panelesFlow[0]);
+                panelesFlow.Remove(panelesFlow[0]);
                 panel31.Enabled = true;
+                currentEditingElement = null;
 
 
 
@@ -425,15 +428,24 @@ namespace Desktop_App
         {
             string title = "NavBar";
             List<string> options = new List<string>();
-            options.Add("ejemplo");
-            options.Add("ejemplo");
-            options.Add("ejemplo");
-            options.Add("ejemplo");
-            options.Add("ejemplo");
-            options.Add("ejemplo");
+            if (currentEditingElement == title)
+            {
+
+            }
+           
+            options.Add("");
+            options.Add("");
+            options.Add("");
+            options.Add("");
+            options.Add("");
+            options.Add("");
             ClassCreatePanelAjustes ajuste = new ClassCreatePanelAjustes(410, 310, title, options);
             panel4.Controls.Add(ajuste.PanelGlo);
         }
 
+        private void panelAddElement_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }
