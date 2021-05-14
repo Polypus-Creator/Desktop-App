@@ -18,9 +18,11 @@ namespace Desktop_App
         int fullWidth = Screen.PrimaryScreen.Bounds.Width;
         int fullHeight = Screen.PrimaryScreen.Bounds.Height;
         List<String> listFiles = new List<String>();
-        List<Panel> panelesFlow = new List<Panel>();
+        List<ClassCreatePanelElement> panelesFlow = new List<ClassCreatePanelElement>();
+        List<ClassCreatePanelAjustes> panelesAjustes = new List<ClassCreatePanelAjustes>();
         Boolean isHeaderAlreadyOn = false;
         String currentEditingElement = null;
+        
 
         public FormPrincipal()
         {
@@ -288,10 +290,10 @@ namespace Desktop_App
 
         private void panelColorPrincipal_Click(object sender, EventArgs e)
         {
-            changeColor(sender);
+            DataClass.backOne = changeColor(sender);
         }
 
-        private void changeColor(object sender)
+        private Color changeColor(object sender)
         {
             ColorDialog colorPicker = new ColorDialog();
             if (colorPicker.ShowDialog() == DialogResult.OK)
@@ -299,14 +301,15 @@ namespace Desktop_App
                 if(sender is Panel)
                 {
                     ((Panel)sender).BackColor = colorPicker.Color;
-
+                    return colorPicker.Color;
                 }
             }
+            return Color.Red;
         }
 
         private void panel11_Click(object sender, EventArgs e)
         {
-            changeColor(sender);
+            DataClass.backTwo = changeColor(sender);
         }
 
         private void panelDisenyo_Paint(object sender, PaintEventArgs e)
@@ -381,7 +384,7 @@ namespace Desktop_App
             options.Add("");
             ClassCreatePanelElement panelElement = new ClassCreatePanelElement(panelGlobal.Width,6,title, options);
             panelGlobal.Controls.Add(panelElement.PanelGol);
-            panelesFlow.Add(panelGlobal);
+            panelesFlow.Add(panelElement);
             panelGlobal.Name="panel" + panelesFlow.Count;
 
             Panel colorOne = new Panel();
@@ -413,7 +416,7 @@ namespace Desktop_App
         private void PanelDe_MouseClicked(Object sender, MouseEventArgs e)
         {
             
-                flowLayoutPanelCurrentElements.Controls.Remove(panelesFlow[0]);
+                flowLayoutPanelCurrentElements.Controls.Remove(panelesFlow[0].PanelGol);
                 isHeaderAlreadyOn = false;
                 panelesFlow.Remove(panelesFlow[0]);
                 panel31.Enabled = true;
@@ -441,11 +444,60 @@ namespace Desktop_App
             options.Add("");
             ClassCreatePanelAjustes ajuste = new ClassCreatePanelAjustes(410, 310, title, options);
             panel4.Controls.Add(ajuste.PanelGlo);
+            panelesAjustes.Add(ajuste);
+            ajuste.ListText.ForEach(delegate (TextBox textBox) 
+            {
+                textBox.TextChanged += textBox_TextChanged;
+            });
+            ajuste.PanelSave.MouseClick += new System.Windows.Forms.MouseEventHandler(PanelSave_MousClick);
+        }
+
+        private void PanelSave_MousClick(object sender, EventArgs e)
+        {
+            string[,] navItems = new string[6, 6];
+            int fila = 0, col = 0;
+            panelesAjustes.ForEach(delegate (ClassCreatePanelAjustes panel) 
+            {
+                if(panel.Title == "NavBar")
+                {
+                    panel.ListText.ForEach(delegate (TextBox textBox) {
+                    if(textBox.Visible)
+                        {
+                            navItems[fila, col] = textBox.Text;
+                            fila++;
+                        }
+                    });
+                    
+                }
+            });
+
+            
+            DataClass.header = new Header(navItems,DataClass.backOne.ToString(),DataClass.backTwo.ToString());
+        }
+
+
+        private void textBox_TextChanged(object sender, EventArgs e)
+        {
+            TextBox textBox = (TextBox) sender;
+            panelesFlow.ForEach(delegate (ClassCreatePanelElement elemento) 
+            {
+                if (elemento.Id == "NavBar") {
+                    elemento.LabelOptions[Int32.Parse(textBox.Name)].Visible = true;
+                    elemento.LabelOptions[Int32.Parse(textBox.Name)].Text = textBox.Text;
+                    elemento.ButonsOptions[Int32.Parse(textBox.Name)].Visible = true;
+                    if(elemento.LabelOptions[Int32.Parse(textBox.Name)].Text == "")
+                    {
+                        elemento.LabelOptions[Int32.Parse(textBox.Name)].Visible = false;
+                        elemento.ButonsOptions[Int32.Parse(textBox.Name)].Visible = false;
+                    }
+                }
+            });
         }
 
         private void panelAddElement_Paint(object sender, PaintEventArgs e)
         {
 
         }
+
     }
 }

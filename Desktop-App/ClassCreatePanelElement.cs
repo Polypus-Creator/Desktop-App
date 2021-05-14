@@ -151,6 +151,7 @@ namespace Desktop_App
             int y1b = 60;
             int y2b = 100;
             int count = 0;
+            int countId = 0;
             Boolean filaOne = true;
             Options.ForEach(delegate (String option)
             {
@@ -160,8 +161,8 @@ namespace Desktop_App
                     lbOption.Location = new Point(x1l+128*count, y1l);
                     lbOption.Font = new Font("Segoe UI Semibold", 12, FontStyle.Bold);
                     lbOption.Text = option;
-                    lbOption.Name = "label" + option;
-                    lbOption.Visible = true;
+                    lbOption.Name = "label" + countId;
+                    lbOption.Visible = false;
                     _labelOptions.Add(lbOption);
                     PanelGol.Controls.Add(lbOption);
 
@@ -181,7 +182,7 @@ namespace Desktop_App
                     */
 
                     PictureBox delete = new PictureBox();
-                    delete.Name = "pbDelete" + option;
+                    delete.Name = "pbDelete" + countId;
                     //delete.Location = new Point(x2b + 128 * count, y1b);
                     delete.Location = new Point(x1b + 128 * count, y1b);
                     delete.Size = new Size(20, 20);
@@ -190,11 +191,12 @@ namespace Desktop_App
                     delete.Cursor = Cursors.Hand;
                     delete.Image = Desktop_App.Properties.Resources.trashDarkIcon;
                     delete.SizeMode = PictureBoxSizeMode.StretchImage;
-                    delete.Visible = true;
+                    delete.Visible = false;
                     PanelGol.Controls.Add(delete);
                     _butonsOptions.Add(delete);
                     PanelGol.Controls.Add(delete);
                     count++;
+                    countId++;
                     if (count == 3)
                     {
                         filaOne = false;
@@ -208,8 +210,8 @@ namespace Desktop_App
                     lbOption.Location = new Point(x1l + 128 * count, y2l);
                     lbOption.Font = new Font("Segoe UI Semibold", 12, FontStyle.Bold);
                     lbOption.Text = option;
-                    lbOption.Name = "label" + option;
-                    lbOption.Visible = true;
+                    lbOption.Name = "label" + count;
+                    lbOption.Visible = false;
                     _labelOptions.Add(lbOption);
                     PanelGol.Controls.Add(lbOption);
 
@@ -229,7 +231,7 @@ namespace Desktop_App
                     */
 
                     PictureBox delete = new PictureBox();
-                    delete.Name = "pbDelete" + option;
+                    delete.Name = "pbDelete" + count;
                     //delete.Location = new Point(x2b + 128 * count, y2b);
                     delete.Location = new Point(x1b + 128 * count, y2b);
                     delete.Size = new Size(20, 20);
@@ -238,11 +240,12 @@ namespace Desktop_App
                     delete.Cursor = Cursors.Hand;
                     delete.Image = Desktop_App.Properties.Resources.trashDarkIcon;
                     delete.SizeMode = PictureBoxSizeMode.StretchImage;
-                    delete.Visible = true;
+                    delete.Visible = false;
                     PanelGol.Controls.Add(delete);
                     _butonsOptions.Add(delete);
                     PanelGol.Controls.Add(delete);
                     count++;
+                    countId++;
                 }
             });
         }

@@ -116,13 +116,14 @@ namespace Desktop_App
             int x1 = 21, x2 = 193;
             int y1 = 57;
             int fila = 0;
+            int countId =0;
             Boolean derecha = true;
             ListItems.ForEach(delegate (String item)
             {
                 if (derecha)
                 {
                     TextBox text = new TextBox();
-                    text.Name = "tb" + item;
+                    text.Name = ""+countId;
                     text.Text = item;
                     text.Size = new Size(149, 20);
                     text.Location = new Point(x1, y1+44*fila);
@@ -130,11 +131,12 @@ namespace Desktop_App
                     derecha = false;
                     ListText.Add(text);
                     PanelTextos.Controls.Add(text);
+                    countId++;
                 }
                 else
                 {
                     TextBox text = new TextBox();
-                    text.Name = "tb" + item;
+                    text.Name = "" + countId;
                     text.Text = item;
                     text.Size = new Size(149, 20);
                     text.Location = new Point(x2, y1+44*fila);
@@ -143,6 +145,7 @@ namespace Desktop_App
                     fila++;
                     ListText.Add(text);
                     PanelTextos.Controls.Add(text);
+                    countId++;
                 }
             });
         }
