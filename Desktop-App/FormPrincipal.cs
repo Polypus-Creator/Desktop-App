@@ -1,4 +1,6 @@
-﻿using System;
+﻿
+using System;
+using System.Windows.Forms;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -6,11 +8,13 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using System.Windows.Forms;
+using Newtonsoft.Json.Linq;
+using Newtonsoft.Json;
+using System.Text.RegularExpressions;
 
 namespace Desktop_App
 {
-    public partial class FormPrincipal : Form
+    public partial class FormPrincipal : System.Windows.Forms.Form
     {
         Boolean extendedLeftBar = true;
         Boolean displayFaqs = false;
@@ -372,9 +376,6 @@ namespace Desktop_App
             }
             string title = "NavBar";
             currentEditingElement = title;
-            Panel panelGlobal = new Panel();
-            panelGlobal.Size = new Size(482, 150);
-            flowLayoutPanelCurrentElements.Controls.Add(panelGlobal);
             List<string> options = new List<string>();
             options.Add("");
             options.Add("");
@@ -382,10 +383,10 @@ namespace Desktop_App
             options.Add("");
             options.Add("");
             options.Add("");
-            ClassCreatePanelElement panelElement = new ClassCreatePanelElement(panelGlobal.Width,6,title, options);
-            panelGlobal.Controls.Add(panelElement.PanelGol);
+            ClassCreatePanelElement panelElement = new ClassCreatePanelElement(482, 6,title, options);
+            flowLayoutPanelCurrentElements.Controls.Add(panelElement.PanelGol);
             panelesFlow.Add(panelElement);
-            panelGlobal.Name="panel" + panelesFlow.Count;
+            panelElement.PanelGol.Name= "NavBar" + panelesFlow.Count;
 
             Panel colorOne = new Panel();
             Panel colorTwo = new Panel();
@@ -406,55 +407,106 @@ namespace Desktop_App
             colorTwo.MouseClick += new System.Windows.Forms.MouseEventHandler(panelColorPrincipal_Click);
             panelElement.PanelGol.Controls.Add(colorTwo);
 
+            panelElement.PanelDe.Name = "NavBarPanelDelete" + panelesFlow.Count;
+            panelElement.PbDe.Name = "NavBarPbDelete" + panelesFlow.Count;
+
             panelElement.PanelDe.MouseClick += new System.Windows.Forms.MouseEventHandler(PanelDe_MouseClicked);
             panelElement.PbDe.MouseClick += new System.Windows.Forms.MouseEventHandler(PanelDe_MouseClicked);
 
+            panelElement.PanelDe.Name = "NavBarPanelDelete" + panelesFlow.Count;
+            panelElement.PbDe.Name = "NavBarPbDelete" + panelesFlow.Count;
 
             panelElement.PanelEd.MouseClick += new System.Windows.Forms.MouseEventHandler(PanelEd_MouseClick);
             panelElement.PbEd.MouseClick += new System.Windows.Forms.MouseEventHandler(PanelEd_MouseClick);
         }
         private void PanelDe_MouseClicked(Object sender, MouseEventArgs e)
         {
+            string typo = sender.GetType().Name;
+            if (typo == "Panel")
+            {
+                Panel panel = (Panel)sender;
+                foreach (ClassCreatePanelElement element in panelesFlow)
+                {
+                    if (element.PanelDe.Equals(panel))
+                    {
+                        flowLayoutPanelCurrentElements.Controls.Remove(element.PanelGol);
+                        panelesFlow.Remove(element);
+                        break;
+                    }
+                }
+                
+                if (panel.Name.Contains("NavBar"))
+                {
+                    isHeaderAlreadyOn = false;
+                    panel31.Enabled = true;
+                    currentEditingElement = null;
+                }
+            }
+            else if (typo == "PictureBox")
+            {
+                PictureBox picture = (PictureBox)sender;
+                foreach (ClassCreatePanelElement element in panelesFlow)
+                {
+                    if (element.PbDe.Equals(picture))
+                    {
+                        flowLayoutPanelCurrentElements.Controls.Remove(element.PanelGol);
+                        panelesFlow.Remove(element);
+                        break;
+                    }
+                }
+                if (picture.Name.Contains("NavBar"))
+                {
+                    isHeaderAlreadyOn = false;
+                    panel31.Enabled = true;
+                    currentEditingElement = null;
+                }
+            }
             
-                flowLayoutPanelCurrentElements.Controls.Remove(panelesFlow[0].PanelGol);
-                isHeaderAlreadyOn = false;
-                panelesFlow.Remove(panelesFlow[0]);
-                panel31.Enabled = true;
-                currentEditingElement = null;
-
-
-
         }
 
 
         private void PanelEd_MouseClick(Object sender, MouseEventArgs e)
         {
-            string title = "NavBar";
-            List<string> options = new List<string>();
-            if (currentEditingElement == title)
+            string typo = sender.GetType().Name;
+            ClassCreatePanelAjustes ajuste = null;
+            if (typo == "Panel")
             {
-
+                Panel panel = (Panel)sender;
+                foreach (ClassCreatePanelElement element in panelesFlow)
+                {
+                    if (element.PanelEd.Equals(panel))
+                    {
+                        ajuste = new ClassCreatePanelAjustes(410, 310, element.Title, element.Options);
+                        break;
+                    }
+                }
             }
-           
-            options.Add("");
-            options.Add("");
-            options.Add("");
-            options.Add("");
-            options.Add("");
-            options.Add("");
-            ClassCreatePanelAjustes ajuste = new ClassCreatePanelAjustes(410, 310, title, options);
+            else if (typo == "PictureBox")
+            {
+                PictureBox picture = (PictureBox)sender;
+                foreach (ClassCreatePanelElement element in panelesFlow)
+                {
+                    if (element.PbEd.Equals(picture))
+                    {
+                        ajuste = new ClassCreatePanelAjustes(410, 310, element.Title, element.Options);
+                        break;
+                    }
+                }
+            }
             panel4.Controls.Add(ajuste.PanelGlo);
             panelesAjustes.Add(ajuste);
+            
             ajuste.ListText.ForEach(delegate (TextBox textBox) 
             {
                 textBox.TextChanged += textBox_TextChanged;
             });
             ajuste.PanelSave.MouseClick += new System.Windows.Forms.MouseEventHandler(PanelSave_MousClick);
+            ajuste.LabelSave.MouseClick += new System.Windows.Forms.MouseEventHandler(PanelSave_MousClick);
         }
 
         private void PanelSave_MousClick(object sender, EventArgs e)
         {
-            string[,] navItems = new string[6, 6];
+            string[,] navItems = new string[6, 2];
             int fila = 0, col = 0;
             panelesAjustes.ForEach(delegate (ClassCreatePanelAjustes panel) 
             {
@@ -472,9 +524,55 @@ namespace Desktop_App
             });
 
             
-            DataClass.header = new Header(navItems,DataClass.backOne.ToString(),DataClass.backTwo.ToString());
+            DataClass.header = new Header(navItems,DataClass.backOne,DataClass.backTwo);
+            DataClass.listasElementos.Add(DataClass.header);
+            generateJSON(DataClass.listasElementos);
+            string typo = sender.GetType().Name;
+            foreach(ClassCreatePanelAjustes elem in panelesAjustes)
+            {
+                if (typo.Equals("PictureBox"))
+                {
+                    PictureBox pictureBox = (PictureBox)sender;
+                    if (elem.Save.Equals(pictureBox))
+                    {
+                        elem.PanelGlo.Visible = false;
+                    }
+
+                }else if (typo.Equals("Panel"))
+                {
+                    Panel panel = (Panel)sender;
+                    if (elem.PanelSave.Equals(panel))
+                    {
+                        elem.PanelGlo.Visible = false;
+                    }
+                }
+                else
+                {
+                    Label label = (Label)sender;
+                    if (elem.LabelSave.Equals(label))
+                    {
+                        elem.PanelGlo.Visible = false;
+                    }
+                }
+            }
+            
         }
 
+        private void generateJSON(List<object> listasElementos)
+        {
+            List<JObject> listaJSON = new List<JObject>();
+            listasElementos.ForEach(delegate (object objeto) 
+            {
+                string typo=objeto.GetType().Name;
+                if (typo == "Header")
+                {
+                    string obstring = JsonConvert.SerializeObject((Header)objeto);
+                    JObject googleSearch = JObject.Parse(obstring);
+                    textBoxBreveDescripcion.Text = googleSearch.ToString();
+                }
+            });
+           
+        }
 
         private void textBox_TextChanged(object sender, EventArgs e)
         {
@@ -484,20 +582,35 @@ namespace Desktop_App
                 if (elemento.Id == "NavBar") {
                     elemento.LabelOptions[Int32.Parse(textBox.Name)].Visible = true;
                     elemento.LabelOptions[Int32.Parse(textBox.Name)].Text = textBox.Text;
-                    elemento.ButonsOptions[Int32.Parse(textBox.Name)].Visible = true;
                     if(elemento.LabelOptions[Int32.Parse(textBox.Name)].Text == "")
                     {
                         elemento.LabelOptions[Int32.Parse(textBox.Name)].Visible = false;
-                        elemento.ButonsOptions[Int32.Parse(textBox.Name)].Visible = false;
                     }
                 }
             });
         }
 
-        private void panelAddElement_Paint(object sender, PaintEventArgs e)
+        private void label24_MouseClick(object sender, MouseEventArgs e)
         {
+            string title = "Separator";
+            List<string> options = new List<string>();
+            options.Add("Color (RGB)");
+            ClassCreatePanelElement panelElement = new ClassCreatePanelElement(482, 1, title, options);
+            flowLayoutPanelCurrentElements.Controls.Add(panelElement.PanelGol);
+            panelesFlow.Add(panelElement);
+            panelElement.PanelGol.Name = "Separator" + panelesFlow.Count;
 
+            panelElement.PanelDe.Name = "SeparatorPanelDelete" + panelesFlow.Count;
+            panelElement.PbDe.Name = "SeparatorPbDelete" + panelesFlow.Count;
+
+            panelElement.PanelDe.MouseClick += new System.Windows.Forms.MouseEventHandler(PanelDe_MouseClicked);
+            panelElement.PbDe.MouseClick += new System.Windows.Forms.MouseEventHandler(PanelDe_MouseClicked);
+
+            panelElement.PanelEd.Name = "SeparatorPanelEdit" + panelesFlow.Count;
+            panelElement.PbEd.Name = "SeparatorPbEdit" + panelesFlow.Count;
+
+            panelElement.PanelEd.MouseClick += new System.Windows.Forms.MouseEventHandler(PanelEd_MouseClick);
+            panelElement.PbEd.MouseClick += new System.Windows.Forms.MouseEventHandler(PanelEd_MouseClick);
         }
-
     }
 }

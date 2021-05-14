@@ -1359,6 +1359,7 @@ namespace Desktop_App
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(88, 116);
             this.panel2.TabIndex = 27;
+            this.panel2.MouseClick += new System.Windows.Forms.MouseEventHandler(this.label24_MouseClick);
             // 
             // label24
             // 
@@ -1371,6 +1372,7 @@ namespace Desktop_App
             this.label24.Size = new System.Drawing.Size(68, 19);
             this.label24.TabIndex = 6;
             this.label24.Text = "Separator";
+            this.label24.MouseClick += new System.Windows.Forms.MouseEventHandler(this.label24_MouseClick);
             // 
             // pictureBox14
             // 
@@ -1381,6 +1383,7 @@ namespace Desktop_App
             this.pictureBox14.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox14.TabIndex = 0;
             this.pictureBox14.TabStop = false;
+            this.pictureBox14.MouseClick += new System.Windows.Forms.MouseEventHandler(this.label24_MouseClick);
             // 
             // panel3
             // 

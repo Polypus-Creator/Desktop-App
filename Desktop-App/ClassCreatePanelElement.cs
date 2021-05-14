@@ -165,36 +165,7 @@ namespace Desktop_App
                     lbOption.Visible = false;
                     _labelOptions.Add(lbOption);
                     PanelGol.Controls.Add(lbOption);
-
-                    /*
-                    PictureBox editar = new PictureBox();
-                    editar.Name = "pbEdit" + option;
-                    editar.Location = new Point(x1b + 128 * count, y1b);
-                    editar.Size = new Size(20, 20);
-                    editar.BackColor = Color.FromArgb(96, 71, 71);
-                    editar.BorderStyle = System.Windows.Forms.BorderStyle.None;
-                    editar.SizeMode = PictureBoxSizeMode.StretchImage;
-                    editar.Cursor = Cursors.Hand;
-                    editar.Image = Desktop_App.Properties.Resources.editar;
-                    editar.Visible = true;
-                    _butonsOptions.Add(editar);
-                    PanelGol.Controls.Add(editar);
-                    */
-
-                    PictureBox delete = new PictureBox();
-                    delete.Name = "pbDelete" + countId;
-                    //delete.Location = new Point(x2b + 128 * count, y1b);
-                    delete.Location = new Point(x1b + 128 * count, y1b);
-                    delete.Size = new Size(20, 20);
-                    delete.BackColor = Color.Transparent;
-                    delete.BorderStyle = System.Windows.Forms.BorderStyle.None;
-                    delete.Cursor = Cursors.Hand;
-                    delete.Image = Desktop_App.Properties.Resources.trashDarkIcon;
-                    delete.SizeMode = PictureBoxSizeMode.StretchImage;
-                    delete.Visible = false;
-                    PanelGol.Controls.Add(delete);
-                    _butonsOptions.Add(delete);
-                    PanelGol.Controls.Add(delete);
+                    
                     count++;
                     countId++;
                     if (count == 3)
@@ -214,36 +185,6 @@ namespace Desktop_App
                     lbOption.Visible = false;
                     _labelOptions.Add(lbOption);
                     PanelGol.Controls.Add(lbOption);
-
-                    /*
-                    PictureBox editar = new PictureBox();
-                    editar.Name = "pbEdit" + option;
-                    editar.Location = new Point(x1b + 128 * count, y2b);
-                    editar.Size = new Size(20, 20);
-                    editar.BackColor = Color.FromArgb(96, 71, 71);
-                    editar.BorderStyle = System.Windows.Forms.BorderStyle.None;
-                    editar.Cursor = Cursors.Hand;
-                    editar.Image = Desktop_App.Properties.Resources.editar;
-                    editar.SizeMode = PictureBoxSizeMode.StretchImage;
-                    editar.Visible = true;
-                    _butonsOptions.Add(editar);
-                    PanelGol.Controls.Add(editar);
-                    */
-
-                    PictureBox delete = new PictureBox();
-                    delete.Name = "pbDelete" + count;
-                    //delete.Location = new Point(x2b + 128 * count, y2b);
-                    delete.Location = new Point(x1b + 128 * count, y2b);
-                    delete.Size = new Size(20, 20);
-                    delete.BackColor = Color.Transparent;
-                    delete.BorderStyle = System.Windows.Forms.BorderStyle.None;
-                    delete.Cursor = Cursors.Hand;
-                    delete.Image = Desktop_App.Properties.Resources.trashDarkIcon;
-                    delete.SizeMode = PictureBoxSizeMode.StretchImage;
-                    delete.Visible = false;
-                    PanelGol.Controls.Add(delete);
-                    _butonsOptions.Add(delete);
-                    PanelGol.Controls.Add(delete);
                     count++;
                     countId++;
                 }

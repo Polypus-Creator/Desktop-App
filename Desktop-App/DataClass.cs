@@ -12,5 +12,6 @@ namespace Desktop_App
         public static Color backOne = Color.Black;
         public static Color backTwo = Color.White;
         public static Header header;
+        public static List<object> listasElementos = new List<object>();
     }
 }
