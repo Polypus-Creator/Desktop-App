@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Drawing;
 using System.Text;
 
 namespace Desktop_App
@@ -14,5 +15,6 @@ namespace Desktop_App
         }
 
         public string Color { get => color; set => color = value; }
+
     }
 }

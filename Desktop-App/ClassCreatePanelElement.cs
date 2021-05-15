@@ -11,6 +11,7 @@ namespace Desktop_App
     class ClassCreatePanelElement
     {
         private string _id;
+        private ClassCreatePanelAjustes _createAjustes;
         private int _maxW;
         private int _maxOp = 6;
         private string _title;
@@ -58,7 +59,7 @@ namespace Desktop_App
         public List<string> Options { get => _options; set => _options = value; }
         public List<Label> LabelOptions { get => _labelOptions; set => _labelOptions = value; }
         public List<PictureBox> ButonsOptions { get => _butonsOptions; set => _butonsOptions = value; }
-
+        internal ClassCreatePanelAjustes CreateAjustes { get => _createAjustes; set => _createAjustes = value; }
 
         private void createView()
         {
@@ -157,7 +158,7 @@ namespace Desktop_App
             {
                 if (filaOne) {
                     Label lbOption = new Label();
-                    lbOption.Size = new Size(70, 21);
+                    lbOption.Size = new Size(75, 21);
                     lbOption.Location = new Point(x1l+128*count, y1l);
                     lbOption.Font = new Font("Segoe UI Semibold", 12, FontStyle.Bold);
                     lbOption.Text = option;

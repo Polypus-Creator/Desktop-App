@@ -52,9 +52,9 @@ namespace Desktop_App
             PanelGlo.Size = new Size(MaxW, MaxH);
             PanelGlo.BorderStyle = System.Windows.Forms.BorderStyle.None;
             PanelGlo.BackColor = Color.FromArgb(96, 71, 71);
-            PanelGlo.Visible = true;
+            PanelGlo.Visible = false;
 
-            LabelTitle.Size = new Size(75, 25);
+            LabelTitle.Size = new Size(100, 25);
             LabelTitle.Location = new Point(15, 13);
             LabelTitle.Font = new Font("Segoe UI Semibold", 14.25f, FontStyle.Bold);
             LabelTitle.ForeColor = Color.White;
