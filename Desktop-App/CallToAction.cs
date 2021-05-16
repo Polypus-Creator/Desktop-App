@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Drawing;
 using System.Text;
 
 namespace Desktop_App
@@ -15,13 +16,13 @@ namespace Desktop_App
         private string buttonUrl;
         private string orientation;
 
-        public CallToAction(string title, string text, string backColor, string titleColor,string  textColor, string buttonText, string buttonUrl, string orientation)
+        public CallToAction(string title, string text, Color backColor, Color titleColor, Color textColor, string buttonText, string buttonUrl, string orientation)
         {
             Title = title;
             Text = text;
-            BackColor = backColor;
-            TitleColor = titleColor;
-            TextColor = textColor;
+            BackColor = HexConverter(backColor);
+            TitleColor = HexConverter(titleColor);
+            TextColor = HexConverter(textColor);
             ButtonText = buttonText;
             ButtonUrl = buttonUrl;
             Orientation = orientation;
@@ -35,5 +36,10 @@ namespace Desktop_App
         public string ButtonText { get => buttonText; set => buttonText = value; }
         public string ButtonUrl { get => buttonUrl; set => buttonUrl = value; }
         public string Orientation { get => orientation; set => orientation = value; }
+
+        private String HexConverter(System.Drawing.Color c)
+        {
+            return "#" + c.R.ToString("X2") + c.G.ToString("X2") + c.B.ToString("X2");
+        }
     }
 }

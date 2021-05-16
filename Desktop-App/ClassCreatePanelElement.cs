@@ -28,7 +28,8 @@ namespace Desktop_App
         private List<string> _options = new List<string>();
         private List<Label> _labelOptions = new List<Label>();
         private List<PictureBox> _butonsOptions = new List<PictureBox>();
-        
+        private List<Panel> _panelColors = new List<Panel>();
+
 
 
         public ClassCreatePanelElement(int maxW, int maxOp, string title, List<string> options)
@@ -60,6 +61,7 @@ namespace Desktop_App
         public List<Label> LabelOptions { get => _labelOptions; set => _labelOptions = value; }
         public List<PictureBox> ButonsOptions { get => _butonsOptions; set => _butonsOptions = value; }
         internal ClassCreatePanelAjustes CreateAjustes { get => _createAjustes; set => _createAjustes = value; }
+        public List<Panel> PanelColors { get => _panelColors; set => _panelColors = value; }
 
         private void createView()
         {

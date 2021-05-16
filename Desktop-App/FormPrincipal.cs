@@ -424,8 +424,8 @@ namespace Desktop_App
             panelElement.PanelDe.MouseClick += new System.Windows.Forms.MouseEventHandler(PanelDe_MouseClicked);
             panelElement.PbDe.MouseClick += new System.Windows.Forms.MouseEventHandler(PanelDe_MouseClicked);
 
-            panelElement.PanelDe.Name = "NavBarPanelDelete" + panelesFlow.Count;
-            panelElement.PbDe.Name = "NavBarPbDelete" + panelesFlow.Count;
+            panelElement.PanelEd.Name = "NavBarPanelEdit" + panelesFlow.Count;
+            panelElement.PbEd.Name = "NavBarPbEdit" + panelesFlow.Count;
 
             panelElement.PanelEd.MouseClick += new System.Windows.Forms.MouseEventHandler(PanelEd_MouseClick);
             panelElement.PbEd.MouseClick += new System.Windows.Forms.MouseEventHandler(PanelEd_MouseClick);
@@ -754,6 +754,145 @@ namespace Desktop_App
         private String HexConverter(System.Drawing.Color c)
         {
             return "#" + c.R.ToString("X2") + c.G.ToString("X2") + c.B.ToString("X2");
+        }
+
+        private void pictureBox15_MouseClick(object sender, MouseEventArgs e)
+        {
+            string title = "Call To Action";
+            currentEditingElement = title;
+            List<string> options = new List<string>();
+            options.Add("Title");
+            options.Add("Text");
+            options.Add("Button Text");
+            options.Add("Button Link");
+            options.Add("orientation");
+            ClassCreatePanelElement panelElement = new ClassCreatePanelElement(482, 5, title, options);
+            flowLayoutPanelCurrentElements.Controls.Add(panelElement.PanelGol);
+            panelesFlow.Add(panelElement);
+            panelElement.PanelGol.Name = "CallToAction" + panelesFlow.Count;
+
+            panelElement.LabelOptions.ForEach(delegate (Label label)
+            {
+                label.Visible = true;
+            });
+
+            Panel backColor = new Panel();
+            Panel titleColor = new Panel();
+            Panel textColor = new Panel();
+
+            panelElement.PanelColors.Add(backColor);
+            panelElement.PanelColors.Add(titleColor);
+            panelElement.PanelColors.Add(textColor);
+
+            backColor.Name = "backColor";
+            backColor.Location = new Point(112, 59);
+            backColor.Size = new Size(16, 16);
+            backColor.BackColor = DataClass.backOne;
+            backColor.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            backColor.Visible = true;
+            panelElement.PanelGol.Controls.Add(backColor);
+
+            titleColor.Location = new Point(187, 59);
+            titleColor.Name = "titleColor";
+            titleColor.Size = new Size(16, 16);
+            titleColor.BackColor = DataClass.backTwo;
+            titleColor.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            titleColor.Visible = true;
+            panelElement.PanelGol.Controls.Add(titleColor);
+
+            textColor.Location = new Point(262, 59);
+            textColor.Name = "textColor";
+            textColor.Size = new Size(16, 16);
+            textColor.BackColor = DataClass.backTwo;
+            textColor.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            textColor.Visible = true;
+            panelElement.PanelGol.Controls.Add(textColor);
+
+            panelElement.CreateAjustes = new ClassCreatePanelAjustes(410, 310, panelElement.Title, panelElement.Options);
+            panel4.Controls.Add(panelElement.CreateAjustes.PanelGlo);
+            panelesAjustes.Add(panelElement.CreateAjustes);
+
+            panelElement.CreateAjustes.ListText.ForEach(delegate (TextBox textBox)
+            {
+                //textBox.TextChanged += textBox_TextChanged;
+            });
+            panelElement.CreateAjustes.PanelSave.MouseClick += new System.Windows.Forms.MouseEventHandler(PanelSave_MousClick);
+            panelElement.CreateAjustes.LabelSave.MouseClick += new System.Windows.Forms.MouseEventHandler(PanelSave_MousClick);
+
+            Panel backColorAjustes = new Panel();
+            Panel titleColorAjustes = new Panel();
+            Panel textColorAjustes = new Panel();
+
+            backColorAjustes.Name = "backColorAjustes";
+            backColorAjustes.Location = new Point(171, 57);
+            backColorAjustes.Size = new Size(21, 21);
+            backColorAjustes.BackColor = DataClass.backOne;
+            backColorAjustes.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            backColorAjustes.Visible = true;
+            backColorAjustes.MouseClick += new System.Windows.Forms.MouseEventHandler(panelColor_Click);
+            panelElement.CreateAjustes.PanelGlo.Controls.Add(backColorAjustes);
+
+            titleColorAjustes.Location = new Point(343, 57);
+            backColorAjustes.Name = "titleColorAjustes";
+            titleColorAjustes.Size = new Size(21, 21);
+            titleColorAjustes.BackColor = DataClass.backTwo;
+            titleColorAjustes.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            titleColorAjustes.Visible = true;
+            titleColorAjustes.MouseClick += new System.Windows.Forms.MouseEventHandler(panelColor_Click);
+            panelElement.CreateAjustes.PanelGlo.Controls.Add(titleColorAjustes);
+
+            textColorAjustes.Location = new Point(171, 101);
+            backColorAjustes.Name = "textColorAjustes";
+            textColorAjustes.Size = new Size(21, 21);
+            textColorAjustes.BackColor = DataClass.backTwo;
+            textColorAjustes.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            textColorAjustes.Visible = true;
+            textColorAjustes.MouseClick += new System.Windows.Forms.MouseEventHandler(panelColor_Click);
+            panelElement.CreateAjustes.PanelGlo.Controls.Add(textColorAjustes);
+
+            panelElement.PanelDe.Name = "CallToActionDelete" + panelesFlow.Count;
+            panelElement.PbDe.Name = "CallToActionDelete" + panelesFlow.Count;
+
+            panelElement.PanelDe.MouseClick += new System.Windows.Forms.MouseEventHandler(PanelDe_MouseClicked);
+            panelElement.PbDe.MouseClick += new System.Windows.Forms.MouseEventHandler(PanelDe_MouseClicked);
+
+            panelElement.PanelEd.Name = "CallToActionEdit" + panelesFlow.Count;
+            panelElement.PbEd.Name = "CallToActionEdit" + panelesFlow.Count;
+
+            panelElement.PanelEd.MouseClick += new System.Windows.Forms.MouseEventHandler(PanelEd_MouseClick);
+            panelElement.PbEd.MouseClick += new System.Windows.Forms.MouseEventHandler(PanelEd_MouseClick);
+        }
+
+        private void panelColor_Click(object sender, MouseEventArgs e)
+        {
+            Color color = changeColor(sender);
+            Panel panel = (Panel)sender;
+            foreach (ClassCreatePanelAjustes ajustes in panelesAjustes)
+            {
+                if (ajustes.PanelGlo.Controls.Contains(panel))
+                {
+                    foreach (ClassCreatePanelElement elementos in panelesFlow)
+                    {
+                        if (elementos.CreateAjustes.Equals(ajustes))
+                        {
+                            foreach (object objeto in elementos.PanelGol.Controls)
+                            {
+                                if (objeto is Panel)
+                                {
+                                    Panel panelColor = (Panel)objeto;
+                                    if (panel.Name.Contains(panelColor.Name))
+                                    {
+                                        panelColor.BackColor = color;
+                                        break;
+                                    }
+                                }
+                            }
+                            break;
+                        }
+                    }
+                    break;
+                }
+            }
         }
     }
 }
