@@ -7,6 +7,7 @@ namespace Desktop_App
 {
     class CallToAction
     {
+        private string elemento;
         private string title;
         private string text;
         private string backColor;
@@ -17,6 +18,7 @@ namespace Desktop_App
         
         public CallToAction(string title, string text, Color backColor, Color buttonColor, string buttonText, string buttonUrl, string orientation)
         {
+            Elemento = "CallToAction" + orientation;
             Title = title;
             Text = text;
             BackColor = HexConverter(backColor);
@@ -26,6 +28,7 @@ namespace Desktop_App
             Orientation = orientation;
         }
 
+        public string Elemento { get => elemento; set => elemento = value; }
         public string Title { get => title; set => title = value; }
         public string Text { get => text; set => text = value; }
         public string BackColor { get => backColor; set => backColor = value; }
