@@ -32,11 +32,13 @@ namespace Desktop_App
         public string[,] NavItems { get => navItems; set => navItems = value; }
         public string BackColor { 
             get => backColor; 
+
             set => backColor = value; 
         }
         public string TextColor { get => textColor; set => textColor = value; }
         public string LogoUrl { get => logoUrl; set => logoUrl = value; }
         public string WebName { get => webName; set => webName = value; }
+
 
         private String HexConverter(System.Drawing.Color c) 
         {

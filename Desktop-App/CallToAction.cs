@@ -10,19 +10,17 @@ namespace Desktop_App
         private string title;
         private string text;
         private string backColor;
-        private string titleColor;
-        private string textColor;
+        private string buttonColor;
         private string buttonText;
         private string buttonUrl;
         private string orientation;
-
-        public CallToAction(string title, string text, Color backColor, Color titleColor, Color textColor, string buttonText, string buttonUrl, string orientation)
+        
+        public CallToAction(string title, string text, Color backColor, Color buttonColor, string buttonText, string buttonUrl, string orientation)
         {
             Title = title;
             Text = text;
             BackColor = HexConverter(backColor);
-            TitleColor = HexConverter(titleColor);
-            TextColor = HexConverter(textColor);
+            ButtonColor = HexConverter(buttonColor);
             ButtonText = buttonText;
             ButtonUrl = buttonUrl;
             Orientation = orientation;
@@ -31,11 +29,11 @@ namespace Desktop_App
         public string Title { get => title; set => title = value; }
         public string Text { get => text; set => text = value; }
         public string BackColor { get => backColor; set => backColor = value; }
-        public string TitleColor { get => titleColor; set => titleColor = value; }
-        public string TextColor { get => textColor; set => textColor = value; }
+        public string ButtonColor { get => buttonColor; set => buttonColor = value; }
         public string ButtonText { get => buttonText; set => buttonText = value; }
         public string ButtonUrl { get => buttonUrl; set => buttonUrl = value; }
         public string Orientation { get => orientation; set => orientation = value; }
+        
 
         private String HexConverter(System.Drawing.Color c)
         {

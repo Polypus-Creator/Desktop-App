@@ -67,6 +67,8 @@ namespace Desktop_App
             flowLayoutPanel1.Height = fullHeight - 10;
             panelFirstLogin.Height = fullWidth / 2 + 540;
             panelDash.Height = fullWidth / 2 + 540;
+            DataClass.backOne = panel8.BackColor;
+            DataClass.backTwo = panel11.BackColor;
         }
 
         private void labelClose_Click(object sender, EventArgs e)
@@ -386,7 +388,7 @@ namespace Desktop_App
             ClassCreatePanelElement panelElement = new ClassCreatePanelElement(482, 6,title, options);
             flowLayoutPanelCurrentElements.Controls.Add(panelElement.PanelGol);
             panelesFlow.Add(panelElement);
-            panelElement.PanelGol.Name= "NavBar" + panelesFlow.Count;
+            panelElement.PanelGol.Name= "NavBar";
 
             panelElement.CreateAjustes = new ClassCreatePanelAjustes(410, 310, panelElement.Title, panelElement.Options);
             panel4.Controls.Add(panelElement.CreateAjustes.PanelGlo);
@@ -398,25 +400,6 @@ namespace Desktop_App
             });
             panelElement.CreateAjustes.PanelSave.MouseClick += new System.Windows.Forms.MouseEventHandler(PanelSave_MousClick);
             panelElement.CreateAjustes.LabelSave.MouseClick += new System.Windows.Forms.MouseEventHandler(PanelSave_MousClick);
-
-            Panel colorOne = new Panel();
-            Panel colorTwo = new Panel();
-
-            colorOne.Location = new Point(299, 0);
-            colorOne.Size = new Size(25, 25);
-            colorOne.BackColor = panel8.BackColor;
-            colorOne.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            colorOne.Visible = true;
-            colorOne.MouseClick += new System.Windows.Forms.MouseEventHandler(panelColorPrincipal_Click);
-            panelElement.PanelGol.Controls.Add(colorOne);
-
-            colorTwo.Location = new Point(324, 0);
-            colorTwo.Size = new Size(25, 25);
-            colorTwo.BackColor = panel11.BackColor;
-            colorTwo.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            colorTwo.Visible = true;
-            colorTwo.MouseClick += new System.Windows.Forms.MouseEventHandler(panelColorPrincipal_Click);
-            panelElement.PanelGol.Controls.Add(colorTwo);
 
             panelElement.PanelDe.Name = "NavBarPanelDelete" + panelesFlow.Count;
             panelElement.PbDe.Name = "NavBarPbDelete" + panelesFlow.Count;
@@ -441,6 +424,8 @@ namespace Desktop_App
                     if (element.PanelDe.Equals(panel))
                     {
                         flowLayoutPanelCurrentElements.Controls.Remove(element.PanelGol);
+                        panel4.Controls.Remove(element.CreateAjustes.PanelGlo);
+                        panelesAjustes.Remove(element.CreateAjustes);
                         panelesFlow.Remove(element);
                         break;
                     }
@@ -461,6 +446,8 @@ namespace Desktop_App
                     if (element.PbDe.Equals(picture))
                     {
                         flowLayoutPanelCurrentElements.Controls.Remove(element.PanelGol);
+                        panel4.Controls.Remove(element.CreateAjustes.PanelGlo);
+                        panelesAjustes.Remove(element.CreateAjustes);
                         panelesFlow.Remove(element);
                         break;
                     }
@@ -484,6 +471,7 @@ namespace Desktop_App
                 Panel panel = (Panel)sender;
                 foreach (ClassCreatePanelElement element in panelesFlow)
                 {
+                    element.CreateAjustes.PanelGlo.Visible = false;
                     if (element.PanelEd.Equals(panel))
                     {
                         element.CreateAjustes.PanelGlo.Visible = true;
@@ -496,6 +484,7 @@ namespace Desktop_App
                 PictureBox picture = (PictureBox)sender;
                 foreach (ClassCreatePanelElement element in panelesFlow)
                 {
+                    element.CreateAjustes.PanelGlo.Visible = false;
                     if (element.PbEd.Equals(picture))
                     {
                         element.CreateAjustes.PanelGlo.Visible = true;
@@ -510,14 +499,15 @@ namespace Desktop_App
 
         private void PanelSave_MousClick(object sender, EventArgs e)
         {
-            string[,] navItems = new string[6, 2];
-            int fila = 0, col = 0;
+            DataClass.listasElementos.Clear();            
             panelesAjustes.ForEach(delegate (ClassCreatePanelAjustes panel) 
             {
                 if(panel.Title == "NavBar")
                 {
+                    string[,] navItems = new string[6, 2];
+                    int fila = 0, col = 0;
                     panel.ListText.ForEach(delegate (TextBox textBox) {
-                    if(textBox.Visible)
+                    if(!textBox.Text.Equals(""))
                         {
                             navItems[fila, col] = textBox.Text;
                             fila++;
@@ -529,6 +519,23 @@ namespace Desktop_App
                 {
                     Separator separator = new Separator(panel.ListText[0].Text);
                     DataClass.listasElementos.Add(separator);
+                }else if (panel.Title == "Call To Action")
+                {
+                    Color backColor = DataClass.backOne;
+                    Color buttonColor = DataClass.backTwo;
+                    foreach (object objeto in panel.PanelTextos.Controls)
+                    {
+                        if (objeto is Panel)
+                        {
+                            Panel panelCo = (Panel)objeto;
+                            if (panelCo.Name.Equals("buttonColorAjustes"))
+                            {
+                                buttonColor = panelCo.BackColor;
+                            }
+                        }
+                    }
+                    CallToAction callToaction = new CallToAction(panel.ListText[0].Text, panel.ListText[1].Text,backColor,buttonColor, panel.ListText[2].Text, panel.ListText[3].Text, panel.ListText[4].Text);
+                    DataClass.listasElementos.Add(callToaction);
                 }
             });
                 
@@ -570,12 +577,25 @@ namespace Desktop_App
             List<JObject> listaJSON = new List<JObject>();
             listasElementos.ForEach(delegate (object objeto) 
             {
-                string typo=objeto.GetType().Name;
-                if (typo == "Header")
+                if (objeto is Header)
                 {
                     string obstring = JsonConvert.SerializeObject((Header)objeto);
                     JObject googleSearch = JObject.Parse(obstring);
-                    textBoxBreveDescripcion.Text = googleSearch.ToString();
+                    //textBoxBreveDescripcion.Text = googleSearch.ToString();
+                    MessageBox.Show(googleSearch.ToString());
+                }else if (objeto is Separator)
+                {
+                    string obstring = JsonConvert.SerializeObject((Separator)objeto);
+                    JObject googleSearch = JObject.Parse(obstring);
+                    MessageBox.Show(googleSearch.ToString());
+                    //textBoxBreveDescripcion.Text = googleSearch.ToString();
+                }
+                else if(objeto is CallToAction)
+                {
+                    string obstring = JsonConvert.SerializeObject((CallToAction)objeto);
+                    JObject googleSearch = JObject.Parse(obstring);
+                    MessageBox.Show(googleSearch.ToString());
+                    //textBoxBreveDescripcion.Text = googleSearch.ToString();
                 }
             });
            
@@ -584,84 +604,82 @@ namespace Desktop_App
         private void textBox_TextChanged(object sender, EventArgs e)
         {
             TextBox textBox = (TextBox) sender;
-            panelesFlow.ForEach(delegate (ClassCreatePanelElement elemento) 
+            ClassCreatePanelAjustes ajustes = null;
+            ClassCreatePanelElement elementos = null;
+            foreach (ClassCreatePanelAjustes ajuste in panelesAjustes)
             {
-                if (elemento.Id == "NavBar") {
-                    elemento.LabelOptions[Int32.Parse(textBox.Name)].Visible = true;
-                    elemento.LabelOptions[Int32.Parse(textBox.Name)].Text = textBox.Text;
-                    if(elemento.LabelOptions[Int32.Parse(textBox.Name)].Text == "")
-                    {
-                        elemento.LabelOptions[Int32.Parse(textBox.Name)].Visible = false;
-                    }
-                }else if (elemento.Id == "Separator")
+                if (ajuste.PanelTextos.Controls.Contains(textBox))
                 {
-                    elemento.LabelOptions[0].Visible = true;
-                    elemento.LabelOptions[0].Text = textBox.Text.ToUpper();
-                    if (elemento.LabelOptions[0].Text == "" || elemento.LabelOptions[0].Text == "#")
-                    {
-                        elemento.LabelOptions[0].Visible = false;
-                        foreach (ClassCreatePanelAjustes ajustes in panelesAjustes)
-                        {
-                            if (ajustes.ListText.Contains(textBox))
-                            {
-                                foreach (ClassCreatePanelElement element in panelesFlow)
-                                {
-                                    if (element.CreateAjustes.Equals(ajustes))
-                                    {
-                                        foreach (object objeto in element.PanelGol.Controls)
-                                        {
-                                            if (objeto is Panel)
-                                            {
-                                                Panel panel = (Panel)objeto;
-                                                if (panel.Name == "colorOne")
-                                                {
-                                                    panel.Visible = false;
-                                                }
-                                            }
-                                        }
-                                    }
-                                }
-                            }
-                        }
-                    }
-                    else
-                    {
-                        foreach (ClassCreatePanelAjustes ajustes in panelesAjustes)
-                        {
-                            if (ajustes.ListText.Contains(textBox))
-                            {
-                                foreach (ClassCreatePanelElement element in panelesFlow)
-                                {
-                                    if (element.CreateAjustes.Equals(ajustes))
-                                    {
-                                        foreach (object objeto in element.PanelGol.Controls)
-                                        {
-                                            if (objeto is Panel)
-                                            {
-                                                Panel panel = (Panel)objeto;
-                                                if (panel.Name == "colorOne")
-                                                {
-                                                    panel.Visible = true;
-                                                    if(Regex.IsMatch(textBox.Text.Remove(0,1), "^[0-9A-F]{6}$"))
-                                                    {
-                                                        Color color = System.Drawing.ColorTranslator.FromHtml(textBox.Text);
-                                                        panel.BackColor = color;
-                                                    }
-                                                    else
-                                                    {                                                        
-                                                        panel.BackColor = Color.White;
-                                                    }
+                    ajustes = ajuste;
+                    break;
+                }
+            }
+            foreach (ClassCreatePanelElement elemento in panelesFlow)
+            {
+                if (elemento.CreateAjustes.Equals(ajustes))
+                {
+                    elementos = elemento;   
+                    break;
+                }
+            }
 
-                                                }
-                                            }
-                                        }
-                                    }
-                                }
+            if (elementos.Id == "NavBar")
+            {
+                elementos.LabelOptions[Int32.Parse(textBox.Name)].Visible = true;
+                elementos.LabelOptions[Int32.Parse(textBox.Name)].Text = textBox.Text;
+                if (elementos.LabelOptions[Int32.Parse(textBox.Name)].Text == "")
+                {
+                    elementos.LabelOptions[Int32.Parse(textBox.Name)].Visible = false;
+                }
+            }
+            else if (elementos.Id == "Separator")
+            {
+                elementos.LabelOptions[0].Visible = true;
+                elementos.LabelOptions[0].Text = textBox.Text.ToUpper();
+                if (elementos.LabelOptions[0].Text == "" || elementos.LabelOptions[0].Text == "#")
+                {
+                    elementos.LabelOptions[0].Visible = false;
+
+                    foreach (object objeto in elementos.PanelGol.Controls)
+                    {
+                        if (objeto is Panel)
+                        {
+                            Panel panel = (Panel)objeto;
+                            if (panel.Name == "colorOne")
+                            {
+                                panel.Visible = false;
+                                break;
                             }
                         }
                     }
                 }
-            });
+                else
+                {
+                    foreach (object objeto in elementos.PanelGol.Controls)
+                    {
+                        if (objeto is Panel)
+                        {
+                            Panel panel = (Panel)objeto;
+                            if (panel.Name == "colorOne")
+                            {
+                                panel.Visible = true;
+                                if (Regex.IsMatch(textBox.Text.Remove(0, 1), "^[0-9A-F]{6}$"))
+                                {
+                                    Color color = System.Drawing.ColorTranslator.FromHtml(textBox.Text);
+                                    panel.BackColor = color;
+                                    break;
+                                }
+                                else
+                                {
+                                    panel.BackColor = Color.White;
+                                    break;
+                                }
+
+                            }
+                        }
+                    }
+                }
+            }
         }
 
         private void label24_MouseClick(object sender, MouseEventArgs e)
@@ -687,7 +705,7 @@ namespace Desktop_App
             colorOne.Name = "colorOne";
             colorOne.Location = new Point(panelElement.LabelOptions[0].Location.X+ panelElement.LabelOptions[0].Size.Width+2, panelElement.LabelOptions[0].Location.Y);
             colorOne.Size = new Size(25, 25);
-            colorOne.BackColor = panel8.BackColor;
+            colorOne.BackColor = DataClass.backOne;
             colorOne.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             colorOne.Visible = false;
             colorOne.MouseClick += new System.Windows.Forms.MouseEventHandler(panelColorPrincipal_Click);
@@ -765,90 +783,56 @@ namespace Desktop_App
             options.Add("Text");
             options.Add("Button Text");
             options.Add("Button Link");
-            options.Add("orientation");
+            options.Add("Orientation");
             ClassCreatePanelElement panelElement = new ClassCreatePanelElement(482, 5, title, options);
             flowLayoutPanelCurrentElements.Controls.Add(panelElement.PanelGol);
             panelesFlow.Add(panelElement);
             panelElement.PanelGol.Name = "CallToAction" + panelesFlow.Count;
-
+            panelElement.LabelTitle.Size = new Size(120,21);
             panelElement.LabelOptions.ForEach(delegate (Label label)
             {
                 label.Visible = true;
+                if(label.Text.Equals("Button Text") || label.Text.Equals("Button Link")  || label.Text.Equals("Orientation"))
+                {
+                    label.Size = new Size(100, 21);
+                }
             });
 
-            Panel backColor = new Panel();
-            Panel titleColor = new Panel();
-            Panel textColor = new Panel();
+            Panel buttonColor = new Panel();
+            
 
-            panelElement.PanelColors.Add(backColor);
-            panelElement.PanelColors.Add(titleColor);
-            panelElement.PanelColors.Add(textColor);
+            panelElement.PanelColors.Add(buttonColor);
+            
 
-            backColor.Name = "backColor";
-            backColor.Location = new Point(112, 59);
-            backColor.Size = new Size(16, 16);
-            backColor.BackColor = DataClass.backOne;
-            backColor.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            backColor.Visible = true;
-            panelElement.PanelGol.Controls.Add(backColor);
+            buttonColor.Name = "buttonColor";
+            buttonColor.Location = new Point(324, 0);
+            buttonColor.Size = new Size(25, 25);
+            buttonColor.BackColor = DataClass.backTwo;
+            buttonColor.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            buttonColor.Visible = true;
+            panelElement.PanelGol.Controls.Add(buttonColor);
 
-            titleColor.Location = new Point(187, 59);
-            titleColor.Name = "titleColor";
-            titleColor.Size = new Size(16, 16);
-            titleColor.BackColor = DataClass.backTwo;
-            titleColor.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            titleColor.Visible = true;
-            panelElement.PanelGol.Controls.Add(titleColor);
-
-            textColor.Location = new Point(262, 59);
-            textColor.Name = "textColor";
-            textColor.Size = new Size(16, 16);
-            textColor.BackColor = DataClass.backTwo;
-            textColor.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            textColor.Visible = true;
-            panelElement.PanelGol.Controls.Add(textColor);
+            
 
             panelElement.CreateAjustes = new ClassCreatePanelAjustes(410, 310, panelElement.Title, panelElement.Options);
             panel4.Controls.Add(panelElement.CreateAjustes.PanelGlo);
             panelesAjustes.Add(panelElement.CreateAjustes);
 
-            panelElement.CreateAjustes.ListText.ForEach(delegate (TextBox textBox)
-            {
-                //textBox.TextChanged += textBox_TextChanged;
-            });
+            
             panelElement.CreateAjustes.PanelSave.MouseClick += new System.Windows.Forms.MouseEventHandler(PanelSave_MousClick);
             panelElement.CreateAjustes.LabelSave.MouseClick += new System.Windows.Forms.MouseEventHandler(PanelSave_MousClick);
 
-            Panel backColorAjustes = new Panel();
-            Panel titleColorAjustes = new Panel();
-            Panel textColorAjustes = new Panel();
+            
+            Panel buttonColorAjustes = new Panel();
 
-            backColorAjustes.Name = "backColorAjustes";
-            backColorAjustes.Location = new Point(171, 57);
-            backColorAjustes.Size = new Size(21, 21);
-            backColorAjustes.BackColor = DataClass.backOne;
-            backColorAjustes.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            backColorAjustes.Visible = true;
-            backColorAjustes.MouseClick += new System.Windows.Forms.MouseEventHandler(panelColor_Click);
-            panelElement.CreateAjustes.PanelGlo.Controls.Add(backColorAjustes);
-
-            titleColorAjustes.Location = new Point(343, 57);
-            backColorAjustes.Name = "titleColorAjustes";
-            titleColorAjustes.Size = new Size(21, 21);
-            titleColorAjustes.BackColor = DataClass.backTwo;
-            titleColorAjustes.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            titleColorAjustes.Visible = true;
-            titleColorAjustes.MouseClick += new System.Windows.Forms.MouseEventHandler(panelColor_Click);
-            panelElement.CreateAjustes.PanelGlo.Controls.Add(titleColorAjustes);
-
-            textColorAjustes.Location = new Point(171, 101);
-            backColorAjustes.Name = "textColorAjustes";
-            textColorAjustes.Size = new Size(21, 21);
-            textColorAjustes.BackColor = DataClass.backTwo;
-            textColorAjustes.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            textColorAjustes.Visible = true;
-            textColorAjustes.MouseClick += new System.Windows.Forms.MouseEventHandler(panelColor_Click);
-            panelElement.CreateAjustes.PanelGlo.Controls.Add(textColorAjustes);
+            buttonColorAjustes.Location = new Point(148, 89);
+            buttonColorAjustes.Name = "buttonColorAjustes";
+            buttonColorAjustes.Size = new Size(21, 11);
+            buttonColorAjustes.BackColor = DataClass.backTwo;
+            buttonColorAjustes.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            buttonColorAjustes.Visible = true;
+            buttonColorAjustes.MouseClick += new System.Windows.Forms.MouseEventHandler(panelColor_Click);
+            panelElement.CreateAjustes.PanelTextos.Controls.Add(buttonColorAjustes);
 
             panelElement.PanelDe.Name = "CallToActionDelete" + panelesFlow.Count;
             panelElement.PbDe.Name = "CallToActionDelete" + panelesFlow.Count;
@@ -863,13 +847,18 @@ namespace Desktop_App
             panelElement.PbEd.MouseClick += new System.Windows.Forms.MouseEventHandler(PanelEd_MouseClick);
         }
 
+        private void panelColorCallToAction_Click(object sender, EventArgs e)
+        {
+            Color color = changeColor(sender);
+        }
+
         private void panelColor_Click(object sender, MouseEventArgs e)
         {
             Color color = changeColor(sender);
             Panel panel = (Panel)sender;
             foreach (ClassCreatePanelAjustes ajustes in panelesAjustes)
             {
-                if (ajustes.PanelGlo.Controls.Contains(panel))
+                if (ajustes.PanelTextos.Controls.Contains(panel))
                 {
                     foreach (ClassCreatePanelElement elementos in panelesFlow)
                     {
@@ -880,7 +869,8 @@ namespace Desktop_App
                                 if (objeto is Panel)
                                 {
                                     Panel panelColor = (Panel)objeto;
-                                    if (panel.Name.Contains(panelColor.Name))
+                                    string name = panel.Name.Replace("Ajustes", "");
+                                    if (name.Equals(panelColor.Name))
                                     {
                                         panelColor.BackColor = color;
                                         break;

@@ -149,10 +149,6 @@ namespace Desktop_App
             int x1l = 37;
             int y1l = 59;
             int y2l = 99;
-            int x1b = 113;
-            int x2b = 133;
-            int y1b = 60;
-            int y2b = 100;
             int count = 0;
             int countId = 0;
             Boolean filaOne = true;
