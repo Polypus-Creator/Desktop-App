@@ -311,7 +311,7 @@ namespace Desktop_App
             // 
             this.labelEmail.AutoSize = true;
             this.labelEmail.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.labelEmail.Location = new System.Drawing.Point(80, 412);
+            this.labelEmail.Location = new System.Drawing.Point(80, 392);
             this.labelEmail.Name = "labelEmail";
             this.labelEmail.Size = new System.Drawing.Size(48, 21);
             this.labelEmail.TabIndex = 35;
@@ -322,7 +322,7 @@ namespace Desktop_App
             this.textBoxEmail.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.textBoxEmail.Font = new System.Drawing.Font("Segoe UI Light", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBoxEmail.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(86)))), ((int)(((byte)(101)))), ((int)(((byte)(115)))));
-            this.textBoxEmail.Location = new System.Drawing.Point(82, 441);
+            this.textBoxEmail.Location = new System.Drawing.Point(84, 426);
             this.textBoxEmail.Name = "textBoxEmail";
             this.textBoxEmail.Size = new System.Drawing.Size(341, 35);
             this.textBoxEmail.TabIndex = 36;
