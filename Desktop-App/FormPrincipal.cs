@@ -398,9 +398,11 @@ namespace Desktop_App
             panelElement.CreateAjustes.ListText.ForEach(delegate (TextBox textBox)
             {
                 textBox.TextChanged += textBox_TextChanged;
+                textBox.LostFocus += textBoxNavBar_LostFocus;
             });
             panelElement.CreateAjustes.PanelSave.MouseClick += new System.Windows.Forms.MouseEventHandler(PanelSave_MousClick);
             panelElement.CreateAjustes.LabelSave.MouseClick += new System.Windows.Forms.MouseEventHandler(PanelSave_MousClick);
+            panelElement.CreateAjustes.TextBoxLink.LostFocus += textBoxLink_LostFocus;
 
             panelElement.PanelDe.Name = "NavBarPanelDelete" + panelesFlow.Count;
             panelElement.PbDe.Name = "NavBarPbDelete" + panelesFlow.Count;
@@ -414,6 +416,66 @@ namespace Desktop_App
             panelElement.PanelEd.MouseClick += new System.Windows.Forms.MouseEventHandler(PanelEd_MouseClick);
             panelElement.PbEd.MouseClick += new System.Windows.Forms.MouseEventHandler(PanelEd_MouseClick);
         }
+
+        private void textBoxNavBar_LostFocus(object sender, EventArgs e) 
+        {
+            TextBox textBox = (TextBox)sender;
+            int fila = Int32.Parse(textBox.Name);
+            if (!textBox.Text.Equals(""))
+            {
+                string message ="Quieres añadir un link a "+textBox.Text+"?";
+                string caption = "Link";
+                var result = MessageBox.Show(message, caption,MessageBoxButtons.YesNo,MessageBoxIcon.Question);
+
+                if (result == DialogResult.Yes)
+                {
+                    foreach(ClassCreatePanelAjustes ajustes in panelesAjustes)
+                    {
+                        if (ajustes.PanelTextos.Controls.Contains(textBox))
+                        {
+                            ajustes.ListLinks[fila, 0] = textBox.Text;
+                            ajustes.TextBoxLink.Name = textBox.Name;
+                            if (ajustes.ListLinks[fila, 1]!=null)
+                            {
+                                ajustes.TextBoxLink.Text = ajustes.ListLinks[fila, 1];
+                            }
+                            else
+                            {
+                                ajustes.TextBoxLink.Text = "";
+                            }
+                            ajustes.TextBoxLink.Visible = true;
+                            ajustes.LabelLink.Visible = true;
+                        }
+                    }
+                }
+            }
+        }
+
+        private void textBoxLink_LostFocus(object sender, EventArgs e)
+        {
+            TextBox textBox = (TextBox)sender;
+            int fila = Int32.Parse(textBox.Name);
+            if (!textBox.Text.Equals(""))
+            {
+                string message = "Quieres guardar el link?";
+                string caption = "Link";
+                var result = MessageBox.Show(message, caption, MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+                if (result == DialogResult.Yes)
+                {
+                    foreach (ClassCreatePanelAjustes ajustes in panelesAjustes)
+                    {
+                        if (ajustes.PanelGlo.Controls.Contains(textBox))
+                        {
+                            ajustes.ListLinks[fila, 1] = textBox.Text;
+                            ajustes.TextBoxLink.Visible = false;
+                            ajustes.LabelLink.Visible = false;
+                        }
+                    }
+                }
+            }
+        }
+
         private void PanelDe_MouseClicked(Object sender, MouseEventArgs e)
         {
             string typo = sender.GetType().Name;
@@ -505,7 +567,7 @@ namespace Desktop_App
             {
                 if(panel.Title == "NavBar")
                 {
-                    string[,] navItems = new string[6, 2];
+                    /*string[,] navItems = new string[6, 2];
                     int fila = 0, col = 0;
                     panel.ListText.ForEach(delegate (TextBox textBox) {
                     if(!textBox.Text.Equals(""))
@@ -513,8 +575,8 @@ namespace Desktop_App
                             navItems[fila, col] = textBox.Text;
                             fila++;
                         }
-                    });
-                    DataClass.header = new Header(navItems, DataClass.backOne, DataClass.backTwo);
+                    });*/
+                    DataClass.header = new Header(panel.ListLinks, DataClass.backOne, DataClass.backTwo);
                     DataClass.listasElementos.Add(DataClass.header);
                 }else if (panel.Title == "Separator")
                 {
@@ -574,7 +636,8 @@ namespace Desktop_App
             generateJSON(DataClass.listasElementos);
             string obstring = JsonConvert.SerializeObject(DataClass.classListaJSON);
             JObject googleSearch = JObject.Parse(obstring);
-            textBoxBreveDescripcion.Text = googleSearch.ToString();
+            //textBoxBreveDescripcion.Text = googleSearch.ToString();
+            MessageBox.Show(googleSearch.ToString());
 
             string typo = sender.GetType().Name;
             foreach(ClassCreatePanelAjustes elem in panelesAjustes)
@@ -1010,7 +1073,14 @@ namespace Desktop_App
             String directory = Path.GetDirectoryName(rutaOrigen) + @"\" + Path.GetFileName(rutaOrigen);
             String newPath = @"..\..\Polypus\YourWebsites\Images\";
             textBox.Text = "\\" + rutas[rutas.Length - 1];
-            File.Copy(directory, newPath + rutas[rutas.Length - 1]);
+            if (!File.Exists(newPath + rutas[rutas.Length - 1]))
+            {
+                File.Copy(directory, newPath + rutas[rutas.Length - 1]);
+            }
+            else
+            {
+                MessageBox.Show("Nombre de fichero existente");
+            }
         }
         private string picPhoto()
         {

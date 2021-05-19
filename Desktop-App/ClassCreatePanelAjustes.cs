@@ -18,10 +18,13 @@ namespace Desktop_App
         private Panel _panelTextos = new Panel();
         private Label labelItem = new Label();
         private List<string> _listItems = new List<string>();
+        private string[,] _listLinks = new string[6,2];
         private List<TextBox> _listText = new List<TextBox>();
         private Panel _panelSave = new Panel();
         private Label _labelSave = new Label();
         private PictureBox _save = new PictureBox();
+        private Label _labelLink = new Label();
+        private TextBox _textBoxLink = new TextBox();
 
         public ClassCreatePanelAjustes(int maxW, int maxH, string title, List<string> items)
         {
@@ -45,6 +48,9 @@ namespace Desktop_App
         public List<string> ListItems { get => _listItems; set => _listItems = value; }
         public List<TextBox> ListText { get => _listText; set => _listText = value; }
         public PictureBox Save { get => _save; set => _save = value; }
+        public Label LabelLink { get => _labelLink; set => _labelLink = value; }
+        public TextBox TextBoxLink { get => _textBoxLink; set => _textBoxLink = value; }
+        public string[,] ListLinks { get => _listLinks; set => _listLinks = value; }
 
         private void createView()
         {
@@ -109,6 +115,20 @@ namespace Desktop_App
             LabelSave.Cursor = Cursors.Hand;
             LabelSave.ForeColor = Color.White;
             PanelSave.Controls.Add(LabelSave);
+
+            LabelLink.Size = new Size(30, 15);
+            LabelLink.Location = new Point(37, 250);
+            LabelLink.Font = new Font("Segoe UI Semibold", 8, FontStyle.Bold);
+            LabelLink.Text = "Link";
+            LabelLink.Visible = false;
+            LabelLink.ForeColor = Color.White;
+            PanelGlo.Controls.Add(LabelLink);
+
+            TextBoxLink.Size = new Size(149, 20);
+            TextBoxLink.Location = new Point(41, 270);
+            TextBoxLink.Visible = false;
+            TextBoxLink.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            PanelGlo.Controls.Add(TextBoxLink);
         }
 
         private void crearItems()
