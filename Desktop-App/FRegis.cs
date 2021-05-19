@@ -8,11 +8,13 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+
 namespace Desktop_App
 {
     public partial class FRegis : Form
     {
         private int time = 0;
+        GestionDB.GestionDB db;
         public FRegis()
         {
             InitializeComponent();
@@ -26,6 +28,7 @@ namespace Desktop_App
             int fullHeight = Screen.PrimaryScreen.Bounds.Height;
             this.Width = fullWidth / 2;
             this.Height = fullHeight / 2;
+            db = new GestionDB.GestionDB();
         }
 
         private void timerOjo_Tick(object sender, EventArgs e)
@@ -64,6 +67,30 @@ namespace Desktop_App
         private void panelClose_MouseClick(object sender, MouseEventArgs e)
         {
             this.Close();
+        }
+
+        private void buttonRegis_Click(object sender, EventArgs e)
+        {
+            String usuario = textBoxUser.Text;
+            String password = textBoxPass.Text;
+            String email = textBoxEmail.Text;
+            String preguntaSeguridad = comboBoxAsk.SelectedItem.ToString();
+            String respuesta = textBoxAnsw.Text;
+           
+            String mantenerSesion = comboBoxSesionIniciada.SelectedItem.ToString();
+            bool sesionMantenida = false;
+            if(mantenerSesion.Equals("Si"))
+            {
+                sesionMantenida = true;
+            } else
+            {
+                sesionMantenida = false;
+            }
+
+            // ANTES DE INSERTAR DATOS HAY QUE MIRAR SI ES SU PRIMER LOGIN
+            db.insertarDatos(usuario, password, email, preguntaSeguridad, respuesta, true, sesionMantenida);
+
+
         }
     }
 }

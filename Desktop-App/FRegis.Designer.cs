@@ -48,19 +48,23 @@ namespace Desktop_App
             this.pictureBoxOjo1 = new System.Windows.Forms.PictureBox();
             this.pictureBoxVolver = new System.Windows.Forms.PictureBox();
             this.panelSuperior = new System.Windows.Forms.Panel();
+            this.panelMin = new System.Windows.Forms.Panel();
+            this.labelMin = new System.Windows.Forms.Label();
             this.labelIniciarSesion = new System.Windows.Forms.Label();
             this.pictureBoxIconoIniciarSesion = new System.Windows.Forms.PictureBox();
             this.panelClose = new System.Windows.Forms.Panel();
-            this.labelMin = new System.Windows.Forms.Label();
             this.labelClose = new System.Windows.Forms.Label();
-            this.panelMin = new System.Windows.Forms.Panel();
+            this.labelEmail = new System.Windows.Forms.Label();
+            this.textBoxEmail = new System.Windows.Forms.TextBox();
+            this.comboBoxSesionIniciada = new System.Windows.Forms.ComboBox();
+            this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxOjo2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxOjo1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxVolver)).BeginInit();
             this.panelSuperior.SuspendLayout();
+            this.panelMin.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxIconoIniciarSesion)).BeginInit();
             this.panelClose.SuspendLayout();
-            this.panelMin.SuspendLayout();
             this.SuspendLayout();
             // 
             // buttonRegis
@@ -70,12 +74,13 @@ namespace Desktop_App
             this.buttonRegis.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonRegis.Font = new System.Drawing.Font("Segoe UI Black", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonRegis.ForeColor = System.Drawing.Color.White;
-            this.buttonRegis.Location = new System.Drawing.Point(466, 320);
+            this.buttonRegis.Location = new System.Drawing.Point(464, 405);
             this.buttonRegis.Name = "buttonRegis";
-            this.buttonRegis.Size = new System.Drawing.Size(308, 71);
+            this.buttonRegis.Size = new System.Drawing.Size(339, 71);
             this.buttonRegis.TabIndex = 31;
             this.buttonRegis.Text = "REGISTRARME";
             this.buttonRegis.UseVisualStyleBackColor = false;
+            this.buttonRegis.Click += new System.EventHandler(this.buttonRegis_Click);
             // 
             // label9
             // 
@@ -94,7 +99,7 @@ namespace Desktop_App
             this.textBoxAnsw.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(86)))), ((int)(((byte)(101)))), ((int)(((byte)(115)))));
             this.textBoxAnsw.Location = new System.Drawing.Point(466, 242);
             this.textBoxAnsw.Name = "textBoxAnsw";
-            this.textBoxAnsw.Size = new System.Drawing.Size(308, 35);
+            this.textBoxAnsw.Size = new System.Drawing.Size(337, 35);
             this.textBoxAnsw.TabIndex = 30;
             // 
             // label8
@@ -111,16 +116,19 @@ namespace Desktop_App
             // 
             this.comboBoxAsk.Font = new System.Drawing.Font("Segoe UI Light", 15.75F);
             this.comboBoxAsk.FormattingEnabled = true;
+            this.comboBoxAsk.Items.AddRange(new object[] {
+            "Animal Favorito?",
+            "Donde hiciste primaria?"});
             this.comboBoxAsk.Location = new System.Drawing.Point(464, 143);
             this.comboBoxAsk.Name = "comboBoxAsk";
-            this.comboBoxAsk.Size = new System.Drawing.Size(304, 38);
+            this.comboBoxAsk.Size = new System.Drawing.Size(339, 38);
             this.comboBoxAsk.TabIndex = 27;
             // 
             // label7
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.label7.Location = new System.Drawing.Point(80, 320);
+            this.label7.Location = new System.Drawing.Point(80, 303);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(164, 21);
             this.label7.TabIndex = 25;
@@ -131,9 +139,9 @@ namespace Desktop_App
             this.textBoxConfPass.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.textBoxConfPass.Font = new System.Drawing.Font("Segoe UI Light", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBoxConfPass.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(86)))), ((int)(((byte)(101)))), ((int)(((byte)(115)))));
-            this.textBoxConfPass.Location = new System.Drawing.Point(82, 349);
+            this.textBoxConfPass.Location = new System.Drawing.Point(84, 327);
             this.textBoxConfPass.Name = "textBoxConfPass";
-            this.textBoxConfPass.Size = new System.Drawing.Size(308, 35);
+            this.textBoxConfPass.Size = new System.Drawing.Size(341, 35);
             this.textBoxConfPass.TabIndex = 26;
             // 
             // label6
@@ -153,7 +161,7 @@ namespace Desktop_App
             this.textBoxPass.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(86)))), ((int)(((byte)(101)))), ((int)(((byte)(115)))));
             this.textBoxPass.Location = new System.Drawing.Point(82, 242);
             this.textBoxPass.Name = "textBoxPass";
-            this.textBoxPass.Size = new System.Drawing.Size(308, 35);
+            this.textBoxPass.Size = new System.Drawing.Size(341, 35);
             this.textBoxPass.TabIndex = 24;
             // 
             // label5
@@ -181,9 +189,9 @@ namespace Desktop_App
             this.textBoxUser.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.textBoxUser.Font = new System.Drawing.Font("Segoe UI Light", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBoxUser.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(86)))), ((int)(((byte)(101)))), ((int)(((byte)(115)))));
-            this.textBoxUser.Location = new System.Drawing.Point(82, 146);
+            this.textBoxUser.Location = new System.Drawing.Point(84, 144);
             this.textBoxUser.Name = "textBoxUser";
-            this.textBoxUser.Size = new System.Drawing.Size(308, 35);
+            this.textBoxUser.Size = new System.Drawing.Size(339, 35);
             this.textBoxUser.TabIndex = 21;
             // 
             // timerOjo
@@ -193,7 +201,7 @@ namespace Desktop_App
             // pictureBoxOjo2
             // 
             this.pictureBoxOjo2.Image = global::Desktop_App.Properties.Resources.eyeCl;
-            this.pictureBoxOjo2.Location = new System.Drawing.Point(360, 355);
+            this.pictureBoxOjo2.Location = new System.Drawing.Point(392, 334);
             this.pictureBoxOjo2.Name = "pictureBoxOjo2";
             this.pictureBoxOjo2.Size = new System.Drawing.Size(23, 21);
             this.pictureBoxOjo2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -204,7 +212,7 @@ namespace Desktop_App
             // pictureBoxOjo1
             // 
             this.pictureBoxOjo1.Image = global::Desktop_App.Properties.Resources.eyeCl;
-            this.pictureBoxOjo1.Location = new System.Drawing.Point(360, 249);
+            this.pictureBoxOjo1.Location = new System.Drawing.Point(391, 249);
             this.pictureBoxOjo1.Name = "pictureBoxOjo1";
             this.pictureBoxOjo1.Size = new System.Drawing.Size(23, 21);
             this.pictureBoxOjo1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -229,10 +237,31 @@ namespace Desktop_App
             this.panelSuperior.Controls.Add(this.labelIniciarSesion);
             this.panelSuperior.Controls.Add(this.pictureBoxIconoIniciarSesion);
             this.panelSuperior.Controls.Add(this.panelClose);
-            this.panelSuperior.Location = new System.Drawing.Point(0, 3);
+            this.panelSuperior.Location = new System.Drawing.Point(-1, 0);
             this.panelSuperior.Name = "panelSuperior";
-            this.panelSuperior.Size = new System.Drawing.Size(800, 54);
+            this.panelSuperior.Size = new System.Drawing.Size(852, 54);
             this.panelSuperior.TabIndex = 34;
+            // 
+            // panelMin
+            // 
+            this.panelMin.Controls.Add(this.labelMin);
+            this.panelMin.Location = new System.Drawing.Point(747, 0);
+            this.panelMin.Name = "panelMin";
+            this.panelMin.Size = new System.Drawing.Size(47, 54);
+            this.panelMin.TabIndex = 4;
+            this.panelMin.MouseClick += new System.Windows.Forms.MouseEventHandler(this.panelMin_MouseClick);
+            // 
+            // labelMin
+            // 
+            this.labelMin.AutoSize = true;
+            this.labelMin.Font = new System.Drawing.Font("Segoe UI", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelMin.ForeColor = System.Drawing.Color.White;
+            this.labelMin.Location = new System.Drawing.Point(12, 6);
+            this.labelMin.Name = "labelMin";
+            this.labelMin.Size = new System.Drawing.Size(29, 40);
+            this.labelMin.TabIndex = 1;
+            this.labelMin.Text = "-";
+            this.labelMin.MouseClick += new System.Windows.Forms.MouseEventHandler(this.panelMin_MouseClick);
             // 
             // labelIniciarSesion
             // 
@@ -260,23 +289,11 @@ namespace Desktop_App
             // 
             this.panelClose.Controls.Add(this.labelClose);
             this.panelClose.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.panelClose.Location = new System.Drawing.Point(751, 0);
+            this.panelClose.Location = new System.Drawing.Point(800, 3);
             this.panelClose.Name = "panelClose";
             this.panelClose.Size = new System.Drawing.Size(49, 51);
             this.panelClose.TabIndex = 1;
             this.panelClose.MouseClick += new System.Windows.Forms.MouseEventHandler(this.panelClose_MouseClick);
-            // 
-            // labelMin
-            // 
-            this.labelMin.AutoSize = true;
-            this.labelMin.Font = new System.Drawing.Font("Segoe UI", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelMin.ForeColor = System.Drawing.Color.White;
-            this.labelMin.Location = new System.Drawing.Point(12, 6);
-            this.labelMin.Name = "labelMin";
-            this.labelMin.Size = new System.Drawing.Size(29, 40);
-            this.labelMin.TabIndex = 1;
-            this.labelMin.Text = "-";
-            this.labelMin.MouseClick += new System.Windows.Forms.MouseEventHandler(this.panelMin_MouseClick);
             // 
             // labelClose
             // 
@@ -290,20 +307,57 @@ namespace Desktop_App
             this.labelClose.Text = "X";
             this.labelClose.MouseClick += new System.Windows.Forms.MouseEventHandler(this.panelClose_MouseClick);
             // 
-            // panelMin
+            // labelEmail
             // 
-            this.panelMin.Controls.Add(this.labelMin);
-            this.panelMin.Location = new System.Drawing.Point(700, 0);
-            this.panelMin.Name = "panelMin";
-            this.panelMin.Size = new System.Drawing.Size(47, 54);
-            this.panelMin.TabIndex = 4;
-            this.panelMin.MouseClick += new System.Windows.Forms.MouseEventHandler(this.panelMin_MouseClick);
+            this.labelEmail.AutoSize = true;
+            this.labelEmail.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.labelEmail.Location = new System.Drawing.Point(80, 412);
+            this.labelEmail.Name = "labelEmail";
+            this.labelEmail.Size = new System.Drawing.Size(48, 21);
+            this.labelEmail.TabIndex = 35;
+            this.labelEmail.Text = "Email";
+            // 
+            // textBoxEmail
+            // 
+            this.textBoxEmail.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.textBoxEmail.Font = new System.Drawing.Font("Segoe UI Light", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxEmail.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(86)))), ((int)(((byte)(101)))), ((int)(((byte)(115)))));
+            this.textBoxEmail.Location = new System.Drawing.Point(82, 441);
+            this.textBoxEmail.Name = "textBoxEmail";
+            this.textBoxEmail.Size = new System.Drawing.Size(341, 35);
+            this.textBoxEmail.TabIndex = 36;
+            // 
+            // comboBoxSesionIniciada
+            // 
+            this.comboBoxSesionIniciada.Font = new System.Drawing.Font("Segoe UI Light", 15.75F);
+            this.comboBoxSesionIniciada.FormattingEnabled = true;
+            this.comboBoxSesionIniciada.Items.AddRange(new object[] {
+            "Si",
+            "No"});
+            this.comboBoxSesionIniciada.Location = new System.Drawing.Point(466, 327);
+            this.comboBoxSesionIniciada.Name = "comboBoxSesionIniciada";
+            this.comboBoxSesionIniciada.Size = new System.Drawing.Size(337, 38);
+            this.comboBoxSesionIniciada.TabIndex = 37;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.label1.Location = new System.Drawing.Point(464, 303);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(212, 21);
+            this.label1.TabIndex = 38;
+            this.label1.Text = "¿Mantener la sesión iniciada?";
             // 
             // FRegis
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(850, 553);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.comboBoxSesionIniciada);
+            this.Controls.Add(this.labelEmail);
+            this.Controls.Add(this.textBoxEmail);
             this.Controls.Add(this.panelSuperior);
             this.Controls.Add(this.pictureBoxOjo2);
             this.Controls.Add(this.pictureBoxOjo1);
@@ -328,11 +382,11 @@ namespace Desktop_App
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxVolver)).EndInit();
             this.panelSuperior.ResumeLayout(false);
             this.panelSuperior.PerformLayout();
+            this.panelMin.ResumeLayout(false);
+            this.panelMin.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxIconoIniciarSesion)).EndInit();
             this.panelClose.ResumeLayout(false);
             this.panelClose.PerformLayout();
-            this.panelMin.ResumeLayout(false);
-            this.panelMin.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -363,5 +417,9 @@ namespace Desktop_App
         private System.Windows.Forms.PictureBox pictureBoxIconoIniciarSesion;
         private System.Windows.Forms.Panel panelClose;
         private System.Windows.Forms.Label labelClose;
+        private System.Windows.Forms.Label labelEmail;
+        private System.Windows.Forms.TextBox textBoxEmail;
+        private System.Windows.Forms.ComboBox comboBoxSesionIniciada;
+        private System.Windows.Forms.Label label1;
     }
 }
