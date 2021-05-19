@@ -964,6 +964,39 @@
         Pyc/F1i1G274/1ke9abi4+4OAAAAAElFTkSuQmCC
 </value>
   </data>
+  <data name="label28.Text" xml:space="preserve">
+    <value>Si es tu primera vez utilizando Polypus Creator, te aparecerá un formulario inicial en el que podrás
+introducir información general de la temática de tu web. Con esta información, nosotros te
+crearemos una plantilla adaptada a la temática y con la que podrás empezar a modificar y a
+construir tu web.</value>
+  </data>
+  <data name="label29.Text" xml:space="preserve">
+    <value>Nuestra aplicación funciona en bloques de HTML y CSS. Cada vez que tu añadas un elemento a
+tu web, nosotros unimos el HTML de ese elemento al HTML de tu página, por lo que poco a
+poco se va construyendo la web. Al finalizarla, se obtiene el HTML principal compuesto de todos
+los HTML de los bloques y, obviamente, su correspondiente diseño en CSS.</value>
+  </data>
+  <data name="label35.Text" xml:space="preserve">
+    <value>A continuación, te dejamos algunos enlaces que te podrán servir para crear tu página web:
+
+	
+Obtener iconos: https://www.flaticon.es/
+	Redimensionar imágenes: https://www.iloveimg.com/es/redimensionar-imagen
+	Aprender CSS: https://www.w3schools.com/css/
+	Aprender HTML: https://www.w3schools.com/html/
+	Elementos principales de una web: https://www.socialmercaz.com/contener-sitio-web/</value>
+  </data>
+  <data name="label37.Text" xml:space="preserve">
+    <value>Si, tienes un botón que te permite ver como está quedando tu web. Así podrás saber en todo
+momento si quieres añadir o quitar elementos de tu web. Recuerda que no verás la web
+finalizada hasta que no aprietes el correspondiente botón.</value>
+  </data>
+  <data name="label43.Text" xml:space="preserve">
+    <value>Al iniciar la aplicación, en tu panel de inicio de sesión, encontrarás un botón de contacto, este 
+te llevará a nuestro formulario de contacto. También puedes pulsar en este botón
+[botón con redirecciónal form de contacto]. Si lo deseas, nos puedes contactar también a través 
+de nuestra web.</value>
+  </data>
   <data name="pictureBoxWebEjemplo.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAB2wAAAOBCAYAAAA9b1CPAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
