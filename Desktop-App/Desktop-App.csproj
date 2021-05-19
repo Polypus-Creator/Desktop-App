@@ -181,6 +181,13 @@
     <Content Include="Polypus\Config\Blocks\Header\OnlyLogoNav.html" />
     <Content Include="Polypus\Config\Blocks\Structure\BottomStructure.html" />
     <Content Include="Polypus\Config\Blocks\Structure\TopStructure.html" />
+    <Content Include="Resources\logos\logo1.png" />
+    <Content Include="Resources\logos\logo2.png" />
+    <Content Include="Resources\logos\logo3.png" />
+    <Content Include="Resources\logos\logo4.png" />
+    <Content Include="Resources\logos\logo5.png" />
+    <Content Include="Resources\logos\logo6.png" />
+    <Content Include="Resources\logos\logo7.png" />
     <Content Include="Resources\saveIconLight.png" />
     <Content Include="Resources\trashDarkIcon.png" />
     <None Include="Resources\textIcon.png" />
