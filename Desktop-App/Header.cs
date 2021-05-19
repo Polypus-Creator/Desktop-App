@@ -7,6 +7,7 @@ namespace Desktop_App
 {
     class Header
     {
+        private string elemento = "Header";
         private string[,] navItems;
         private string backColor;
         private string textColor;
@@ -29,10 +30,10 @@ namespace Desktop_App
         }  
 
 
+        public string Elemento => elemento;
         public string[,] NavItems { get => navItems; set => navItems = value; }
         public string BackColor { 
             get => backColor; 
-
             set => backColor = value; 
         }
         public string TextColor { get => textColor; set => textColor = value; }

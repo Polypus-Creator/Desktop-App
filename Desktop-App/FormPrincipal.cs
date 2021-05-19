@@ -11,6 +11,7 @@ using System.Threading.Tasks;
 using Newtonsoft.Json.Linq;
 using Newtonsoft.Json;
 using System.Text.RegularExpressions;
+using System.IO;
 
 namespace Desktop_App
 {
@@ -523,6 +524,7 @@ namespace Desktop_App
                 {
                     Color backColor = DataClass.backOne;
                     Color buttonColor = DataClass.backTwo;
+                    string orientation = "left";
                     foreach (object objeto in panel.PanelTextos.Controls)
                     {
                         if (objeto is Panel)
@@ -532,10 +534,39 @@ namespace Desktop_App
                             {
                                 buttonColor = panelCo.BackColor;
                             }
+                        }else if (objeto is ComboBox)
+                        {
+                            ComboBox comboBox = (ComboBox)objeto;
+                            orientation = comboBox.SelectedItem.ToString();
                         }
                     }
-                    CallToAction callToaction = new CallToAction(panel.ListText[0].Text, panel.ListText[1].Text,backColor,buttonColor, panel.ListText[2].Text, panel.ListText[3].Text, panel.ListText[4].Text);
+                    CallToAction callToaction = new CallToAction(panel.ListText[0].Text, panel.ListText[1].Text,backColor,buttonColor, panel.ListText[2].Text, panel.ListText[3].Text, orientation);
                     DataClass.listasElementos.Add(callToaction);
+                }else if (panel.Title == "Image Text")
+                {
+                    string orientation = "left";
+                    foreach(object objeto in panel.PanelTextos.Controls)
+                    {
+                        if (objeto is ComboBox)
+                        {
+                            ComboBox comboBox = (ComboBox)objeto;
+                            orientation = comboBox.SelectedItem.ToString();
+                        }
+                    }
+                    ImageText imageText = null;
+                    if (panel.ListText[0].Text.Equals("Title") || panel.ListText[0].Text.Equals(""))
+                    {
+                        imageText = new ImageText(panel.ListText[2].Text, panel.ListText[1].Text, orientation);
+                    }
+                    else
+                    {
+                        imageText = new ImageText(panel.ListText[0].Text, panel.ListText[2].Text, panel.ListText[1].Text, orientation);
+                    }
+                    DataClass.listasElementos.Add(imageText);
+                }else if (panel.Title == "Footer")
+                {
+                    Footer footer = new Footer(panel.ListText[0].Text);
+                    DataClass.listasElementos.Add(footer);
                 }
             });
                 
@@ -593,6 +624,18 @@ namespace Desktop_App
                 else if(objeto is CallToAction)
                 {
                     string obstring = JsonConvert.SerializeObject((CallToAction)objeto);
+                    JObject googleSearch = JObject.Parse(obstring);
+                    MessageBox.Show(googleSearch.ToString());
+                    //textBoxBreveDescripcion.Text = googleSearch.ToString();
+                }else if (objeto is ImageText)
+                {
+                    string obstring = JsonConvert.SerializeObject((ImageText)objeto);
+                    JObject googleSearch = JObject.Parse(obstring);
+                    MessageBox.Show(googleSearch.ToString());
+                    //textBoxBreveDescripcion.Text = googleSearch.ToString();
+                }else if (objeto is Footer)
+                {
+                    string obstring = JsonConvert.SerializeObject((Footer)objeto);
                     JObject googleSearch = JObject.Parse(obstring);
                     MessageBox.Show(googleSearch.ToString());
                     //textBoxBreveDescripcion.Text = googleSearch.ToString();
@@ -812,9 +855,12 @@ namespace Desktop_App
             buttonColor.Visible = true;
             panelElement.PanelGol.Controls.Add(buttonColor);
 
-            
-
-            panelElement.CreateAjustes = new ClassCreatePanelAjustes(410, 310, panelElement.Title, panelElement.Options);
+            List<string> optionsAjustes = new List<string>();
+            for(int id = 0; id<panelElement.Options.Count-1; id++)
+            {
+                optionsAjustes.Add(panelElement.Options[id]);
+            }
+            panelElement.CreateAjustes = new ClassCreatePanelAjustes(410, 310, panelElement.Title, optionsAjustes);
             panel4.Controls.Add(panelElement.CreateAjustes.PanelGlo);
             panelesAjustes.Add(panelElement.CreateAjustes);
 
@@ -833,6 +879,17 @@ namespace Desktop_App
             buttonColorAjustes.Visible = true;
             buttonColorAjustes.MouseClick += new System.Windows.Forms.MouseEventHandler(panelColor_Click);
             panelElement.CreateAjustes.PanelTextos.Controls.Add(buttonColorAjustes);
+
+            ComboBox comboBox = new ComboBox();
+            comboBox.Items.Clear();
+            comboBox.Items.Add("Right");
+            comboBox.SelectedItem = "Right";
+            comboBox.Items.Add("Left");
+            comboBox.Items.Add("Middle");
+            comboBox.Size = new Size(149, 20);
+            comboBox.Location = new Point(21, 145);
+            comboBox.SelectedValueChanged += new EventHandler(comboBoxLado_SelectedValueChanged);
+            panelElement.CreateAjustes.PanelTextos.Controls.Add(comboBox);
 
             panelElement.PanelDe.Name = "CallToActionDelete" + panelesFlow.Count;
             panelElement.PbDe.Name = "CallToActionDelete" + panelesFlow.Count;
@@ -883,6 +940,132 @@ namespace Desktop_App
                     break;
                 }
             }
+        }
+
+        private void label26_MouseClick(object sender, MouseEventArgs e)
+        {
+            string title = "Image Text";
+            List<string> options = new List<string>();
+            options.Add("Title");
+            options.Add("Text");
+            options.Add("Path Image");
+            options.Add("orientation");
+            ClassCreatePanelElement panelElement = new ClassCreatePanelElement(482, 3, title, options);
+            flowLayoutPanelCurrentElements.Controls.Add(panelElement.PanelGol);
+            panelesFlow.Add(panelElement);
+            panelElement.PanelGol.Name = "ImageText" + panelesFlow.Count;
+            panelElement.LabelTitle.Size = new Size(120, 21);
+            panelElement.LabelOptions.ForEach(delegate (Label label)
+            {
+                label.Visible = true;
+            });
+
+            List<string> optionsAjustes = new List<string>();
+            optionsAjustes.Add(panelElement.Options[0]);
+            optionsAjustes.Add(panelElement.Options[2]);
+            optionsAjustes.Add(panelElement.Options[1]);
+
+
+            panelElement.CreateAjustes = new ClassCreatePanelAjustes(410, 310, panelElement.Title, optionsAjustes);
+            panel4.Controls.Add(panelElement.CreateAjustes.PanelGlo);
+            panelesAjustes.Add(panelElement.CreateAjustes);
+
+            panelElement.CreateAjustes.ListText[1].MouseClick += clickTextBox_AjustesFoto;
+
+            panelElement.CreateAjustes.ListText[1].ReadOnly = true;
+
+            panelElement.CreateAjustes.ListText[2].Size = new Size(149,80);
+            panelElement.CreateAjustes.ListText[2].Multiline = true;
+
+            ComboBox comboBox = new ComboBox();
+            comboBox.Items.Clear();
+            comboBox.Items.Add("Right");
+            comboBox.SelectedItem = "Right";
+            comboBox.Items.Add("Left");
+            comboBox.Size = new Size(149, 20);
+            comboBox.Location = new Point(193, 101);
+            comboBox.SelectedValueChanged += new EventHandler(comboBoxLado_SelectedValueChanged);
+            panelElement.CreateAjustes.PanelTextos.Controls.Add(comboBox);
+
+
+            panelElement.CreateAjustes.PanelSave.MouseClick += new System.Windows.Forms.MouseEventHandler(PanelSave_MousClick);
+            panelElement.CreateAjustes.LabelSave.MouseClick += new System.Windows.Forms.MouseEventHandler(PanelSave_MousClick);
+
+            panelElement.PanelDe.Name = "ImageTextDelete" + panelesFlow.Count;
+            panelElement.PbDe.Name = "ImageTextDelete" + panelesFlow.Count;
+
+            panelElement.PanelDe.MouseClick += new System.Windows.Forms.MouseEventHandler(PanelDe_MouseClicked);
+            panelElement.PbDe.MouseClick += new System.Windows.Forms.MouseEventHandler(PanelDe_MouseClicked);
+
+            panelElement.PanelEd.Name = "ImageTextEdit" + panelesFlow.Count;
+            panelElement.PbEd.Name = "ImageTextEdit" + panelesFlow.Count;
+
+            panelElement.PanelEd.MouseClick += new System.Windows.Forms.MouseEventHandler(PanelEd_MouseClick);
+            panelElement.PbEd.MouseClick += new System.Windows.Forms.MouseEventHandler(PanelEd_MouseClick);
+        }
+
+        private void clickTextBox_AjustesFoto(object sender, MouseEventArgs e)
+        {
+            TextBox textBox = (TextBox)sender;
+            textBox.Text = picPhoto();
+            String directory = Path.GetDirectoryName(textBox.Text) + @"\" + Path.GetFileName(textBox.Text);
+            String newPath = @"C:\Users\alejandromarurb\Desktop\newPath\";
+            File.Copy(directory, newPath + "");
+            MessageBox.Show("Archivo copiado correctamente.");
+        }
+        private string picPhoto()
+        {
+            OpenFileDialog openFileDialog = new OpenFileDialog();
+            openFileDialog.ShowDialog();
+            return openFileDialog.FileName;
+        }
+
+        private void comboBoxLado_SelectedValueChanged(object sender, EventArgs e) 
+        {
+            ComboBox comboBox = (ComboBox)sender;
+            foreach (ClassCreatePanelElement element in panelesFlow)
+            {
+                if (element.CreateAjustes.PanelTextos.Controls.Contains(comboBox))
+                {
+                    element.LabelOptions[element.LabelOptions.Count-1].Text = comboBox.SelectedItem.ToString();
+                    break;
+                }
+            }
+        }
+
+        private void pictureBox10_MouseClick(object sender, MouseEventArgs e)
+        {
+            string title = "Footer";
+            List<string> options = new List<string>();
+            options.Add("Text");
+            ClassCreatePanelElement panelElement = new ClassCreatePanelElement(482, 3, title, options);
+            flowLayoutPanelCurrentElements.Controls.Add(panelElement.PanelGol);
+            panelesFlow.Add(panelElement);
+            panelElement.PanelGol.Name = "Footer" + panelesFlow.Count;
+            panelElement.LabelTitle.Size = new Size(120, 21);
+            panelElement.LabelOptions.ForEach(delegate (Label label)
+            {
+                label.Visible = true;
+            });
+
+            panelElement.CreateAjustes = new ClassCreatePanelAjustes(410, 310, panelElement.Title, panelElement.Options);
+            panel4.Controls.Add(panelElement.CreateAjustes.PanelGlo);
+            panelesAjustes.Add(panelElement.CreateAjustes);
+
+            panelElement.CreateAjustes.PanelSave.MouseClick += new System.Windows.Forms.MouseEventHandler(PanelSave_MousClick);
+            panelElement.CreateAjustes.LabelSave.MouseClick += new System.Windows.Forms.MouseEventHandler(PanelSave_MousClick);
+
+            panelElement.PanelDe.Name = "FooterDelete" + panelesFlow.Count;
+            panelElement.PbDe.Name = "FooterDelete" + panelesFlow.Count;
+
+            panelElement.PanelDe.MouseClick += new System.Windows.Forms.MouseEventHandler(PanelDe_MouseClicked);
+            panelElement.PbDe.MouseClick += new System.Windows.Forms.MouseEventHandler(PanelDe_MouseClicked);
+
+            panelElement.PanelEd.Name = "FooterTextEdit" + panelesFlow.Count;
+            panelElement.PbEd.Name = "FooterTextEdit" + panelesFlow.Count;
+
+            panelElement.PanelEd.MouseClick += new System.Windows.Forms.MouseEventHandler(PanelEd_MouseClick);
+            panelElement.PbEd.MouseClick += new System.Windows.Forms.MouseEventHandler(PanelEd_MouseClick);
         }
     }
 }

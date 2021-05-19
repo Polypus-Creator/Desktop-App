@@ -183,6 +183,16 @@ namespace Desktop_App.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap footer {
+            get {
+                object obj = ResourceManager.GetObject("footer", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap footerIcon {
             get {
                 object obj = ResourceManager.GetObject("footerIcon", resourceCulture);
@@ -196,6 +206,16 @@ namespace Desktop_App.Properties {
         internal static System.Drawing.Bitmap headerIcon {
             get {
                 object obj = ResourceManager.GetObject("headerIcon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap ImageText {
+            get {
+                object obj = ResourceManager.GetObject("ImageText", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
