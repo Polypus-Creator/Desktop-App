@@ -572,6 +572,10 @@ namespace Desktop_App
                 
             
             generateJSON(DataClass.listasElementos);
+            string obstring = JsonConvert.SerializeObject(DataClass.classListaJSON);
+            JObject googleSearch = JObject.Parse(obstring);
+            textBoxBreveDescripcion.Text = googleSearch.ToString();
+
             string typo = sender.GetType().Name;
             foreach(ClassCreatePanelAjustes elem in panelesAjustes)
             {
@@ -605,40 +609,34 @@ namespace Desktop_App
 
         private void generateJSON(List<object> listasElementos)
         {
-            List<JObject> listaJSON = new List<JObject>();
             listasElementos.ForEach(delegate (object objeto) 
             {
                 if (objeto is Header)
                 {
                     string obstring = JsonConvert.SerializeObject((Header)objeto);
                     JObject googleSearch = JObject.Parse(obstring);
-                    //textBoxBreveDescripcion.Text = googleSearch.ToString();
-                    MessageBox.Show(googleSearch.ToString());
+                    DataClass.classListaJSON.ListaJSON.Add(googleSearch);
                 }else if (objeto is Separator)
                 {
                     string obstring = JsonConvert.SerializeObject((Separator)objeto);
                     JObject googleSearch = JObject.Parse(obstring);
-                    MessageBox.Show(googleSearch.ToString());
-                    //textBoxBreveDescripcion.Text = googleSearch.ToString();
+                    DataClass.classListaJSON.ListaJSON.Add(googleSearch);
                 }
                 else if(objeto is CallToAction)
                 {
                     string obstring = JsonConvert.SerializeObject((CallToAction)objeto);
                     JObject googleSearch = JObject.Parse(obstring);
-                    MessageBox.Show(googleSearch.ToString());
-                    //textBoxBreveDescripcion.Text = googleSearch.ToString();
+                    DataClass.classListaJSON.ListaJSON.Add(googleSearch);
                 }else if (objeto is ImageText)
                 {
                     string obstring = JsonConvert.SerializeObject((ImageText)objeto);
                     JObject googleSearch = JObject.Parse(obstring);
-                    MessageBox.Show(googleSearch.ToString());
-                    //textBoxBreveDescripcion.Text = googleSearch.ToString();
+                    DataClass.classListaJSON.ListaJSON.Add(googleSearch);
                 }else if (objeto is Footer)
                 {
                     string obstring = JsonConvert.SerializeObject((Footer)objeto);
                     JObject googleSearch = JObject.Parse(obstring);
-                    MessageBox.Show(googleSearch.ToString());
-                    //textBoxBreveDescripcion.Text = googleSearch.ToString();
+                    DataClass.classListaJSON.ListaJSON.Add(googleSearch);
                 }
             });
            
@@ -1007,11 +1005,12 @@ namespace Desktop_App
         private void clickTextBox_AjustesFoto(object sender, MouseEventArgs e)
         {
             TextBox textBox = (TextBox)sender;
-            textBox.Text = picPhoto();
-            String directory = Path.GetDirectoryName(textBox.Text) + @"\" + Path.GetFileName(textBox.Text);
-            String newPath = @"C:\Users\alejandromarurb\Desktop\newPath\";
-            File.Copy(directory, newPath + "");
-            MessageBox.Show("Archivo copiado correctamente.");
+            string rutaOrigen = picPhoto();
+            string[] rutas = rutaOrigen.Split('\\');
+            String directory = Path.GetDirectoryName(rutaOrigen) + @"\" + Path.GetFileName(rutaOrigen);
+            String newPath = @"..\..\Polypus\YourWebsites\Images\";
+            textBox.Text = "\\" + rutas[rutas.Length - 1];
+            File.Copy(directory, newPath + rutas[rutas.Length - 1]);
         }
         private string picPhoto()
         {
@@ -1066,6 +1065,22 @@ namespace Desktop_App
 
             panelElement.PanelEd.MouseClick += new System.Windows.Forms.MouseEventHandler(PanelEd_MouseClick);
             panelElement.PbEd.MouseClick += new System.Windows.Forms.MouseEventHandler(PanelEd_MouseClick);
+        }
+
+        private void buttonGenerarLogoAleatorio_Click(object sender, EventArgs e)
+        {
+            String[] images = new string[7];
+            images[0] = @"..\..\Resources\logos\logo1.png";
+            images[1] = @"..\..\Resources\logos\logo2.png";
+            images[2] = @"..\..\Resources\logos\logo3.png";
+            images[3] = @"..\..\Resources\logos\logo4.png";
+            images[4] = @"..\..\Resources\logos\logo5.png";
+            images[5] = @"..\..\Resources\logos\logo6.png";
+            images[6] = @"..\..\Resources\logos\logo7.png";
+            Random rnd = new Random();
+            int random = rnd.Next(0, 6);
+            pictureBoxLogo.Image = Image.FromFile(images[random]);
+            MessageBox.Show("Se ha generado un logo aleatorio.");
         }
     }
 }

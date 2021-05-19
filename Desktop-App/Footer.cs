@@ -8,7 +8,7 @@ namespace Desktop_App
 {
     class Footer
     {
-        private string elemento = "Logo&ItemsNav";
+        private string elemento = "Footer";
         private string text;
         public Footer(string text)
         {

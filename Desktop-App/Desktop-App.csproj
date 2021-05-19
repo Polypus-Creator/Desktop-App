@@ -64,6 +64,7 @@
     <Compile Include="CallToAction.cs" />
     <Compile Include="ClassCreatePanelAjustes.cs" />
     <Compile Include="ClassCreatePanelElement.cs" />
+    <Compile Include="ClassJSONList.cs" />
     <Compile Include="DataClass.cs" />
     <Compile Include="FAboutUs.cs">
       <SubType>Form</SubType>
@@ -222,7 +223,7 @@
   <ItemGroup>
     <Folder Include="Polypus\Config\Blocks\Footer\" />
     <Folder Include="Polypus\Config\Templates\" />
-    <Folder Include="Polypus\YourWebsites\" />
+    <Folder Include="Polypus\YourWebsites\Images\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

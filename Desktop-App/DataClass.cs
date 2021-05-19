@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Newtonsoft.Json.Linq;
+using System;
 using System.Collections.Generic;
 using System.Drawing;
 using System.Linq;
@@ -13,5 +14,6 @@ namespace Desktop_App
         public static Color backTwo = Color.White;
         public static Header header;
         public static List<object> listasElementos = new List<object>();
+        public static ClassJSONList classListaJSON = new ClassJSONList();
     }
 }

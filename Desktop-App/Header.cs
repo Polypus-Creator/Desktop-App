@@ -7,7 +7,7 @@ namespace Desktop_App
 {
     class Header
     {
-        private string elemento = "Header";
+        private string elemento = "Logo&ItemsNav";
         private string[,] navItems;
         private string backColor;
         private string textColor;
