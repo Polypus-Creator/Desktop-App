@@ -12,7 +12,6 @@ namespace Desktop_App
         private string backColor;
         private string textColor;
         private string logoUrl;
-        private string webName;
 
         public Header(string[,] navItems, Color backColor, Color textColor)
         {
@@ -20,13 +19,12 @@ namespace Desktop_App
             BackColor = HexConverter(backColor);
             TextColor = HexConverter(textColor);
         }
-        public Header(string[,] navItems, Color backColor, Color textColor, string logoUrl, string webName)
+        public Header(string[,] navItems, Color backColor, Color textColor, string logoUrl)
         {
             NavItems = navItems;
             BackColor = HexConverter(backColor);
             TextColor = HexConverter(textColor);
             LogoUrl = logoUrl;
-            WebName = webName;
         }  
 
 
@@ -38,7 +36,6 @@ namespace Desktop_App
         }
         public string TextColor { get => textColor; set => textColor = value; }
         public string LogoUrl { get => logoUrl; set => logoUrl = value; }
-        public string WebName { get => webName; set => webName = value; }
 
 
         private String HexConverter(System.Drawing.Color c) 

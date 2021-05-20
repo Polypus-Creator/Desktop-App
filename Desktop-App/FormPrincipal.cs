@@ -622,15 +622,6 @@ namespace Desktop_App
             {
                 if(panel.Title == "NavBar")
                 {
-                    /*string[,] navItems = new string[6, 2];
-                    int fila = 0, col = 0;
-                    panel.ListText.ForEach(delegate (TextBox textBox) {
-                    if(!textBox.Text.Equals(""))
-                        {
-                            navItems[fila, col] = textBox.Text;
-                            fila++;
-                        }
-                    });*/
                     DataClass.header = new Header(panel.ListLinks, DataClass.backOne, DataClass.backTwo);
                     DataClass.listasElementos.Add(DataClass.header);
                 }else if (panel.Title == "Separator")
@@ -689,6 +680,7 @@ namespace Desktop_App
                 
             
             generateJSON(DataClass.listasElementos);
+            DataClass.classListaJSON.WebName = textBoxNombre.Text;
             string obstring = JsonConvert.SerializeObject(DataClass.classListaJSON);
             JObject googleSearch = JObject.Parse(obstring);
             //textBoxBreveDescripcion.Text = googleSearch.ToString();
