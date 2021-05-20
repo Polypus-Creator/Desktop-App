@@ -1130,24 +1130,35 @@ namespace Desktop_App
         {
             TextBox textBox = (TextBox)sender;
             string rutaOrigen = picPhoto();
-            string[] rutas = rutaOrigen.Split('\\');
-            String directory = Path.GetDirectoryName(rutaOrigen) + @"\" + Path.GetFileName(rutaOrigen);
-            String newPath = @"..\..\Polypus\YourWebsites\Images\";
-            textBox.Text = "\\" + rutas[rutas.Length - 1];
-            if (!File.Exists(newPath + rutas[rutas.Length - 1]))
-            {
-                File.Copy(directory, newPath + rutas[rutas.Length - 1]);
-            }
-            else
-            {
-                MessageBox.Show("Nombre de fichero existente");
+            if (rutaOrigen != null) {
+                string[] rutas = rutaOrigen.Split('\\');
+                String directory = Path.GetDirectoryName(rutaOrigen) + @"\" + Path.GetFileName(rutaOrigen);
+                String newPath = @"..\..\Polypus\YourWebsites\Images\";
+                textBox.Text = "\\" + rutas[rutas.Length - 1];
+                if (!File.Exists(newPath + rutas[rutas.Length - 1]))
+                {
+                    File.Copy(directory, newPath + rutas[rutas.Length - 1]);
+                }
+                else
+                {
+                    MessageBox.Show("Nombre de fichero existente");
+                }
             }
         }
         private string picPhoto()
         {
             OpenFileDialog openFileDialog = new OpenFileDialog();
             openFileDialog.ShowDialog();
-            return openFileDialog.FileName;
+            string filename = openFileDialog.FileName;
+            if (filename != null && filename != "")
+            {
+                if (Path.GetExtension(filename).ToLower().Contains("png") || Path.GetExtension(filename).ToLower().Contains("jpg") || Path.GetExtension(filename).ToLower().Contains("svg"))
+                {
+                    return filename;
+                }
+
+            }
+            return null;
         }
 
         private void comboBoxLado_SelectedValueChanged(object sender, EventArgs e) 
@@ -1227,8 +1238,15 @@ namespace Desktop_App
         {
             OpenFileDialog openFileDialog = new OpenFileDialog();
             openFileDialog.ShowDialog();
-            String filename = openFileDialog.FileName;
-            pictureBoxLogo.Image = Image.FromFile(filename);
+            string filename = openFileDialog.FileName;
+            if (filename != null && filename != "")
+            {
+                if(Path.GetExtension(filename).ToLower().Contains("png") || Path.GetExtension(filename).ToLower().Contains("jpg") || Path.GetExtension(filename).ToLower().Contains("svg")){
+                    pictureBoxLogo.Image = Image.FromFile(filename);
+                }
+                
+            }
+            
         }
 
         private void panelRandomLogo_Click(object sender, EventArgs e)
