@@ -389,6 +389,7 @@ namespace Desktop_App
             options.Add("");
             ClassCreatePanelElement panelElement = new ClassCreatePanelElement(482, 6,title, options);
             flowLayoutPanelCurrentElements.Controls.Add(panelElement.PanelGol);
+            panelElement.PanelGol.BackColor = Color.FromArgb(175,175,175);
             panelesFlow.Add(panelElement);
             panelElement.PanelGol.Name= "NavBar";
 
@@ -416,6 +417,45 @@ namespace Desktop_App
 
             panelElement.PanelEd.MouseClick += new System.Windows.Forms.MouseEventHandler(PanelEd_MouseClick);
             panelElement.PbEd.MouseClick += new System.Windows.Forms.MouseEventHandler(PanelEd_MouseClick);
+
+            ordenarPaneles();
+        }
+
+        private void ordenarPaneles()
+        {
+            int he = panelesFlow[0].PanelGol.Height;
+            ClassCreatePanelElement navBar = null;
+            ClassCreatePanelElement footer = null;
+            List<ClassCreatePanelElement> newElemento = new List<ClassCreatePanelElement>();
+            panelesFlow.ForEach(delegate(ClassCreatePanelElement element){
+                if (element.Title.Equals("NavBar"))
+                {
+                    navBar = element;
+                }
+                else if (element.Title.Equals("Footer"))
+                {
+                    footer = element;
+                }
+            });
+            if (navBar != null)
+            {
+                newElemento.Add(navBar);
+            }
+            panelesFlow.ForEach(delegate (ClassCreatePanelElement element) {
+                if (!element.Title.Equals("NavBar")&& !element.Title.Equals("Footer"))
+                {
+                    newElemento.Add(element);
+                }
+            });
+
+            if (footer!=null) {
+                newElemento.Add(footer);
+            }
+            panelesFlow = newElemento;
+            flowLayoutPanelCurrentElements.Controls.Clear();
+            panelesFlow.ForEach(delegate (ClassCreatePanelElement element) {
+                flowLayoutPanelCurrentElements.Controls.Add(element.PanelGol);
+            });
         }
 
         private void textBoxNavBar_LostFocus(object sender, EventArgs e) 
@@ -846,6 +886,8 @@ namespace Desktop_App
 
             panelElement.PanelEd.MouseClick += new System.Windows.Forms.MouseEventHandler(PanelEd_MouseClick);
             panelElement.PbEd.MouseClick += new System.Windows.Forms.MouseEventHandler(PanelEd_MouseClick);
+
+            ordenarPaneles();
         }
 
         private void textBoxSeparator_MouseClick(object sender, MouseEventArgs e)
@@ -978,6 +1020,8 @@ namespace Desktop_App
 
             panelElement.PanelEd.MouseClick += new System.Windows.Forms.MouseEventHandler(PanelEd_MouseClick);
             panelElement.PbEd.MouseClick += new System.Windows.Forms.MouseEventHandler(PanelEd_MouseClick);
+
+            ordenarPaneles();
         }
 
         private void panelColorCallToAction_Click(object sender, EventArgs e)
@@ -1078,6 +1122,8 @@ namespace Desktop_App
 
             panelElement.PanelEd.MouseClick += new System.Windows.Forms.MouseEventHandler(PanelEd_MouseClick);
             panelElement.PbEd.MouseClick += new System.Windows.Forms.MouseEventHandler(PanelEd_MouseClick);
+
+            ordenarPaneles();
         }
 
         private void clickTextBox_AjustesFoto(object sender, MouseEventArgs e)
@@ -1136,6 +1182,7 @@ namespace Desktop_App
 
                 panelElement.CreateAjustes = new ClassCreatePanelAjustes(410, 310, panelElement.Title, panelElement.Options);
                 panel4.Controls.Add(panelElement.CreateAjustes.PanelGlo);
+                panelElement.PanelGol.BackColor = Color.FromArgb(175, 175, 175);
                 panelesAjustes.Add(panelElement.CreateAjustes);
 
                 panelElement.CreateAjustes.PanelSave.MouseClick += new System.Windows.Forms.MouseEventHandler(PanelSave_MousClick);
@@ -1154,6 +1201,7 @@ namespace Desktop_App
                 panelElement.PbEd.MouseClick += new System.Windows.Forms.MouseEventHandler(PanelEd_MouseClick);
                 panel6.Enabled = false;
                 isFooterAlreadyOn = true;
+                ordenarPaneles();
             }
             
             
