@@ -189,6 +189,7 @@
     <Content Include="Resources\logos\logo5.png" />
     <Content Include="Resources\logos\logo6.png" />
     <Content Include="Resources\logos\logo7.png" />
+    <None Include="Resources\paintbrushIcon1.png" />
     <Content Include="Resources\saveIconLight.png" />
     <Content Include="Resources\trashDarkIcon.png" />
     <None Include="Resources\textIcon.png" />

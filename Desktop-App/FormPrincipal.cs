@@ -26,6 +26,7 @@ namespace Desktop_App
         List<ClassCreatePanelElement> panelesFlow = new List<ClassCreatePanelElement>();
         List<ClassCreatePanelAjustes> panelesAjustes = new List<ClassCreatePanelAjustes>();
         Boolean isHeaderAlreadyOn = false;
+        Boolean isFooterAlreadyOn = false;
         String currentEditingElement = null;
         
 
@@ -500,6 +501,14 @@ namespace Desktop_App
                     panel31.Enabled = true;
                     currentEditingElement = null;
                 }
+
+                if (panel.Name.Contains("Footer"))
+                {
+                    isFooterAlreadyOn = false;
+                    panel6.Enabled = true;
+                }
+
+
             }
             else if (typo == "PictureBox")
             {
@@ -520,6 +529,12 @@ namespace Desktop_App
                     isHeaderAlreadyOn = false;
                     panel31.Enabled = true;
                     currentEditingElement = null;
+                }
+
+                if (picture.Name.Contains("Footer"))
+                {
+                    isFooterAlreadyOn = false;
+                    panel6.Enabled = true;
                 }
             }
             
@@ -1104,37 +1119,44 @@ namespace Desktop_App
 
         private void pictureBox10_MouseClick(object sender, MouseEventArgs e)
         {
-            string title = "Footer";
-            List<string> options = new List<string>();
-            options.Add("Text");
-            ClassCreatePanelElement panelElement = new ClassCreatePanelElement(482, 3, title, options);
-            flowLayoutPanelCurrentElements.Controls.Add(panelElement.PanelGol);
-            panelesFlow.Add(panelElement);
-            panelElement.PanelGol.Name = "Footer" + panelesFlow.Count;
-            panelElement.LabelTitle.Size = new Size(120, 21);
-            panelElement.LabelOptions.ForEach(delegate (Label label)
+            if(isFooterAlreadyOn == false)
             {
-                label.Visible = true;
-            });
+                string title = "Footer";
+                List<string> options = new List<string>();
+                options.Add("Text");
+                ClassCreatePanelElement panelElement = new ClassCreatePanelElement(482, 3, title, options);
+                flowLayoutPanelCurrentElements.Controls.Add(panelElement.PanelGol);
+                panelesFlow.Add(panelElement);
+                panelElement.PanelGol.Name = "Footer" + panelesFlow.Count;
+                panelElement.LabelTitle.Size = new Size(120, 21);
+                panelElement.LabelOptions.ForEach(delegate (Label label)
+                {
+                    label.Visible = true;
+                });
 
-            panelElement.CreateAjustes = new ClassCreatePanelAjustes(410, 310, panelElement.Title, panelElement.Options);
-            panel4.Controls.Add(panelElement.CreateAjustes.PanelGlo);
-            panelesAjustes.Add(panelElement.CreateAjustes);
+                panelElement.CreateAjustes = new ClassCreatePanelAjustes(410, 310, panelElement.Title, panelElement.Options);
+                panel4.Controls.Add(panelElement.CreateAjustes.PanelGlo);
+                panelesAjustes.Add(panelElement.CreateAjustes);
 
-            panelElement.CreateAjustes.PanelSave.MouseClick += new System.Windows.Forms.MouseEventHandler(PanelSave_MousClick);
-            panelElement.CreateAjustes.LabelSave.MouseClick += new System.Windows.Forms.MouseEventHandler(PanelSave_MousClick);
+                panelElement.CreateAjustes.PanelSave.MouseClick += new System.Windows.Forms.MouseEventHandler(PanelSave_MousClick);
+                panelElement.CreateAjustes.LabelSave.MouseClick += new System.Windows.Forms.MouseEventHandler(PanelSave_MousClick);
 
-            panelElement.PanelDe.Name = "FooterDelete" + panelesFlow.Count;
-            panelElement.PbDe.Name = "FooterDelete" + panelesFlow.Count;
+                panelElement.PanelDe.Name = "FooterDelete" + panelesFlow.Count;
+                panelElement.PbDe.Name = "FooterDelete" + panelesFlow.Count;
 
-            panelElement.PanelDe.MouseClick += new System.Windows.Forms.MouseEventHandler(PanelDe_MouseClicked);
-            panelElement.PbDe.MouseClick += new System.Windows.Forms.MouseEventHandler(PanelDe_MouseClicked);
+                panelElement.PanelDe.MouseClick += new System.Windows.Forms.MouseEventHandler(PanelDe_MouseClicked);
+                panelElement.PbDe.MouseClick += new System.Windows.Forms.MouseEventHandler(PanelDe_MouseClicked);
 
-            panelElement.PanelEd.Name = "FooterTextEdit" + panelesFlow.Count;
-            panelElement.PbEd.Name = "FooterTextEdit" + panelesFlow.Count;
+                panelElement.PanelEd.Name = "FooterTextEdit" + panelesFlow.Count;
+                panelElement.PbEd.Name = "FooterTextEdit" + panelesFlow.Count;
 
-            panelElement.PanelEd.MouseClick += new System.Windows.Forms.MouseEventHandler(PanelEd_MouseClick);
-            panelElement.PbEd.MouseClick += new System.Windows.Forms.MouseEventHandler(PanelEd_MouseClick);
+                panelElement.PanelEd.MouseClick += new System.Windows.Forms.MouseEventHandler(PanelEd_MouseClick);
+                panelElement.PbEd.MouseClick += new System.Windows.Forms.MouseEventHandler(PanelEd_MouseClick);
+                panel6.Enabled = false;
+                isFooterAlreadyOn = true;
+            }
+            
+            
         }
 
         private void buttonGenerarLogoAleatorio_Click(object sender, EventArgs e)
@@ -1151,6 +1173,29 @@ namespace Desktop_App
             int random = rnd.Next(0, 6);
             pictureBoxLogo.Image = Image.FromFile(images[random]);
             MessageBox.Show("Se ha generado un logo aleatorio.");
+        }
+
+        private void panelSelectLogo_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog openFileDialog = new OpenFileDialog();
+            openFileDialog.ShowDialog();
+            String filename = openFileDialog.FileName;
+            pictureBoxLogo.Image = Image.FromFile(filename);
+        }
+
+        private void panelRandomLogo_Click(object sender, EventArgs e)
+        {
+            String[] images = new string[7];
+            images[0] = @"..\..\Resources\logos\logo1.png";
+            images[1] = @"..\..\Resources\logos\logo2.png";
+            images[2] = @"..\..\Resources\logos\logo3.png";
+            images[3] = @"..\..\Resources\logos\logo4.png";
+            images[4] = @"..\..\Resources\logos\logo5.png";
+            images[5] = @"..\..\Resources\logos\logo6.png";
+            images[6] = @"..\..\Resources\logos\logo7.png";
+            Random rnd = new Random();
+            int random = rnd.Next(0, 6);
+            pictureBoxLogo.Image = Image.FromFile(images[random]);
         }
     }
 }
