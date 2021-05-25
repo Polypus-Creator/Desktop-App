@@ -73,6 +73,16 @@ namespace Desktop_App.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap addNewImage {
+            get {
+                object obj = ResourceManager.GetObject("addNewImage", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap arrow_down {
             get {
                 object obj = ResourceManager.GetObject("arrow-down", resourceCulture);
@@ -436,6 +446,26 @@ namespace Desktop_App.Properties {
         internal static System.Drawing.Bitmap textIcon {
             get {
                 object obj = ResourceManager.GetObject("textIcon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap TextIconMenu {
+            get {
+                object obj = ResourceManager.GetObject("TextIconMenu", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap TitleIcon {
+            get {
+                object obj = ResourceManager.GetObject("TitleIcon", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

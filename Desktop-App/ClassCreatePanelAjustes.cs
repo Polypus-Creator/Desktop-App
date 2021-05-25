@@ -25,6 +25,8 @@ namespace Desktop_App
         private PictureBox _save = new PictureBox();
         private Label _labelLink = new Label();
         private TextBox _textBoxLink = new TextBox();
+        private List<PictureBox> _listaImages = new List<PictureBox>();
+        private List<Panel> _deleteImage = new List<Panel>();
 
         public ClassCreatePanelAjustes(int maxW, int maxH, string title, List<string> items)
         {
@@ -32,6 +34,13 @@ namespace Desktop_App
             this.MaxW = maxW;
             this.Title = title;
             this.ListItems = items;
+            createView();
+        }
+        public ClassCreatePanelAjustes(int maxW, int maxH, string title)
+        {
+            this.MaxH = maxH;
+            this.MaxW = maxW;
+            this.Title = title;
             createView();
         }
 
@@ -51,6 +60,8 @@ namespace Desktop_App
         public Label LabelLink { get => _labelLink; set => _labelLink = value; }
         public TextBox TextBoxLink { get => _textBoxLink; set => _textBoxLink = value; }
         public string[,] ListLinks { get => _listLinks; set => _listLinks = value; }
+        public List<PictureBox> ListaImages { get => _listaImages; set => _listaImages = value; }
+        public List<Panel> DeleteImage { get => _deleteImage; set => _deleteImage = value; }
 
         private void createView()
         {

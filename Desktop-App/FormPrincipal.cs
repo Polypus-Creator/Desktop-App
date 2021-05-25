@@ -27,7 +27,6 @@ namespace Desktop_App
         List<ClassCreatePanelAjustes> panelesAjustes = new List<ClassCreatePanelAjustes>();
         Boolean isHeaderAlreadyOn = false;
         Boolean isFooterAlreadyOn = false;
-        String currentEditingElement = null;
         
 
         public FormPrincipal()
@@ -379,7 +378,6 @@ namespace Desktop_App
                 isHeaderAlreadyOn = true;            
             }
             string title = "NavBar";
-            currentEditingElement = title;
             List<string> options = new List<string>();
             options.Add("");
             options.Add("");
@@ -539,7 +537,6 @@ namespace Desktop_App
                 {
                     isHeaderAlreadyOn = false;
                     panel31.Enabled = true;
-                    currentEditingElement = null;
                 }
 
                 if (panel.Name.Contains("Footer"))
@@ -568,7 +565,6 @@ namespace Desktop_App
                 {
                     isHeaderAlreadyOn = false;
                     panel31.Enabled = true;
-                    currentEditingElement = null;
                 }
 
                 if (picture.Name.Contains("Footer"))
@@ -675,6 +671,33 @@ namespace Desktop_App
                 {
                     Footer footer = new Footer(panel.ListText[0].Text);
                     DataClass.listasElementos.Add(footer);
+                }else if (panel.Title == "Image")
+                {
+                    ClassImage image = new ClassImage("Image");
+                    foreach(ClassCreatePanelElement element in panelesFlow)
+                    {
+                        if (element.CreateAjustes.Equals(panel))
+                        {
+                            element.Options.ForEach(delegate (string ruta)
+                            {
+                                if(ruta != null && ruta != "")
+                                {
+                                    image.RutasImages.Add(ruta);
+                                }
+                            });
+                        }
+                        break;
+                    }
+                    DataClass.listasElementos.Add(image);
+                }else if (panel.Title == "Title")
+                {
+                    Title title = new Title("Tilte", panel.ListText[0].Text);
+                    DataClass.listasElementos.Add(title);
+                }
+                else if (panel.Title == "Text")
+                {
+                    Text text = new Text("Text", panel.ListText[0].Text);
+                    DataClass.listasElementos.Add(text);
                 }
             });
                 
@@ -745,6 +768,23 @@ namespace Desktop_App
                 }else if (objeto is Footer)
                 {
                     string obstring = JsonConvert.SerializeObject((Footer)objeto);
+                    JObject googleSearch = JObject.Parse(obstring);
+                    DataClass.classListaJSON.ListaJSON.Add(googleSearch);
+                }else if(objeto is ClassImage)
+                {
+                    string obstring = JsonConvert.SerializeObject((ClassImage)objeto);
+                    JObject googleSearch = JObject.Parse(obstring);
+                    DataClass.classListaJSON.ListaJSON.Add(googleSearch);
+                }
+                else if (objeto is Title)
+                {
+                    string obstring = JsonConvert.SerializeObject((Title)objeto);
+                    JObject googleSearch = JObject.Parse(obstring);
+                    DataClass.classListaJSON.ListaJSON.Add(googleSearch);
+                }
+                else if (objeto is Text)
+                {
+                    string obstring = JsonConvert.SerializeObject((Text)objeto);
                     JObject googleSearch = JObject.Parse(obstring);
                     DataClass.classListaJSON.ListaJSON.Add(googleSearch);
                 }
@@ -830,6 +870,14 @@ namespace Desktop_App
                         }
                     }
                 }
+            }else if (elementos.Id == "Title")
+            {
+                elementos.LabelOptions[Int32.Parse(textBox.Name)].Visible = true;
+                elementos.LabelOptions[Int32.Parse(textBox.Name)].Text = textBox.Text;
+                if (elementos.LabelOptions[Int32.Parse(textBox.Name)].Text == "")
+                {
+                    elementos.LabelOptions[Int32.Parse(textBox.Name)].Visible = false;
+                }
             }
         }
 
@@ -905,9 +953,12 @@ namespace Desktop_App
                                         panel.BackColor = color;
                                     }
                                 }
+                                break;
                             }
                         }
+                        break;
                     }
+                    break;
                 }
             }
             textBox.Text = HexConverter(color);
@@ -930,7 +981,6 @@ namespace Desktop_App
         private void pictureBox15_MouseClick(object sender, MouseEventArgs e)
         {
             string title = "Call To Action";
-            currentEditingElement = title;
             List<string> options = new List<string>();
             options.Add("Title");
             options.Add("Text");
@@ -1078,6 +1128,16 @@ namespace Desktop_App
             optionsAjustes.Add(panelElement.Options[1]);
 
 
+            PictureBox image1 = new PictureBox();
+            image1.BackColor = Color.LightGray;
+            image1.Size = new Size(90, 70);
+            image1.SizeMode = PictureBoxSizeMode.StretchImage;
+            image1.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            image1.Location = new Point(370, 50);
+            image1.Visible = false;
+            panelElement.PanelGol.Controls.Add(image1);
+            panelElement.ButonsOptions.Add(image1);
+
             panelElement.CreateAjustes = new ClassCreatePanelAjustes(410, 310, panelElement.Title, optionsAjustes);
             panel4.Controls.Add(panelElement.CreateAjustes.PanelGlo);
             panelesAjustes.Add(panelElement.CreateAjustes);
@@ -1134,6 +1194,22 @@ namespace Desktop_App
                 else
                 {
                     MessageBox.Show("Nombre de fichero existente");
+                }
+                foreach (ClassCreatePanelAjustes ajustes in panelesAjustes)
+                {
+                    if (ajustes.PanelTextos.Controls.Contains(textBox))
+                    {
+                        foreach (ClassCreatePanelElement element in panelesFlow)
+                        {
+                            if (element.CreateAjustes.Equals(ajustes))
+                            {
+                                element.ButonsOptions[0].Image = Image.FromFile(newPath + rutas[rutas.Length - 1]);
+                                element.ButonsOptions[0].Visible = true;
+                            }
+                            break;
+                        }
+                    }
+                    break;
                 }
             }
         }
@@ -1254,6 +1330,419 @@ namespace Desktop_App
             Random rnd = new Random();
             int random = rnd.Next(0, 6);
             pictureBoxLogo.Image = Image.FromFile(images[random]);
+        }
+
+        private void panel35_MouseClick(object sender, MouseEventArgs e)
+        {
+            string title = "Image";
+            List<string> options = new List<string>();
+            options.Add("");
+            options.Add("");
+            options.Add("");
+            ClassCreatePanelElement panelElement = new ClassCreatePanelElement(482, 0, title, options);
+            flowLayoutPanelCurrentElements.Controls.Add(panelElement.PanelGol);
+            panelesFlow.Add(panelElement);
+            panelElement.PanelGol.Name = "Image" + panelesFlow.Count;
+
+            PictureBox image1 = new PictureBox();
+            image1.BackColor = Color.LightGray;
+            image1.Size = new Size(100, 80);
+            image1.SizeMode = PictureBoxSizeMode.StretchImage;
+            image1.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            image1.Location = new Point(35,40);
+            image1.Visible = false;
+            panelElement.PanelGol.Controls.Add(image1);
+            panelElement.ButonsOptions.Add(image1);
+
+            PictureBox image2 = new PictureBox();
+            image2.BackColor = Color.LightGray;
+            image2.Size = new Size(100, 80);
+            image2.SizeMode = PictureBoxSizeMode.StretchImage;
+            image2.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            image2.Location = new Point(140, 40);
+            image2.Visible = false;
+            panelElement.PanelGol.Controls.Add(image2);
+            panelElement.ButonsOptions.Add(image2);
+
+            PictureBox image3 = new PictureBox();
+            image3.BackColor = Color.LightGray;
+            image3.Size = new Size(100, 80);
+            image3.SizeMode = PictureBoxSizeMode.StretchImage;
+            image3.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            image3.Location = new Point(244, 40);
+            image3.Visible = false;
+            panelElement.PanelGol.Controls.Add(image3);
+            panelElement.ButonsOptions.Add(image3);
+
+
+            panelElement.CreateAjustes = new ClassCreatePanelAjustes(410, 310, panelElement.Title);
+            panel4.Controls.Add(panelElement.CreateAjustes.PanelGlo);
+            panelesAjustes.Add(panelElement.CreateAjustes);
+
+            PictureBox image1Ajuste = new PictureBox();
+            image1Ajuste.Name = "image1Ajuste";
+            image1Ajuste.BackColor = Color.Transparent;
+            image1Ajuste.Cursor = Cursors.Hand;
+            image1Ajuste.Size = new Size(100, 100);
+            image1Ajuste.SizeMode = PictureBoxSizeMode.StretchImage;
+            image1Ajuste.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            image1Ajuste.Location = new Point(11, 59);
+            image1Ajuste.Image = Desktop_App.Properties.Resources.addNewImage;
+            image1Ajuste.MouseClick += new System.Windows.Forms.MouseEventHandler(ImageAjustes_MouseClick);
+            panelElement.CreateAjustes.PanelTextos.Controls.Add(image1Ajuste);
+            panelElement.CreateAjustes.ListaImages.Add(image1Ajuste);
+
+            PictureBox image2Ajuste = new PictureBox();
+            image2Ajuste.Name = "image2Ajuste";
+            image2Ajuste.BackColor = Color.Transparent;
+            image2Ajuste.Cursor = Cursors.Hand;
+            image2Ajuste.Size = new Size(100, 100);
+            image2Ajuste.SizeMode = PictureBoxSizeMode.StretchImage;
+            image2Ajuste.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            image2Ajuste.Location = new Point(122, 59);
+            image2Ajuste.Image = Desktop_App.Properties.Resources.addNewImage;
+            image2Ajuste.MouseClick += new System.Windows.Forms.MouseEventHandler(ImageAjustes_MouseClick);
+            panelElement.CreateAjustes.PanelTextos.Controls.Add(image2Ajuste);
+            panelElement.CreateAjustes.ListaImages.Add(image2Ajuste);
+
+            PictureBox image3Ajuste = new PictureBox();
+            image3Ajuste.Name = "image3Ajuste";
+            image3Ajuste.BackColor = Color.Transparent;
+            image3Ajuste.Cursor = Cursors.Hand;
+            image3Ajuste.Size = new Size(100, 100);
+            image3Ajuste.SizeMode = PictureBoxSizeMode.StretchImage;
+            image3Ajuste.Image = Desktop_App.Properties.Resources.addNewImage;
+            image3Ajuste.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            image3Ajuste.Location = new Point(233, 59);
+            image3Ajuste.MouseClick += new System.Windows.Forms.MouseEventHandler(ImageAjustes_MouseClick);
+            panelElement.CreateAjustes.PanelTextos.Controls.Add(image3Ajuste);
+            panelElement.CreateAjustes.ListaImages.Add(image3Ajuste);
+
+            Panel panelDelete1 = new Panel();
+            panelDelete1.Name = "panelDelete1";
+            panelDelete1.Location = new Point(100, 45);
+            panelDelete1.Size = new Size(15, 15);
+            panelDelete1.Cursor = Cursors.Hand;
+            panelDelete1.BackColor = Color.FromArgb(96, 71, 71);
+            panelDelete1.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            panelDelete1.Visible = true;
+            panelDelete1.MouseClick += new System.Windows.Forms.MouseEventHandler(DeleteImageAjustes_MouseClick);
+            panelElement.CreateAjustes.PanelTextos.Controls.Add(panelDelete1);
+            panelElement.CreateAjustes.DeleteImage.Add(panelDelete1);
+
+            Label labelX1 = new Label();
+            labelX1.Name = "labelX1";
+            labelX1.Size = new Size(10, 10);
+            labelX1.Cursor = Cursors.Hand;
+            labelX1.Location = new Point(0, 0);
+            labelX1.Font = new Font("Segoe UI", 8, FontStyle.Bold);
+            labelX1.Text = "X";
+            labelX1.ForeColor = Color.White;
+            labelX1.Visible = true;
+            labelX1.MouseClick += new System.Windows.Forms.MouseEventHandler(DeleteImageAjustes_MouseClick);
+            panelDelete1.Controls.Add(labelX1);
+
+            Panel panelDelete2 = new Panel();
+            panelDelete2.Name = "panelDelete2";
+            panelDelete2.Location = new Point(210, 45);
+            panelDelete2.Size = new Size(15, 15);
+            panelDelete2.Cursor = Cursors.Hand;
+            panelDelete2.BackColor = Color.FromArgb(96, 71, 71);
+            panelDelete2.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            panelDelete2.Visible = true;
+            panelDelete2.MouseClick += new System.Windows.Forms.MouseEventHandler(DeleteImageAjustes_MouseClick);
+            panelElement.CreateAjustes.PanelTextos.Controls.Add(panelDelete2);
+            panelElement.CreateAjustes.DeleteImage.Add(panelDelete2);
+
+            Label labelX2 = new Label();
+            labelX2.Name = "labelX2";
+            labelX2.Size = new Size(10, 10);
+            labelX2.Cursor = Cursors.Hand;
+            labelX2.Location = new Point(0, 0);
+            labelX2.Font = new Font("Segoe UI", 8, FontStyle.Bold);
+            labelX2.Text = "X";
+            labelX2.ForeColor = Color.White;
+            labelX2.Visible = true;
+            labelX2.MouseClick += new System.Windows.Forms.MouseEventHandler(DeleteImageAjustes_MouseClick);
+            panelDelete2.Controls.Add(labelX2);
+
+            Panel panelDelete3 = new Panel();
+            panelDelete3.Name = "panelDelete3";
+            panelDelete3.Location = new Point(320, 45);
+            panelDelete3.Size = new Size(15, 15);
+            panelDelete3.Cursor = Cursors.Hand;
+            panelDelete3.BackColor = Color.FromArgb(96, 71, 71);
+            panelDelete3.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            panelDelete3.Visible = true;
+            panelDelete3.MouseClick += new System.Windows.Forms.MouseEventHandler(DeleteImageAjustes_MouseClick);
+            panelElement.CreateAjustes.PanelTextos.Controls.Add(panelDelete3);
+            panelElement.CreateAjustes.DeleteImage.Add(panelDelete3);
+
+            Label labelX3 = new Label();
+            labelX3.Name = "labelX3";
+            labelX3.Size = new Size(10, 10);
+            labelX3.Cursor = Cursors.Hand;
+            labelX3.Location = new Point(0, 0);
+            labelX3.Font = new Font("Segoe UI", 8, FontStyle.Bold);
+            labelX3.Text = "X";
+            labelX3.ForeColor = Color.White;
+            labelX3.Visible = true;
+            labelX3.MouseClick += new System.Windows.Forms.MouseEventHandler(DeleteImageAjustes_MouseClick);
+            panelDelete3.Controls.Add(labelX3);
+
+            panelElement.CreateAjustes.PanelSave.MouseClick += new System.Windows.Forms.MouseEventHandler(PanelSave_MousClick);
+            panelElement.CreateAjustes.LabelSave.MouseClick += new System.Windows.Forms.MouseEventHandler(PanelSave_MousClick);
+
+            panelElement.PanelDe.Name = "ImageDelete" + panelesFlow.Count;
+            panelElement.PbDe.Name = "ImageDelete" + panelesFlow.Count;
+
+            panelElement.PanelDe.MouseClick += new System.Windows.Forms.MouseEventHandler(PanelDe_MouseClicked);
+            panelElement.PbDe.MouseClick += new System.Windows.Forms.MouseEventHandler(PanelDe_MouseClicked);
+
+            panelElement.PanelEd.Name = "ImageTextEdit" + panelesFlow.Count;
+            panelElement.PbEd.Name = "ImageTextEdit" + panelesFlow.Count;
+
+            panelElement.PanelEd.MouseClick += new System.Windows.Forms.MouseEventHandler(PanelEd_MouseClick);
+            panelElement.PbEd.MouseClick += new System.Windows.Forms.MouseEventHandler(PanelEd_MouseClick);
+            
+            ordenarPaneles();
+        }
+
+        private void ImageAjustes_MouseClick(object sender, EventArgs e)
+        {
+            PictureBox imageAjustes = (PictureBox)sender;
+            string rutaOrigen = picPhoto();
+            if (rutaOrigen != null && rutaOrigen != "")
+            {
+                if (Path.GetExtension(rutaOrigen).ToLower().Contains("png") || Path.GetExtension(rutaOrigen).ToLower().Contains("jpg") || Path.GetExtension(rutaOrigen).ToLower().Contains("svg"))
+                {
+                    string[] rutas = rutaOrigen.Split('\\');
+                    String directory = Path.GetDirectoryName(rutaOrigen) + @"\" + Path.GetFileName(rutaOrigen);
+                    String newPath = @"..\..\Polypus\YourWebsites\Images\";
+                    if (!File.Exists(newPath + rutas[rutas.Length - 1]))
+                    {
+                        File.Copy(directory, newPath + rutas[rutas.Length - 1]);
+                    }
+                    else
+                    {
+                        MessageBox.Show("Nombre de fichero existente");
+                    }
+                    imageAjustes.Image = Image.FromFile(newPath + rutas[rutas.Length - 1]);
+                    foreach(ClassCreatePanelAjustes ajustes in panelesAjustes)
+                    {
+                        if (ajustes.PanelTextos.Controls.Contains(imageAjustes))
+                        {
+                            foreach(ClassCreatePanelElement element in panelesFlow)
+                            {
+                                if (element.CreateAjustes.Equals(ajustes))
+                                {
+                                    if (imageAjustes.Name.Contains("1"))
+                                    {
+                                        element.ButonsOptions[0].Image = Image.FromFile(newPath + rutas[rutas.Length - 1]);
+                                        element.ButonsOptions[0].Visible = true;
+                                        element.Options[0] = "\\" + rutas[rutas.Length - 1];
+                                        break;
+                                    }
+                                    else if (imageAjustes.Name.Contains("2"))
+                                    {
+                                        element.ButonsOptions[1].Image = Image.FromFile(newPath + rutas[rutas.Length - 1]);
+                                        element.ButonsOptions[1].Visible = true;
+                                        element.Options[1] = "\\" + rutas[rutas.Length - 1];
+                                        break;
+                                    }
+                                    else if (imageAjustes.Name.Contains("3"))
+                                    {
+                                        element.ButonsOptions[2].Image = Image.FromFile(newPath + rutas[rutas.Length - 1]);
+                                        element.ButonsOptions[2].Visible = true;
+                                        element.Options[2] = "\\" + rutas[rutas.Length - 1];
+                                        break;
+                                    }
+                                    
+                                }
+                            }
+                            break;
+                        }
+                    }
+                }
+
+            }
+        }
+
+        private void DeleteImageAjustes_MouseClick(object sender, EventArgs e)
+        {
+            if (sender is Panel)
+            {
+                Panel panelDelete = (Panel)sender;
+                foreach (ClassCreatePanelAjustes ajustes in panelesAjustes)
+                {
+                    if (ajustes.PanelTextos.Controls.Contains(panelDelete))
+                    {
+                        foreach (ClassCreatePanelElement element in panelesFlow)
+                        {
+                            if (element.CreateAjustes.Equals(ajustes))
+                            {
+                                if (panelDelete.Name.Contains("1"))
+                                {
+                                    ajustes.ListaImages[0].Image = Desktop_App.Properties.Resources.addNewImage; ;
+                                    element.ButonsOptions[0].Image = null;
+                                    element.ButonsOptions[0].Visible = false;
+                                    element.Options[0] = null;
+                                    break;
+                                }
+                                else if (panelDelete.Name.Contains("2"))
+                                {
+                                    ajustes.ListaImages[1].Image = Desktop_App.Properties.Resources.addNewImage; ;
+                                    element.ButonsOptions[1].Image = null;
+                                    element.ButonsOptions[1].Visible = false;
+                                    element.Options[1] = null;
+                                    break;
+                                }
+                                else if (panelDelete.Name.Contains("3"))
+                                {
+                                    ajustes.ListaImages[2].Image = Desktop_App.Properties.Resources.addNewImage; ;
+                                    element.ButonsOptions[2].Image = null;
+                                    element.ButonsOptions[2].Visible = false;
+                                    element.Options[2] = null;
+                                    break;
+                                }
+
+                            }
+                        }
+                        break;
+                    }
+                }
+            }
+            else
+            {
+                Label labelDelete = (Label)sender;
+                Panel panelDelete = null;
+                foreach (ClassCreatePanelAjustes ajust in panelesAjustes)
+                {
+                    foreach (object objeto in ajust.PanelTextos.Controls)
+                    {
+                        if(objeto is Panel)
+                        {
+                            Panel panel = (Panel)objeto;
+                            if (panel.Controls.Contains(labelDelete))
+                            {
+                                panelDelete = panel;
+                                break;
+                            }
+                        }
+                    }
+                    if(panelDelete != null)
+                    {
+                        break;
+                    }
+                }
+                foreach (ClassCreatePanelAjustes ajustes in panelesAjustes)
+                {
+                    if (ajustes.PanelTextos.Controls.Contains(panelDelete))
+                    {
+                        foreach (ClassCreatePanelElement element in panelesFlow)
+                        {
+                            if (element.CreateAjustes.Equals(ajustes))
+                            {
+                                if (panelDelete.Name.Contains("1"))
+                                {
+                                    ajustes.ListaImages[0].Image = Desktop_App.Properties.Resources.addNewImage; ;
+                                    element.ButonsOptions[0].Image = null;
+                                    element.ButonsOptions[0].Visible = false;
+                                    element.Options[0] = null;
+                                    break;
+                                }
+                                else if (panelDelete.Name.Contains("2"))
+                                {
+                                    ajustes.ListaImages[1].Image = Desktop_App.Properties.Resources.addNewImage; ;
+                                    element.ButonsOptions[1].Image = null;
+                                    element.ButonsOptions[1].Visible = false;
+                                    element.Options[1] = null;
+                                    break;
+                                }
+                                else if (panelDelete.Name.Contains("3"))
+                                {
+                                    ajustes.ListaImages[2].Image = Desktop_App.Properties.Resources.addNewImage; ;
+                                    element.ButonsOptions[2].Image = null;
+                                    element.ButonsOptions[2].Visible = false;
+                                    element.Options[2] = null;
+                                    break;
+                                }
+
+                            }
+                        }
+                        break;
+                    }
+                }
+            }
+        }
+
+        private void pictureBox21_MouseClick(object sender, MouseEventArgs e)
+        {
+            string title = "Title";
+            List<string> options = new List<string>();
+            options.Add("");
+            ClassCreatePanelElement panelElement = new ClassCreatePanelElement(482, 1, title, options);
+            flowLayoutPanelCurrentElements.Controls.Add(panelElement.PanelGol);
+            panelesFlow.Add(panelElement);
+            panelElement.PanelGol.Name = "Title" + panelesFlow.Count;
+            panelElement.LabelTitle.Size = new Size(120, 21);
+            panelElement.CreateAjustes = new ClassCreatePanelAjustes(410, 310, panelElement.Title, panelElement.Options);
+            panel4.Controls.Add(panelElement.CreateAjustes.PanelGlo);
+            panelesAjustes.Add(panelElement.CreateAjustes);
+
+            panelElement.CreateAjustes.ListText[0].TextChanged += textBox_TextChanged;
+            panelElement.CreateAjustes.ListText[0].Size = new Size(350, 20);
+            panelElement.CreateAjustes.PanelSave.MouseClick += new System.Windows.Forms.MouseEventHandler(PanelSave_MousClick);
+            panelElement.CreateAjustes.LabelSave.MouseClick += new System.Windows.Forms.MouseEventHandler(PanelSave_MousClick);
+
+            panelElement.PanelDe.Name = "TitleDelete" + panelesFlow.Count;
+            panelElement.PbDe.Name = "TitleDelete" + panelesFlow.Count;
+
+            panelElement.PanelDe.MouseClick += new System.Windows.Forms.MouseEventHandler(PanelDe_MouseClicked);
+            panelElement.PbDe.MouseClick += new System.Windows.Forms.MouseEventHandler(PanelDe_MouseClicked);
+
+            panelElement.PanelEd.Name = "TitleTextEdit" + panelesFlow.Count;
+            panelElement.PbEd.Name = "TitleTextEdit" + panelesFlow.Count;
+
+            panelElement.PanelEd.MouseClick += new System.Windows.Forms.MouseEventHandler(PanelEd_MouseClick);
+            panelElement.PbEd.MouseClick += new System.Windows.Forms.MouseEventHandler(PanelEd_MouseClick);
+            ordenarPaneles();
+        }
+
+        private void label54_MouseClick(object sender, MouseEventArgs e)
+        {
+            string title = "Text";
+            List<string> options = new List<string>();
+            options.Add("Text");
+            ClassCreatePanelElement panelElement = new ClassCreatePanelElement(482, 1, title, options);
+            flowLayoutPanelCurrentElements.Controls.Add(panelElement.PanelGol);
+            panelesFlow.Add(panelElement);
+            panelElement.PanelGol.Name = "Text" + panelesFlow.Count;
+            panelElement.LabelTitle.Size = new Size(120, 21);
+            panelElement.LabelOptions[0].Visible = true;
+            panelElement.CreateAjustes = new ClassCreatePanelAjustes(410, 310, panelElement.Title, panelElement.Options);
+            panel4.Controls.Add(panelElement.CreateAjustes.PanelGlo);
+            panelesAjustes.Add(panelElement.CreateAjustes);
+
+            panelElement.CreateAjustes.ListText[0].Multiline = true;
+            panelElement.CreateAjustes.ListText[0].Text = "";
+            panelElement.CreateAjustes.ListText[0].Size = new Size(350, 124);
+
+            panelElement.CreateAjustes.PanelSave.MouseClick += new System.Windows.Forms.MouseEventHandler(PanelSave_MousClick);
+            panelElement.CreateAjustes.LabelSave.MouseClick += new System.Windows.Forms.MouseEventHandler(PanelSave_MousClick);
+
+            panelElement.PanelDe.Name = "TextDelete" + panelesFlow.Count;
+            panelElement.PbDe.Name = "TextDelete" + panelesFlow.Count;
+
+            panelElement.PanelDe.MouseClick += new System.Windows.Forms.MouseEventHandler(PanelDe_MouseClicked);
+            panelElement.PbDe.MouseClick += new System.Windows.Forms.MouseEventHandler(PanelDe_MouseClicked);
+
+            panelElement.PanelEd.Name = "TextTextEdit" + panelesFlow.Count;
+            panelElement.PbEd.Name = "TextTextEdit" + panelesFlow.Count;
+
+            panelElement.PanelEd.MouseClick += new System.Windows.Forms.MouseEventHandler(PanelEd_MouseClick);
+            panelElement.PbEd.MouseClick += new System.Windows.Forms.MouseEventHandler(PanelEd_MouseClick);
+            ordenarPaneles();
         }
     }
 }

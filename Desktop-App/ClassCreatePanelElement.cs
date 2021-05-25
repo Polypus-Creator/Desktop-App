@@ -152,42 +152,44 @@ namespace Desktop_App
             int count = 0;
             int countId = 0;
             Boolean filaOne = true;
-            Options.ForEach(delegate (String option)
-            {
-                if (filaOne) {
-                    Label lbOption = new Label();
-                    lbOption.Size = new Size(75, 21);
-                    lbOption.Location = new Point(x1l+128*count, y1l);
-                    lbOption.Font = new Font("Segoe UI Semibold", 12, FontStyle.Bold);
-                    lbOption.Text = option;
-                    lbOption.Name = "label" + countId;
-                    lbOption.Visible = false;
-                    _labelOptions.Add(lbOption);
-                    PanelGol.Controls.Add(lbOption);
-                    
-                    count++;
-                    countId++;
-                    if (count == 3)
-                    {
-                        filaOne = false;
-                        count = 0;
-                    }
-                }
-                else
+            if (MaxOp>0) {
+                Options.ForEach(delegate (String option)
                 {
-                    Label lbOption = new Label();
-                    lbOption.Size = new Size(70, 21);
-                    lbOption.Location = new Point(x1l + 128 * count, y2l);
-                    lbOption.Font = new Font("Segoe UI Semibold", 12, FontStyle.Bold);
-                    lbOption.Text = option;
-                    lbOption.Name = "label" + count;
-                    lbOption.Visible = false;
-                    _labelOptions.Add(lbOption);
-                    PanelGol.Controls.Add(lbOption);
-                    count++;
-                    countId++;
-                }
-            });
+                    if (filaOne) {
+                        Label lbOption = new Label();
+                        lbOption.Size = new Size(75, 21);
+                        lbOption.Location = new Point(x1l + 128 * count, y1l);
+                        lbOption.Font = new Font("Segoe UI Semibold", 12, FontStyle.Bold);
+                        lbOption.Text = option;
+                        lbOption.Name = "label" + countId;
+                        lbOption.Visible = false;
+                        _labelOptions.Add(lbOption);
+                        PanelGol.Controls.Add(lbOption);
+
+                        count++;
+                        countId++;
+                        if (count == 3)
+                        {
+                            filaOne = false;
+                            count = 0;
+                        }
+                    }
+                    else
+                    {
+                        Label lbOption = new Label();
+                        lbOption.Size = new Size(70, 21);
+                        lbOption.Location = new Point(x1l + 128 * count, y2l);
+                        lbOption.Font = new Font("Segoe UI Semibold", 12, FontStyle.Bold);
+                        lbOption.Text = option;
+                        lbOption.Name = "label" + count;
+                        lbOption.Visible = false;
+                        _labelOptions.Add(lbOption);
+                        PanelGol.Controls.Add(lbOption);
+                        count++;
+                        countId++;
+                    }
+                });
+            }
         }
     }
 }
