@@ -27,13 +27,45 @@ namespace Desktop_App
         List<ClassCreatePanelAjustes> panelesAjustes = new List<ClassCreatePanelAjustes>();
         Boolean isHeaderAlreadyOn = false;
         Boolean isFooterAlreadyOn = false;
+        Boolean firstLogin = true;
         
 
         public FormPrincipal()
         {
             InitializeComponent();
             initConfig();
+            checkFirstLogin();
         }
+
+        private void checkFirstLogin()
+        {
+            if(firstLogin)
+            {
+                panelFirstLogin.Visible = true;
+                panelDashboard.Enabled = true;
+
+                panelDisenyo.Enabled = false;
+                //panelDisenyo.BackColor = Color.FromArgb(153, 155, 154);
+
+                panelConstructor.Enabled = false;
+                //panelConstructor.BackColor = Color.FromArgb(153, 155, 154);
+
+                panelAjustes.Enabled = false;
+                //panelAjustes.BackColor = Color.FromArgb(153, 155, 154);
+
+                panelAyuda.Enabled = true;
+            } else
+            {
+                // panelPorDefinir.Visible = true;
+                panelDashboard.Enabled = true;
+                panelFirstLogin.Visible = false;
+                panelDisenyo.Enabled = true;
+                panelConstructor.Enabled = true;
+                panelAjustes.Enabled = true;
+                panelAyuda.Enabled = true;
+            }
+        }
+
 
         private void labelIniciarSesion_Click(object sender, EventArgs e)
         {
@@ -70,6 +102,10 @@ namespace Desktop_App
             panelDash.Height = fullWidth / 2 + 540;
             DataClass.backOne = panel8.BackColor;
             DataClass.backTwo = panel11.BackColor;
+            firstLogin = true;
+
+
+
         }
 
         private void labelClose_Click(object sender, EventArgs e)
@@ -1743,6 +1779,19 @@ namespace Desktop_App
             panelElement.PanelEd.MouseClick += new System.Windows.Forms.MouseEventHandler(PanelEd_MouseClick);
             panelElement.PbEd.MouseClick += new System.Windows.Forms.MouseEventHandler(PanelEd_MouseClick);
             ordenarPaneles();
+        }
+
+        private void panelSelectLogo_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void buttonEmpezar_Click(object sender, EventArgs e)
+        {
+            firstLogin = false;
+            // guardar todos los datos introducidos
+            MessageBox.Show("Tu configuración se ha guardado. Bienvenido, ya puedes empezar a utilizar Polypus Creator.");
+            checkFirstLogin();
         }
     }
 }

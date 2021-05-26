@@ -31,39 +31,51 @@ namespace Desktop_App
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormPrincipal));
             this.panelSuperior = new System.Windows.Forms.Panel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.labelIniciarSesion = new System.Windows.Forms.Label();
             this.windowControlButtons = new System.Windows.Forms.Panel();
             this.labelMinimize = new System.Windows.Forms.Label();
             this.labelClose = new System.Windows.Forms.Label();
             this.panelLeftBar = new System.Windows.Forms.Panel();
             this.panelAyuda = new System.Windows.Forms.Panel();
+            this.pictureBox6 = new System.Windows.Forms.PictureBox();
             this.label5 = new System.Windows.Forms.Label();
             this.panelAjustes = new System.Windows.Forms.Panel();
+            this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.label4 = new System.Windows.Forms.Label();
             this.panelConstructor = new System.Windows.Forms.Panel();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.label3 = new System.Windows.Forms.Label();
             this.panelDisenyo = new System.Windows.Forms.Panel();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.label2 = new System.Windows.Forms.Label();
             this.panelTopSideBar = new System.Windows.Forms.Panel();
+            this.hideShowBar = new System.Windows.Forms.PictureBox();
             this.panelDashboard = new System.Windows.Forms.Panel();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.tabControl = new System.Windows.Forms.TabControl();
             this.dashboard = new System.Windows.Forms.TabPage();
             this.panelDash = new System.Windows.Forms.Panel();
             this.panelFirstLogin = new System.Windows.Forms.Panel();
             this.panel34 = new System.Windows.Forms.Panel();
+            this.pictureBox19 = new System.Windows.Forms.PictureBox();
             this.label51 = new System.Windows.Forms.Label();
             this.panel33 = new System.Windows.Forms.Panel();
+            this.pictureBox18 = new System.Windows.Forms.PictureBox();
             this.label50 = new System.Windows.Forms.Label();
             this.panelRandomLogo = new System.Windows.Forms.Panel();
+            this.pictureBox17 = new System.Windows.Forms.PictureBox();
             this.label49 = new System.Windows.Forms.Label();
             this.panelSelectLogo = new System.Windows.Forms.Panel();
+            this.pictureBox16 = new System.Windows.Forms.PictureBox();
             this.label48 = new System.Windows.Forms.Label();
+            this.pictureBoxLogo = new System.Windows.Forms.PictureBox();
             this.labelWebEjemplo = new System.Windows.Forms.Label();
+            this.pictureBoxWebEjemplo = new System.Windows.Forms.PictureBox();
             this.labelTuLogo = new System.Windows.Forms.Label();
             this.labelPlantillaPorDefecto = new System.Windows.Forms.Label();
             this.buttonEmpezar = new System.Windows.Forms.Button();
-            this.comboBoxCategoria = new System.Windows.Forms.ComboBox();
             this.labelCategoria = new System.Windows.Forms.Label();
             this.labelBreveDescripcion = new System.Windows.Forms.Label();
             this.textBoxBreveDescripcion = new System.Windows.Forms.TextBox();
@@ -90,19 +102,25 @@ namespace Desktop_App
             this.label12 = new System.Windows.Forms.Label();
             this.flowLayoutPanelCurrentElements = new System.Windows.Forms.FlowLayoutPanel();
             this.panelAddElement = new System.Windows.Forms.Panel();
+            this.pictureBox7 = new System.Windows.Forms.PictureBox();
             this.label11 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.ajustes = new System.Windows.Forms.TabPage();
             this.panelAj = new System.Windows.Forms.Panel();
             this.panelSave = new System.Windows.Forms.Panel();
             this.label20 = new System.Windows.Forms.Label();
+            this.pictureBox13 = new System.Windows.Forms.PictureBox();
             this.panelTemp2 = new System.Windows.Forms.Panel();
+            this.pictureBox11 = new System.Windows.Forms.PictureBox();
             this.label15 = new System.Windows.Forms.Label();
             this.panelTemp1 = new System.Windows.Forms.Panel();
+            this.pictureBox12 = new System.Windows.Forms.PictureBox();
             this.label16 = new System.Windows.Forms.Label();
             this.panelNube = new System.Windows.Forms.Panel();
+            this.pictureBox9 = new System.Windows.Forms.PictureBox();
             this.label14 = new System.Windows.Forms.Label();
             this.panelSesion = new System.Windows.Forms.Panel();
+            this.radioStayLogged = new System.Windows.Forms.PictureBox();
             this.label13 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.ayuda = new System.Windows.Forms.TabPage();
@@ -150,72 +168,69 @@ namespace Desktop_App
             this.label45 = new System.Windows.Forms.Label();
             this.label47 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.showHideFaqs = new System.Windows.Forms.PictureBox();
             this.label21 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.panelAddElements = new System.Windows.Forms.Panel();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.panel31 = new System.Windows.Forms.Panel();
             this.label46 = new System.Windows.Forms.Label();
+            this.pictureBox36 = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.label24 = new System.Windows.Forms.Label();
+            this.pictureBox14 = new System.Windows.Forms.PictureBox();
             this.panel3 = new System.Windows.Forms.Panel();
             this.label25 = new System.Windows.Forms.Label();
+            this.pictureBox15 = new System.Windows.Forms.PictureBox();
             this.panel5 = new System.Windows.Forms.Panel();
             this.label26 = new System.Windows.Forms.Label();
+            this.pictureBox8 = new System.Windows.Forms.PictureBox();
             this.panel6 = new System.Windows.Forms.Panel();
             this.label27 = new System.Windows.Forms.Label();
+            this.pictureBox10 = new System.Windows.Forms.PictureBox();
             this.panel35 = new System.Windows.Forms.Panel();
             this.label52 = new System.Windows.Forms.Label();
+            this.pictureBox20 = new System.Windows.Forms.PictureBox();
             this.panel36 = new System.Windows.Forms.Panel();
             this.label53 = new System.Windows.Forms.Label();
+            this.pictureBox21 = new System.Windows.Forms.PictureBox();
             this.panel37 = new System.Windows.Forms.Panel();
             this.label54 = new System.Windows.Forms.Label();
-            this.label23 = new System.Windows.Forms.Label();
-            this.pictureBox36 = new System.Windows.Forms.PictureBox();
-            this.pictureBox14 = new System.Windows.Forms.PictureBox();
-            this.pictureBox15 = new System.Windows.Forms.PictureBox();
-            this.pictureBox8 = new System.Windows.Forms.PictureBox();
-            this.pictureBox10 = new System.Windows.Forms.PictureBox();
-            this.pictureBox20 = new System.Windows.Forms.PictureBox();
-            this.pictureBox21 = new System.Windows.Forms.PictureBox();
             this.pictureBox22 = new System.Windows.Forms.PictureBox();
-            this.pictureBox6 = new System.Windows.Forms.PictureBox();
-            this.pictureBox5 = new System.Windows.Forms.PictureBox();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.hideShowBar = new System.Windows.Forms.PictureBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.pictureBox19 = new System.Windows.Forms.PictureBox();
-            this.pictureBox18 = new System.Windows.Forms.PictureBox();
-            this.pictureBox17 = new System.Windows.Forms.PictureBox();
-            this.pictureBox16 = new System.Windows.Forms.PictureBox();
-            this.pictureBoxLogo = new System.Windows.Forms.PictureBox();
-            this.pictureBoxWebEjemplo = new System.Windows.Forms.PictureBox();
-            this.pictureBox7 = new System.Windows.Forms.PictureBox();
-            this.pictureBox13 = new System.Windows.Forms.PictureBox();
-            this.pictureBox11 = new System.Windows.Forms.PictureBox();
-            this.pictureBox12 = new System.Windows.Forms.PictureBox();
-            this.pictureBox9 = new System.Windows.Forms.PictureBox();
-            this.radioStayLogged = new System.Windows.Forms.PictureBox();
-            this.showHideFaqs = new System.Windows.Forms.PictureBox();
+            this.label23 = new System.Windows.Forms.Label();
+            this.checkBoxWebPersonal = new System.Windows.Forms.CheckBox();
+            this.checkBoxWebDeEmpresa = new System.Windows.Forms.CheckBox();
+            this.checkBoxWebPersonalizada = new System.Windows.Forms.CheckBox();
             this.panelSuperior.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.windowControlButtons.SuspendLayout();
             this.panelLeftBar.SuspendLayout();
             this.panelAyuda.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             this.panelAjustes.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             this.panelConstructor.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             this.panelDisenyo.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.panelTopSideBar.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.hideShowBar)).BeginInit();
             this.panelDashboard.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.tabControl.SuspendLayout();
             this.dashboard.SuspendLayout();
             this.panelDash.SuspendLayout();
             this.panelFirstLogin.SuspendLayout();
             this.panel34.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox19)).BeginInit();
             this.panel33.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox18)).BeginInit();
             this.panelRandomLogo.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox17)).BeginInit();
             this.panelSelectLogo.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox16)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLogo)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxWebEjemplo)).BeginInit();
             this.disenyo.SuspendLayout();
             this.panelDise.SuspendLayout();
             this.panel12.SuspendLayout();
@@ -225,13 +240,19 @@ namespace Desktop_App
             this.panelConst.SuspendLayout();
             this.panel4.SuspendLayout();
             this.panelAddElement.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
             this.ajustes.SuspendLayout();
             this.panelAj.SuspendLayout();
             this.panelSave.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox13)).BeginInit();
             this.panelTemp2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).BeginInit();
             this.panelTemp1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox12)).BeginInit();
             this.panelNube.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).BeginInit();
             this.panelSesion.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.radioStayLogged)).BeginInit();
             this.ayuda.SuspendLayout();
             this.panelAyud.SuspendLayout();
             this.panelFaqs.SuspendLayout();
@@ -247,44 +268,25 @@ namespace Desktop_App
             this.panel20.SuspendLayout();
             this.panel21.SuspendLayout();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.showHideFaqs)).BeginInit();
             this.panelAddElements.SuspendLayout();
             this.flowLayoutPanel1.SuspendLayout();
             this.panel31.SuspendLayout();
-            this.panel2.SuspendLayout();
-            this.panel3.SuspendLayout();
-            this.panel5.SuspendLayout();
-            this.panel6.SuspendLayout();
-            this.panel35.SuspendLayout();
-            this.panel36.SuspendLayout();
-            this.panel37.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox36)).BeginInit();
+            this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox14)).BeginInit();
+            this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox15)).BeginInit();
+            this.panel5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
+            this.panel6.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).BeginInit();
+            this.panel35.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox20)).BeginInit();
+            this.panel36.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox21)).BeginInit();
+            this.panel37.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox22)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.hideShowBar)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox19)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox18)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox17)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox16)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLogo)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxWebEjemplo)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox13)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox12)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.radioStayLogged)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.showHideFaqs)).BeginInit();
             this.SuspendLayout();
             // 
             // panelSuperior
@@ -297,6 +299,17 @@ namespace Desktop_App
             this.panelSuperior.Name = "panelSuperior";
             this.panelSuperior.Size = new System.Drawing.Size(823, 54);
             this.panelSuperior.TabIndex = 1;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(11, 12);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(30, 30);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 2;
+            this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // labelIniciarSesion
             // 
@@ -347,6 +360,7 @@ namespace Desktop_App
             // panelLeftBar
             // 
             this.panelLeftBar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(48)))), ((int)(((byte)(45)))));
+            this.panelLeftBar.Controls.Add(this.panelAddElements);
             this.panelLeftBar.Controls.Add(this.panelAyuda);
             this.panelLeftBar.Controls.Add(this.panelAjustes);
             this.panelLeftBar.Controls.Add(this.panelConstructor);
@@ -370,6 +384,18 @@ namespace Desktop_App
             this.panelAyuda.TabIndex = 9;
             this.panelAyuda.Click += new System.EventHandler(this.panelAyuda_Click);
             this.panelAyuda.Paint += new System.Windows.Forms.PaintEventHandler(this.panelAyuda_Paint);
+            // 
+            // pictureBox6
+            // 
+            this.pictureBox6.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pictureBox6.Image = global::Desktop_App.Properties.Resources.information;
+            this.pictureBox6.Location = new System.Drawing.Point(11, 26);
+            this.pictureBox6.Name = "pictureBox6";
+            this.pictureBox6.Size = new System.Drawing.Size(23, 23);
+            this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox6.TabIndex = 5;
+            this.pictureBox6.TabStop = false;
+            this.pictureBox6.Click += new System.EventHandler(this.pictureBox6_Click);
             // 
             // label5
             // 
@@ -395,6 +421,18 @@ namespace Desktop_App
             this.panelAjustes.TabIndex = 8;
             this.panelAjustes.Click += new System.EventHandler(this.panelAjustes_Click);
             // 
+            // pictureBox5
+            // 
+            this.pictureBox5.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pictureBox5.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox5.Image")));
+            this.pictureBox5.Location = new System.Drawing.Point(11, 26);
+            this.pictureBox5.Name = "pictureBox5";
+            this.pictureBox5.Size = new System.Drawing.Size(23, 23);
+            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox5.TabIndex = 5;
+            this.pictureBox5.TabStop = false;
+            this.pictureBox5.Click += new System.EventHandler(this.pictureBox5_Click);
+            // 
             // label4
             // 
             this.label4.AutoSize = true;
@@ -417,6 +455,18 @@ namespace Desktop_App
             this.panelConstructor.Size = new System.Drawing.Size(216, 73);
             this.panelConstructor.TabIndex = 7;
             this.panelConstructor.Click += new System.EventHandler(this.panelConstructor_Click);
+            // 
+            // pictureBox4
+            // 
+            this.pictureBox4.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
+            this.pictureBox4.Location = new System.Drawing.Point(11, 26);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(23, 23);
+            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox4.TabIndex = 5;
+            this.pictureBox4.TabStop = false;
+            this.pictureBox4.Click += new System.EventHandler(this.pictureBox4_Click);
             // 
             // label3
             // 
@@ -442,6 +492,18 @@ namespace Desktop_App
             this.panelDisenyo.Click += new System.EventHandler(this.panelDisenyo_Click);
             this.panelDisenyo.Paint += new System.Windows.Forms.PaintEventHandler(this.panelDisenyo_Paint);
             // 
+            // pictureBox3
+            // 
+            this.pictureBox3.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
+            this.pictureBox3.Location = new System.Drawing.Point(11, 26);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(23, 23);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox3.TabIndex = 5;
+            this.pictureBox3.TabStop = false;
+            this.pictureBox3.Click += new System.EventHandler(this.pictureBox3_Click);
+            // 
             // label2
             // 
             this.label2.AutoSize = true;
@@ -463,6 +525,18 @@ namespace Desktop_App
             this.panelTopSideBar.Size = new System.Drawing.Size(216, 45);
             this.panelTopSideBar.TabIndex = 5;
             // 
+            // hideShowBar
+            // 
+            this.hideShowBar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.hideShowBar.Image = global::Desktop_App.Properties.Resources.left_arrow;
+            this.hideShowBar.Location = new System.Drawing.Point(182, 14);
+            this.hideShowBar.Name = "hideShowBar";
+            this.hideShowBar.Size = new System.Drawing.Size(18, 18);
+            this.hideShowBar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.hideShowBar.TabIndex = 4;
+            this.hideShowBar.TabStop = false;
+            this.hideShowBar.Click += new System.EventHandler(this.hideShowBar_Click);
+            // 
             // panelDashboard
             // 
             this.panelDashboard.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(96)))), ((int)(((byte)(71)))), ((int)(((byte)(71)))));
@@ -475,6 +549,18 @@ namespace Desktop_App
             this.panelDashboard.TabIndex = 0;
             this.panelDashboard.Click += new System.EventHandler(this.panelDashboard_Click);
             this.panelDashboard.Paint += new System.Windows.Forms.PaintEventHandler(this.panelDashboard_Paint);
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
+            this.pictureBox2.Location = new System.Drawing.Point(11, 26);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(23, 23);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox2.TabIndex = 5;
+            this.pictureBox2.TabStop = false;
+            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
             // 
             // label1
             // 
@@ -526,6 +612,9 @@ namespace Desktop_App
             // 
             // panelFirstLogin
             // 
+            this.panelFirstLogin.Controls.Add(this.checkBoxWebPersonalizada);
+            this.panelFirstLogin.Controls.Add(this.checkBoxWebDeEmpresa);
+            this.panelFirstLogin.Controls.Add(this.checkBoxWebPersonal);
             this.panelFirstLogin.Controls.Add(this.panel34);
             this.panelFirstLogin.Controls.Add(this.panel33);
             this.panelFirstLogin.Controls.Add(this.panelRandomLogo);
@@ -536,7 +625,6 @@ namespace Desktop_App
             this.panelFirstLogin.Controls.Add(this.labelTuLogo);
             this.panelFirstLogin.Controls.Add(this.labelPlantillaPorDefecto);
             this.panelFirstLogin.Controls.Add(this.buttonEmpezar);
-            this.panelFirstLogin.Controls.Add(this.comboBoxCategoria);
             this.panelFirstLogin.Controls.Add(this.labelCategoria);
             this.panelFirstLogin.Controls.Add(this.labelBreveDescripcion);
             this.panelFirstLogin.Controls.Add(this.textBoxBreveDescripcion);
@@ -561,6 +649,16 @@ namespace Desktop_App
             this.panel34.Size = new System.Drawing.Size(461, 32);
             this.panel34.TabIndex = 41;
             // 
+            // pictureBox19
+            // 
+            this.pictureBox19.Image = global::Desktop_App.Properties.Resources.left_arrow1;
+            this.pictureBox19.Location = new System.Drawing.Point(185, 7);
+            this.pictureBox19.Name = "pictureBox19";
+            this.pictureBox19.Size = new System.Drawing.Size(20, 20);
+            this.pictureBox19.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox19.TabIndex = 1;
+            this.pictureBox19.TabStop = false;
+            // 
             // label51
             // 
             this.label51.AutoSize = true;
@@ -582,6 +680,16 @@ namespace Desktop_App
             this.panel33.Name = "panel33";
             this.panel33.Size = new System.Drawing.Size(454, 32);
             this.panel33.TabIndex = 40;
+            // 
+            // pictureBox18
+            // 
+            this.pictureBox18.Image = global::Desktop_App.Properties.Resources.paintbrushIcon1;
+            this.pictureBox18.Location = new System.Drawing.Point(102, 7);
+            this.pictureBox18.Name = "pictureBox18";
+            this.pictureBox18.Size = new System.Drawing.Size(20, 20);
+            this.pictureBox18.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox18.TabIndex = 1;
+            this.pictureBox18.TabStop = false;
             // 
             // label50
             // 
@@ -606,6 +714,17 @@ namespace Desktop_App
             this.panelRandomLogo.TabIndex = 39;
             this.panelRandomLogo.Click += new System.EventHandler(this.panelRandomLogo_Click);
             // 
+            // pictureBox17
+            // 
+            this.pictureBox17.Image = global::Desktop_App.Properties.Resources.randomIcon1;
+            this.pictureBox17.Location = new System.Drawing.Point(96, 7);
+            this.pictureBox17.Name = "pictureBox17";
+            this.pictureBox17.Size = new System.Drawing.Size(20, 20);
+            this.pictureBox17.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox17.TabIndex = 1;
+            this.pictureBox17.TabStop = false;
+            this.pictureBox17.Click += new System.EventHandler(this.panelRandomLogo_Click);
+            // 
             // label49
             // 
             this.label49.AutoSize = true;
@@ -628,6 +747,18 @@ namespace Desktop_App
             this.panelSelectLogo.Size = new System.Drawing.Size(345, 32);
             this.panelSelectLogo.TabIndex = 38;
             this.panelSelectLogo.Click += new System.EventHandler(this.panelSelectLogo_Click);
+            this.panelSelectLogo.Paint += new System.Windows.Forms.PaintEventHandler(this.panelSelectLogo_Paint);
+            // 
+            // pictureBox16
+            // 
+            this.pictureBox16.Image = global::Desktop_App.Properties.Resources.pictureIcon;
+            this.pictureBox16.Location = new System.Drawing.Point(88, 7);
+            this.pictureBox16.Name = "pictureBox16";
+            this.pictureBox16.Size = new System.Drawing.Size(20, 20);
+            this.pictureBox16.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox16.TabIndex = 1;
+            this.pictureBox16.TabStop = false;
+            this.pictureBox16.Click += new System.EventHandler(this.panelSelectLogo_Click);
             // 
             // label48
             // 
@@ -641,6 +772,17 @@ namespace Desktop_App
             this.label48.Text = "SELECCIONAR LOGO";
             this.label48.Click += new System.EventHandler(this.panelSelectLogo_Click);
             // 
+            // pictureBoxLogo
+            // 
+            this.pictureBoxLogo.BackColor = System.Drawing.Color.LightGray;
+            this.pictureBoxLogo.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pictureBoxLogo.Location = new System.Drawing.Point(594, 199);
+            this.pictureBoxLogo.Name = "pictureBoxLogo";
+            this.pictureBoxLogo.Size = new System.Drawing.Size(109, 97);
+            this.pictureBoxLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBoxLogo.TabIndex = 37;
+            this.pictureBoxLogo.TabStop = false;
+            // 
             // labelWebEjemplo
             // 
             this.labelWebEjemplo.AutoSize = true;
@@ -651,6 +793,16 @@ namespace Desktop_App
             this.labelWebEjemplo.Size = new System.Drawing.Size(353, 30);
             this.labelWebEjemplo.TabIndex = 35;
             this.labelWebEjemplo.Text = "Podrás hacer webs similares a esta:";
+            // 
+            // pictureBoxWebEjemplo
+            // 
+            this.pictureBoxWebEjemplo.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxWebEjemplo.Image")));
+            this.pictureBoxWebEjemplo.Location = new System.Drawing.Point(673, 358);
+            this.pictureBoxWebEjemplo.Name = "pictureBoxWebEjemplo";
+            this.pictureBoxWebEjemplo.Size = new System.Drawing.Size(339, 169);
+            this.pictureBoxWebEjemplo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBoxWebEjemplo.TabIndex = 34;
+            this.pictureBoxWebEjemplo.TabStop = false;
             // 
             // labelTuLogo
             // 
@@ -688,23 +840,7 @@ namespace Desktop_App
             this.buttonEmpezar.TabIndex = 27;
             this.buttonEmpezar.Text = "EMPEZAR A CREAR";
             this.buttonEmpezar.UseVisualStyleBackColor = false;
-            // 
-            // comboBoxCategoria
-            // 
-            this.comboBoxCategoria.Font = new System.Drawing.Font("Segoe UI Light", 15.75F);
-            this.comboBoxCategoria.FormattingEnabled = true;
-            this.comboBoxCategoria.Items.AddRange(new object[] {
-            "Alimentación",
-            "Deporte",
-            "Comercio",
-            "Electronica",
-            "Informática",
-            "Música",
-            "Blog"});
-            this.comboBoxCategoria.Location = new System.Drawing.Point(25, 441);
-            this.comboBoxCategoria.Name = "comboBoxCategoria";
-            this.comboBoxCategoria.Size = new System.Drawing.Size(461, 38);
-            this.comboBoxCategoria.TabIndex = 26;
+            this.buttonEmpezar.Click += new System.EventHandler(this.buttonEmpezar_Click);
             // 
             // labelCategoria
             // 
@@ -985,6 +1121,17 @@ namespace Desktop_App
             this.panelAddElement.TabIndex = 6;
             this.panelAddElement.MouseClick += new System.Windows.Forms.MouseEventHandler(this.panelAddElement_MouseClick);
             // 
+            // pictureBox7
+            // 
+            this.pictureBox7.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pictureBox7.Image = global::Desktop_App.Properties.Resources.addNewIconWhite;
+            this.pictureBox7.Location = new System.Drawing.Point(19, 14);
+            this.pictureBox7.Name = "pictureBox7";
+            this.pictureBox7.Size = new System.Drawing.Size(23, 23);
+            this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox7.TabIndex = 6;
+            this.pictureBox7.TabStop = false;
+            // 
             // label11
             // 
             this.label11.AutoSize = true;
@@ -1054,6 +1201,17 @@ namespace Desktop_App
             this.label20.TabIndex = 11;
             this.label20.Text = "Guardar";
             // 
+            // pictureBox13
+            // 
+            this.pictureBox13.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pictureBox13.Image = global::Desktop_App.Properties.Resources.save;
+            this.pictureBox13.Location = new System.Drawing.Point(13, 8);
+            this.pictureBox13.Name = "pictureBox13";
+            this.pictureBox13.Size = new System.Drawing.Size(30, 30);
+            this.pictureBox13.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox13.TabIndex = 7;
+            this.pictureBox13.TabStop = false;
+            // 
             // panelTemp2
             // 
             this.panelTemp2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(96)))), ((int)(((byte)(71)))), ((int)(((byte)(71)))));
@@ -1063,6 +1221,17 @@ namespace Desktop_App
             this.panelTemp2.Name = "panelTemp2";
             this.panelTemp2.Size = new System.Drawing.Size(505, 52);
             this.panelTemp2.TabIndex = 10;
+            // 
+            // pictureBox11
+            // 
+            this.pictureBox11.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pictureBox11.Image = global::Desktop_App.Properties.Resources.off;
+            this.pictureBox11.Location = new System.Drawing.Point(457, 7);
+            this.pictureBox11.Name = "pictureBox11";
+            this.pictureBox11.Size = new System.Drawing.Size(40, 40);
+            this.pictureBox11.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox11.TabIndex = 6;
+            this.pictureBox11.TabStop = false;
             // 
             // label15
             // 
@@ -1085,6 +1254,17 @@ namespace Desktop_App
             this.panelTemp1.Size = new System.Drawing.Size(505, 52);
             this.panelTemp1.TabIndex = 9;
             // 
+            // pictureBox12
+            // 
+            this.pictureBox12.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pictureBox12.Image = global::Desktop_App.Properties.Resources.off;
+            this.pictureBox12.Location = new System.Drawing.Point(457, 7);
+            this.pictureBox12.Name = "pictureBox12";
+            this.pictureBox12.Size = new System.Drawing.Size(40, 40);
+            this.pictureBox12.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox12.TabIndex = 6;
+            this.pictureBox12.TabStop = false;
+            // 
             // label16
             // 
             this.label16.AutoSize = true;
@@ -1106,6 +1286,17 @@ namespace Desktop_App
             this.panelNube.Size = new System.Drawing.Size(505, 52);
             this.panelNube.TabIndex = 8;
             // 
+            // pictureBox9
+            // 
+            this.pictureBox9.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pictureBox9.Image = global::Desktop_App.Properties.Resources.off;
+            this.pictureBox9.Location = new System.Drawing.Point(457, 7);
+            this.pictureBox9.Name = "pictureBox9";
+            this.pictureBox9.Size = new System.Drawing.Size(40, 40);
+            this.pictureBox9.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox9.TabIndex = 6;
+            this.pictureBox9.TabStop = false;
+            // 
             // label14
             // 
             this.label14.AutoSize = true;
@@ -1126,6 +1317,18 @@ namespace Desktop_App
             this.panelSesion.Name = "panelSesion";
             this.panelSesion.Size = new System.Drawing.Size(505, 52);
             this.panelSesion.TabIndex = 7;
+            // 
+            // radioStayLogged
+            // 
+            this.radioStayLogged.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.radioStayLogged.Image = global::Desktop_App.Properties.Resources.off;
+            this.radioStayLogged.Location = new System.Drawing.Point(457, 7);
+            this.radioStayLogged.Name = "radioStayLogged";
+            this.radioStayLogged.Size = new System.Drawing.Size(40, 40);
+            this.radioStayLogged.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.radioStayLogged.TabIndex = 6;
+            this.radioStayLogged.TabStop = false;
+            this.radioStayLogged.Click += new System.EventHandler(this.radioStayLogged_Click);
             // 
             // label13
             // 
@@ -1636,6 +1839,18 @@ namespace Desktop_App
             this.panel1.Size = new System.Drawing.Size(614, 52);
             this.panel1.TabIndex = 8;
             // 
+            // showHideFaqs
+            // 
+            this.showHideFaqs.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.showHideFaqs.Image = global::Desktop_App.Properties.Resources.arrow_down;
+            this.showHideFaqs.Location = new System.Drawing.Point(583, 16);
+            this.showHideFaqs.Name = "showHideFaqs";
+            this.showHideFaqs.Size = new System.Drawing.Size(17, 17);
+            this.showHideFaqs.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.showHideFaqs.TabIndex = 6;
+            this.showHideFaqs.TabStop = false;
+            this.showHideFaqs.Click += new System.EventHandler(this.showHideFaqs_Click);
+            // 
             // label21
             // 
             this.label21.AutoSize = true;
@@ -1664,7 +1879,7 @@ namespace Desktop_App
             this.panelAddElements.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(60)))), ((int)(((byte)(61)))));
             this.panelAddElements.Controls.Add(this.flowLayoutPanel1);
             this.panelAddElements.Controls.Add(this.label23);
-            this.panelAddElements.Location = new System.Drawing.Point(221, 353);
+            this.panelAddElements.Location = new System.Drawing.Point(12, 427);
             this.panelAddElements.Name = "panelAddElements";
             this.panelAddElements.Size = new System.Drawing.Size(208, 378);
             this.panelAddElements.TabIndex = 8;
@@ -1711,6 +1926,17 @@ namespace Desktop_App
             this.label46.Text = "NavBar";
             this.label46.MouseClick += new System.Windows.Forms.MouseEventHandler(this.panel31_MouseClick);
             // 
+            // pictureBox36
+            // 
+            this.pictureBox36.Image = global::Desktop_App.Properties.Resources.navbarIcon;
+            this.pictureBox36.Location = new System.Drawing.Point(6, 5);
+            this.pictureBox36.Name = "pictureBox36";
+            this.pictureBox36.Size = new System.Drawing.Size(77, 77);
+            this.pictureBox36.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox36.TabIndex = 0;
+            this.pictureBox36.TabStop = false;
+            this.pictureBox36.MouseClick += new System.Windows.Forms.MouseEventHandler(this.panel31_MouseClick);
+            // 
             // panel2
             // 
             this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
@@ -1736,6 +1962,17 @@ namespace Desktop_App
             this.label24.Text = "Separator";
             this.label24.MouseClick += new System.Windows.Forms.MouseEventHandler(this.label24_MouseClick);
             // 
+            // pictureBox14
+            // 
+            this.pictureBox14.Image = global::Desktop_App.Properties.Resources.separatorIcon;
+            this.pictureBox14.Location = new System.Drawing.Point(20, 21);
+            this.pictureBox14.Name = "pictureBox14";
+            this.pictureBox14.Size = new System.Drawing.Size(44, 44);
+            this.pictureBox14.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox14.TabIndex = 0;
+            this.pictureBox14.TabStop = false;
+            this.pictureBox14.MouseClick += new System.Windows.Forms.MouseEventHandler(this.label24_MouseClick);
+            // 
             // panel3
             // 
             this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
@@ -1760,6 +1997,17 @@ namespace Desktop_App
             this.label25.TabIndex = 6;
             this.label25.Text = "Call to\r\n Action";
             this.label25.MouseClick += new System.Windows.Forms.MouseEventHandler(this.pictureBox15_MouseClick);
+            // 
+            // pictureBox15
+            // 
+            this.pictureBox15.Image = global::Desktop_App.Properties.Resources.callToActionIcon;
+            this.pictureBox15.Location = new System.Drawing.Point(5, 9);
+            this.pictureBox15.Name = "pictureBox15";
+            this.pictureBox15.Size = new System.Drawing.Size(77, 77);
+            this.pictureBox15.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox15.TabIndex = 0;
+            this.pictureBox15.TabStop = false;
+            this.pictureBox15.MouseClick += new System.Windows.Forms.MouseEventHandler(this.pictureBox15_MouseClick);
             // 
             // panel5
             // 
@@ -1787,6 +2035,17 @@ namespace Desktop_App
             this.label26.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.label26.MouseClick += new System.Windows.Forms.MouseEventHandler(this.label26_MouseClick);
             // 
+            // pictureBox8
+            // 
+            this.pictureBox8.Image = global::Desktop_App.Properties.Resources.ImageText;
+            this.pictureBox8.Location = new System.Drawing.Point(5, 9);
+            this.pictureBox8.Name = "pictureBox8";
+            this.pictureBox8.Size = new System.Drawing.Size(77, 77);
+            this.pictureBox8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox8.TabIndex = 0;
+            this.pictureBox8.TabStop = false;
+            this.pictureBox8.MouseClick += new System.Windows.Forms.MouseEventHandler(this.label26_MouseClick);
+            // 
             // panel6
             // 
             this.panel6.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
@@ -1812,6 +2071,17 @@ namespace Desktop_App
             this.label27.Text = "Footer";
             this.label27.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.label27.MouseClick += new System.Windows.Forms.MouseEventHandler(this.pictureBox10_MouseClick);
+            // 
+            // pictureBox10
+            // 
+            this.pictureBox10.Image = global::Desktop_App.Properties.Resources.footer;
+            this.pictureBox10.Location = new System.Drawing.Point(15, 20);
+            this.pictureBox10.Name = "pictureBox10";
+            this.pictureBox10.Size = new System.Drawing.Size(50, 50);
+            this.pictureBox10.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox10.TabIndex = 0;
+            this.pictureBox10.TabStop = false;
+            this.pictureBox10.MouseClick += new System.Windows.Forms.MouseEventHandler(this.pictureBox10_MouseClick);
             // 
             // panel35
             // 
@@ -1839,6 +2109,17 @@ namespace Desktop_App
             this.label52.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.label52.MouseClick += new System.Windows.Forms.MouseEventHandler(this.panel35_MouseClick);
             // 
+            // pictureBox20
+            // 
+            this.pictureBox20.Image = global::Desktop_App.Properties.Resources.pictureIcon;
+            this.pictureBox20.Location = new System.Drawing.Point(15, 20);
+            this.pictureBox20.Name = "pictureBox20";
+            this.pictureBox20.Size = new System.Drawing.Size(50, 50);
+            this.pictureBox20.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox20.TabIndex = 0;
+            this.pictureBox20.TabStop = false;
+            this.pictureBox20.MouseClick += new System.Windows.Forms.MouseEventHandler(this.panel35_MouseClick);
+            // 
             // panel36
             // 
             this.panel36.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
@@ -1864,6 +2145,17 @@ namespace Desktop_App
             this.label53.Text = "Title";
             this.label53.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.label53.MouseClick += new System.Windows.Forms.MouseEventHandler(this.pictureBox21_MouseClick);
+            // 
+            // pictureBox21
+            // 
+            this.pictureBox21.Image = global::Desktop_App.Properties.Resources.TitleIcon;
+            this.pictureBox21.Location = new System.Drawing.Point(15, 20);
+            this.pictureBox21.Name = "pictureBox21";
+            this.pictureBox21.Size = new System.Drawing.Size(50, 50);
+            this.pictureBox21.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox21.TabIndex = 0;
+            this.pictureBox21.TabStop = false;
+            this.pictureBox21.MouseClick += new System.Windows.Forms.MouseEventHandler(this.pictureBox21_MouseClick);
             // 
             // panel37
             // 
@@ -1891,94 +2183,6 @@ namespace Desktop_App
             this.label54.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.label54.MouseClick += new System.Windows.Forms.MouseEventHandler(this.label54_MouseClick);
             // 
-            // label23
-            // 
-            this.label23.AutoSize = true;
-            this.label23.Font = new System.Drawing.Font("Segoe UI Black", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label23.ForeColor = System.Drawing.Color.White;
-            this.label23.Location = new System.Drawing.Point(40, 8);
-            this.label23.Name = "label23";
-            this.label23.Size = new System.Drawing.Size(120, 30);
-            this.label23.TabIndex = 6;
-            this.label23.Text = "Elementos";
-            // 
-            // pictureBox36
-            // 
-            this.pictureBox36.Image = global::Desktop_App.Properties.Resources.navbarIcon;
-            this.pictureBox36.Location = new System.Drawing.Point(6, 5);
-            this.pictureBox36.Name = "pictureBox36";
-            this.pictureBox36.Size = new System.Drawing.Size(77, 77);
-            this.pictureBox36.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox36.TabIndex = 0;
-            this.pictureBox36.TabStop = false;
-            this.pictureBox36.MouseClick += new System.Windows.Forms.MouseEventHandler(this.panel31_MouseClick);
-            // 
-            // pictureBox14
-            // 
-            this.pictureBox14.Image = global::Desktop_App.Properties.Resources.separatorIcon;
-            this.pictureBox14.Location = new System.Drawing.Point(20, 21);
-            this.pictureBox14.Name = "pictureBox14";
-            this.pictureBox14.Size = new System.Drawing.Size(44, 44);
-            this.pictureBox14.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox14.TabIndex = 0;
-            this.pictureBox14.TabStop = false;
-            this.pictureBox14.MouseClick += new System.Windows.Forms.MouseEventHandler(this.label24_MouseClick);
-            // 
-            // pictureBox15
-            // 
-            this.pictureBox15.Image = global::Desktop_App.Properties.Resources.callToActionIcon;
-            this.pictureBox15.Location = new System.Drawing.Point(5, 9);
-            this.pictureBox15.Name = "pictureBox15";
-            this.pictureBox15.Size = new System.Drawing.Size(77, 77);
-            this.pictureBox15.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox15.TabIndex = 0;
-            this.pictureBox15.TabStop = false;
-            this.pictureBox15.MouseClick += new System.Windows.Forms.MouseEventHandler(this.pictureBox15_MouseClick);
-            // 
-            // pictureBox8
-            // 
-            this.pictureBox8.Image = global::Desktop_App.Properties.Resources.ImageText;
-            this.pictureBox8.Location = new System.Drawing.Point(5, 9);
-            this.pictureBox8.Name = "pictureBox8";
-            this.pictureBox8.Size = new System.Drawing.Size(77, 77);
-            this.pictureBox8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox8.TabIndex = 0;
-            this.pictureBox8.TabStop = false;
-            this.pictureBox8.MouseClick += new System.Windows.Forms.MouseEventHandler(this.label26_MouseClick);
-            // 
-            // pictureBox10
-            // 
-            this.pictureBox10.Image = global::Desktop_App.Properties.Resources.footer;
-            this.pictureBox10.Location = new System.Drawing.Point(15, 20);
-            this.pictureBox10.Name = "pictureBox10";
-            this.pictureBox10.Size = new System.Drawing.Size(50, 50);
-            this.pictureBox10.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox10.TabIndex = 0;
-            this.pictureBox10.TabStop = false;
-            this.pictureBox10.MouseClick += new System.Windows.Forms.MouseEventHandler(this.pictureBox10_MouseClick);
-            // 
-            // pictureBox20
-            // 
-            this.pictureBox20.Image = global::Desktop_App.Properties.Resources.pictureIcon;
-            this.pictureBox20.Location = new System.Drawing.Point(15, 20);
-            this.pictureBox20.Name = "pictureBox20";
-            this.pictureBox20.Size = new System.Drawing.Size(50, 50);
-            this.pictureBox20.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox20.TabIndex = 0;
-            this.pictureBox20.TabStop = false;
-            this.pictureBox20.MouseClick += new System.Windows.Forms.MouseEventHandler(this.panel35_MouseClick);
-            // 
-            // pictureBox21
-            // 
-            this.pictureBox21.Image = global::Desktop_App.Properties.Resources.TitleIcon;
-            this.pictureBox21.Location = new System.Drawing.Point(15, 20);
-            this.pictureBox21.Name = "pictureBox21";
-            this.pictureBox21.Size = new System.Drawing.Size(50, 50);
-            this.pictureBox21.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox21.TabIndex = 0;
-            this.pictureBox21.TabStop = false;
-            this.pictureBox21.MouseClick += new System.Windows.Forms.MouseEventHandler(this.pictureBox21_MouseClick);
-            // 
             // pictureBox22
             // 
             this.pictureBox22.Image = global::Desktop_App.Properties.Resources.TextIconMenu;
@@ -1990,230 +2194,49 @@ namespace Desktop_App
             this.pictureBox22.TabStop = false;
             this.pictureBox22.MouseClick += new System.Windows.Forms.MouseEventHandler(this.label54_MouseClick);
             // 
-            // pictureBox6
+            // label23
             // 
-            this.pictureBox6.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pictureBox6.Image = global::Desktop_App.Properties.Resources.information;
-            this.pictureBox6.Location = new System.Drawing.Point(11, 26);
-            this.pictureBox6.Name = "pictureBox6";
-            this.pictureBox6.Size = new System.Drawing.Size(23, 23);
-            this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox6.TabIndex = 5;
-            this.pictureBox6.TabStop = false;
-            this.pictureBox6.Click += new System.EventHandler(this.pictureBox6_Click);
+            this.label23.AutoSize = true;
+            this.label23.Font = new System.Drawing.Font("Segoe UI Black", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label23.ForeColor = System.Drawing.Color.White;
+            this.label23.Location = new System.Drawing.Point(40, 8);
+            this.label23.Name = "label23";
+            this.label23.Size = new System.Drawing.Size(120, 30);
+            this.label23.TabIndex = 6;
+            this.label23.Text = "Elementos";
             // 
-            // pictureBox5
+            // checkBoxWebPersonal
             // 
-            this.pictureBox5.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pictureBox5.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox5.Image")));
-            this.pictureBox5.Location = new System.Drawing.Point(11, 26);
-            this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(23, 23);
-            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox5.TabIndex = 5;
-            this.pictureBox5.TabStop = false;
-            this.pictureBox5.Click += new System.EventHandler(this.pictureBox5_Click);
+            this.checkBoxWebPersonal.AutoSize = true;
+            this.checkBoxWebPersonal.Font = new System.Drawing.Font("Segoe UI Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.checkBoxWebPersonal.Location = new System.Drawing.Point(25, 444);
+            this.checkBoxWebPersonal.Name = "checkBoxWebPersonal";
+            this.checkBoxWebPersonal.Size = new System.Drawing.Size(119, 25);
+            this.checkBoxWebPersonal.TabIndex = 42;
+            this.checkBoxWebPersonal.Text = "Web Personal";
+            this.checkBoxWebPersonal.UseVisualStyleBackColor = true;
             // 
-            // pictureBox4
+            // checkBoxWebDeEmpresa
             // 
-            this.pictureBox4.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
-            this.pictureBox4.Location = new System.Drawing.Point(11, 26);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(23, 23);
-            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox4.TabIndex = 5;
-            this.pictureBox4.TabStop = false;
-            this.pictureBox4.Click += new System.EventHandler(this.pictureBox4_Click);
+            this.checkBoxWebDeEmpresa.AutoSize = true;
+            this.checkBoxWebDeEmpresa.Font = new System.Drawing.Font("Segoe UI Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.checkBoxWebDeEmpresa.Location = new System.Drawing.Point(186, 444);
+            this.checkBoxWebDeEmpresa.Name = "checkBoxWebDeEmpresa";
+            this.checkBoxWebDeEmpresa.Size = new System.Drawing.Size(141, 25);
+            this.checkBoxWebDeEmpresa.TabIndex = 43;
+            this.checkBoxWebDeEmpresa.Text = "Web de Empresa";
+            this.checkBoxWebDeEmpresa.UseVisualStyleBackColor = true;
             // 
-            // pictureBox3
+            // checkBoxWebPersonalizada
             // 
-            this.pictureBox3.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
-            this.pictureBox3.Location = new System.Drawing.Point(11, 26);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(23, 23);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox3.TabIndex = 5;
-            this.pictureBox3.TabStop = false;
-            this.pictureBox3.Click += new System.EventHandler(this.pictureBox3_Click);
-            // 
-            // hideShowBar
-            // 
-            this.hideShowBar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.hideShowBar.Image = global::Desktop_App.Properties.Resources.left_arrow;
-            this.hideShowBar.Location = new System.Drawing.Point(182, 14);
-            this.hideShowBar.Name = "hideShowBar";
-            this.hideShowBar.Size = new System.Drawing.Size(18, 18);
-            this.hideShowBar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.hideShowBar.TabIndex = 4;
-            this.hideShowBar.TabStop = false;
-            this.hideShowBar.Click += new System.EventHandler(this.hideShowBar_Click);
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(11, 26);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(23, 23);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox2.TabIndex = 5;
-            this.pictureBox2.TabStop = false;
-            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(11, 12);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(30, 30);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 2;
-            this.pictureBox1.TabStop = false;
-            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
-            // 
-            // pictureBox19
-            // 
-            this.pictureBox19.Image = global::Desktop_App.Properties.Resources.left_arrow1;
-            this.pictureBox19.Location = new System.Drawing.Point(185, 7);
-            this.pictureBox19.Name = "pictureBox19";
-            this.pictureBox19.Size = new System.Drawing.Size(20, 20);
-            this.pictureBox19.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox19.TabIndex = 1;
-            this.pictureBox19.TabStop = false;
-            // 
-            // pictureBox18
-            // 
-            this.pictureBox18.Image = global::Desktop_App.Properties.Resources.paintbrushIcon1;
-            this.pictureBox18.Location = new System.Drawing.Point(102, 7);
-            this.pictureBox18.Name = "pictureBox18";
-            this.pictureBox18.Size = new System.Drawing.Size(20, 20);
-            this.pictureBox18.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox18.TabIndex = 1;
-            this.pictureBox18.TabStop = false;
-            // 
-            // pictureBox17
-            // 
-            this.pictureBox17.Image = global::Desktop_App.Properties.Resources.randomIcon1;
-            this.pictureBox17.Location = new System.Drawing.Point(96, 7);
-            this.pictureBox17.Name = "pictureBox17";
-            this.pictureBox17.Size = new System.Drawing.Size(20, 20);
-            this.pictureBox17.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox17.TabIndex = 1;
-            this.pictureBox17.TabStop = false;
-            this.pictureBox17.Click += new System.EventHandler(this.panelRandomLogo_Click);
-            // 
-            // pictureBox16
-            // 
-            this.pictureBox16.Image = global::Desktop_App.Properties.Resources.pictureIcon;
-            this.pictureBox16.Location = new System.Drawing.Point(88, 7);
-            this.pictureBox16.Name = "pictureBox16";
-            this.pictureBox16.Size = new System.Drawing.Size(20, 20);
-            this.pictureBox16.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox16.TabIndex = 1;
-            this.pictureBox16.TabStop = false;
-            this.pictureBox16.Click += new System.EventHandler(this.panelSelectLogo_Click);
-            // 
-            // pictureBoxLogo
-            // 
-            this.pictureBoxLogo.BackColor = System.Drawing.Color.LightGray;
-            this.pictureBoxLogo.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pictureBoxLogo.Location = new System.Drawing.Point(594, 199);
-            this.pictureBoxLogo.Name = "pictureBoxLogo";
-            this.pictureBoxLogo.Size = new System.Drawing.Size(109, 97);
-            this.pictureBoxLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBoxLogo.TabIndex = 37;
-            this.pictureBoxLogo.TabStop = false;
-            // 
-            // pictureBoxWebEjemplo
-            // 
-            this.pictureBoxWebEjemplo.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxWebEjemplo.Image")));
-            this.pictureBoxWebEjemplo.Location = new System.Drawing.Point(673, 358);
-            this.pictureBoxWebEjemplo.Name = "pictureBoxWebEjemplo";
-            this.pictureBoxWebEjemplo.Size = new System.Drawing.Size(339, 169);
-            this.pictureBoxWebEjemplo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBoxWebEjemplo.TabIndex = 34;
-            this.pictureBoxWebEjemplo.TabStop = false;
-            // 
-            // pictureBox7
-            // 
-            this.pictureBox7.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pictureBox7.Image = global::Desktop_App.Properties.Resources.addNewIconWhite;
-            this.pictureBox7.Location = new System.Drawing.Point(19, 14);
-            this.pictureBox7.Name = "pictureBox7";
-            this.pictureBox7.Size = new System.Drawing.Size(23, 23);
-            this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox7.TabIndex = 6;
-            this.pictureBox7.TabStop = false;
-            // 
-            // pictureBox13
-            // 
-            this.pictureBox13.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pictureBox13.Image = global::Desktop_App.Properties.Resources.save;
-            this.pictureBox13.Location = new System.Drawing.Point(13, 8);
-            this.pictureBox13.Name = "pictureBox13";
-            this.pictureBox13.Size = new System.Drawing.Size(30, 30);
-            this.pictureBox13.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox13.TabIndex = 7;
-            this.pictureBox13.TabStop = false;
-            // 
-            // pictureBox11
-            // 
-            this.pictureBox11.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pictureBox11.Image = global::Desktop_App.Properties.Resources.off;
-            this.pictureBox11.Location = new System.Drawing.Point(457, 7);
-            this.pictureBox11.Name = "pictureBox11";
-            this.pictureBox11.Size = new System.Drawing.Size(40, 40);
-            this.pictureBox11.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox11.TabIndex = 6;
-            this.pictureBox11.TabStop = false;
-            // 
-            // pictureBox12
-            // 
-            this.pictureBox12.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pictureBox12.Image = global::Desktop_App.Properties.Resources.off;
-            this.pictureBox12.Location = new System.Drawing.Point(457, 7);
-            this.pictureBox12.Name = "pictureBox12";
-            this.pictureBox12.Size = new System.Drawing.Size(40, 40);
-            this.pictureBox12.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox12.TabIndex = 6;
-            this.pictureBox12.TabStop = false;
-            // 
-            // pictureBox9
-            // 
-            this.pictureBox9.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pictureBox9.Image = global::Desktop_App.Properties.Resources.off;
-            this.pictureBox9.Location = new System.Drawing.Point(457, 7);
-            this.pictureBox9.Name = "pictureBox9";
-            this.pictureBox9.Size = new System.Drawing.Size(40, 40);
-            this.pictureBox9.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox9.TabIndex = 6;
-            this.pictureBox9.TabStop = false;
-            // 
-            // radioStayLogged
-            // 
-            this.radioStayLogged.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.radioStayLogged.Image = global::Desktop_App.Properties.Resources.off;
-            this.radioStayLogged.Location = new System.Drawing.Point(457, 7);
-            this.radioStayLogged.Name = "radioStayLogged";
-            this.radioStayLogged.Size = new System.Drawing.Size(40, 40);
-            this.radioStayLogged.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.radioStayLogged.TabIndex = 6;
-            this.radioStayLogged.TabStop = false;
-            this.radioStayLogged.Click += new System.EventHandler(this.radioStayLogged_Click);
-            // 
-            // showHideFaqs
-            // 
-            this.showHideFaqs.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.showHideFaqs.Image = global::Desktop_App.Properties.Resources.arrow_down;
-            this.showHideFaqs.Location = new System.Drawing.Point(583, 16);
-            this.showHideFaqs.Name = "showHideFaqs";
-            this.showHideFaqs.Size = new System.Drawing.Size(17, 17);
-            this.showHideFaqs.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.showHideFaqs.TabIndex = 6;
-            this.showHideFaqs.TabStop = false;
-            this.showHideFaqs.Click += new System.EventHandler(this.showHideFaqs_Click);
+            this.checkBoxWebPersonalizada.AutoSize = true;
+            this.checkBoxWebPersonalizada.Font = new System.Drawing.Font("Segoe UI Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.checkBoxWebPersonalizada.Location = new System.Drawing.Point(366, 442);
+            this.checkBoxWebPersonalizada.Name = "checkBoxWebPersonalizada";
+            this.checkBoxWebPersonalizada.Size = new System.Drawing.Size(120, 25);
+            this.checkBoxWebPersonalizada.TabIndex = 44;
+            this.checkBoxWebPersonalizada.Text = "Personalizada";
+            this.checkBoxWebPersonalizada.UseVisualStyleBackColor = true;
             // 
             // FormPrincipal
             // 
@@ -2221,7 +2244,6 @@ namespace Desktop_App
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1395, 773);
-            this.Controls.Add(this.panelAddElements);
             this.Controls.Add(this.panelLeftBar);
             this.Controls.Add(this.panelSuperior);
             this.Controls.Add(this.tabControl);
@@ -2230,20 +2252,27 @@ namespace Desktop_App
             this.Text = " ";
             this.panelSuperior.ResumeLayout(false);
             this.panelSuperior.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.windowControlButtons.ResumeLayout(false);
             this.windowControlButtons.PerformLayout();
             this.panelLeftBar.ResumeLayout(false);
             this.panelAyuda.ResumeLayout(false);
             this.panelAyuda.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
             this.panelAjustes.ResumeLayout(false);
             this.panelAjustes.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             this.panelConstructor.ResumeLayout(false);
             this.panelConstructor.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             this.panelDisenyo.ResumeLayout(false);
             this.panelDisenyo.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.panelTopSideBar.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.hideShowBar)).EndInit();
             this.panelDashboard.ResumeLayout(false);
             this.panelDashboard.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.tabControl.ResumeLayout(false);
             this.dashboard.ResumeLayout(false);
             this.panelDash.ResumeLayout(false);
@@ -2252,12 +2281,18 @@ namespace Desktop_App
             this.panelFirstLogin.PerformLayout();
             this.panel34.ResumeLayout(false);
             this.panel34.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox19)).EndInit();
             this.panel33.ResumeLayout(false);
             this.panel33.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox18)).EndInit();
             this.panelRandomLogo.ResumeLayout(false);
             this.panelRandomLogo.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox17)).EndInit();
             this.panelSelectLogo.ResumeLayout(false);
             this.panelSelectLogo.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox16)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLogo)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxWebEjemplo)).EndInit();
             this.disenyo.ResumeLayout(false);
             this.panelDise.ResumeLayout(false);
             this.panelDise.PerformLayout();
@@ -2274,19 +2309,25 @@ namespace Desktop_App
             this.panel4.PerformLayout();
             this.panelAddElement.ResumeLayout(false);
             this.panelAddElement.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
             this.ajustes.ResumeLayout(false);
             this.panelAj.ResumeLayout(false);
             this.panelAj.PerformLayout();
             this.panelSave.ResumeLayout(false);
             this.panelSave.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox13)).EndInit();
             this.panelTemp2.ResumeLayout(false);
             this.panelTemp2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).EndInit();
             this.panelTemp1.ResumeLayout(false);
             this.panelTemp1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox12)).EndInit();
             this.panelNube.ResumeLayout(false);
             this.panelNube.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).EndInit();
             this.panelSesion.ResumeLayout(false);
             this.panelSesion.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.radioStayLogged)).EndInit();
             this.ayuda.ResumeLayout(false);
             this.panelAyud.ResumeLayout(false);
             this.panelAyud.PerformLayout();
@@ -2314,53 +2355,34 @@ namespace Desktop_App
             this.panel21.PerformLayout();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.showHideFaqs)).EndInit();
             this.panelAddElements.ResumeLayout(false);
             this.panelAddElements.PerformLayout();
             this.flowLayoutPanel1.ResumeLayout(false);
             this.panel31.ResumeLayout(false);
             this.panel31.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox36)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox14)).EndInit();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox15)).EndInit();
             this.panel5.ResumeLayout(false);
             this.panel5.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
             this.panel6.ResumeLayout(false);
             this.panel6.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).EndInit();
             this.panel35.ResumeLayout(false);
             this.panel35.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox20)).EndInit();
             this.panel36.ResumeLayout(false);
             this.panel36.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox21)).EndInit();
             this.panel37.ResumeLayout(false);
             this.panel37.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox36)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox14)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox15)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox20)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox21)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox22)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.hideShowBar)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox19)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox18)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox17)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox16)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLogo)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxWebEjemplo)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox13)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox12)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.radioStayLogged)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.showHideFaqs)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -2455,7 +2477,6 @@ namespace Desktop_App
         private System.Windows.Forms.Label labelTuLogo;
         private System.Windows.Forms.Label labelPlantillaPorDefecto;
         private System.Windows.Forms.Button buttonEmpezar;
-        private System.Windows.Forms.ComboBox comboBoxCategoria;
         private System.Windows.Forms.Label labelCategoria;
         private System.Windows.Forms.Label labelBreveDescripcion;
         private System.Windows.Forms.TextBox textBoxBreveDescripcion;
@@ -2536,5 +2557,8 @@ namespace Desktop_App
         private System.Windows.Forms.Panel panel37;
         private System.Windows.Forms.Label label54;
         private System.Windows.Forms.PictureBox pictureBox22;
+        private System.Windows.Forms.CheckBox checkBoxWebPersonalizada;
+        private System.Windows.Forms.CheckBox checkBoxWebDeEmpresa;
+        private System.Windows.Forms.CheckBox checkBoxWebPersonal;
     }
 }

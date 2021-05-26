@@ -91,6 +91,12 @@
     <Compile Include="FormLogin.Designer.cs">
       <DependentUpon>FormLogin.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormPrueba.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormPrueba.Designer.cs">
+      <DependentUpon>FormPrueba.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormSoporte.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -138,6 +144,9 @@
     <EmbeddedResource Include="FormPrincipal.resx">
       <DependentUpon>FormPrincipal.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FormPrueba.resx">
+      <DependentUpon>FormPrueba.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormSoporte.resx">
       <DependentUpon>FormSoporte.cs</DependentUpon>
     </EmbeddedResource>
@@ -176,6 +185,7 @@
     <Content Include="Icons\footer.png" />
     <Content Include="Icons\headerIcon.png" />
     <Content Include="Icons\ImageText.png" />
+    <Content Include="Icons\info.png" />
     <Content Include="Icons\navbarIcon.png" />
     <Content Include="Icons\separatorIcon.png" />
     <Content Include="Icons\TextIconMenu.png" />
