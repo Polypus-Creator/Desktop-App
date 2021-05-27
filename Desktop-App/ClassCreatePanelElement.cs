@@ -149,10 +149,14 @@ namespace Desktop_App
             int x1l = 37;
             int y1l = 59;
             int y2l = 99;
+            
             int count = 0;
             int countId = 0;
             Boolean filaOne = true;
-            if (MaxOp>0) {
+            Boolean filaTwo = true;
+            Boolean filaThree = true;
+            Boolean filaFour = true;
+            if (MaxOp<=6&&MaxOp>0) {
                 Options.ForEach(delegate (String option)
                 {
                     if (filaOne) {
@@ -188,6 +192,89 @@ namespace Desktop_App
                         count++;
                         countId++;
                     }
+                });
+            }
+            else
+            {
+                y1l = 40;
+                y2l = 66;
+                int y3l = 88;
+                int y4l = 110;
+                Options.ForEach(delegate (String option)
+                {
+                    if (filaOne)
+                    {
+                        Label lbOption = new Label();
+                        lbOption.Size = new Size(75, 21);
+                        lbOption.Location = new Point(x1l + 128 * count, y1l);
+                        lbOption.Font = new Font("Segoe UI Semibold", 12, FontStyle.Bold);
+                        lbOption.Text = option;
+                        lbOption.Name = "label" + countId;
+                        lbOption.Visible = false;
+                        _labelOptions.Add(lbOption);
+                        PanelGol.Controls.Add(lbOption);
+
+                        count++;
+                        countId++;
+                        if (count == 3)
+                        {
+                            filaOne = false;
+                            count = 0;
+                        }
+                    }
+                    else if(filaTwo)
+                    {
+                        Label lbOption = new Label();
+                        lbOption.Size = new Size(70, 21);
+                        lbOption.Location = new Point(x1l + 128 * count, y2l);
+                        lbOption.Font = new Font("Segoe UI Semibold", 12, FontStyle.Bold);
+                        lbOption.Text = option;
+                        lbOption.Name = "label" + count;
+                        lbOption.Visible = false;
+                        _labelOptions.Add(lbOption);
+                        PanelGol.Controls.Add(lbOption);
+                        count++;
+                        countId++;
+                        if (count == 3)
+                        {
+                            filaTwo = false;
+                            count = 0;
+                        }
+                    }
+                    else if(filaThree)
+                    {
+                        Label lbOption = new Label();
+                        lbOption.Size = new Size(70, 21);
+                        lbOption.Location = new Point(x1l + 128 * count, y3l);
+                        lbOption.Font = new Font("Segoe UI Semibold", 12, FontStyle.Bold);
+                        lbOption.Text = option;
+                        lbOption.Name = "label" + count;
+                        lbOption.Visible = false;
+                        _labelOptions.Add(lbOption);
+                        PanelGol.Controls.Add(lbOption);
+                        count++;
+                        countId++;
+                        if (count == 3)
+                        {
+                            filaThree = false;
+                            count = 0;
+                        }
+                    }
+                    else
+                    {
+                        Label lbOption = new Label();
+                        lbOption.Size = new Size(70, 21);
+                        lbOption.Location = new Point(x1l + 128 * count, y4l);
+                        lbOption.Font = new Font("Segoe UI Semibold", 12, FontStyle.Bold);
+                        lbOption.Text = option;
+                        lbOption.Name = "label" + count;
+                        lbOption.Visible = false;
+                        _labelOptions.Add(lbOption);
+                        PanelGol.Controls.Add(lbOption);
+                        count++;
+                        countId++;
+                    }
+
                 });
             }
         }

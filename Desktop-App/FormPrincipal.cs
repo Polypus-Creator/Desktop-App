@@ -103,7 +103,7 @@ namespace Desktop_App
             DataClass.backOne = panel8.BackColor;
             DataClass.backTwo = panel11.BackColor;
             firstLogin = true;
-
+            panel4.Height = panelConst.Height - 20;
 
 
         }
@@ -735,6 +735,80 @@ namespace Desktop_App
                     Text text = new Text("Text", panel.ListText[0].Text);
                     DataClass.listasElementos.Add(text);
                 }
+                else if (panel.Title == "Price Cards")
+                {
+                    string[,] contenido = new string[3, 4];
+                    foreach(object objeto in panel.PanelTextos.Controls)
+                    {
+                        if (objeto is TextBox)
+                        {
+                            TextBox text = (TextBox)objeto;
+                            if (text.Name.Contains("Title"))
+                            {
+                                if (text.Name.Contains("1"))
+                                {
+                                    contenido[0, 0] = text.Text;
+                                }
+                                else if (text.Name.Contains("2"))
+                                {
+                                    contenido[1, 0] = text.Text;
+                                }
+                                else if (text.Name.Contains("3"))
+                                {
+                                    contenido[2, 0] = text.Text;
+                                }
+                            }
+                            else if (text.Name.Contains("Price"))
+                            {
+                                if (text.Name.Contains("1"))
+                                {
+                                    contenido[0, 1] = text.Text;
+                                }
+                                else if (text.Name.Contains("2"))
+                                {
+                                    contenido[1, 1] = text.Text;
+                                }
+                                else if (text.Name.Contains("3"))
+                                {
+                                    contenido[2, 1] = text.Text;
+                                }
+                            }
+                            else if (text.Name.Contains("Descr"))
+                            {
+                                if (text.Name.Contains("1"))
+                                {
+                                    contenido[0, 3] = text.Text;
+                                }
+                                else if (text.Name.Contains("2"))
+                                {
+                                    contenido[1, 3] = text.Text;
+                                }
+                                else if (text.Name.Contains("3"))
+                                {
+                                    contenido[2, 3] = text.Text;
+                                }
+                            }
+                        }
+                        else if (objeto is ComboBox)
+                        {
+                            ComboBox text = (ComboBox)objeto;
+                            if (text.Name.Contains("1"))
+                            {
+                                contenido[0, 2] = text.SelectedItem.ToString();
+                            }
+                            else if (text.Name.Contains("2"))
+                            {
+                                contenido[1, 2] = text.SelectedItem.ToString();
+                            }
+                            else if (text.Name.Contains("3"))
+                            {
+                                contenido[2, 2] = text.SelectedItem.ToString();
+                            }
+                        }
+                    }
+                    PriceCard price = new PriceCard("Price Card", contenido);
+                    DataClass.listasElementos.Add(price);
+                }
             });
                 
             
@@ -742,7 +816,6 @@ namespace Desktop_App
             DataClass.classListaJSON.WebName = textBoxNombre.Text;
             string obstring = JsonConvert.SerializeObject(DataClass.classListaJSON);
             JObject googleSearch = JObject.Parse(obstring);
-            //textBoxBreveDescripcion.Text = googleSearch.ToString();
             MessageBox.Show(googleSearch.ToString());
 
             string typo = sender.GetType().Name;
@@ -778,6 +851,7 @@ namespace Desktop_App
 
         private void generateJSON(List<object> listasElementos)
         {
+            DataClass.classListaJSON.ListaJSON.Clear();
             listasElementos.ForEach(delegate (object objeto) 
             {
                 if (objeto is Header)
@@ -821,6 +895,12 @@ namespace Desktop_App
                 else if (objeto is Text)
                 {
                     string obstring = JsonConvert.SerializeObject((Text)objeto);
+                    JObject googleSearch = JObject.Parse(obstring);
+                    DataClass.classListaJSON.ListaJSON.Add(googleSearch);
+                }
+                else if (objeto is PriceCard)
+                {
+                    string obstring = JsonConvert.SerializeObject((PriceCard)objeto);
                     JObject googleSearch = JObject.Parse(obstring);
                     DataClass.classListaJSON.ListaJSON.Add(googleSearch);
                 }
@@ -1792,6 +1872,204 @@ namespace Desktop_App
             // guardar todos los datos introducidos
             MessageBox.Show("Tu configuración se ha guardado. Bienvenido, ya puedes empezar a utilizar Polypus Creator.");
             checkFirstLogin();
+        }
+
+        private void pictureBox23_Click(object sender, EventArgs e)
+        {
+            string title = "Price Cards";
+            List<string> options = new List<string>();
+            options.Add("Title");
+            options.Add("Title");
+            options.Add("Title");
+            options.Add("Price");
+            options.Add("Price");
+            options.Add("Price");
+            options.Add("Description");
+            options.Add("Description");
+            options.Add("Description");
+            ClassCreatePanelElement panelElement = new ClassCreatePanelElement(482, options.Count, title, options);
+            flowLayoutPanelCurrentElements.Controls.Add(panelElement.PanelGol);
+            panelesFlow.Add(panelElement);
+            panelElement.PanelGol.Name = "PriceCards" + panelesFlow.Count;
+            panelElement.LabelTitle.Size = new Size(120, 21);
+            panelElement.LabelOptions.ForEach(delegate (Label label)
+            {
+                label.Visible = true;
+            });
+            panelElement.CreateAjustes = new ClassCreatePanelAjustes(410, panel4.Height-140, panelElement.Title, new List<string>());
+            panel4.Controls.Add(panelElement.CreateAjustes.PanelGlo);
+            panelesAjustes.Add(panelElement.CreateAjustes);
+
+            panelElement.CreateAjustes.PanelTextos.Height = panelElement.CreateAjustes.PanelGlo.Height - panelElement.CreateAjustes.PanelSave.Height - 75;
+            panelElement.CreateAjustes.PanelSave.Location = new Point(panelElement.CreateAjustes.PanelSave.Location.X, panelElement.CreateAjustes.PanelGlo.Height - panelElement.CreateAjustes.PanelSave.Height - 5);
+
+            CrearAjustesPriceCard(panelElement.CreateAjustes);
+
+            panelElement.CreateAjustes.PanelSave.MouseClick += new System.Windows.Forms.MouseEventHandler(PanelSave_MousClick);
+            panelElement.CreateAjustes.LabelSave.MouseClick += new System.Windows.Forms.MouseEventHandler(PanelSave_MousClick);
+
+            panelElement.PanelDe.Name = "PriceCardsDelete" + panelesFlow.Count;
+            panelElement.PbDe.Name = "PriceCardsDelete" + panelesFlow.Count;
+
+            panelElement.PanelDe.MouseClick += new System.Windows.Forms.MouseEventHandler(PanelDe_MouseClicked);
+            panelElement.PbDe.MouseClick += new System.Windows.Forms.MouseEventHandler(PanelDe_MouseClicked);
+
+            panelElement.PanelEd.Name = "PriceCardsTextEdit" + panelesFlow.Count;
+            panelElement.PbEd.Name = "PriceCardsTextEdit" + panelesFlow.Count;
+
+            panelElement.PanelEd.MouseClick += new System.Windows.Forms.MouseEventHandler(PanelEd_MouseClick);
+            panelElement.PbEd.MouseClick += new System.Windows.Forms.MouseEventHandler(PanelEd_MouseClick);
+            ordenarPaneles();
+        }
+
+        private void CrearAjustesPriceCard(ClassCreatePanelAjustes createAjustes)
+        {
+            int x1 = 5, y1=57;
+            int H = createAjustes.PanelTextos.Height/3;
+            int W = createAjustes.PanelTextos.Width-10;
+            int marg= H/5/3;
+
+            TextBox textBox1 = new TextBox();
+            textBox1.Name = "Title1";
+            textBox1.Location = new Point(x1, y1);
+            textBox1.Size = new Size(W/2-20,H/5);
+            textBox1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            createAjustes.ListText.Add(textBox1);
+            createAjustes.PanelTextos.Controls.Add(textBox1);
+
+            int x2 = x1 + textBox1.Width + 10;
+
+            TextBox textBox2 = new TextBox();
+            textBox2.Name = "Price1";
+            textBox2.Location = new Point(x2, y1);
+            textBox2.TextAlign = HorizontalAlignment.Right;
+            textBox2.Size = new Size(W / 4 - 20, H / 5);
+            textBox2.TextChanged += textBoxPrice_TextChanged;
+            textBox2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            createAjustes.ListText.Add(textBox2);
+            createAjustes.PanelTextos.Controls.Add(textBox2);
+
+            int x3 = x2 + textBox2.Width + 10;
+
+            ComboBox comboBox3 = new ComboBox();
+            comboBox3.Name = "Moneda1";
+            comboBox3.Location = new Point(x3, y1);
+            comboBox3.Size = new Size(W / 4 - 20, H / 5);
+            comboBox3.Items.Add("$");
+            comboBox3.Items.Add("€");
+            comboBox3.Items.Add("£");
+            comboBox3.SelectedIndex = 0;
+            comboBox3.DropDownStyle = ComboBoxStyle.DropDownList;
+            createAjustes.ListaMoneda.Add(comboBox3);
+            createAjustes.PanelTextos.Controls.Add(comboBox3);
+
+            int y2 = y1 + textBox1.Height + marg;
+
+            TextBox textBox4 = new TextBox();
+            textBox4.Name = "Descrip1";
+            textBox4.Location = new Point(x1, y2);
+            textBox4.Size = new Size(W, H * 3 / 5);
+            textBox4.Multiline = true;
+            textBox4.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            createAjustes.ListText.Add(textBox4);
+            createAjustes.PanelTextos.Controls.Add(textBox4);
+
+            int y3 = y2 + textBox4.Height + 5, y4 = y3 + textBox1.Height + marg;
+            
+
+            TextBox textBox5 = new TextBox();
+            textBox5.Name = "Title2";
+            textBox5.Location = new Point(x1, y3);
+            textBox5.Size = new Size(W / 2 - 20, H / 5);
+            textBox5.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            createAjustes.ListText.Add(textBox5);
+            createAjustes.PanelTextos.Controls.Add(textBox5);
+
+            TextBox textBox6 = new TextBox();
+            textBox6.Name = "Price2";
+            textBox6.TextAlign = HorizontalAlignment.Right;
+            textBox6.Location = new Point(x2, y3);
+            textBox6.Size = new Size(W / 4 - 20, H / 5);
+            textBox6.TextChanged += textBoxPrice_TextChanged;
+            textBox6.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            createAjustes.ListText.Add(textBox6);
+            createAjustes.PanelTextos.Controls.Add(textBox6);
+
+            ComboBox comboBox7 = new ComboBox();
+            comboBox7.Name = "Moneda2";
+            comboBox7.Location = new Point(x3, y3);
+            comboBox7.Size = new Size(W / 4 - 20, H / 5);
+            comboBox7.Items.Add("$");
+            comboBox7.Items.Add("€");
+            comboBox7.Items.Add("£");
+            comboBox7.SelectedIndex = 0;
+            comboBox7.DropDownStyle = ComboBoxStyle.DropDownList;
+            createAjustes.ListaMoneda.Add(comboBox7);
+            createAjustes.PanelTextos.Controls.Add(comboBox7);
+
+            TextBox textBox8 = new TextBox();
+            textBox8.Name = "Descrip2";
+            textBox8.Location = new Point(x1, y4);
+            textBox8.Size = new Size(W, H * 3 / 5);
+            textBox8.Multiline = true;
+            textBox8.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            createAjustes.ListText.Add(textBox8);
+            createAjustes.PanelTextos.Controls.Add(textBox8);
+
+            int y5 = y4 + textBox4.Height + 5, y6 = y5 + textBox1.Height + marg;
+
+            TextBox textBox9 = new TextBox();
+            textBox9.Name = "Title3";
+            textBox9.Location = new Point(x1, y5);
+            textBox9.Size = new Size(W / 2 - 20, H / 5);
+            textBox9.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            createAjustes.ListText.Add(textBox9);
+            createAjustes.PanelTextos.Controls.Add(textBox9);
+
+            TextBox textBox10 = new TextBox();
+            textBox10.Name = "Price3";
+            textBox10.Location = new Point(x2, y5);
+            textBox10.Size = new Size(W / 4 - 20, H / 5);
+            textBox10.TextAlign = HorizontalAlignment.Right;
+            textBox10.TextChanged += textBoxPrice_TextChanged;
+            textBox10.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            createAjustes.ListText.Add(textBox10);
+            createAjustes.PanelTextos.Controls.Add(textBox10);
+
+            ComboBox comboBox11 = new ComboBox();
+            comboBox11.Name = "Moneda3";
+            comboBox11.Location = new Point(x3, y5);
+            comboBox11.Size = new Size(W / 4 - 20, H / 5);
+            comboBox11.Items.Add("$");
+            comboBox11.Items.Add("€");
+            comboBox11.Items.Add("£");
+            comboBox11.SelectedIndex = 0;
+            comboBox11.DropDownStyle = ComboBoxStyle.DropDownList;
+            createAjustes.ListaMoneda.Add(comboBox11);
+            createAjustes.PanelTextos.Controls.Add(comboBox11);
+
+            TextBox textBox12 = new TextBox();
+            textBox12.Name = "Descrip3";
+            textBox12.Location = new Point(x1, y6);
+            textBox12.Multiline = true;
+            textBox12.Size = new Size(W, H * 3 / 5);
+            textBox12.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            createAjustes.ListText.Add(textBox12);
+            createAjustes.PanelTextos.Controls.Add(textBox12);
+        }
+
+        private void textBoxPrice_TextChanged(object sender, EventArgs e)
+        {
+            TextBox text = (TextBox)sender;
+            try
+            {
+                Regex regexObj = new Regex(@"[^\d]");
+                text.Text = regexObj.Replace(text.Text, "");
+            }
+            catch (ArgumentException ex)
+            {
+                
+            }
         }
     }
 }

@@ -27,6 +27,7 @@ namespace Desktop_App
         private TextBox _textBoxLink = new TextBox();
         private List<PictureBox> _listaImages = new List<PictureBox>();
         private List<Panel> _deleteImage = new List<Panel>();
+        private List<ComboBox> _listaMoneda = new List<ComboBox>();
 
         public ClassCreatePanelAjustes(int maxW, int maxH, string title, List<string> items)
         {
@@ -62,6 +63,7 @@ namespace Desktop_App
         public string[,] ListLinks { get => _listLinks; set => _listLinks = value; }
         public List<PictureBox> ListaImages { get => _listaImages; set => _listaImages = value; }
         public List<Panel> DeleteImage { get => _deleteImage; set => _deleteImage = value; }
+        public List<ComboBox> ListaMoneda { get => _listaMoneda; set => _listaMoneda = value; }
 
         private void createView()
         {

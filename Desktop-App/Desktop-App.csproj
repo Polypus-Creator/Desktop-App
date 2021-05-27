@@ -119,6 +119,7 @@
     <Compile Include="Header.cs" />
     <Compile Include="ClassImage.cs" />
     <Compile Include="ImageText.cs" />
+    <Compile Include="PriceCard.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Properties\Resources.Designer.cs">
@@ -187,6 +188,7 @@
     <Content Include="Icons\ImageText.png" />
     <Content Include="Icons\info.png" />
     <Content Include="Icons\navbarIcon.png" />
+    <Content Include="Icons\PriceCardIcon.png" />
     <Content Include="Icons\separatorIcon.png" />
     <Content Include="Icons\TextIconMenu.png" />
     <Content Include="Icons\TitleIcon.png" />
