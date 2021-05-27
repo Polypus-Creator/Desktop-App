@@ -37,6 +37,12 @@ namespace Desktop_App
             this.labelMinimize = new System.Windows.Forms.Label();
             this.labelClose = new System.Windows.Forms.Label();
             this.panelLeftBar = new System.Windows.Forms.Panel();
+            this.panelFinalizarWeb = new System.Windows.Forms.Panel();
+            this.pictureBox27 = new System.Windows.Forms.PictureBox();
+            this.label58 = new System.Windows.Forms.Label();
+            this.panelPrevisualizar = new System.Windows.Forms.Panel();
+            this.pictureBox26 = new System.Windows.Forms.PictureBox();
+            this.label57 = new System.Windows.Forms.Label();
             this.panelUsuario = new System.Windows.Forms.Panel();
             this.panelTuUsuario = new System.Windows.Forms.Panel();
             this.label59 = new System.Windows.Forms.Label();
@@ -129,6 +135,30 @@ namespace Desktop_App
             this.label6 = new System.Windows.Forms.Label();
             this.disenyo = new System.Windows.Forms.TabPage();
             this.panelDise = new System.Windows.Forms.Panel();
+            this.panelAyudaFuente = new System.Windows.Forms.Panel();
+            this.labelFuenteAyuda2 = new System.Windows.Forms.Label();
+            this.panelOcultarAyuda = new System.Windows.Forms.Panel();
+            this.pictureBoxFlecha = new System.Windows.Forms.PictureBox();
+            this.labelOcultarAyuda = new System.Windows.Forms.Label();
+            this.labelFuenteDecidida = new System.Windows.Forms.Label();
+            this.pictureBoxFrancoisOne = new System.Windows.Forms.PictureBox();
+            this.labelFrancoisOne = new System.Windows.Forms.Label();
+            this.pictureBoxAbel = new System.Windows.Forms.PictureBox();
+            this.labelAbel = new System.Windows.Forms.Label();
+            this.pictureBoxYantramanav = new System.Windows.Forms.PictureBox();
+            this.labelYantramanav = new System.Windows.Forms.Label();
+            this.pictureBox25 = new System.Windows.Forms.PictureBox();
+            this.labelSourceSerifPro = new System.Windows.Forms.Label();
+            this.pictureBoxSquadaOne = new System.Windows.Forms.PictureBox();
+            this.labelSquadaOne = new System.Windows.Forms.Label();
+            this.pictureBoxNunito = new System.Windows.Forms.PictureBox();
+            this.labelNunito = new System.Windows.Forms.Label();
+            this.pictureBoxKarla = new System.Windows.Forms.PictureBox();
+            this.labelKarla = new System.Windows.Forms.Label();
+            this.pictureBoxFuente = new System.Windows.Forms.PictureBox();
+            this.labelFuente3 = new System.Windows.Forms.Label();
+            this.labelFuente2 = new System.Windows.Forms.Label();
+            this.labelTituloFuente = new System.Windows.Forms.Label();
             this.panel40 = new System.Windows.Forms.Panel();
             this.pictureBoxFuenteAyuda = new System.Windows.Forms.PictureBox();
             this.panel8 = new System.Windows.Forms.Panel();
@@ -216,40 +246,14 @@ namespace Desktop_App
             this.showHideFaqs = new System.Windows.Forms.PictureBox();
             this.label21 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
-            this.panelPrevisualizar = new System.Windows.Forms.Panel();
-            this.label57 = new System.Windows.Forms.Label();
-            this.pictureBox26 = new System.Windows.Forms.PictureBox();
-            this.panelFinalizarWeb = new System.Windows.Forms.Panel();
-            this.pictureBox27 = new System.Windows.Forms.PictureBox();
-            this.label58 = new System.Windows.Forms.Label();
-            this.panelAyudaFuente = new System.Windows.Forms.Panel();
-            this.labelFuenteAyuda2 = new System.Windows.Forms.Label();
-            this.panelOcultarAyuda = new System.Windows.Forms.Panel();
-            this.pictureBoxFlecha = new System.Windows.Forms.PictureBox();
-            this.labelOcultarAyuda = new System.Windows.Forms.Label();
-            this.labelFuenteDecidida = new System.Windows.Forms.Label();
-            this.pictureBoxFrancoisOne = new System.Windows.Forms.PictureBox();
-            this.labelFrancoisOne = new System.Windows.Forms.Label();
-            this.pictureBoxAbel = new System.Windows.Forms.PictureBox();
-            this.labelAbel = new System.Windows.Forms.Label();
-            this.pictureBoxYantramanav = new System.Windows.Forms.PictureBox();
-            this.labelYantramanav = new System.Windows.Forms.Label();
-            this.pictureBox25 = new System.Windows.Forms.PictureBox();
-            this.labelSourceSerifPro = new System.Windows.Forms.Label();
-            this.pictureBoxSquadaOne = new System.Windows.Forms.PictureBox();
-            this.labelSquadaOne = new System.Windows.Forms.Label();
-            this.pictureBoxNunito = new System.Windows.Forms.PictureBox();
-            this.labelNunito = new System.Windows.Forms.Label();
-            this.pictureBoxKarla = new System.Windows.Forms.PictureBox();
-            this.labelKarla = new System.Windows.Forms.Label();
-            this.pictureBoxFuente = new System.Windows.Forms.PictureBox();
-            this.labelFuente3 = new System.Windows.Forms.Label();
-            this.labelFuente2 = new System.Windows.Forms.Label();
-            this.labelTituloFuente = new System.Windows.Forms.Label();
             this.panelSuperior.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.windowControlButtons.SuspendLayout();
             this.panelLeftBar.SuspendLayout();
+            this.panelFinalizarWeb.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox27)).BeginInit();
+            this.panelPrevisualizar.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox26)).BeginInit();
             this.panelUsuario.SuspendLayout();
             this.panelTuUsuario.SuspendLayout();
             this.panelDesconectar.SuspendLayout();
@@ -303,6 +307,17 @@ namespace Desktop_App
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxWebEjemplo)).BeginInit();
             this.disenyo.SuspendLayout();
             this.panelDise.SuspendLayout();
+            this.panelAyudaFuente.SuspendLayout();
+            this.panelOcultarAyuda.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxFlecha)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxFrancoisOne)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxAbel)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxYantramanav)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox25)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxSquadaOne)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxNunito)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxKarla)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxFuente)).BeginInit();
             this.panel40.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxFuenteAyuda)).BeginInit();
             this.panel12.SuspendLayout();
@@ -341,21 +356,6 @@ namespace Desktop_App
             this.panel21.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.showHideFaqs)).BeginInit();
-            this.panelPrevisualizar.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox26)).BeginInit();
-            this.panelFinalizarWeb.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox27)).BeginInit();
-            this.panelAyudaFuente.SuspendLayout();
-            this.panelOcultarAyuda.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxFlecha)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxFrancoisOne)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxAbel)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxYantramanav)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox25)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxSquadaOne)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxNunito)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxKarla)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxFuente)).BeginInit();
             this.SuspendLayout();
             // 
             // panelSuperior
@@ -443,6 +443,73 @@ namespace Desktop_App
             this.panelLeftBar.Size = new System.Drawing.Size(216, 724);
             this.panelLeftBar.TabIndex = 2;
             this.panelLeftBar.Paint += new System.Windows.Forms.PaintEventHandler(this.panelLeftBar_Paint);
+            // 
+            // panelFinalizarWeb
+            // 
+            this.panelFinalizarWeb.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(152)))), ((int)(((byte)(219)))));
+            this.panelFinalizarWeb.Controls.Add(this.pictureBox27);
+            this.panelFinalizarWeb.Controls.Add(this.label58);
+            this.panelFinalizarWeb.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.panelFinalizarWeb.Enabled = false;
+            this.panelFinalizarWeb.Location = new System.Drawing.Point(14, 502);
+            this.panelFinalizarWeb.Name = "panelFinalizarWeb";
+            this.panelFinalizarWeb.Size = new System.Drawing.Size(188, 32);
+            this.panelFinalizarWeb.TabIndex = 42;
+            // 
+            // pictureBox27
+            // 
+            this.pictureBox27.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox27.Image")));
+            this.pictureBox27.Location = new System.Drawing.Point(24, 6);
+            this.pictureBox27.Name = "pictureBox27";
+            this.pictureBox27.Size = new System.Drawing.Size(20, 20);
+            this.pictureBox27.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox27.TabIndex = 2;
+            this.pictureBox27.TabStop = false;
+            // 
+            // label58
+            // 
+            this.label58.AutoSize = true;
+            this.label58.Font = new System.Drawing.Font("Segoe UI Black", 10.15F, System.Drawing.FontStyle.Bold);
+            this.label58.ForeColor = System.Drawing.Color.White;
+            this.label58.Location = new System.Drawing.Point(44, 7);
+            this.label58.Name = "label58";
+            this.label58.Size = new System.Drawing.Size(124, 19);
+            this.label58.TabIndex = 0;
+            this.label58.Text = "FINALIZAR WEB";
+            // 
+            // panelPrevisualizar
+            // 
+            this.panelPrevisualizar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(131)))), ((int)(((byte)(72)))));
+            this.panelPrevisualizar.Controls.Add(this.pictureBox26);
+            this.panelPrevisualizar.Controls.Add(this.label57);
+            this.panelPrevisualizar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.panelPrevisualizar.Location = new System.Drawing.Point(14, 457);
+            this.panelPrevisualizar.Name = "panelPrevisualizar";
+            this.panelPrevisualizar.Size = new System.Drawing.Size(188, 32);
+            this.panelPrevisualizar.TabIndex = 41;
+            this.panelPrevisualizar.Click += new System.EventHandler(this.panelPrevisualizar_Click);
+            // 
+            // pictureBox26
+            // 
+            this.pictureBox26.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox26.Image")));
+            this.pictureBox26.Location = new System.Drawing.Point(25, 6);
+            this.pictureBox26.Name = "pictureBox26";
+            this.pictureBox26.Size = new System.Drawing.Size(20, 20);
+            this.pictureBox26.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox26.TabIndex = 3;
+            this.pictureBox26.TabStop = false;
+            this.pictureBox26.Click += new System.EventHandler(this.pictureBox26_Click);
+            // 
+            // label57
+            // 
+            this.label57.AutoSize = true;
+            this.label57.Font = new System.Drawing.Font("Segoe UI Black", 10.15F, System.Drawing.FontStyle.Bold);
+            this.label57.ForeColor = System.Drawing.Color.White;
+            this.label57.Location = new System.Drawing.Point(44, 6);
+            this.label57.Name = "label57";
+            this.label57.Size = new System.Drawing.Size(123, 19);
+            this.label57.TabIndex = 0;
+            this.label57.Text = "PREVISUALIZAR";
             // 
             // panelUsuario
             // 
@@ -1538,14 +1605,290 @@ namespace Desktop_App
             this.panelDise.Controls.Add(this.label7);
             this.panelDise.Location = new System.Drawing.Point(15, 14);
             this.panelDise.Name = "panelDise";
-            this.panelDise.Size = new System.Drawing.Size(845, 891);
+            this.panelDise.Size = new System.Drawing.Size(1068, 891);
             this.panelDise.TabIndex = 1;
+            // 
+            // panelAyudaFuente
+            // 
+            this.panelAyudaFuente.BackColor = System.Drawing.Color.White;
+            this.panelAyudaFuente.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panelAyudaFuente.Controls.Add(this.labelFuenteAyuda2);
+            this.panelAyudaFuente.Controls.Add(this.panelOcultarAyuda);
+            this.panelAyudaFuente.Controls.Add(this.labelFuenteDecidida);
+            this.panelAyudaFuente.Controls.Add(this.pictureBoxFrancoisOne);
+            this.panelAyudaFuente.Controls.Add(this.labelFrancoisOne);
+            this.panelAyudaFuente.Controls.Add(this.pictureBoxAbel);
+            this.panelAyudaFuente.Controls.Add(this.labelAbel);
+            this.panelAyudaFuente.Controls.Add(this.pictureBoxYantramanav);
+            this.panelAyudaFuente.Controls.Add(this.labelYantramanav);
+            this.panelAyudaFuente.Controls.Add(this.pictureBox25);
+            this.panelAyudaFuente.Controls.Add(this.labelSourceSerifPro);
+            this.panelAyudaFuente.Controls.Add(this.pictureBoxSquadaOne);
+            this.panelAyudaFuente.Controls.Add(this.labelSquadaOne);
+            this.panelAyudaFuente.Controls.Add(this.pictureBoxNunito);
+            this.panelAyudaFuente.Controls.Add(this.labelNunito);
+            this.panelAyudaFuente.Controls.Add(this.pictureBoxKarla);
+            this.panelAyudaFuente.Controls.Add(this.labelKarla);
+            this.panelAyudaFuente.Controls.Add(this.pictureBoxFuente);
+            this.panelAyudaFuente.Controls.Add(this.labelFuente3);
+            this.panelAyudaFuente.Controls.Add(this.labelFuente2);
+            this.panelAyudaFuente.Controls.Add(this.labelTituloFuente);
+            this.panelAyudaFuente.Location = new System.Drawing.Point(21, 264);
+            this.panelAyudaFuente.Name = "panelAyudaFuente";
+            this.panelAyudaFuente.Size = new System.Drawing.Size(1032, 477);
+            this.panelAyudaFuente.TabIndex = 13;
+            this.panelAyudaFuente.Visible = false;
+            // 
+            // labelFuenteAyuda2
+            // 
+            this.labelFuenteAyuda2.AutoSize = true;
+            this.labelFuenteAyuda2.Font = new System.Drawing.Font("Segoe UI Black", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelFuenteAyuda2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(152)))), ((int)(((byte)(219)))));
+            this.labelFuenteAyuda2.Location = new System.Drawing.Point(713, 324);
+            this.labelFuenteAyuda2.Name = "labelFuenteAyuda2";
+            this.labelFuenteAyuda2.Size = new System.Drawing.Size(263, 37);
+            this.labelFuenteAyuda2.TabIndex = 61;
+            this.labelFuenteAyuda2.Text = " que fuente elegir?";
+            // 
+            // panelOcultarAyuda
+            // 
+            this.panelOcultarAyuda.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(131)))), ((int)(((byte)(72)))));
+            this.panelOcultarAyuda.Controls.Add(this.pictureBoxFlecha);
+            this.panelOcultarAyuda.Controls.Add(this.labelOcultarAyuda);
+            this.panelOcultarAyuda.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.panelOcultarAyuda.Location = new System.Drawing.Point(691, 372);
+            this.panelOcultarAyuda.Name = "panelOcultarAyuda";
+            this.panelOcultarAyuda.Size = new System.Drawing.Size(302, 32);
+            this.panelOcultarAyuda.TabIndex = 60;
+            this.panelOcultarAyuda.Click += new System.EventHandler(this.panelOcultarAyuda_Click_1);
+            // 
+            // pictureBoxFlecha
+            // 
+            this.pictureBoxFlecha.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxFlecha.Image")));
+            this.pictureBoxFlecha.Location = new System.Drawing.Point(78, 6);
+            this.pictureBoxFlecha.Name = "pictureBoxFlecha";
+            this.pictureBoxFlecha.Size = new System.Drawing.Size(20, 20);
+            this.pictureBoxFlecha.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBoxFlecha.TabIndex = 1;
+            this.pictureBoxFlecha.TabStop = false;
+            // 
+            // labelOcultarAyuda
+            // 
+            this.labelOcultarAyuda.AutoSize = true;
+            this.labelOcultarAyuda.Font = new System.Drawing.Font("Segoe UI Black", 10.15F, System.Drawing.FontStyle.Bold);
+            this.labelOcultarAyuda.ForeColor = System.Drawing.Color.White;
+            this.labelOcultarAyuda.Location = new System.Drawing.Point(99, 6);
+            this.labelOcultarAyuda.Name = "labelOcultarAyuda";
+            this.labelOcultarAyuda.Size = new System.Drawing.Size(133, 19);
+            this.labelOcultarAyuda.TabIndex = 0;
+            this.labelOcultarAyuda.Text = "OCULTAR AYUDA";
+            // 
+            // labelFuenteDecidida
+            // 
+            this.labelFuenteDecidida.AutoSize = true;
+            this.labelFuenteDecidida.Font = new System.Drawing.Font("Segoe UI Black", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelFuenteDecidida.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(152)))), ((int)(((byte)(219)))));
+            this.labelFuenteDecidida.Location = new System.Drawing.Point(727, 287);
+            this.labelFuenteDecidida.Name = "labelFuenteDecidida";
+            this.labelFuenteDecidida.Size = new System.Drawing.Size(242, 37);
+            this.labelFuenteDecidida.TabIndex = 59;
+            this.labelFuenteDecidida.Text = "¿Ya has decidido ";
+            // 
+            // pictureBoxFrancoisOne
+            // 
+            this.pictureBoxFrancoisOne.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxFrancoisOne.Image")));
+            this.pictureBoxFrancoisOne.Location = new System.Drawing.Point(723, 187);
+            this.pictureBoxFrancoisOne.Name = "pictureBoxFrancoisOne";
+            this.pictureBoxFrancoisOne.Size = new System.Drawing.Size(257, 39);
+            this.pictureBoxFrancoisOne.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBoxFrancoisOne.TabIndex = 58;
+            this.pictureBoxFrancoisOne.TabStop = false;
+            // 
+            // labelFrancoisOne
+            // 
+            this.labelFrancoisOne.AutoSize = true;
+            this.labelFrancoisOne.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelFrancoisOne.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(152)))), ((int)(((byte)(219)))));
+            this.labelFrancoisOne.Location = new System.Drawing.Point(782, 154);
+            this.labelFrancoisOne.Name = "labelFrancoisOne";
+            this.labelFrancoisOne.Size = new System.Drawing.Size(140, 30);
+            this.labelFrancoisOne.TabIndex = 57;
+            this.labelFrancoisOne.Text = "Francois One";
+            // 
+            // pictureBoxAbel
+            // 
+            this.pictureBoxAbel.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxAbel.Image")));
+            this.pictureBoxAbel.Location = new System.Drawing.Point(388, 402);
+            this.pictureBoxAbel.Name = "pictureBoxAbel";
+            this.pictureBoxAbel.Size = new System.Drawing.Size(257, 39);
+            this.pictureBoxAbel.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBoxAbel.TabIndex = 56;
+            this.pictureBoxAbel.TabStop = false;
+            // 
+            // labelAbel
+            // 
+            this.labelAbel.AutoSize = true;
+            this.labelAbel.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelAbel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(152)))), ((int)(((byte)(219)))));
+            this.labelAbel.Location = new System.Drawing.Point(490, 369);
+            this.labelAbel.Name = "labelAbel";
+            this.labelAbel.Size = new System.Drawing.Size(58, 30);
+            this.labelAbel.TabIndex = 55;
+            this.labelAbel.Text = "Abel";
+            // 
+            // pictureBoxYantramanav
+            // 
+            this.pictureBoxYantramanav.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxYantramanav.Image")));
+            this.pictureBoxYantramanav.Location = new System.Drawing.Point(28, 402);
+            this.pictureBoxYantramanav.Name = "pictureBoxYantramanav";
+            this.pictureBoxYantramanav.Size = new System.Drawing.Size(257, 39);
+            this.pictureBoxYantramanav.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBoxYantramanav.TabIndex = 54;
+            this.pictureBoxYantramanav.TabStop = false;
+            // 
+            // labelYantramanav
+            // 
+            this.labelYantramanav.AutoSize = true;
+            this.labelYantramanav.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelYantramanav.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(152)))), ((int)(((byte)(219)))));
+            this.labelYantramanav.Location = new System.Drawing.Point(85, 369);
+            this.labelYantramanav.Name = "labelYantramanav";
+            this.labelYantramanav.Size = new System.Drawing.Size(140, 30);
+            this.labelYantramanav.TabIndex = 53;
+            this.labelYantramanav.Text = "Yantramanav";
+            // 
+            // pictureBox25
+            // 
+            this.pictureBox25.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox25.Image")));
+            this.pictureBox25.Location = new System.Drawing.Point(393, 291);
+            this.pictureBox25.Name = "pictureBox25";
+            this.pictureBox25.Size = new System.Drawing.Size(257, 39);
+            this.pictureBox25.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox25.TabIndex = 52;
+            this.pictureBox25.TabStop = false;
+            // 
+            // labelSourceSerifPro
+            // 
+            this.labelSourceSerifPro.AutoSize = true;
+            this.labelSourceSerifPro.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelSourceSerifPro.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(152)))), ((int)(((byte)(219)))));
+            this.labelSourceSerifPro.Location = new System.Drawing.Point(442, 258);
+            this.labelSourceSerifPro.Name = "labelSourceSerifPro";
+            this.labelSourceSerifPro.Size = new System.Drawing.Size(171, 30);
+            this.labelSourceSerifPro.TabIndex = 51;
+            this.labelSourceSerifPro.Text = "Source Serif Pro";
+            // 
+            // pictureBoxSquadaOne
+            // 
+            this.pictureBoxSquadaOne.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxSquadaOne.Image")));
+            this.pictureBoxSquadaOne.Location = new System.Drawing.Point(28, 291);
+            this.pictureBoxSquadaOne.Name = "pictureBoxSquadaOne";
+            this.pictureBoxSquadaOne.Size = new System.Drawing.Size(257, 39);
+            this.pictureBoxSquadaOne.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBoxSquadaOne.TabIndex = 50;
+            this.pictureBoxSquadaOne.TabStop = false;
+            // 
+            // labelSquadaOne
+            // 
+            this.labelSquadaOne.AutoSize = true;
+            this.labelSquadaOne.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelSquadaOne.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(152)))), ((int)(((byte)(219)))));
+            this.labelSquadaOne.Location = new System.Drawing.Point(88, 258);
+            this.labelSquadaOne.Name = "labelSquadaOne";
+            this.labelSquadaOne.Size = new System.Drawing.Size(132, 30);
+            this.labelSquadaOne.TabIndex = 49;
+            this.labelSquadaOne.Text = "Squada One";
+            // 
+            // pictureBoxNunito
+            // 
+            this.pictureBoxNunito.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxNunito.Image")));
+            this.pictureBoxNunito.Location = new System.Drawing.Point(395, 187);
+            this.pictureBoxNunito.Name = "pictureBoxNunito";
+            this.pictureBoxNunito.Size = new System.Drawing.Size(257, 39);
+            this.pictureBoxNunito.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBoxNunito.TabIndex = 48;
+            this.pictureBoxNunito.TabStop = false;
+            // 
+            // labelNunito
+            // 
+            this.labelNunito.AutoSize = true;
+            this.labelNunito.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelNunito.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(152)))), ((int)(((byte)(219)))));
+            this.labelNunito.Location = new System.Drawing.Point(484, 154);
+            this.labelNunito.Name = "labelNunito";
+            this.labelNunito.Size = new System.Drawing.Size(83, 30);
+            this.labelNunito.TabIndex = 47;
+            this.labelNunito.Text = "Nunito";
+            // 
+            // pictureBoxKarla
+            // 
+            this.pictureBoxKarla.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxKarla.Image")));
+            this.pictureBoxKarla.Location = new System.Drawing.Point(28, 187);
+            this.pictureBoxKarla.Name = "pictureBoxKarla";
+            this.pictureBoxKarla.Size = new System.Drawing.Size(257, 39);
+            this.pictureBoxKarla.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBoxKarla.TabIndex = 46;
+            this.pictureBoxKarla.TabStop = false;
+            // 
+            // labelKarla
+            // 
+            this.labelKarla.AutoSize = true;
+            this.labelKarla.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelKarla.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(152)))), ((int)(((byte)(219)))));
+            this.labelKarla.Location = new System.Drawing.Point(122, 154);
+            this.labelKarla.Name = "labelKarla";
+            this.labelKarla.Size = new System.Drawing.Size(63, 30);
+            this.labelKarla.TabIndex = 45;
+            this.labelKarla.Text = "Karla";
+            // 
+            // pictureBoxFuente
+            // 
+            this.pictureBoxFuente.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxFuente.Image")));
+            this.pictureBoxFuente.Location = new System.Drawing.Point(603, 31);
+            this.pictureBoxFuente.Name = "pictureBoxFuente";
+            this.pictureBoxFuente.Size = new System.Drawing.Size(85, 79);
+            this.pictureBoxFuente.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBoxFuente.TabIndex = 44;
+            this.pictureBoxFuente.TabStop = false;
+            // 
+            // labelFuente3
+            // 
+            this.labelFuente3.AutoSize = true;
+            this.labelFuente3.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelFuente3.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.labelFuente3.Location = new System.Drawing.Point(13, 89);
+            this.labelFuente3.Name = "labelFuente3";
+            this.labelFuente3.Size = new System.Drawing.Size(572, 21);
+            this.labelFuente3.TabIndex = 41;
+            this.labelFuente3.Text = "A continuación te dejamos unos ejemplos para que encuentres tu favorita";
+            // 
+            // labelFuente2
+            // 
+            this.labelFuente2.AutoSize = true;
+            this.labelFuente2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelFuente2.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.labelFuente2.Location = new System.Drawing.Point(13, 67);
+            this.labelFuente2.Name = "labelFuente2";
+            this.labelFuente2.Size = new System.Drawing.Size(563, 21);
+            this.labelFuente2.TabIndex = 40;
+            this.labelFuente2.Text = "Polypus Creator dispone de diversas fuentes de letras a aplicar en tu web";
+            // 
+            // labelTituloFuente
+            // 
+            this.labelTituloFuente.AutoSize = true;
+            this.labelTituloFuente.Font = new System.Drawing.Font("Segoe UI", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelTituloFuente.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(152)))), ((int)(((byte)(219)))));
+            this.labelTituloFuente.Location = new System.Drawing.Point(8, 14);
+            this.labelTituloFuente.Name = "labelTituloFuente";
+            this.labelTituloFuente.Size = new System.Drawing.Size(553, 50);
+            this.labelTituloFuente.TabIndex = 19;
+            this.labelTituloFuente.Text = "¿No sabes que fuente escoger?";
             // 
             // panel40
             // 
             this.panel40.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(48)))), ((int)(((byte)(45)))));
             this.panel40.Controls.Add(this.pictureBoxFuenteAyuda);
-            this.panel40.Location = new System.Drawing.Point(462, 198);
+            this.panel40.Location = new System.Drawing.Point(994, 198);
             this.panel40.Name = "panel40";
             this.panel40.Size = new System.Drawing.Size(59, 52);
             this.panel40.TabIndex = 12;
@@ -1565,9 +1908,9 @@ namespace Desktop_App
             // 
             this.panel8.BackColor = System.Drawing.Color.CornflowerBlue;
             this.panel8.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.panel8.Location = new System.Drawing.Point(462, 55);
+            this.panel8.Location = new System.Drawing.Point(994, 55);
             this.panel8.Name = "panel8";
-            this.panel8.Size = new System.Drawing.Size(61, 52);
+            this.panel8.Size = new System.Drawing.Size(59, 52);
             this.panel8.TabIndex = 9;
             this.panel8.Click += new System.EventHandler(this.panelColorPrincipal_Click);
             // 
@@ -1575,9 +1918,9 @@ namespace Desktop_App
             // 
             this.panel11.BackColor = System.Drawing.Color.Lime;
             this.panel11.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.panel11.Location = new System.Drawing.Point(462, 127);
+            this.panel11.Location = new System.Drawing.Point(994, 127);
             this.panel11.Name = "panel11";
-            this.panel11.Size = new System.Drawing.Size(61, 52);
+            this.panel11.Size = new System.Drawing.Size(59, 52);
             this.panel11.TabIndex = 9;
             this.panel11.Click += new System.EventHandler(this.panel11_Click);
             // 
@@ -1588,7 +1931,7 @@ namespace Desktop_App
             this.panel12.Controls.Add(this.label19);
             this.panel12.Location = new System.Drawing.Point(18, 198);
             this.panel12.Name = "panel12";
-            this.panel12.Size = new System.Drawing.Size(435, 52);
+            this.panel12.Size = new System.Drawing.Size(950, 52);
             this.panel12.TabIndex = 11;
             // 
             // comboBox1
@@ -1604,9 +1947,9 @@ namespace Desktop_App
             "Yantramanav",
             "Abel",
             "Francois One"});
-            this.comboBox1.Location = new System.Drawing.Point(148, 12);
+            this.comboBox1.Location = new System.Drawing.Point(637, 12);
             this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(264, 29);
+            this.comboBox1.Size = new System.Drawing.Size(290, 29);
             this.comboBox1.TabIndex = 12;
             // 
             // label19
@@ -1627,7 +1970,7 @@ namespace Desktop_App
             this.panel10.Controls.Add(this.label18);
             this.panel10.Location = new System.Drawing.Point(18, 127);
             this.panel10.Name = "panel10";
-            this.panel10.Size = new System.Drawing.Size(435, 52);
+            this.panel10.Size = new System.Drawing.Size(950, 52);
             this.panel10.TabIndex = 10;
             // 
             // label18
@@ -1647,7 +1990,7 @@ namespace Desktop_App
             this.panel7.Controls.Add(this.label17);
             this.panel7.Location = new System.Drawing.Point(18, 55);
             this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(435, 52);
+            this.panel7.Size = new System.Drawing.Size(950, 52);
             this.panel7.TabIndex = 8;
             // 
             // label17
@@ -2487,349 +2830,6 @@ namespace Desktop_App
             this.label10.TabIndex = 5;
             this.label10.Text = "Ayuda";
             // 
-            // panelPrevisualizar
-            // 
-            this.panelPrevisualizar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(131)))), ((int)(((byte)(72)))));
-            this.panelPrevisualizar.Controls.Add(this.pictureBox26);
-            this.panelPrevisualizar.Controls.Add(this.label57);
-            this.panelPrevisualizar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.panelPrevisualizar.Location = new System.Drawing.Point(14, 457);
-            this.panelPrevisualizar.Name = "panelPrevisualizar";
-            this.panelPrevisualizar.Size = new System.Drawing.Size(188, 32);
-            this.panelPrevisualizar.TabIndex = 41;
-            this.panelPrevisualizar.Click += new System.EventHandler(this.panelPrevisualizar_Click);
-            // 
-            // label57
-            // 
-            this.label57.AutoSize = true;
-            this.label57.Font = new System.Drawing.Font("Segoe UI Black", 10.15F, System.Drawing.FontStyle.Bold);
-            this.label57.ForeColor = System.Drawing.Color.White;
-            this.label57.Location = new System.Drawing.Point(44, 6);
-            this.label57.Name = "label57";
-            this.label57.Size = new System.Drawing.Size(123, 19);
-            this.label57.TabIndex = 0;
-            this.label57.Text = "PREVISUALIZAR";
-            // 
-            // pictureBox26
-            // 
-            this.pictureBox26.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox26.Image")));
-            this.pictureBox26.Location = new System.Drawing.Point(25, 6);
-            this.pictureBox26.Name = "pictureBox26";
-            this.pictureBox26.Size = new System.Drawing.Size(20, 20);
-            this.pictureBox26.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox26.TabIndex = 3;
-            this.pictureBox26.TabStop = false;
-            this.pictureBox26.Click += new System.EventHandler(this.pictureBox26_Click);
-            // 
-            // panelFinalizarWeb
-            // 
-            this.panelFinalizarWeb.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(152)))), ((int)(((byte)(219)))));
-            this.panelFinalizarWeb.Controls.Add(this.pictureBox27);
-            this.panelFinalizarWeb.Controls.Add(this.label58);
-            this.panelFinalizarWeb.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.panelFinalizarWeb.Enabled = false;
-            this.panelFinalizarWeb.Location = new System.Drawing.Point(14, 502);
-            this.panelFinalizarWeb.Name = "panelFinalizarWeb";
-            this.panelFinalizarWeb.Size = new System.Drawing.Size(188, 32);
-            this.panelFinalizarWeb.TabIndex = 42;
-            // 
-            // pictureBox27
-            // 
-            this.pictureBox27.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox27.Image")));
-            this.pictureBox27.Location = new System.Drawing.Point(24, 6);
-            this.pictureBox27.Name = "pictureBox27";
-            this.pictureBox27.Size = new System.Drawing.Size(20, 20);
-            this.pictureBox27.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox27.TabIndex = 2;
-            this.pictureBox27.TabStop = false;
-            // 
-            // label58
-            // 
-            this.label58.AutoSize = true;
-            this.label58.Font = new System.Drawing.Font("Segoe UI Black", 10.15F, System.Drawing.FontStyle.Bold);
-            this.label58.ForeColor = System.Drawing.Color.White;
-            this.label58.Location = new System.Drawing.Point(44, 7);
-            this.label58.Name = "label58";
-            this.label58.Size = new System.Drawing.Size(124, 19);
-            this.label58.TabIndex = 0;
-            this.label58.Text = "FINALIZAR WEB";
-            // 
-            // panelAyudaFuente
-            // 
-            this.panelAyudaFuente.BackColor = System.Drawing.Color.White;
-            this.panelAyudaFuente.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panelAyudaFuente.Controls.Add(this.labelFuenteAyuda2);
-            this.panelAyudaFuente.Controls.Add(this.panelOcultarAyuda);
-            this.panelAyudaFuente.Controls.Add(this.labelFuenteDecidida);
-            this.panelAyudaFuente.Controls.Add(this.pictureBoxFrancoisOne);
-            this.panelAyudaFuente.Controls.Add(this.labelFrancoisOne);
-            this.panelAyudaFuente.Controls.Add(this.pictureBoxAbel);
-            this.panelAyudaFuente.Controls.Add(this.labelAbel);
-            this.panelAyudaFuente.Controls.Add(this.pictureBoxYantramanav);
-            this.panelAyudaFuente.Controls.Add(this.labelYantramanav);
-            this.panelAyudaFuente.Controls.Add(this.pictureBox25);
-            this.panelAyudaFuente.Controls.Add(this.labelSourceSerifPro);
-            this.panelAyudaFuente.Controls.Add(this.pictureBoxSquadaOne);
-            this.panelAyudaFuente.Controls.Add(this.labelSquadaOne);
-            this.panelAyudaFuente.Controls.Add(this.pictureBoxNunito);
-            this.panelAyudaFuente.Controls.Add(this.labelNunito);
-            this.panelAyudaFuente.Controls.Add(this.pictureBoxKarla);
-            this.panelAyudaFuente.Controls.Add(this.labelKarla);
-            this.panelAyudaFuente.Controls.Add(this.pictureBoxFuente);
-            this.panelAyudaFuente.Controls.Add(this.labelFuente3);
-            this.panelAyudaFuente.Controls.Add(this.labelFuente2);
-            this.panelAyudaFuente.Controls.Add(this.labelTituloFuente);
-            this.panelAyudaFuente.Location = new System.Drawing.Point(21, 264);
-            this.panelAyudaFuente.Name = "panelAyudaFuente";
-            this.panelAyudaFuente.Size = new System.Drawing.Size(1032, 477);
-            this.panelAyudaFuente.TabIndex = 13;
-            this.panelAyudaFuente.Visible = false;
-            // 
-            // labelFuenteAyuda2
-            // 
-            this.labelFuenteAyuda2.AutoSize = true;
-            this.labelFuenteAyuda2.Font = new System.Drawing.Font("Segoe UI Black", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelFuenteAyuda2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(152)))), ((int)(((byte)(219)))));
-            this.labelFuenteAyuda2.Location = new System.Drawing.Point(713, 324);
-            this.labelFuenteAyuda2.Name = "labelFuenteAyuda2";
-            this.labelFuenteAyuda2.Size = new System.Drawing.Size(263, 37);
-            this.labelFuenteAyuda2.TabIndex = 61;
-            this.labelFuenteAyuda2.Text = " que fuente elegir?";
-            // 
-            // panelOcultarAyuda
-            // 
-            this.panelOcultarAyuda.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(131)))), ((int)(((byte)(72)))));
-            this.panelOcultarAyuda.Controls.Add(this.pictureBoxFlecha);
-            this.panelOcultarAyuda.Controls.Add(this.labelOcultarAyuda);
-            this.panelOcultarAyuda.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.panelOcultarAyuda.Location = new System.Drawing.Point(691, 372);
-            this.panelOcultarAyuda.Name = "panelOcultarAyuda";
-            this.panelOcultarAyuda.Size = new System.Drawing.Size(302, 32);
-            this.panelOcultarAyuda.TabIndex = 60;
-            this.panelOcultarAyuda.Click += new System.EventHandler(this.panelOcultarAyuda_Click_1);
-            // 
-            // pictureBoxFlecha
-            // 
-            this.pictureBoxFlecha.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxFlecha.Image")));
-            this.pictureBoxFlecha.Location = new System.Drawing.Point(78, 6);
-            this.pictureBoxFlecha.Name = "pictureBoxFlecha";
-            this.pictureBoxFlecha.Size = new System.Drawing.Size(20, 20);
-            this.pictureBoxFlecha.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBoxFlecha.TabIndex = 1;
-            this.pictureBoxFlecha.TabStop = false;
-            // 
-            // labelOcultarAyuda
-            // 
-            this.labelOcultarAyuda.AutoSize = true;
-            this.labelOcultarAyuda.Font = new System.Drawing.Font("Segoe UI Black", 10.15F, System.Drawing.FontStyle.Bold);
-            this.labelOcultarAyuda.ForeColor = System.Drawing.Color.White;
-            this.labelOcultarAyuda.Location = new System.Drawing.Point(99, 6);
-            this.labelOcultarAyuda.Name = "labelOcultarAyuda";
-            this.labelOcultarAyuda.Size = new System.Drawing.Size(133, 19);
-            this.labelOcultarAyuda.TabIndex = 0;
-            this.labelOcultarAyuda.Text = "OCULTAR AYUDA";
-            // 
-            // labelFuenteDecidida
-            // 
-            this.labelFuenteDecidida.AutoSize = true;
-            this.labelFuenteDecidida.Font = new System.Drawing.Font("Segoe UI Black", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelFuenteDecidida.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(152)))), ((int)(((byte)(219)))));
-            this.labelFuenteDecidida.Location = new System.Drawing.Point(727, 287);
-            this.labelFuenteDecidida.Name = "labelFuenteDecidida";
-            this.labelFuenteDecidida.Size = new System.Drawing.Size(242, 37);
-            this.labelFuenteDecidida.TabIndex = 59;
-            this.labelFuenteDecidida.Text = "¿Ya has decidido ";
-            // 
-            // pictureBoxFrancoisOne
-            // 
-            this.pictureBoxFrancoisOne.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxFrancoisOne.Image")));
-            this.pictureBoxFrancoisOne.Location = new System.Drawing.Point(723, 187);
-            this.pictureBoxFrancoisOne.Name = "pictureBoxFrancoisOne";
-            this.pictureBoxFrancoisOne.Size = new System.Drawing.Size(257, 39);
-            this.pictureBoxFrancoisOne.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBoxFrancoisOne.TabIndex = 58;
-            this.pictureBoxFrancoisOne.TabStop = false;
-            // 
-            // labelFrancoisOne
-            // 
-            this.labelFrancoisOne.AutoSize = true;
-            this.labelFrancoisOne.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelFrancoisOne.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(152)))), ((int)(((byte)(219)))));
-            this.labelFrancoisOne.Location = new System.Drawing.Point(782, 154);
-            this.labelFrancoisOne.Name = "labelFrancoisOne";
-            this.labelFrancoisOne.Size = new System.Drawing.Size(140, 30);
-            this.labelFrancoisOne.TabIndex = 57;
-            this.labelFrancoisOne.Text = "Francois One";
-            // 
-            // pictureBoxAbel
-            // 
-            this.pictureBoxAbel.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxAbel.Image")));
-            this.pictureBoxAbel.Location = new System.Drawing.Point(388, 402);
-            this.pictureBoxAbel.Name = "pictureBoxAbel";
-            this.pictureBoxAbel.Size = new System.Drawing.Size(257, 39);
-            this.pictureBoxAbel.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBoxAbel.TabIndex = 56;
-            this.pictureBoxAbel.TabStop = false;
-            // 
-            // labelAbel
-            // 
-            this.labelAbel.AutoSize = true;
-            this.labelAbel.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelAbel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(152)))), ((int)(((byte)(219)))));
-            this.labelAbel.Location = new System.Drawing.Point(490, 369);
-            this.labelAbel.Name = "labelAbel";
-            this.labelAbel.Size = new System.Drawing.Size(58, 30);
-            this.labelAbel.TabIndex = 55;
-            this.labelAbel.Text = "Abel";
-            // 
-            // pictureBoxYantramanav
-            // 
-            this.pictureBoxYantramanav.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxYantramanav.Image")));
-            this.pictureBoxYantramanav.Location = new System.Drawing.Point(28, 402);
-            this.pictureBoxYantramanav.Name = "pictureBoxYantramanav";
-            this.pictureBoxYantramanav.Size = new System.Drawing.Size(257, 39);
-            this.pictureBoxYantramanav.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBoxYantramanav.TabIndex = 54;
-            this.pictureBoxYantramanav.TabStop = false;
-            // 
-            // labelYantramanav
-            // 
-            this.labelYantramanav.AutoSize = true;
-            this.labelYantramanav.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelYantramanav.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(152)))), ((int)(((byte)(219)))));
-            this.labelYantramanav.Location = new System.Drawing.Point(85, 369);
-            this.labelYantramanav.Name = "labelYantramanav";
-            this.labelYantramanav.Size = new System.Drawing.Size(140, 30);
-            this.labelYantramanav.TabIndex = 53;
-            this.labelYantramanav.Text = "Yantramanav";
-            // 
-            // pictureBox25
-            // 
-            this.pictureBox25.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox25.Image")));
-            this.pictureBox25.Location = new System.Drawing.Point(393, 291);
-            this.pictureBox25.Name = "pictureBox25";
-            this.pictureBox25.Size = new System.Drawing.Size(257, 39);
-            this.pictureBox25.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox25.TabIndex = 52;
-            this.pictureBox25.TabStop = false;
-            // 
-            // labelSourceSerifPro
-            // 
-            this.labelSourceSerifPro.AutoSize = true;
-            this.labelSourceSerifPro.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelSourceSerifPro.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(152)))), ((int)(((byte)(219)))));
-            this.labelSourceSerifPro.Location = new System.Drawing.Point(442, 258);
-            this.labelSourceSerifPro.Name = "labelSourceSerifPro";
-            this.labelSourceSerifPro.Size = new System.Drawing.Size(171, 30);
-            this.labelSourceSerifPro.TabIndex = 51;
-            this.labelSourceSerifPro.Text = "Source Serif Pro";
-            // 
-            // pictureBoxSquadaOne
-            // 
-            this.pictureBoxSquadaOne.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxSquadaOne.Image")));
-            this.pictureBoxSquadaOne.Location = new System.Drawing.Point(28, 291);
-            this.pictureBoxSquadaOne.Name = "pictureBoxSquadaOne";
-            this.pictureBoxSquadaOne.Size = new System.Drawing.Size(257, 39);
-            this.pictureBoxSquadaOne.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBoxSquadaOne.TabIndex = 50;
-            this.pictureBoxSquadaOne.TabStop = false;
-            // 
-            // labelSquadaOne
-            // 
-            this.labelSquadaOne.AutoSize = true;
-            this.labelSquadaOne.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelSquadaOne.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(152)))), ((int)(((byte)(219)))));
-            this.labelSquadaOne.Location = new System.Drawing.Point(88, 258);
-            this.labelSquadaOne.Name = "labelSquadaOne";
-            this.labelSquadaOne.Size = new System.Drawing.Size(132, 30);
-            this.labelSquadaOne.TabIndex = 49;
-            this.labelSquadaOne.Text = "Squada One";
-            // 
-            // pictureBoxNunito
-            // 
-            this.pictureBoxNunito.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxNunito.Image")));
-            this.pictureBoxNunito.Location = new System.Drawing.Point(395, 187);
-            this.pictureBoxNunito.Name = "pictureBoxNunito";
-            this.pictureBoxNunito.Size = new System.Drawing.Size(257, 39);
-            this.pictureBoxNunito.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBoxNunito.TabIndex = 48;
-            this.pictureBoxNunito.TabStop = false;
-            // 
-            // labelNunito
-            // 
-            this.labelNunito.AutoSize = true;
-            this.labelNunito.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelNunito.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(152)))), ((int)(((byte)(219)))));
-            this.labelNunito.Location = new System.Drawing.Point(484, 154);
-            this.labelNunito.Name = "labelNunito";
-            this.labelNunito.Size = new System.Drawing.Size(83, 30);
-            this.labelNunito.TabIndex = 47;
-            this.labelNunito.Text = "Nunito";
-            // 
-            // pictureBoxKarla
-            // 
-            this.pictureBoxKarla.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxKarla.Image")));
-            this.pictureBoxKarla.Location = new System.Drawing.Point(28, 187);
-            this.pictureBoxKarla.Name = "pictureBoxKarla";
-            this.pictureBoxKarla.Size = new System.Drawing.Size(257, 39);
-            this.pictureBoxKarla.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBoxKarla.TabIndex = 46;
-            this.pictureBoxKarla.TabStop = false;
-            // 
-            // labelKarla
-            // 
-            this.labelKarla.AutoSize = true;
-            this.labelKarla.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelKarla.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(152)))), ((int)(((byte)(219)))));
-            this.labelKarla.Location = new System.Drawing.Point(122, 154);
-            this.labelKarla.Name = "labelKarla";
-            this.labelKarla.Size = new System.Drawing.Size(63, 30);
-            this.labelKarla.TabIndex = 45;
-            this.labelKarla.Text = "Karla";
-            // 
-            // pictureBoxFuente
-            // 
-            this.pictureBoxFuente.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxFuente.Image")));
-            this.pictureBoxFuente.Location = new System.Drawing.Point(603, 31);
-            this.pictureBoxFuente.Name = "pictureBoxFuente";
-            this.pictureBoxFuente.Size = new System.Drawing.Size(85, 79);
-            this.pictureBoxFuente.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBoxFuente.TabIndex = 44;
-            this.pictureBoxFuente.TabStop = false;
-            // 
-            // labelFuente3
-            // 
-            this.labelFuente3.AutoSize = true;
-            this.labelFuente3.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelFuente3.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.labelFuente3.Location = new System.Drawing.Point(13, 89);
-            this.labelFuente3.Name = "labelFuente3";
-            this.labelFuente3.Size = new System.Drawing.Size(572, 21);
-            this.labelFuente3.TabIndex = 41;
-            this.labelFuente3.Text = "A continuación te dejamos unos ejemplos para que encuentres tu favorita";
-            // 
-            // labelFuente2
-            // 
-            this.labelFuente2.AutoSize = true;
-            this.labelFuente2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelFuente2.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.labelFuente2.Location = new System.Drawing.Point(13, 67);
-            this.labelFuente2.Name = "labelFuente2";
-            this.labelFuente2.Size = new System.Drawing.Size(563, 21);
-            this.labelFuente2.TabIndex = 40;
-            this.labelFuente2.Text = "Polypus Creator dispone de diversas fuentes de letras a aplicar en tu web";
-            // 
-            // labelTituloFuente
-            // 
-            this.labelTituloFuente.AutoSize = true;
-            this.labelTituloFuente.Font = new System.Drawing.Font("Segoe UI", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelTituloFuente.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(152)))), ((int)(((byte)(219)))));
-            this.labelTituloFuente.Location = new System.Drawing.Point(8, 14);
-            this.labelTituloFuente.Name = "labelTituloFuente";
-            this.labelTituloFuente.Size = new System.Drawing.Size(553, 50);
-            this.labelTituloFuente.TabIndex = 19;
-            this.labelTituloFuente.Text = "¿No sabes que fuente escoger?";
-            // 
             // FormPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -2849,6 +2849,12 @@ namespace Desktop_App
             this.windowControlButtons.ResumeLayout(false);
             this.windowControlButtons.PerformLayout();
             this.panelLeftBar.ResumeLayout(false);
+            this.panelFinalizarWeb.ResumeLayout(false);
+            this.panelFinalizarWeb.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox27)).EndInit();
+            this.panelPrevisualizar.ResumeLayout(false);
+            this.panelPrevisualizar.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox26)).EndInit();
             this.panelUsuario.ResumeLayout(false);
             this.panelUsuario.PerformLayout();
             this.panelTuUsuario.ResumeLayout(false);
@@ -2927,6 +2933,19 @@ namespace Desktop_App
             this.disenyo.ResumeLayout(false);
             this.panelDise.ResumeLayout(false);
             this.panelDise.PerformLayout();
+            this.panelAyudaFuente.ResumeLayout(false);
+            this.panelAyudaFuente.PerformLayout();
+            this.panelOcultarAyuda.ResumeLayout(false);
+            this.panelOcultarAyuda.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxFlecha)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxFrancoisOne)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxAbel)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxYantramanav)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox25)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxSquadaOne)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxNunito)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxKarla)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxFuente)).EndInit();
             this.panel40.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxFuenteAyuda)).EndInit();
             this.panel12.ResumeLayout(false);
@@ -2989,25 +3008,6 @@ namespace Desktop_App
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.showHideFaqs)).EndInit();
-            this.panelPrevisualizar.ResumeLayout(false);
-            this.panelPrevisualizar.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox26)).EndInit();
-            this.panelFinalizarWeb.ResumeLayout(false);
-            this.panelFinalizarWeb.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox27)).EndInit();
-            this.panelAyudaFuente.ResumeLayout(false);
-            this.panelAyudaFuente.PerformLayout();
-            this.panelOcultarAyuda.ResumeLayout(false);
-            this.panelOcultarAyuda.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxFlecha)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxFrancoisOne)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxAbel)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxYantramanav)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox25)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxSquadaOne)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxNunito)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxKarla)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxFuente)).EndInit();
             this.ResumeLayout(false);
 
         }
