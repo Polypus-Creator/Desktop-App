@@ -45,13 +45,13 @@ namespace Desktop_App
                 panelDashboard.Enabled = true;
 
                 panelDisenyo.Enabled = false;
-                //panelDisenyo.BackColor = Color.FromArgb(153, 155, 154);
+                panelDisenyo.BackColor = Color.FromArgb(153, 155, 154);
 
                 panelConstructor.Enabled = false;
-                //panelConstructor.BackColor = Color.FromArgb(153, 155, 154);
+                panelConstructor.BackColor = Color.FromArgb(153, 155, 154);
 
                 panelAjustes.Enabled = false;
-                //panelAjustes.BackColor = Color.FromArgb(153, 155, 154);
+                panelAjustes.BackColor = Color.FromArgb(153, 155, 154);
 
                 panelAyuda.Enabled = true;
             } else
@@ -104,7 +104,7 @@ namespace Desktop_App
             DataClass.backTwo = panel11.BackColor;
             firstLogin = true;
             panel4.Height = panelConst.Height - 20;
-
+            //panelUsuario.Location = new Point(fullHeight / 2);
 
         }
 
@@ -2070,6 +2070,44 @@ namespace Desktop_App
             {
                 
             }
+        }
+
+        private void panelDesconectar_Click(object sender, EventArgs e)
+        {
+            FormLogin login = new FormLogin();
+            login.Show();
+            this.Hide();
+        }
+
+        private void pictureBoxFuenteAyuda_Click(object sender, EventArgs e)
+        {
+            panelAyudaFuente.Visible = true;
+        }
+
+        private void panelOcultarAyuda_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void panelOcultarAyuda_Click(object sender, EventArgs e)
+        {
+            panelAyudaFuente.Visible = false;
+        }
+
+        private void pictureBox26_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panelPrevisualizar_Click(object sender, EventArgs e)
+        {
+            // codigo de generar la web
+            panelFinalizarWeb.Enabled = true;
+        }
+
+        private void panelOcultarAyuda_Click_1(object sender, EventArgs e)
+        {
+            panelAyudaFuente.Visible = false;
         }
     }
 }
