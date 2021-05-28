@@ -18,7 +18,7 @@ namespace Desktop_App
         
         public CallToAction(string title, string text, Color backColor, Color buttonColor, string buttonText, string buttonUrl, string orientation)
         {
-            Elemento = "CallToAction" + orientation;
+            Elemento = "CallToAction";
             Title = title;
             Text = text;
             BackColor = HexConverter(backColor);

@@ -28,20 +28,30 @@ namespace Desktop_App
         private List<PictureBox> _listaImages = new List<PictureBox>();
         private List<Panel> _deleteImage = new List<Panel>();
         private List<ComboBox> _listaMoneda = new List<ComboBox>();
-
+        private int y1 = 57;
         public ClassCreatePanelAjustes(int maxW, int maxH, string title, List<string> items)
         {
-            this.MaxH = maxH;
-            this.MaxW = maxW;
-            this.Title = title;
-            this.ListItems = items;
+            MaxH = maxH;
+            MaxW = maxW;
+            Title = title;
+            ListItems = items;
+            createView();
+        }
+
+        public ClassCreatePanelAjustes(int maxW, int maxH, string title, List<string> items,int y1)
+        {
+            MaxH = maxH;
+            MaxW = maxW;
+            Title = title;
+            ListItems = items;
+            Y1 = y1;
             createView();
         }
         public ClassCreatePanelAjustes(int maxW, int maxH, string title)
         {
-            this.MaxH = maxH;
-            this.MaxW = maxW;
-            this.Title = title;
+            MaxH = maxH;
+            MaxW = maxW;
+            Title = title;
             createView();
         }
 
@@ -64,6 +74,7 @@ namespace Desktop_App
         public List<PictureBox> ListaImages { get => _listaImages; set => _listaImages = value; }
         public List<Panel> DeleteImage { get => _deleteImage; set => _deleteImage = value; }
         public List<ComboBox> ListaMoneda { get => _listaMoneda; set => _listaMoneda = value; }
+        public int Y1 { get => y1; set => y1 = value; }
 
         private void createView()
         {
@@ -147,7 +158,6 @@ namespace Desktop_App
         private void crearItems()
         {
             int x1 = 21, x2 = 193;
-            int y1 = 57;
             int fila = 0;
             int countId =0;
             Boolean derecha = true;

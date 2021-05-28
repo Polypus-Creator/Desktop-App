@@ -625,7 +625,6 @@ namespace Desktop_App
                     if (element.PanelEd.Equals(panel))
                     {
                         element.CreateAjustes.PanelGlo.Visible = true;
-                        break;
                     }
                 }
             }
@@ -638,7 +637,6 @@ namespace Desktop_App
                     if (element.PbEd.Equals(picture))
                     {
                         element.CreateAjustes.PanelGlo.Visible = true;
-                        break;
                     }
                 }
             }
@@ -710,24 +708,25 @@ namespace Desktop_App
                 }else if (panel.Title == "Image")
                 {
                     ClassImage image = new ClassImage("Image");
-                    foreach(ClassCreatePanelElement element in panelesFlow)
-                    {
-                        if (element.CreateAjustes.Equals(panel))
-                        {
+                    foreach (ClassCreatePanelElement element in panelesFlow) {
+                        if (element.CreateAjustes.Equals(panel)){
                             element.Options.ForEach(delegate (string ruta)
                             {
-                                if(ruta != null && ruta != "")
+                                if (ruta != null && ruta != "")
                                 {
+                                    MessageBox.Show(ruta);
                                     image.RutasImages.Add(ruta);
                                 }
+
                             });
+                            
                         }
-                        break;
+                        
                     }
                     DataClass.listasElementos.Add(image);
                 }else if (panel.Title == "Title")
                 {
-                    Title title = new Title("Tilte", panel.ListText[0].Text);
+                    Title title = new Title("Title", panel.ListText[0].Text);
                     DataClass.listasElementos.Add(title);
                 }
                 else if (panel.Title == "Text")
@@ -809,6 +808,17 @@ namespace Desktop_App
                     PriceCard price = new PriceCard("Price Card", contenido);
                     DataClass.listasElementos.Add(price);
                 }
+                else if (panel.Title == "Button")
+                {
+                    ClassButton button = new ClassButton("Button", panel.ListText[0].Text, panel.ListText[1].Text);
+                    DataClass.listasElementos.Add(button);
+                }
+                else if (panel.Title == "Mapa")
+                {
+                    string iframe = panel.ListText[4].Text;
+                    Mapa button = new Mapa("Mapa", panel.ListText[4].Text, panel.ListText[5].Text, panel.ListText[0].Text, panel.ListText[1].Text, panel.ListText[2].Text, panel.ListText[3].Text);
+                    DataClass.listasElementos.Add(button);
+                }
             });
                 
             
@@ -816,7 +826,7 @@ namespace Desktop_App
             DataClass.classListaJSON.WebName = textBoxNombre.Text;
             string obstring = JsonConvert.SerializeObject(DataClass.classListaJSON);
             JObject googleSearch = JObject.Parse(obstring);
-            MessageBox.Show(googleSearch.ToString());
+            Console.WriteLine(googleSearch.ToString());
 
             string typo = sender.GetType().Name;
             foreach(ClassCreatePanelAjustes elem in panelesAjustes)
@@ -904,6 +914,18 @@ namespace Desktop_App
                     JObject googleSearch = JObject.Parse(obstring);
                     DataClass.classListaJSON.ListaJSON.Add(googleSearch);
                 }
+                else if (objeto is ClassButton)
+                {
+                    string obstring = JsonConvert.SerializeObject((ClassButton)objeto);
+                    JObject googleSearch = JObject.Parse(obstring);
+                    DataClass.classListaJSON.ListaJSON.Add(googleSearch);
+                }
+                else if (objeto is Mapa)
+                {
+                    string obstring = JsonConvert.SerializeObject((Mapa)objeto);
+                    JObject googleSearch = JObject.Parse(obstring);
+                    DataClass.classListaJSON.ListaJSON.Add(googleSearch);
+                }
             });
            
         }
@@ -987,6 +1009,15 @@ namespace Desktop_App
                     }
                 }
             }else if (elementos.Id == "Title")
+            {
+                elementos.LabelOptions[Int32.Parse(textBox.Name)].Visible = true;
+                elementos.LabelOptions[Int32.Parse(textBox.Name)].Text = textBox.Text;
+                if (elementos.LabelOptions[Int32.Parse(textBox.Name)].Text == "")
+                {
+                    elementos.LabelOptions[Int32.Parse(textBox.Name)].Visible = false;
+                }
+            }
+            else if (elementos.Id == "Button")
             {
                 elementos.LabelOptions[Int32.Parse(textBox.Name)].Visible = true;
                 elementos.LabelOptions[Int32.Parse(textBox.Name)].Text = textBox.Text;
@@ -1702,7 +1733,7 @@ namespace Desktop_App
                                     ajustes.ListaImages[0].Image = Desktop_App.Properties.Resources.addNewImage; ;
                                     element.ButonsOptions[0].Image = null;
                                     element.ButonsOptions[0].Visible = false;
-                                    element.Options[0] = null;
+                                    ajustes.ListItems[0] = null;
                                     break;
                                 }
                                 else if (panelDelete.Name.Contains("2"))
@@ -1710,7 +1741,7 @@ namespace Desktop_App
                                     ajustes.ListaImages[1].Image = Desktop_App.Properties.Resources.addNewImage; ;
                                     element.ButonsOptions[1].Image = null;
                                     element.ButonsOptions[1].Visible = false;
-                                    element.Options[1] = null;
+                                    ajustes.ListItems[1] = null;
                                     break;
                                 }
                                 else if (panelDelete.Name.Contains("3"))
@@ -1718,7 +1749,7 @@ namespace Desktop_App
                                     ajustes.ListaImages[2].Image = Desktop_App.Properties.Resources.addNewImage; ;
                                     element.ButonsOptions[2].Image = null;
                                     element.ButonsOptions[2].Visible = false;
-                                    element.Options[2] = null;
+                                    ajustes.ListItems[2] = null;
                                     break;
                                 }
 
@@ -2065,6 +2096,7 @@ namespace Desktop_App
             {
                 Regex regexObj = new Regex(@"[^\d]");
                 text.Text = regexObj.Replace(text.Text, "");
+                text.Select(text.Text.Length, 0);
             }
             catch (ArgumentException ex)
             {
@@ -2084,20 +2116,7 @@ namespace Desktop_App
             panelAyudaFuente.Visible = true;
         }
 
-        private void panelOcultarAyuda_Paint(object sender, PaintEventArgs e)
-        {
 
-        }
-
-        private void panelOcultarAyuda_Click(object sender, EventArgs e)
-        {
-            panelAyudaFuente.Visible = false;
-        }
-
-        private void pictureBox26_Click(object sender, EventArgs e)
-        {
-
-        }
 
         private void panelPrevisualizar_Click(object sender, EventArgs e)
         {
@@ -2105,9 +2124,153 @@ namespace Desktop_App
             panelFinalizarWeb.Enabled = true;
         }
 
-        private void panelOcultarAyuda_Click_1(object sender, EventArgs e)
+        private void panelOcultarAyuda_Click_2(object sender, EventArgs e)
         {
             panelAyudaFuente.Visible = false;
+        }
+
+        private void pictureBox24_MouseClick(object sender, MouseEventArgs e)
+        {
+            string title = "Button";
+            List<string> options = new List<string>();
+            options.Add("Text");
+            options.Add("Link");
+            ClassCreatePanelElement panelElement = new ClassCreatePanelElement(482, options.Count, title, options);
+            flowLayoutPanelCurrentElements.Controls.Add(panelElement.PanelGol);
+            panelesFlow.Add(panelElement);
+            panelElement.PanelGol.Name = "Button" + panelesFlow.Count;
+            panelElement.LabelTitle.Size = new Size(120, 21);
+            panelElement.LabelOptions.ForEach(delegate (Label label)
+            {
+                label.Visible = true;
+            });
+            panelElement.CreateAjustes = new ClassCreatePanelAjustes(410, 310, panelElement.Title, panelElement.Options);
+            panel4.Controls.Add(panelElement.CreateAjustes.PanelGlo);
+            panelesAjustes.Add(panelElement.CreateAjustes);
+
+            panelElement.CreateAjustes.ListText.ForEach(delegate (TextBox text)
+            {
+                text.TextChanged += textBox_TextChanged;
+            });
+
+            panelElement.CreateAjustes.PanelSave.MouseClick += new System.Windows.Forms.MouseEventHandler(PanelSave_MousClick);
+            panelElement.CreateAjustes.LabelSave.MouseClick += new System.Windows.Forms.MouseEventHandler(PanelSave_MousClick);
+
+            panelElement.PanelDe.Name = "ButtonDelete" + panelesFlow.Count;
+            panelElement.PbDe.Name = "ButtonDelete" + panelesFlow.Count;
+
+            panelElement.PanelDe.MouseClick += new System.Windows.Forms.MouseEventHandler(PanelDe_MouseClicked);
+            panelElement.PbDe.MouseClick += new System.Windows.Forms.MouseEventHandler(PanelDe_MouseClicked);
+
+            panelElement.PanelEd.Name = "ButtonTextEdit" + panelesFlow.Count;
+            panelElement.PbEd.Name = "ButtonTextEdit" + panelesFlow.Count;
+
+            panelElement.PanelEd.MouseClick += new System.Windows.Forms.MouseEventHandler(PanelEd_MouseClick);
+            panelElement.PbEd.MouseClick += new System.Windows.Forms.MouseEventHandler(PanelEd_MouseClick);
+            ordenarPaneles();
+        }
+
+
+        private void pictureBox28_MouseClick(object sender, MouseEventArgs e)
+        {
+            string title = "Mapa";
+            List<string> options = new List<string>();
+            options.Add("Google");
+            options.Add("Title");
+            options.Add("Correo");
+            options.Add("Tel.");
+            options.Add("Hora");
+            options.Add("Web");
+            ClassCreatePanelElement panelElement = new ClassCreatePanelElement(482, options.Count, title, options);
+            flowLayoutPanelCurrentElements.Controls.Add(panelElement.PanelGol);
+            panelesFlow.Add(panelElement);
+            panelElement.PanelGol.Name = "Mapa" + panelesFlow.Count;
+            panelElement.LabelTitle.Size = new Size(120, 21);
+            panelElement.LabelOptions.ForEach(delegate (Label label)
+            {
+                label.Visible = true;
+            });
+            List<string> option2 = new List<string>();
+            option2.Add("Correo");
+            option2.Add("Teléfono");
+            option2.Add("Horario");
+            option2.Add("Web");
+            panelElement.CreateAjustes = new ClassCreatePanelAjustes(410, 355, panelElement.Title,option2, 57 + 40 + 24+44);
+            panel4.Controls.Add(panelElement.CreateAjustes.PanelGlo);
+            panelesAjustes.Add(panelElement.CreateAjustes);
+
+            panelElement.CreateAjustes.PanelTextos.Height = 229;
+            panelElement.CreateAjustes.PanelSave.Location = new Point(panelElement.CreateAjustes.PanelSave.Location.X, panelElement.CreateAjustes.PanelGlo.Height - panelElement.CreateAjustes.PanelSave.Height - 5);
+
+            TextBox iframe = new TextBox();
+            iframe.Name = "iframe";
+            iframe.Multiline = true;
+            iframe.Size = new Size(149*2+23, 40);
+            iframe.Location = new Point(21, 57);
+            iframe.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            panelElement.CreateAjustes.ListText.Add(iframe);
+            panelElement.CreateAjustes.PanelTextos.Controls.Add(iframe);
+
+            TextBox tbTitle = new TextBox();
+            tbTitle.Name = "title";
+            tbTitle.Size = new Size(149 * 2+23, 20);
+            tbTitle.Location = new Point(21, 57+40+24);
+            tbTitle.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            panelElement.CreateAjustes.ListText.Add(tbTitle);
+            panelElement.CreateAjustes.PanelTextos.Controls.Add(tbTitle);
+
+            panelElement.CreateAjustes.ListText[0].LostFocus += CorreoValidator_LostFocus;
+            panelElement.CreateAjustes.ListText[1].LostFocus += PhoneValidator_LostFocus;
+
+            panelElement.CreateAjustes.PanelSave.MouseClick += new System.Windows.Forms.MouseEventHandler(PanelSave_MousClick);
+            panelElement.CreateAjustes.LabelSave.MouseClick += new System.Windows.Forms.MouseEventHandler(PanelSave_MousClick);
+
+            panelElement.PanelDe.Name = "MapaDelete" + panelesFlow.Count;
+            panelElement.PbDe.Name = "MapaDelete" + panelesFlow.Count;
+
+            panelElement.PanelDe.MouseClick += new System.Windows.Forms.MouseEventHandler(PanelDe_MouseClicked);
+            panelElement.PbDe.MouseClick += new System.Windows.Forms.MouseEventHandler(PanelDe_MouseClicked);
+
+            panelElement.PanelEd.Name = "MapaTextEdit" + panelesFlow.Count;
+            panelElement.PbEd.Name = "MapaTextEdit" + panelesFlow.Count;
+
+            panelElement.PanelEd.MouseClick += new System.Windows.Forms.MouseEventHandler(PanelEd_MouseClick);
+            panelElement.PbEd.MouseClick += new System.Windows.Forms.MouseEventHandler(PanelEd_MouseClick);
+            ordenarPaneles();
+        }
+
+        private void CorreoValidator_LostFocus(object sender, EventArgs e)
+        {
+            TextBox text = (TextBox)sender;
+            try
+            {
+                /*Regex regexObj = new Regex(@"^[^@\s] +@[^@\s] +\.[^@\s]+$");
+                if (!regexObj.Match(text.Text).Success)
+                {
+                    MessageBox.Show("Correo no valido");
+                }*/
+            }
+            catch (ArgumentException ex)
+            {
+
+            }
+        }
+
+        private void PhoneValidator_LostFocus(object sender, EventArgs e)
+        {
+            TextBox text = (TextBox)sender;
+            try
+            {
+                /*Regex regexObj = new Regex(@"^(\+[0-9]{9})$");
+                if (!regexObj.Match(text.Text).Success)
+                {
+                    MessageBox.Show("Teléfono no valido");
+                }*/
+            }
+            catch (ArgumentException ex)
+            {
+
+            }
         }
     }
 }

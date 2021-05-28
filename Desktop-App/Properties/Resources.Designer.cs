@@ -143,6 +143,16 @@ namespace Desktop_App.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap CreateButtonIcon {
+            get {
+                object obj = ResourceManager.GetObject("CreateButtonIcon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap dashboard {
             get {
                 object obj = ResourceManager.GetObject("dashboard", resourceCulture);
@@ -276,6 +286,16 @@ namespace Desktop_App.Properties {
         internal static System.Drawing.Bitmap logoLogin {
             get {
                 object obj = ResourceManager.GetObject("logoLogin", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap mapaIcon {
+            get {
+                object obj = ResourceManager.GetObject("mapaIcon", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
