@@ -123,6 +123,16 @@ namespace Desktop_App.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap browserIcon1 {
+            get {
+                object obj = ResourceManager.GetObject("browserIcon1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap callToActionIcon {
             get {
                 object obj = ResourceManager.GetObject("callToActionIcon", resourceCulture);
@@ -136,6 +146,46 @@ namespace Desktop_App.Properties {
         internal static System.Drawing.Bitmap carrouseIcon {
             get {
                 object obj = ResourceManager.GetObject("carrouseIcon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap checkIcon {
+            get {
+                object obj = ResourceManager.GetObject("checkIcon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap checkLightIcon {
+            get {
+                object obj = ResourceManager.GetObject("checkLightIcon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap contentDarkIcon {
+            get {
+                object obj = ResourceManager.GetObject("contentDarkIcon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap contentIcon {
+            get {
+                object obj = ResourceManager.GetObject("contentIcon", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -296,6 +346,16 @@ namespace Desktop_App.Properties {
         internal static System.Drawing.Bitmap mapaIcon {
             get {
                 object obj = ResourceManager.GetObject("mapaIcon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap mechanicalIcon {
+            get {
+                object obj = ResourceManager.GetObject("mechanicalIcon", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -516,6 +576,16 @@ namespace Desktop_App.Properties {
         internal static System.Drawing.Bitmap trashDarkIcon {
             get {
                 object obj = ResourceManager.GetObject("trashDarkIcon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap userIcon {
+            get {
+                object obj = ResourceManager.GetObject("userIcon", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

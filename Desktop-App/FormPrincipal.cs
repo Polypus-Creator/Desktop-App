@@ -28,6 +28,7 @@ namespace Desktop_App
         Boolean isHeaderAlreadyOn = false;
         Boolean isFooterAlreadyOn = false;
         Boolean firstLogin = true;
+        int timerCount = 0;
         
 
         public FormPrincipal()
@@ -44,25 +45,30 @@ namespace Desktop_App
                 panelFirstLogin.Visible = true;
                 panelDashboard.Enabled = true;
 
-                panelDisenyo.Enabled = false;
-                panelDisenyo.BackColor = Color.FromArgb(153, 155, 154);
+                panelDisenyo.Visible = false;
 
-                panelConstructor.Enabled = false;
-                panelConstructor.BackColor = Color.FromArgb(153, 155, 154);
+                panelConstructor.Visible = false;
 
-                panelAjustes.Enabled = false;
-                panelAjustes.BackColor = Color.FromArgb(153, 155, 154);
-
+                panelAjustes.Visible = false;
+                panelAyuda.Location = new Point(1, 121);
                 panelAyuda.Enabled = true;
+                panelInfoDashboard.Visible = false;
+                panelSavedFirsTime.Visible = false;
+
             } else
             {
                 // panelPorDefinir.Visible = true;
                 panelDashboard.Enabled = true;
                 panelFirstLogin.Visible = false;
-                panelDisenyo.Enabled = true;
-                panelConstructor.Enabled = true;
-                panelAjustes.Enabled = true;
-                panelAyuda.Enabled = true;
+                panelDisenyo.Visible = true;
+                panelConstructor.Visible = true;
+                panelAjustes.Visible = true;
+                panelAyuda.Visible = true;
+                panelAyuda.Location = new Point(1, 345);
+                panelInfoDashboard.Visible = true;
+                panelInfoDashboard.Location = new Point(9, 66);
+                timerPanelGuardado.Start();
+
             }
         }
 
@@ -74,10 +80,9 @@ namespace Desktop_App
 
         private void initConfig()
         {
-            
-            this.Width = fullWidth;
-            this.Height = fullHeight - 1;
-            this.Location = new Point(0, 0);
+
+            this.MaximizedBounds = Screen.FromHandle(this.Handle).WorkingArea;
+            this.WindowState = FormWindowState.Maximized;
             panelSuperior.Width = fullWidth;
             windowControlButtons.Location = new Point(fullWidth-100, 0);
             panelLeftBar.Height = fullHeight - 5;
@@ -105,6 +110,7 @@ namespace Desktop_App
             firstLogin = true;
             panel4.Height = panelConst.Height - 20;
             //panelUsuario.Location = new Point(fullHeight / 2);
+            
 
         }
 
@@ -145,6 +151,9 @@ namespace Desktop_App
                 hideShowBar.Location = new Point(15, 14);
                 tabControl.Location = new Point(58,30);
                 tabControl.Width = fullWidth - 62;
+                panelPrevisualizar.Visible = false;
+                panelFinalizarWeb.Visible = false;
+                panelUsuario.Visible = false;
 
 
             }
@@ -156,6 +165,9 @@ namespace Desktop_App
                 hideShowBar.Location = new Point(panelWidth - 35,14);
                 tabControl.Location = new Point(223, 30);
                 tabControl.Width = fullWidth - 227;
+                panelPrevisualizar.Visible = true;
+                panelFinalizarWeb.Visible = true;
+                panelUsuario.Visible = true;
             }
             
         }
@@ -334,6 +346,8 @@ namespace Desktop_App
         private void panelColorPrincipal_Click(object sender, EventArgs e)
         {
             DataClass.backOne = changeColor(sender);
+            timerPanelGuardado.Start();
+            labelFirstTimeSaved.Text = "Color guardado!";
         }
 
         private Color changeColor(object sender)
@@ -353,6 +367,8 @@ namespace Desktop_App
         private void panel11_Click(object sender, EventArgs e)
         {
             DataClass.backTwo = changeColor(sender);
+            timerPanelGuardado.Start();
+            labelFirstTimeSaved.Text = "Color guardado!";
         }
 
         private void panelDisenyo_Paint(object sender, PaintEventArgs e)
@@ -647,7 +663,8 @@ namespace Desktop_App
 
         private void PanelSave_MousClick(object sender, EventArgs e)
         {
-            DataClass.listasElementos.Clear();            
+            DataClass.listasElementos.Clear();
+            timerPanelGuardado.Start();
             panelesAjustes.ForEach(delegate (ClassCreatePanelAjustes panel) 
             {
                 if(panel.Title == "NavBar")
@@ -1901,8 +1918,8 @@ namespace Desktop_App
         {
             firstLogin = false;
             // guardar todos los datos introducidos
-            MessageBox.Show("Tu configuración se ha guardado. Bienvenido, ya puedes empezar a utilizar Polypus Creator.");
             checkFirstLogin();
+            
         }
 
         private void pictureBox23_Click(object sender, EventArgs e)
@@ -2121,7 +2138,7 @@ namespace Desktop_App
         private void panelPrevisualizar_Click(object sender, EventArgs e)
         {
             // codigo de generar la web
-            panelFinalizarWeb.Enabled = true;
+            //panelFinalizarWeb.Enabled = true;
         }
 
         private void panelOcultarAyuda_Click_2(object sender, EventArgs e)
@@ -2271,6 +2288,34 @@ namespace Desktop_App
             {
 
             }
+        }
+
+        private void buttonCambiarConfiguracion_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void timerPanelGuardado_Tick(object sender, EventArgs e)
+        {
+
+            if(timerCount == 3)
+            {
+                panelSavedFirsTime.Visible = false;
+                timerPanelGuardado.Stop();
+                timerCount = 0;
+            }
+            else
+            {
+                panelSavedFirsTime.Visible = true;
+
+            }
+            timerCount++;
+        }
+
+        private void comboBox1_SelectedIndexChanged_1(object sender, EventArgs e)
+        {
+            timerPanelGuardado.Start();
+            labelFirstTimeSaved.Text = "La fuente es " + comboBoxFont.SelectedItem + "!";
         }
     }
 }
