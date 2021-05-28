@@ -28,6 +28,7 @@ namespace Desktop_App
         Boolean isHeaderAlreadyOn = false;
         Boolean isFooterAlreadyOn = false;
         Boolean firstLogin = true;
+        Boolean panelConstDetalleShow = false;
         int timerCount = 0;
         
 
@@ -393,6 +394,8 @@ namespace Desktop_App
                 panelFaqs.Visible = true;
                 showHideFaqs.Image = Desktop_App.Properties.Resources.arrow_up;
                 displayFaqs = true;
+                panelFaqs.Width = 736;
+                panelFaqs.Height = 394;
             }
             else
             {
@@ -2316,6 +2319,24 @@ namespace Desktop_App
         {
             timerPanelGuardado.Start();
             labelFirstTimeSaved.Text = "La fuente es " + comboBoxFont.SelectedItem + "!";
+        }
+
+        private void showHideConstDetalle_Click(object sender, EventArgs e)
+        {
+            if (panelConstDetalleShow == false)
+            {
+                panelConstDetalle.Visible = true;
+                showHideConstDetalle.Image = Desktop_App.Properties.Resources.arrow_up;
+                panelConstDetalleShow = true;
+                panelConstDetalle.Width = 736;
+                panelConstDetalle.Height = 394;
+            }
+            else
+            {
+                panelConstDetalle.Visible = false;
+                showHideConstDetalle.Image = Desktop_App.Properties.Resources.arrow_down;
+                panelConstDetalleShow = false;
+            }
         }
     }
 }

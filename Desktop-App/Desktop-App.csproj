@@ -211,6 +211,7 @@
     <None Include="Resources\contentDarkIcon.png" />
     <None Include="Resources\checkIcon.png" />
     <None Include="Resources\checkLightIcon.png" />
+    <None Include="Resources\CallToActionImage.png" />
     <Content Include="Resources\fuentes\fuenteAbel.PNG" />
     <Content Include="Resources\fuentes\fuenteFrancoisOne.PNG" />
     <Content Include="Resources\fuentes\fuenteKarla.PNG" />
@@ -218,6 +219,8 @@
     <Content Include="Resources\fuentes\fuenteSourceSerifPro.PNG" />
     <Content Include="Resources\fuentes\fuenteSquadaOne.PNG" />
     <Content Include="Resources\fuentes\fuenteYantramanav.PNG" />
+    <None Include="Resources\ImageTextImage.png" />
+    <None Include="Resources\ImageImage.png" />
     <Content Include="Resources\logos\logo1.png" />
     <Content Include="Resources\logos\logo2.png" />
     <Content Include="Resources\logos\logo3.png" />
@@ -228,6 +231,12 @@
     <None Include="Resources\paintbrushIcon1.png" />
     <None Include="Resources\userIcon.png" />
     <None Include="Resources\mechanicalIcon.png" />
+    <None Include="Resources\NavbarImage.png" />
+    <None Include="Resources\NavbarImage1.png" />
+    <None Include="Resources\SeparadorImage.jpg" />
+    <None Include="Resources\TitleImage.png" />
+    <None Include="Resources\TextImage.png" />
+    <None Include="Resources\PriceCardImages.png" />
     <Content Include="Resources\ventana-de-fuente.png" />
     <Content Include="Resources\saveIconLight.png" />
     <Content Include="Resources\trashDarkIcon.png" />

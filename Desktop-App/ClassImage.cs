@@ -8,18 +8,18 @@ namespace Desktop_App
 {
     class ClassImage
     {
-        private string element = "Image";
+        private string elemento = "Image";
         private List<string> rutasImages = new List<string>();
-        public ClassImage(string element)
+        public ClassImage(string elemento)
         {
-            Element = element;
+            Elemento = elemento;
         }
-        public ClassImage(string element, List<string> rutas)
+        public ClassImage(string elemento, List<string> rutas)
         {
-            Element = element;
+            Elemento = elemento;
             RutasImages = rutas;
         }
-        public string Element { get => element; set => element = value; }
+        public string Elemento { get => elemento; set => elemento = value; }
         public List<string> RutasImages { get => rutasImages; set => rutasImages = value; }
         
 
