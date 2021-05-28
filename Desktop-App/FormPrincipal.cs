@@ -835,8 +835,10 @@ namespace Desktop_App
                 }
                 else if (panel.Title == "Mapa")
                 {
-                    string iframe = panel.ListText[4].Text;
-                    Mapa button = new Mapa("Mapa", panel.ListText[4].Text, panel.ListText[5].Text, panel.ListText[0].Text, panel.ListText[1].Text, panel.ListText[2].Text, panel.ListText[3].Text);
+                    string[] iframe = panel.ListText[4].Text.Split('"');
+                    string text = iframe[0] + '"' + iframe[1] + " "+'"' +  "allowfullscreen="+'"'+'"'+ " loading="+'"'+"lazy"+'"';
+
+                    Mapa button = new Mapa("Mapa", text, panel.ListText[5].Text, panel.ListText[0].Text, panel.ListText[1].Text, panel.ListText[2].Text, panel.ListText[3].Text);
                     DataClass.listasElementos.Add(button);
                 }
             });
