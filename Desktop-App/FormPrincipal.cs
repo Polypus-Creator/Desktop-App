@@ -734,7 +734,6 @@ namespace Desktop_App
                             {
                                 if (ruta != null && ruta != "")
                                 {
-                                    MessageBox.Show(ruta);
                                     image.RutasImages.Add(ruta);
                                 }
 
@@ -845,7 +844,6 @@ namespace Desktop_App
                 
             
             generateJSON(DataClass.listasElementos);
-            DataClass.classListaJSON.WebName = textBoxNombre.Text;
             string obstring = JsonConvert.SerializeObject(DataClass.classListaJSON);
             JObject googleSearch = JObject.Parse(obstring);
             Console.WriteLine(googleSearch.ToString());
@@ -888,9 +886,7 @@ namespace Desktop_App
             {
                 if (objeto is Header)
                 {
-                    string obstring = JsonConvert.SerializeObject((Header)objeto);
-                    JObject googleSearch = JObject.Parse(obstring);
-                    DataClass.classListaJSON.ListaJSON.Add(googleSearch);
+                    DataClass.classListaJSON.Header = (Header)objeto;
                 }else if (objeto is Separator)
                 {
                     string obstring = JsonConvert.SerializeObject((Separator)objeto);
@@ -909,9 +905,7 @@ namespace Desktop_App
                     DataClass.classListaJSON.ListaJSON.Add(googleSearch);
                 }else if (objeto is Footer)
                 {
-                    string obstring = JsonConvert.SerializeObject((Footer)objeto);
-                    JObject googleSearch = JObject.Parse(obstring);
-                    DataClass.classListaJSON.ListaJSON.Add(googleSearch);
+                    DataClass.classListaJSON.Footer = (Footer)objeto;
                 }else if(objeto is ClassImage)
                 {
                     string obstring = JsonConvert.SerializeObject((ClassImage)objeto);

@@ -9,14 +9,15 @@ namespace Desktop_App
 {
     class ClassJSONList
     {
-        private string webName = "test";
-        private string font;
+        private Header header;
+        private Footer footer;
         private List<JObject> listaJSON = new List<JObject>();
         
         public ClassJSONList() { }
 
-        public string WebName { get => webName; set => webName = value; }
+        public Header Header { get => header; set => header = value; }
+        public Footer Footer { get => footer; set => footer = value; }
         public List<JObject> ListaJSON { get => listaJSON; set => listaJSON = value; }
-        public string Font { get => font; set => font = value; }
+        
     }
 }

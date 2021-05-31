@@ -10,14 +10,22 @@ namespace Desktop_App
     {
         private string elemento = "Text";
         private string vText;
+        private string columnas;
+
+        public Text(string elemento, string vText, string columnas)
+        {
+            Elemento = elemento;
+            VText = vText;
+            Columnas = columnas;
+        }
 
         public Text(string elemento, string vText)
         {
             Elemento = elemento;
             VText = vText;
         }
-
         public string Elemento { get => elemento; set => elemento = value; }
         public string VText { get => vText; set => vText = value; }
+        public string Columnas { get => columnas; set => columnas = value; }
     }
 }

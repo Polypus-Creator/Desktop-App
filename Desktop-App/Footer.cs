@@ -10,12 +10,19 @@ namespace Desktop_App
     {
         private string elemento = "Footer";
         private string text;
+        private string columnas;
+        public Footer(string text, string columnas)
+        {
+            Text = text;
+            Columnas = columnas;
+        }
         public Footer(string text)
         {
             Text = text;
+            
         }
-
         public string Elemento => elemento;
         public string Text { get => text; set => text = value; }
+        public string Columnas { get => columnas; set => columnas = value; }
     }
 }
