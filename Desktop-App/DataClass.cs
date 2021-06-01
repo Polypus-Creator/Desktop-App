@@ -15,5 +15,9 @@ namespace Desktop_App
         public static Header header;
         public static List<object> listasElementos = new List<object>();
         public static ClassJSONList classListaJSON = new ClassJSONList();
+        public static string websiteName="";
+        public static string websiteDesc = "";
+        public static string logoPath = "";
+        public static string websiteCategory = "";
     }
 }

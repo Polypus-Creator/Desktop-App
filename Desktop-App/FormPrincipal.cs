@@ -36,7 +36,7 @@ namespace Desktop_App
         {
             InitializeComponent();
             initConfig();
-            checkFirstLogin();
+            //checkFirstLogin();
         }
 
         private void checkFirstLogin()
@@ -55,6 +55,7 @@ namespace Desktop_App
                 panelAyuda.Enabled = true;
                 panelInfoDashboard.Visible = false;
                 panelSavedFirsTime.Visible = false;
+
 
             } else
             {
@@ -427,9 +428,9 @@ namespace Desktop_App
 
         private void panel31_MouseClick(object sender, MouseEventArgs e)
         {
-            if(isHeaderAlreadyOn == false)
+            if (isHeaderAlreadyOn == false)
             {
-                panel31.Enabled = false;
+                panelElemNavBar.Enabled = false;
                 isHeaderAlreadyOn = true;            
             }
             string title = "NavBar";
@@ -591,13 +592,13 @@ namespace Desktop_App
                 if (panel.Name.Contains("NavBar"))
                 {
                     isHeaderAlreadyOn = false;
-                    panel31.Enabled = true;
+                    panelElemNavBar.Enabled = true;
                 }
 
                 if (panel.Name.Contains("Footer"))
                 {
                     isFooterAlreadyOn = false;
-                    panel6.Enabled = true;
+                    panelElemFooter.Enabled = true;
                 }
 
 
@@ -619,13 +620,13 @@ namespace Desktop_App
                 if (picture.Name.Contains("NavBar"))
                 {
                     isHeaderAlreadyOn = false;
-                    panel31.Enabled = true;
+                    panelElemNavBar.Enabled = true;
                 }
 
                 if (picture.Name.Contains("Footer"))
                 {
                     isFooterAlreadyOn = false;
-                    panel6.Enabled = true;
+                    panelElemFooter.Enabled = true;
                 }
             }
             
@@ -1441,7 +1442,7 @@ namespace Desktop_App
 
                 panelElement.PanelEd.MouseClick += new System.Windows.Forms.MouseEventHandler(PanelEd_MouseClick);
                 panelElement.PbEd.MouseClick += new System.Windows.Forms.MouseEventHandler(PanelEd_MouseClick);
-                panel6.Enabled = false;
+                panelElemFooter.Enabled = false;
                 isFooterAlreadyOn = true;
                 ordenarPaneles();
             }
@@ -1467,15 +1468,30 @@ namespace Desktop_App
 
         private void panelSelectLogo_Click(object sender, EventArgs e)
         {
-            OpenFileDialog openFileDialog = new OpenFileDialog();
-            openFileDialog.ShowDialog();
-            string filename = openFileDialog.FileName;
-            if (filename != null && filename != "")
+            string rutaOrigen = picPhoto();
+            if (rutaOrigen != null && rutaOrigen != "")
             {
-                if(Path.GetExtension(filename).ToLower().Contains("png") || Path.GetExtension(filename).ToLower().Contains("jpg") || Path.GetExtension(filename).ToLower().Contains("svg")){
-                    pictureBoxLogo.Image = Image.FromFile(filename);
+                if (Path.GetExtension(rutaOrigen).ToLower().Contains("png") || Path.GetExtension(rutaOrigen).ToLower().Contains("jpg") || Path.GetExtension(rutaOrigen).ToLower().Contains("svg"))
+                {
+                    string[] rutas = rutaOrigen.Split('\\');
+                    String directory = Path.GetDirectoryName(rutaOrigen) + @"\" + Path.GetFileName(rutaOrigen);
+                    String newPath = @"..\..\Polypus\YourWebsites\Images\";
+                    if (!File.Exists(newPath + rutas[rutas.Length - 1]))
+                    {
+                        File.Copy(directory, newPath + rutas[rutas.Length - 1]);
+                    }
+                    else
+                    {
+                        MessageBox.Show("Nombre de fichero existente");
+                    }
+                    pictureBoxLogo.Image = Image.FromFile(newPath + rutas[rutas.Length - 1]);
+                    DataClass.logoPath = "\\"+rutas[rutas.Length - 1];
+                    pictureBoxLogoFinal.Image = Image.FromFile(newPath + rutas[rutas.Length - 1]);
+                    
                 }
-                
+                textBoxNameFinal.Text = DataClass.websiteName.ToString();
+                textBoxCategoriaFinal.Text = DataClass.websiteCategory.ToString();
+                textBoxDescFinal.Text = DataClass.websiteDesc.ToString();
             }
             
         }
@@ -1917,8 +1933,25 @@ namespace Desktop_App
         {
             firstLogin = false;
             // guardar todos los datos introducidos
-            checkFirstLogin();
             
+
+
+            if (textBoxNombre.Text.Equals("") || textBoxBreveDescripcion.Text.Equals("") ||
+                DataClass.logoPath.Equals("") || DataClass.websiteCategory.Equals(""))
+            {
+                DataClass.websiteName = textBoxNombre.Text;
+                DataClass.websiteDesc = textBoxBreveDescripcion.Text;
+                MessageBox.Show("Debes completar todo el formulario para poder crear una web", "Formulario Incompleto",
+                MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else
+            {
+                checkFirstLogin();
+            }
+            
+            
+
+
         }
 
         private void pictureBox23_Click(object sender, EventArgs e)
@@ -2333,6 +2366,319 @@ namespace Desktop_App
                 showHideConstDetalle.Image = Desktop_App.Properties.Resources.arrow_down;
                 panelConstDetalleShow = false;
             }
+        }
+
+        private void checkBoxWebPersonal_CheckedChanged(object sender, EventArgs e)
+        {
+            if (checkBoxWebPersonal.Checked)
+            {
+                DataClass.websiteCategory = "Personal";
+                checkBoxWebDeEmpresa.Checked = false;
+                checkBoxWebPersonalizada.Checked = false;
+                checkBoxWebPersonal.Enabled = false;
+                checkBoxWebDeEmpresa.Enabled = true;
+                checkBoxWebPersonalizada.Enabled = true;
+            }
+            
+        }
+
+        private void checkBoxWebDeEmpresa_CheckedChanged(object sender, EventArgs e)
+        {
+            if (checkBoxWebDeEmpresa.Checked)
+            {
+                DataClass.websiteCategory = "Empresa";
+                checkBoxWebPersonal.Checked = false;
+                checkBoxWebPersonalizada.Checked = false;
+                checkBoxWebDeEmpresa.Enabled = false;
+                checkBoxWebPersonal.Enabled = true;
+                checkBoxWebPersonalizada.Enabled = true;
+            }
+        }
+
+        private void checkBoxWebPersonalizada_CheckedChanged(object sender, EventArgs e)
+        {
+            if (checkBoxWebPersonalizada.Checked)
+            {
+                DataClass.websiteCategory = "Custom";
+                checkBoxWebPersonal.Checked = false;
+                checkBoxWebDeEmpresa.Checked = false;
+                checkBoxWebDeEmpresa.Enabled = true;
+                checkBoxWebPersonal.Enabled = true;
+                checkBoxWebPersonalizada.Enabled = false;
+            }
+        }
+
+        private void hoverElementEnter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void hoverElementLeave(object sender, EventArgs e)
+        {
+            panelElemNavBar.BackColor = Color.FromArgb(59, 60, 61);
+        }
+
+        private void panelElemNavBar_MouseHover(object sender, EventArgs e)
+        {
+            Panel panel = (Panel)sender;
+            panel.BackColor = Color.FromArgb(52, 152, 219);
+        }
+
+        private void panelElemSeparator_MouseEnter(object sender, EventArgs e)
+        {
+            Panel panel = (Panel)sender;
+            panel.BackColor = Color.FromArgb(52, 152, 219);
+        }
+
+        private void panelElemCallToAction_MouseEnter(object sender, EventArgs e)
+        {
+            Panel panel = (Panel)sender;
+            panel.BackColor = Color.FromArgb(52, 152, 219);
+        }
+
+        private void panelElemImageText_MouseEnter(object sender, EventArgs e)
+        {
+            Panel panel = (Panel)sender;
+            panel.BackColor = Color.FromArgb(52, 152, 219);
+        }
+
+        private void panelElemFooter_MouseEnter(object sender, EventArgs e)
+        {
+            Panel panel = (Panel)sender;
+            panel.BackColor = Color.FromArgb(52, 152, 219);
+        }
+
+        private void panelElemImage_MouseEnter(object sender, EventArgs e)
+        {
+            Panel panel = (Panel)sender;
+            panel.BackColor = Color.FromArgb(52, 152, 219);
+        }
+
+        private void panelElemText_MouseEnter(object sender, EventArgs e)
+        {
+            Panel panel = (Panel)sender;
+            panel.BackColor = Color.FromArgb(52, 152, 219);
+        }
+
+        private void panelElemPriceCards_MouseEnter(object sender, EventArgs e)
+        {
+            Panel panel = (Panel)sender;
+            panel.BackColor = Color.FromArgb(52, 152, 219);
+        }
+
+        private void panelElemButton_MouseEnter(object sender, EventArgs e)
+        {
+            Panel panel = (Panel)sender;
+            panel.BackColor = Color.FromArgb(52, 152, 219);
+        }
+
+        private void panelElemMapa_MouseEnter(object sender, EventArgs e)
+        {
+            Panel panel = (Panel)sender;
+
+            panel.BackColor = Color.FromArgb(52, 152, 219);
+        }
+
+        private void panelElemNavBar_MouseEnter(object sender, EventArgs e)
+        {
+            Panel panel = (Panel)sender;
+            panel.BackColor = Color.FromArgb(52, 152, 219);
+        }
+
+        private void panelElemTitle_MouseEnter(object sender, EventArgs e)
+        {
+            Panel panel = (Panel)sender;
+            panel.BackColor = Color.FromArgb(52, 152, 219);
+        }
+
+        private void panelElemNavBar_MouseLeave(object sender, EventArgs e)
+        {
+            Panel panel = (Panel)sender;
+            panel.BackColor = Color.FromArgb(59, 60, 61);
+        }
+
+        private void mouseEnterNavBar()
+        {
+            
+        }
+
+        private void mouseEnterNavBar(object sender, EventArgs e)
+        {
+            panelElemNavBar.BackColor = Color.FromArgb(52, 152, 219);
+            pictureBoxNavBar.BackColor = Color.FromArgb(52, 152, 219);
+        }
+
+        private void mouseLeaveNavBar(object sender, EventArgs e)
+        {
+            panelElemNavBar.BackColor = Color.FromArgb(59, 60, 61);
+            pictureBoxNavBar.BackColor = Color.FromArgb(59, 60, 61);
+        }
+
+        private void mouseEnterSeparator(object sender, EventArgs e)
+        {
+            panelElemSeparator.BackColor = Color.FromArgb(52, 152, 219);
+            pictureBoxNavBar.BackColor = Color.FromArgb(52, 152, 219);
+        }
+
+        private void mouseLeaveSeparator(object sender, EventArgs e)
+        {
+            panelElemSeparator.BackColor = Color.FromArgb(59, 60, 61);
+            pictureBoxSeparator.BackColor = Color.FromArgb(59, 60, 61);
+        }
+
+        private void mouseEnterNavBar(object sender, MouseEventArgs e)
+        {
+            
+            pictureBoxNavBar.BackColor = Color.FromArgb(52, 152, 219);
+        }
+
+        private void pictureBoxNavBar_MouseEnter(object sender, EventArgs e)
+        {
+            panelElemNavBar.BackColor = Color.FromArgb(52, 152, 219);
+        }
+
+        private void pictureBoxNavBar_MouseLeave(object sender, EventArgs e)
+        {
+            panelElemNavBar.BackColor = Color.FromArgb(59, 60, 61);
+        }
+
+        private void panelElemSeparator_MouseEnter_1(object sender, EventArgs e)
+        {
+            panelElemSeparator.BackColor = Color.FromArgb(52, 152, 219);
+        }
+
+        private void panelElemSeparator_MouseLeave(object sender, EventArgs e)
+        {
+            panelElemSeparator.BackColor = Color.FromArgb(59, 60, 61);
+        }
+
+        private void panelElemCallToAction_MouseEnter_1(object sender, EventArgs e)
+        {
+            panelElemCallToAction.BackColor = Color.FromArgb(52, 152, 219);
+        }
+
+        private void panelElemCallToAction_MouseLeave(object sender, EventArgs e)
+        {
+            panelElemCallToAction.BackColor = Color.FromArgb(59, 60, 61);
+        }
+
+        private void pictureBox8_MouseEnter(object sender, EventArgs e)
+        {
+            panelElemImageText.BackColor = Color.FromArgb(52, 152, 219);
+        }
+
+        private void panelElemImageText_MouseLeave(object sender, EventArgs e)
+        {
+            panelElemImageText.BackColor = Color.FromArgb(59, 60, 61);
+        }
+
+        private void panelElemFooter_MouseEnter_1(object sender, EventArgs e)
+        {
+            panelElemFooter.BackColor = Color.FromArgb(52, 152, 219);
+        }
+
+        private void panelElemFooter_MouseLeave(object sender, EventArgs e)
+        {
+            panelElemFooter.BackColor = Color.FromArgb(59, 60, 61);
+        }
+
+        private void panelElemImage_MouseEnter_1(object sender, EventArgs e)
+        {
+            panelElemImage.BackColor = Color.FromArgb(52, 152, 219);
+        }
+
+        private void panelElemImage_MouseLeave(object sender, EventArgs e)
+        {
+            panelElemImage.BackColor = Color.FromArgb(59, 60, 61);
+        }
+
+        private void panelElemTitle_MouseEnter_1(object sender, EventArgs e)
+        {
+            panelElemTitle.BackColor = Color.FromArgb(52, 152, 219);
+        }
+
+        private void panelElemTitle_MouseLeave(object sender, EventArgs e)
+        {
+            panelElemTitle.BackColor = Color.FromArgb(59, 60, 61);
+        }
+
+        private void panelElemText_MouseEnter_1(object sender, EventArgs e)
+        {
+            panelElemText.BackColor = Color.FromArgb(52, 152, 219);
+        }
+
+        private void panelElemText_MouseLeave(object sender, EventArgs e)
+        {
+            panelElemText.BackColor = Color.FromArgb(59, 60, 61);
+        }
+
+        private void panelElemPriceCards_MouseEnter_1(object sender, EventArgs e)
+        {
+            panelElemPriceCards.BackColor = Color.FromArgb(52, 152, 219);
+        }
+
+        private void panelElemPriceCards_MouseLeave(object sender, EventArgs e)
+        {
+            panelElemPriceCards.BackColor = Color.FromArgb(59, 60, 61);
+        }
+
+        private void panelElemButton_MouseEnter_1(object sender, EventArgs e)
+        {
+            panelElemButton.BackColor = Color.FromArgb(52, 152, 219);
+        }
+
+        private void panelElemButton_MouseLeave(object sender, EventArgs e)
+        {
+            panelElemButton.BackColor = Color.FromArgb(59, 60, 61);
+        }
+
+        private void panelElemMapa_MouseEnter_1(object sender, EventArgs e)
+        {
+            panelElemMapa.BackColor = Color.FromArgb(52, 152, 219);
+        }
+
+        private void panelElemMapa_MouseLeave(object sender, EventArgs e)
+        {
+            panelElemMapa.BackColor = Color.FromArgb(59, 60, 61);
+        }
+
+        private void panelPrevisualizar_MouseEnter(object sender, EventArgs e)
+        {
+            panelPrevisualizar.BackColor = Color.FromArgb(16, 201, 83);
+        }
+
+        private void panelPrevisualizar_MouseLeave(object sender, EventArgs e)
+        {
+
+            panelPrevisualizar.BackColor = Color.FromArgb(29, 131, 72);
+        }
+
+        private void panelFinalizarWeb_MouseEnter(object sender, EventArgs e)
+        {
+            panelFinalizarWeb.BackColor = Color.FromArgb(41, 197, 255);
+        }
+
+        private void panelFinalizarWeb_MouseLeave(object sender, EventArgs e)
+        {
+            
+            
+                panelFinalizarWeb.BackColor = Color.FromArgb(52, 152, 219);
+
+        }
+
+        private void panelAddElement_MouseClick(object sender, EventArgs e)
+        {
+            panelAddElements.Visible = true;
+        }
+
+        private void panelAddElement_MouseEnter(object sender, EventArgs e)
+        {
+            panelAddElement.BackColor = Color.FromArgb(96, 71, 71);
+        }
+
+        private void panelAddElement_MouseLeave(object sender, EventArgs e)
+        {
+            panelAddElement.BackColor = Color.FromArgb(49, 48, 45);
         }
     }
 }
