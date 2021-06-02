@@ -17,19 +17,19 @@ namespace Desktop_App
         private Panel _panelSeparador = new Panel();
         private Panel _panelTextos = new Panel();
         private Label labelItem = new Label();
+        private Label labelLinks = new Label();
         private List<string> _listItems = new List<string>();
         private string[,] _listLinks = new string[6,2];
         private List<TextBox> _listText = new List<TextBox>();
         private Panel _panelSave = new Panel();
         private Label _labelSave = new Label();
         private PictureBox _save = new PictureBox();
-        private Label _labelLink = new Label();
-        private TextBox _textBoxLink = new TextBox();
         private List<PictureBox> _listaImages = new List<PictureBox>();
         private List<Panel> _deleteImage = new List<Panel>();
         private List<ComboBox> _listaCombo = new List<ComboBox>();
         private CheckBox _checkBox = new CheckBox();
         private int y1 = 57;
+        private Boolean items = true;
         public ClassCreatePanelAjustes(int maxW, int maxH, string title, List<string> items)
         {
             MaxH = maxH;
@@ -69,14 +69,15 @@ namespace Desktop_App
         public List<string> ListItems { get => _listItems; set => _listItems = value; }
         public List<TextBox> ListText { get => _listText; set => _listText = value; }
         public PictureBox Save { get => _save; set => _save = value; }
-        public Label LabelLink { get => _labelLink; set => _labelLink = value; }
-        public TextBox TextBoxLink { get => _textBoxLink; set => _textBoxLink = value; }
         public string[,] ListLinks { get => _listLinks; set => _listLinks = value; }
         public List<PictureBox> ListaImages { get => _listaImages; set => _listaImages = value; }
         public List<Panel> DeleteImage { get => _deleteImage; set => _deleteImage = value; }
         public List<ComboBox> ListaCombo { get => _listaCombo; set => _listaCombo = value; }
         public int Y1 { get => y1; set => y1 = value; }
         public CheckBox CheckBox { get => _checkBox; set => _checkBox = value; }
+        public Label LabelItem { get => labelItem; set => labelItem = value; }
+        public Label LabelLinks { get => labelLinks; set => labelLinks = value; }
+        public bool Items { get => items; set => items = value; }
 
         private void createView()
         {
@@ -108,12 +109,12 @@ namespace Desktop_App
             PanelTextos.Visible = true;
             PanelGlo.Controls.Add(PanelTextos);
 
-            labelItem.Size = new Size(45, 20);
-            labelItem.Location = new Point(17, 17);
-            labelItem.Font = new Font("Segoe UI Semibold", 11.25f, FontStyle.Bold);
-            labelItem.Text = "Items";
-            labelItem.ForeColor = Color.White;
-            PanelTextos.Controls.Add(labelItem);
+            LabelItem.Size = new Size(45, 20);
+            LabelItem.Location = new Point(17, 17);
+            LabelItem.Font = new Font("Segoe UI Semibold", 11.25f, FontStyle.Bold);
+            LabelItem.Text = "Items";
+            LabelItem.ForeColor = Color.White;
+            PanelTextos.Controls.Add(LabelItem);
             crearItems();
 
             PanelSave.Location = new Point(237, 247);
@@ -141,20 +142,6 @@ namespace Desktop_App
             LabelSave.Cursor = Cursors.Hand;
             LabelSave.ForeColor = Color.White;
             PanelSave.Controls.Add(LabelSave);
-
-            LabelLink.Size = new Size(30, 15);
-            LabelLink.Location = new Point(37, 250);
-            LabelLink.Font = new Font("Segoe UI Semibold", 8, FontStyle.Bold);
-            LabelLink.Text = "Link";
-            LabelLink.Visible = false;
-            LabelLink.ForeColor = Color.White;
-            PanelGlo.Controls.Add(LabelLink);
-
-            TextBoxLink.Size = new Size(149, 20);
-            TextBoxLink.Location = new Point(41, 270);
-            TextBoxLink.Visible = false;
-            TextBoxLink.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            PanelGlo.Controls.Add(TextBoxLink);
         }
 
         private void crearItems()

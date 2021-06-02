@@ -451,14 +451,28 @@ namespace Desktop_App
             panel4.Controls.Add(panelElement.CreateAjustes.PanelGlo);
             panelesAjustes.Add(panelElement.CreateAjustes);
 
+            Label labelLinks = new Label();
+            labelLinks.Size = new Size(100, 20);
+            labelLinks.Location = new Point(70, 17);
+            labelLinks.Font = new Font("Segoe UI Semibold", 11.25f, FontStyle.Bold);
+            labelLinks.Text = "       Links";
+            labelLinks.ForeColor = Color.White;
+            labelLinks.Cursor = Cursors.Hand;
+            labelLinks.Click += LabelLinks_Click;
+            panelElement.CreateAjustes.LabelLinks = labelLinks;
+            panelElement.CreateAjustes.PanelTextos.Controls.Add(labelLinks);
+
+            panelElement.CreateAjustes.LabelItem.Cursor = Cursors.Hand;
+            panelElement.CreateAjustes.LabelItem.ForeColor = Color.FromArgb(52, 152, 219);
+            panelElement.CreateAjustes.LabelItem.Click += LabelLinks_Click;
+
+
             panelElement.CreateAjustes.ListText.ForEach(delegate (TextBox textBox)
             {
                 textBox.TextChanged += textBox_TextChanged;
-                textBox.LostFocus += textBoxNavBar_LostFocus;
             });
             panelElement.CreateAjustes.PanelSave.MouseClick += new System.Windows.Forms.MouseEventHandler(PanelSave_MousClick);
             panelElement.CreateAjustes.LabelSave.MouseClick += new System.Windows.Forms.MouseEventHandler(PanelSave_MousClick);
-            panelElement.CreateAjustes.TextBoxLink.LostFocus += textBoxLink_LostFocus;
 
             panelElement.PanelDe.Name = "NavBarPanelDelete" + panelesFlow.Count;
             panelElement.PbDe.Name = "NavBarPbDelete" + panelesFlow.Count;
@@ -473,6 +487,68 @@ namespace Desktop_App
             panelElement.PbEd.MouseClick += new System.Windows.Forms.MouseEventHandler(PanelEd_MouseClick);
 
             ordenarPaneles();
+        }
+
+        private void LabelLinks_Click(object sender, EventArgs e)
+        {
+            Label option = (Label)sender;
+            option.ForeColor = Color.FromArgb(52, 152, 219);
+            switch (option.Text)
+            {
+                case "Items":
+                    foreach (ClassCreatePanelAjustes ajustes in panelesAjustes)
+                    {
+                        if (ajustes.PanelTextos.Controls.Contains(option))
+                        {
+                            ajustes.Items = true;
+                            ajustes.LabelLinks.ForeColor = Color.White;
+                            ajustes.ListText.ForEach(delegate (TextBox text)
+                            {
+                                if (text.Text != "")
+                                {
+                                    ajustes.ListLinks[Int32.Parse(text.Name), 1] = text.Text;
+                                    if (ajustes.ListLinks[Int32.Parse(text.Name), 0] != null && ajustes.ListLinks[Int32.Parse(text.Name), 0] != "")
+                                    {
+                                        text.Text = ajustes.ListLinks[Int32.Parse(text.Name), 0];
+                                    }
+                                    else
+                                    {
+                                        text.Text = "";
+                                    }
+                                }
+                            });
+                            break;
+                        }
+                    }
+                    break;
+
+                case "       Links":
+                    foreach (ClassCreatePanelAjustes ajustes in panelesAjustes)
+                    {
+                        if (ajustes.PanelTextos.Controls.Contains(option))
+                        {
+                            ajustes.Items = false;
+                            ajustes.LabelItem.ForeColor = Color.White;
+                            ajustes.ListText.ForEach(delegate(TextBox text) 
+                            {
+                                if (text.Text != "")
+                                {
+                                    ajustes.ListLinks[Int32.Parse(text.Name), 0] = text.Text;
+                                    if(ajustes.ListLinks[Int32.Parse(text.Name), 1]!=null&& ajustes.ListLinks[Int32.Parse(text.Name), 1] != "")
+                                    {
+                                        text.Text = ajustes.ListLinks[Int32.Parse(text.Name), 1];
+                                    }
+                                    else
+                                    {
+                                        text.Text = "";
+                                    }
+                                }
+                            });
+                            break;
+                        }
+                    }
+                    break;
+            }
         }
 
         private void ordenarPaneles()
@@ -511,66 +587,7 @@ namespace Desktop_App
                 flowLayoutPanelCurrentElements.Controls.Add(element.PanelGol);
             });
         }
-
-        private void textBoxNavBar_LostFocus(object sender, EventArgs e) 
-        {
-            TextBox textBox = (TextBox)sender;
-            int fila = Int32.Parse(textBox.Name);
-            if (!textBox.Text.Equals(""))
-            {
-                string message ="Quieres añadir un link a "+textBox.Text+"?";
-                string caption = "Link";
-                var result = MessageBox.Show(message, caption,MessageBoxButtons.YesNo,MessageBoxIcon.Question);
-
-                if (result == DialogResult.Yes)
-                {
-                    foreach(ClassCreatePanelAjustes ajustes in panelesAjustes)
-                    {
-                        if (ajustes.PanelTextos.Controls.Contains(textBox))
-                        {
-                            ajustes.ListLinks[fila, 0] = textBox.Text;
-                            ajustes.TextBoxLink.Name = textBox.Name;
-                            if (ajustes.ListLinks[fila, 1]!=null)
-                            {
-                                ajustes.TextBoxLink.Text = ajustes.ListLinks[fila, 1];
-                            }
-                            else
-                            {
-                                ajustes.TextBoxLink.Text = "";
-                            }
-                            ajustes.TextBoxLink.Visible = true;
-                            ajustes.LabelLink.Visible = true;
-                        }
-                    }
-                }
-            }
-        }
-
-        private void textBoxLink_LostFocus(object sender, EventArgs e)
-        {
-            TextBox textBox = (TextBox)sender;
-            int fila = Int32.Parse(textBox.Name);
-            if (!textBox.Text.Equals(""))
-            {
-                string message = "Quieres guardar el link?";
-                string caption = "Link";
-                var result = MessageBox.Show(message, caption, MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-
-                if (result == DialogResult.Yes)
-                {
-                    foreach (ClassCreatePanelAjustes ajustes in panelesAjustes)
-                    {
-                        if (ajustes.PanelGlo.Controls.Contains(textBox))
-                        {
-                            ajustes.ListLinks[fila, 1] = textBox.Text;
-                            ajustes.TextBoxLink.Visible = false;
-                            ajustes.LabelLink.Visible = false;
-                        }
-                    }
-                }
-            }
-        }
-
+        
         private void PanelDe_MouseClicked(Object sender, MouseEventArgs e)
         {
             if (sender is Panel)
@@ -671,6 +688,26 @@ namespace Desktop_App
             {
                 if(panel.Title == "NavBar")
                 {
+                    if (panel.Items)
+                    {
+                        panel.ListText.ForEach(delegate (TextBox text)
+                        {
+                            if (text.Text != "")
+                            {
+                                panel.ListLinks[Int32.Parse(text.Name), 0] = text.Text;
+                            }
+                        });
+                    }
+                    else
+                    {
+                        panel.ListText.ForEach(delegate (TextBox text)
+                        {
+                            if (text.Text != "")
+                            {
+                                panel.ListLinks[Int32.Parse(text.Name), 1] = text.Text;
+                            }
+                        });
+                    }
                     DataClass.header = new Header(panel.ListLinks, DataClass.backOne, DataClass.backTwo);
                     DataClass.listasElementos.Add(DataClass.header);
                 }else if (panel.Title == "Separator")
@@ -988,11 +1025,14 @@ namespace Desktop_App
 
             if (elementos.Id == "NavBar")
             {
-                elementos.LabelOptions[Int32.Parse(textBox.Name)].Visible = true;
-                elementos.LabelOptions[Int32.Parse(textBox.Name)].Text = textBox.Text;
-                if (elementos.LabelOptions[Int32.Parse(textBox.Name)].Text == "")
+                if (ajustes.Items)
                 {
-                    elementos.LabelOptions[Int32.Parse(textBox.Name)].Visible = false;
+                    elementos.LabelOptions[Int32.Parse(textBox.Name)].Visible = true;
+                    elementos.LabelOptions[Int32.Parse(textBox.Name)].Text = textBox.Text;
+                    if (elementos.LabelOptions[Int32.Parse(textBox.Name)].Text == "")
+                    {
+                        elementos.LabelOptions[Int32.Parse(textBox.Name)].Visible = false;
+                    }
                 }
             }
             else if (elementos.Id == "Separator")
@@ -2560,19 +2600,33 @@ namespace Desktop_App
         private void CorreoValidator_LostFocus(object sender, EventArgs e)
         {
             TextBox text = (TextBox)sender;
-            try
+            if (!email_bien_escrito(text.Text))
             {
-                /*Regex regexObj = new Regex(@"^[^@\s] +@[^@\s] +\.[^@\s]+$");
-                if (!regexObj.Match(text.Text).Success)
-                {
-                    MessageBox.Show("Correo no valido");
-                }*/
-            }
-            catch (ArgumentException ex)
-            {
-
+                MessageBox.Show("Correo no valido");
             }
         }
+
+        private Boolean email_bien_escrito(String email)
+        {
+            String expresion;
+            expresion = "\\w+([-+.']\\w+)*@\\w+([-.]\\w+)*\\.\\w+([-.]\\w+)*";
+            if (Regex.IsMatch(email, expresion))
+            {
+                if (Regex.Replace(email, expresion, String.Empty).Length == 0)
+                {
+                    return true;
+                }
+                else
+                {
+                    return false;
+                }
+            }
+            else
+            {
+                return false;
+            }
+        }
+
 
         private void PhoneValidator_LostFocus(object sender, EventArgs e)
         {
