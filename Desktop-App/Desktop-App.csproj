@@ -212,6 +212,7 @@
     <None Include="Resources\checkIcon.png" />
     <None Include="Resources\checkLightIcon.png" />
     <None Include="Resources\CallToActionImage.png" />
+    <None Include="Resources\forgotPassIcon.png" />
     <Content Include="Resources\fuentes\fuenteAbel.PNG" />
     <Content Include="Resources\fuentes\fuenteFrancoisOne.PNG" />
     <Content Include="Resources\fuentes\fuenteKarla.PNG" />
@@ -237,6 +238,7 @@
     <None Include="Resources\TitleImage.png" />
     <None Include="Resources\TextImage.png" />
     <None Include="Resources\PriceCardImages.png" />
+    <None Include="Resources\padlockIcon.png" />
     <Content Include="Resources\ventana-de-fuente.png" />
     <Content Include="Resources\saveIconLight.png" />
     <Content Include="Resources\trashDarkIcon.png" />

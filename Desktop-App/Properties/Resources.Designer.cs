@@ -283,6 +283,16 @@ namespace Desktop_App.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap forgotPassIcon {
+            get {
+                object obj = ResourceManager.GetObject("forgotPassIcon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap headerIcon {
             get {
                 object obj = ResourceManager.GetObject("headerIcon", resourceCulture);
@@ -456,6 +466,16 @@ namespace Desktop_App.Properties {
         internal static System.Drawing.Bitmap padlock {
             get {
                 object obj = ResourceManager.GetObject("padlock", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap padlockIcon {
+            get {
+                object obj = ResourceManager.GetObject("padlockIcon", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

@@ -32,7 +32,6 @@ namespace Desktop_App
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormContrasenaOlvidada));
             this.panelSuperior = new System.Windows.Forms.Panel();
             this.labelContrasenaOlvidada = new System.Windows.Forms.Label();
-            this.pictureBoxIconoContrasenaOlvidada = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.labelMinimize = new System.Windows.Forms.Label();
             this.labelClose = new System.Windows.Forms.Label();
@@ -45,29 +44,30 @@ namespace Desktop_App
             this.textBoxRepiteNuevaContrasena = new System.Windows.Forms.TextBox();
             this.textBoxNuevaContrasena = new System.Windows.Forms.TextBox();
             this.panelSabiasQue = new System.Windows.Forms.Panel();
-            this.labelRecuerda1 = new System.Windows.Forms.Label();
-            this.labelRecuerda2 = new System.Windows.Forms.Label();
-            this.buttonCambiarContrasena = new System.Windows.Forms.Button();
-            this.pictureBoxBombilla = new System.Windows.Forms.PictureBox();
-            this.labelSabiasQue = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
-            this.label12 = new System.Windows.Forms.Label();
-            this.label13 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
             this.label17 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
+            this.label12 = new System.Windows.Forms.Label();
+            this.label13 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.labelSabiasQue = new System.Windows.Forms.Label();
+            this.labelRecuerda1 = new System.Windows.Forms.Label();
+            this.labelRecuerda2 = new System.Windows.Forms.Label();
+            this.buttonCambiarContrasena = new System.Windows.Forms.Button();
             this.buttonVolverIniciarSesion = new System.Windows.Forms.Button();
+            this.pictureBoxBombilla = new System.Windows.Forms.PictureBox();
+            this.pictureBoxIconoContrasenaOlvidada = new System.Windows.Forms.PictureBox();
             this.panelSuperior.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxIconoContrasenaOlvidada)).BeginInit();
             this.panel2.SuspendLayout();
             this.panelSabiasQue.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxBombilla)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxIconoContrasenaOlvidada)).BeginInit();
             this.SuspendLayout();
             // 
             // panelSuperior
@@ -86,22 +86,11 @@ namespace Desktop_App
             this.labelContrasenaOlvidada.AutoSize = true;
             this.labelContrasenaOlvidada.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelContrasenaOlvidada.ForeColor = System.Drawing.Color.White;
-            this.labelContrasenaOlvidada.Location = new System.Drawing.Point(63, 10);
+            this.labelContrasenaOlvidada.Location = new System.Drawing.Point(48, 12);
             this.labelContrasenaOlvidada.Name = "labelContrasenaOlvidada";
             this.labelContrasenaOlvidada.Size = new System.Drawing.Size(249, 32);
             this.labelContrasenaOlvidada.TabIndex = 3;
             this.labelContrasenaOlvidada.Text = "Contraseña olvidada";
-            // 
-            // pictureBoxIconoContrasenaOlvidada
-            // 
-            this.pictureBoxIconoContrasenaOlvidada.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(48)))), ((int)(((byte)(45)))));
-            this.pictureBoxIconoContrasenaOlvidada.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxIconoContrasenaOlvidada.Image")));
-            this.pictureBoxIconoContrasenaOlvidada.Location = new System.Drawing.Point(12, 5);
-            this.pictureBoxIconoContrasenaOlvidada.Name = "pictureBoxIconoContrasenaOlvidada";
-            this.pictureBoxIconoContrasenaOlvidada.Size = new System.Drawing.Size(44, 44);
-            this.pictureBoxIconoContrasenaOlvidada.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBoxIconoContrasenaOlvidada.TabIndex = 2;
-            this.pictureBoxIconoContrasenaOlvidada.TabStop = false;
             // 
             // panel2
             // 
@@ -239,100 +228,45 @@ namespace Desktop_App
             this.panelSabiasQue.Size = new System.Drawing.Size(245, 341);
             this.panelSabiasQue.TabIndex = 14;
             // 
-            // labelRecuerda1
+            // label14
             // 
-            this.labelRecuerda1.AutoSize = true;
-            this.labelRecuerda1.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelRecuerda1.Location = new System.Drawing.Point(30, 336);
-            this.labelRecuerda1.Name = "labelRecuerda1";
-            this.labelRecuerda1.Size = new System.Drawing.Size(358, 13);
-            this.labelRecuerda1.TabIndex = 15;
-            this.labelRecuerda1.Text = "Recuerda que la contraseña debe contener mayusculas, minusculas,";
+            this.label14.AutoSize = true;
+            this.label14.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label14.Location = new System.Drawing.Point(3, 243);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(219, 13);
+            this.label14.TabIndex = 27;
+            this.label14.Text = "Lorem ipsum dolor sit amet, consectetur ";
             // 
-            // labelRecuerda2
+            // label15
             // 
-            this.labelRecuerda2.AutoSize = true;
-            this.labelRecuerda2.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelRecuerda2.Location = new System.Drawing.Point(30, 349);
-            this.labelRecuerda2.Name = "labelRecuerda2";
-            this.labelRecuerda2.Size = new System.Drawing.Size(171, 13);
-            this.labelRecuerda2.TabIndex = 16;
-            this.labelRecuerda2.Text = "números y caracteres especiales";
+            this.label15.AutoSize = true;
+            this.label15.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label15.Location = new System.Drawing.Point(3, 228);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(219, 13);
+            this.label15.TabIndex = 26;
+            this.label15.Text = "Lorem ipsum dolor sit amet, consectetur ";
             // 
-            // buttonCambiarContrasena
+            // label16
             // 
-            this.buttonCambiarContrasena.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(152)))), ((int)(((byte)(219)))));
-            this.buttonCambiarContrasena.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.buttonCambiarContrasena.FlatAppearance.BorderSize = 0;
-            this.buttonCambiarContrasena.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonCambiarContrasena.Font = new System.Drawing.Font("Segoe UI Black", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonCambiarContrasena.ForeColor = System.Drawing.Color.White;
-            this.buttonCambiarContrasena.Location = new System.Drawing.Point(33, 455);
-            this.buttonCambiarContrasena.Name = "buttonCambiarContrasena";
-            this.buttonCambiarContrasena.Size = new System.Drawing.Size(384, 53);
-            this.buttonCambiarContrasena.TabIndex = 17;
-            this.buttonCambiarContrasena.Text = "CAMBIAR CONTRASEÑA";
-            this.buttonCambiarContrasena.UseVisualStyleBackColor = false;
+            this.label16.AutoSize = true;
+            this.label16.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label16.Location = new System.Drawing.Point(3, 212);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(219, 13);
+            this.label16.TabIndex = 25;
+            this.label16.Text = "Lorem ipsum dolor sit amet, consectetur ";
             // 
-            // pictureBoxBombilla
+            // label17
             // 
-            this.pictureBoxBombilla.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxBombilla.Image")));
-            this.pictureBoxBombilla.Location = new System.Drawing.Point(3, 3);
-            this.pictureBoxBombilla.Name = "pictureBoxBombilla";
-            this.pictureBoxBombilla.Size = new System.Drawing.Size(37, 31);
-            this.pictureBoxBombilla.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBoxBombilla.TabIndex = 0;
-            this.pictureBoxBombilla.TabStop = false;
-            // 
-            // labelSabiasQue
-            // 
-            this.labelSabiasQue.AutoSize = true;
-            this.labelSabiasQue.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelSabiasQue.Location = new System.Drawing.Point(46, 4);
-            this.labelSabiasQue.Name = "labelSabiasQue";
-            this.labelSabiasQue.Size = new System.Drawing.Size(154, 30);
-            this.labelSabiasQue.TabIndex = 11;
-            this.labelSabiasQue.Text = "¿Sabias qué...?";
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(3, 48);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(219, 13);
-            this.label6.TabIndex = 16;
-            this.label6.Text = "Lorem ipsum dolor sit amet, consectetur ";
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(3, 65);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(219, 13);
-            this.label7.TabIndex = 17;
-            this.label7.Text = "Lorem ipsum dolor sit amet, consectetur ";
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(3, 81);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(219, 13);
-            this.label8.TabIndex = 18;
-            this.label8.Text = "Lorem ipsum dolor sit amet, consectetur ";
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(3, 96);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(219, 13);
-            this.label9.TabIndex = 19;
-            this.label9.Text = "Lorem ipsum dolor sit amet, consectetur ";
+            this.label17.AutoSize = true;
+            this.label17.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label17.Location = new System.Drawing.Point(3, 195);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(219, 13);
+            this.label17.TabIndex = 24;
+            this.label17.Text = "Lorem ipsum dolor sit amet, consectetur ";
             // 
             // label10
             // 
@@ -374,45 +308,90 @@ namespace Desktop_App
             this.label13.TabIndex = 20;
             this.label13.Text = "Lorem ipsum dolor sit amet, consectetur ";
             // 
-            // label14
+            // label9
             // 
-            this.label14.AutoSize = true;
-            this.label14.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.Location = new System.Drawing.Point(3, 243);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(219, 13);
-            this.label14.TabIndex = 27;
-            this.label14.Text = "Lorem ipsum dolor sit amet, consectetur ";
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.Location = new System.Drawing.Point(3, 96);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(219, 13);
+            this.label9.TabIndex = 19;
+            this.label9.Text = "Lorem ipsum dolor sit amet, consectetur ";
             // 
-            // label15
+            // label8
             // 
-            this.label15.AutoSize = true;
-            this.label15.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label15.Location = new System.Drawing.Point(3, 228);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(219, 13);
-            this.label15.TabIndex = 26;
-            this.label15.Text = "Lorem ipsum dolor sit amet, consectetur ";
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Location = new System.Drawing.Point(3, 81);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(219, 13);
+            this.label8.TabIndex = 18;
+            this.label8.Text = "Lorem ipsum dolor sit amet, consectetur ";
             // 
-            // label16
+            // label7
             // 
-            this.label16.AutoSize = true;
-            this.label16.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label16.Location = new System.Drawing.Point(3, 212);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(219, 13);
-            this.label16.TabIndex = 25;
-            this.label16.Text = "Lorem ipsum dolor sit amet, consectetur ";
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(3, 65);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(219, 13);
+            this.label7.TabIndex = 17;
+            this.label7.Text = "Lorem ipsum dolor sit amet, consectetur ";
             // 
-            // label17
+            // label6
             // 
-            this.label17.AutoSize = true;
-            this.label17.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label17.Location = new System.Drawing.Point(3, 195);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(219, 13);
-            this.label17.TabIndex = 24;
-            this.label17.Text = "Lorem ipsum dolor sit amet, consectetur ";
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(3, 48);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(219, 13);
+            this.label6.TabIndex = 16;
+            this.label6.Text = "Lorem ipsum dolor sit amet, consectetur ";
+            // 
+            // labelSabiasQue
+            // 
+            this.labelSabiasQue.AutoSize = true;
+            this.labelSabiasQue.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelSabiasQue.Location = new System.Drawing.Point(46, 4);
+            this.labelSabiasQue.Name = "labelSabiasQue";
+            this.labelSabiasQue.Size = new System.Drawing.Size(154, 30);
+            this.labelSabiasQue.TabIndex = 11;
+            this.labelSabiasQue.Text = "¿Sabias qué...?";
+            // 
+            // labelRecuerda1
+            // 
+            this.labelRecuerda1.AutoSize = true;
+            this.labelRecuerda1.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelRecuerda1.Location = new System.Drawing.Point(30, 336);
+            this.labelRecuerda1.Name = "labelRecuerda1";
+            this.labelRecuerda1.Size = new System.Drawing.Size(358, 13);
+            this.labelRecuerda1.TabIndex = 15;
+            this.labelRecuerda1.Text = "Recuerda que la contraseña debe contener mayusculas, minusculas,";
+            // 
+            // labelRecuerda2
+            // 
+            this.labelRecuerda2.AutoSize = true;
+            this.labelRecuerda2.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelRecuerda2.Location = new System.Drawing.Point(30, 349);
+            this.labelRecuerda2.Name = "labelRecuerda2";
+            this.labelRecuerda2.Size = new System.Drawing.Size(171, 13);
+            this.labelRecuerda2.TabIndex = 16;
+            this.labelRecuerda2.Text = "números y caracteres especiales";
+            // 
+            // buttonCambiarContrasena
+            // 
+            this.buttonCambiarContrasena.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(152)))), ((int)(((byte)(219)))));
+            this.buttonCambiarContrasena.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.buttonCambiarContrasena.FlatAppearance.BorderSize = 0;
+            this.buttonCambiarContrasena.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonCambiarContrasena.Font = new System.Drawing.Font("Segoe UI Black", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonCambiarContrasena.ForeColor = System.Drawing.Color.White;
+            this.buttonCambiarContrasena.Location = new System.Drawing.Point(33, 455);
+            this.buttonCambiarContrasena.Name = "buttonCambiarContrasena";
+            this.buttonCambiarContrasena.Size = new System.Drawing.Size(384, 53);
+            this.buttonCambiarContrasena.TabIndex = 17;
+            this.buttonCambiarContrasena.Text = "CAMBIAR CONTRASEÑA";
+            this.buttonCambiarContrasena.UseVisualStyleBackColor = false;
             // 
             // buttonVolverIniciarSesion
             // 
@@ -430,6 +409,27 @@ namespace Desktop_App
             this.buttonVolverIniciarSesion.Text = "Volver para iniciar sesión";
             this.buttonVolverIniciarSesion.UseVisualStyleBackColor = false;
             this.buttonVolverIniciarSesion.Click += new System.EventHandler(this.buttonVolverIniciarSesion_Click);
+            // 
+            // pictureBoxBombilla
+            // 
+            this.pictureBoxBombilla.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxBombilla.Image")));
+            this.pictureBoxBombilla.Location = new System.Drawing.Point(3, 3);
+            this.pictureBoxBombilla.Name = "pictureBoxBombilla";
+            this.pictureBoxBombilla.Size = new System.Drawing.Size(37, 31);
+            this.pictureBoxBombilla.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBoxBombilla.TabIndex = 0;
+            this.pictureBoxBombilla.TabStop = false;
+            // 
+            // pictureBoxIconoContrasenaOlvidada
+            // 
+            this.pictureBoxIconoContrasenaOlvidada.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(48)))), ((int)(((byte)(45)))));
+            this.pictureBoxIconoContrasenaOlvidada.Image = global::Desktop_App.Properties.Resources.forgotPassIcon;
+            this.pictureBoxIconoContrasenaOlvidada.Location = new System.Drawing.Point(12, 12);
+            this.pictureBoxIconoContrasenaOlvidada.Name = "pictureBoxIconoContrasenaOlvidada";
+            this.pictureBoxIconoContrasenaOlvidada.Size = new System.Drawing.Size(30, 30);
+            this.pictureBoxIconoContrasenaOlvidada.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBoxIconoContrasenaOlvidada.TabIndex = 2;
+            this.pictureBoxIconoContrasenaOlvidada.TabStop = false;
             // 
             // FormContrasenaOlvidada
             // 
@@ -455,12 +455,12 @@ namespace Desktop_App
             this.Text = "FormContrasenaOlvidada";
             this.panelSuperior.ResumeLayout(false);
             this.panelSuperior.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxIconoContrasenaOlvidada)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             this.panelSabiasQue.ResumeLayout(false);
             this.panelSabiasQue.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxBombilla)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxIconoContrasenaOlvidada)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

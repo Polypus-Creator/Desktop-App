@@ -32,7 +32,6 @@ namespace Desktop_App
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormLogin));
             this.panelSuperior = new System.Windows.Forms.Panel();
             this.labelIniciarSesion = new System.Windows.Forms.Label();
-            this.pictureBoxIconoIniciarSesion = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.labelMinimize = new System.Windows.Forms.Label();
             this.labelClose = new System.Windows.Forms.Label();
@@ -45,11 +44,12 @@ namespace Desktop_App
             this.linkLabelRegistrarte = new System.Windows.Forms.LinkLabel();
             this.panelPrincipal = new System.Windows.Forms.Panel();
             this.pictureBoxLogo = new System.Windows.Forms.PictureBox();
+            this.pictureBoxIconoIniciarSesion = new System.Windows.Forms.PictureBox();
             this.panelSuperior.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxIconoIniciarSesion)).BeginInit();
             this.panel2.SuspendLayout();
             this.panelPrincipal.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLogo)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxIconoIniciarSesion)).BeginInit();
             this.SuspendLayout();
             // 
             // panelSuperior
@@ -68,22 +68,11 @@ namespace Desktop_App
             this.labelIniciarSesion.AutoSize = true;
             this.labelIniciarSesion.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelIniciarSesion.ForeColor = System.Drawing.Color.White;
-            this.labelIniciarSesion.Location = new System.Drawing.Point(63, 10);
+            this.labelIniciarSesion.Location = new System.Drawing.Point(44, 13);
             this.labelIniciarSesion.Name = "labelIniciarSesion";
             this.labelIniciarSesion.Size = new System.Drawing.Size(166, 32);
             this.labelIniciarSesion.TabIndex = 3;
             this.labelIniciarSesion.Text = "Iniciar sesión";
-            // 
-            // pictureBoxIconoIniciarSesion
-            // 
-            this.pictureBoxIconoIniciarSesion.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(48)))), ((int)(((byte)(45)))));
-            this.pictureBoxIconoIniciarSesion.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxIconoIniciarSesion.Image")));
-            this.pictureBoxIconoIniciarSesion.Location = new System.Drawing.Point(12, 5);
-            this.pictureBoxIconoIniciarSesion.Name = "pictureBoxIconoIniciarSesion";
-            this.pictureBoxIconoIniciarSesion.Size = new System.Drawing.Size(44, 44);
-            this.pictureBoxIconoIniciarSesion.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBoxIconoIniciarSesion.TabIndex = 2;
-            this.pictureBoxIconoIniciarSesion.TabStop = false;
             // 
             // panel2
             // 
@@ -98,14 +87,6 @@ namespace Desktop_App
             // labelMinimize
             // 
             this.labelMinimize.AutoSize = true;
-            this.labelMinimize.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelMinimize.ForeColor = System.Drawing.Color.White;
-            this.labelMinimize.Location = new System.Drawing.Point(21, 1);
-            this.labelMinimize.Name = "labelMinimize";
-            this.labelMinimize.Size = new System.Drawing.Size(35, 32);
-            this.labelMinimize.TabIndex = 1;
-            this.labelMinimize.Text = "__";
-            this.labelMinimize.Click += new System.EventHandler(this.labelMinimize_Click);
             this.labelMinimize.Font = new System.Drawing.Font("Segoe UI", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelMinimize.ForeColor = System.Drawing.Color.White;
             this.labelMinimize.Location = new System.Drawing.Point(16, 4);
@@ -113,6 +94,7 @@ namespace Desktop_App
             this.labelMinimize.Size = new System.Drawing.Size(29, 40);
             this.labelMinimize.TabIndex = 1;
             this.labelMinimize.Text = "-";
+            this.labelMinimize.Click += new System.EventHandler(this.labelMinimize_Click);
             // 
             // labelClose
             // 
@@ -230,6 +212,17 @@ namespace Desktop_App
             this.pictureBoxLogo.TabIndex = 9;
             this.pictureBoxLogo.TabStop = false;
             // 
+            // pictureBoxIconoIniciarSesion
+            // 
+            this.pictureBoxIconoIniciarSesion.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(48)))), ((int)(((byte)(45)))));
+            this.pictureBoxIconoIniciarSesion.Image = global::Desktop_App.Properties.Resources.padlockIcon;
+            this.pictureBoxIconoIniciarSesion.Location = new System.Drawing.Point(12, 11);
+            this.pictureBoxIconoIniciarSesion.Name = "pictureBoxIconoIniciarSesion";
+            this.pictureBoxIconoIniciarSesion.Size = new System.Drawing.Size(30, 30);
+            this.pictureBoxIconoIniciarSesion.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBoxIconoIniciarSesion.TabIndex = 2;
+            this.pictureBoxIconoIniciarSesion.TabStop = false;
+            // 
             // FormLogin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -242,12 +235,12 @@ namespace Desktop_App
             this.Text = "Form";
             this.panelSuperior.ResumeLayout(false);
             this.panelSuperior.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxIconoIniciarSesion)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             this.panelPrincipal.ResumeLayout(false);
             this.panelPrincipal.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLogo)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxIconoIniciarSesion)).EndInit();
             this.ResumeLayout(false);
 
         }
