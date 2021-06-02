@@ -19,12 +19,14 @@ namespace Desktop_App
         private string linkLk;
         private string linkIn;
         private string linkFb;
-        public Footer(string text)
+        public Footer(string elemento, string text)
         {
+            Elemento = elemento;
             Text = text;
         }
-        public Footer(string title, string text, string horario, string correo, string telefono, string web, string linkTw, string linkLk, string linkIn, string linkFb)
+        public Footer(string elemento, string title, string text, string horario, string correo, string telefono, string web, string linkTw, string linkLk, string linkIn, string linkFb)
         {
+            Elemento = elemento;
             Text = text;
             Title = title;
             Horari = horario;
@@ -36,7 +38,7 @@ namespace Desktop_App
             LinkIn = linkIn;
             LinkFb = linkFb;
         }
-        public string Elemento => elemento;
+        public string Elemento { get => elemento; set => elemento = value; }
         public string Text { get => text; set => text = value; }
         public string Title { get => title; set => title = value; }
         public string Horari { get => horari; set => horari = value; }
@@ -47,5 +49,6 @@ namespace Desktop_App
         public string LinkLk { get => linkLk; set => linkLk = value; }
         public string LinkIn { get => linkIn; set => linkIn = value; }
         public string LinkFb { get => linkFb; set => linkFb = value; }
+        
     }
 }

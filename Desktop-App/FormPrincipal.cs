@@ -725,13 +725,13 @@ namespace Desktop_App
                     Footer footer = null;
                     if (panel.CheckBox.Checked)
                     {
-                        footer = new Footer(panel.ListText[0].Text, panel.ListText[1].Text, panel.ListText[2].Text, panel.ListText[3].Text,
+                        footer = new Footer("ComplexFooter", panel.ListText[0].Text, panel.ListText[1].Text, panel.ListText[2].Text, panel.ListText[3].Text,
                             panel.ListText[4].Text, panel.ListText[5].Text, panel.ListText[6].Text, panel.ListText[7].Text, panel.ListText[8].Text,
                             panel.ListText[9].Text);
                     }
                     else
                     {
-                        footer = new Footer(panel.ListText[0].Text);
+                        footer = new Footer("SimpleFooter", panel.ListText[0].Text);
                     }
 
                     DataClass.listasElementos.Add(footer);
