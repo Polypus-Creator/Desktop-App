@@ -760,7 +760,20 @@ namespace Desktop_App
                 }
                 else if (panel.Title == "Text")
                 {
-                    Text text = new Text("Text", panel.ListText[0].Text, panel.ListaCombo[0].SelectedItem.ToString().Substring(0,1));
+                    Text text = null;
+                    switch (panel.ListaCombo[0].SelectedIndex)
+                    {
+                        case 0:
+                            text = new Text("Text", panel.ListaCombo[0].SelectedItem.ToString().Substring(0, 1), panel.ListText[0].Text);
+                            break;
+                        case 1:
+                            text = new Text("Text", panel.ListaCombo[0].SelectedItem.ToString().Substring(0, 1), panel.ListText[0].Text, panel.ListText[1].Text);
+                            break;
+                        case 2:
+                            text = new Text("Text", panel.ListaCombo[0].SelectedItem.ToString().Substring(0, 1), panel.ListText[0].Text, panel.ListText[1].Text, panel.ListText[2].Text);
+                            break;
+                    }
+                    
                     DataClass.listasElementos.Add(text);
                 }
                 else if (panel.Title == "Price Cards")
@@ -1877,7 +1890,7 @@ namespace Desktop_App
                             {
                                 if (panelDelete.Name.Contains("1"))
                                 {
-                                    ajustes.ListaImages[0].Image = Desktop_App.Properties.Resources.addNewImage; ;
+                                    ajustes.ListaImages[0].Image = Desktop_App.Properties.Resources.addNewImage;
                                     element.ButonsOptions[0].Image = null;
                                     element.ButonsOptions[0].Visible = false;
                                     ajustes.ListItems[0] = null;
@@ -1885,7 +1898,7 @@ namespace Desktop_App
                                 }
                                 else if (panelDelete.Name.Contains("2"))
                                 {
-                                    ajustes.ListaImages[1].Image = Desktop_App.Properties.Resources.addNewImage; ;
+                                    ajustes.ListaImages[1].Image = Desktop_App.Properties.Resources.addNewImage;
                                     element.ButonsOptions[1].Image = null;
                                     element.ButonsOptions[1].Visible = false;
                                     ajustes.ListItems[1] = null;
@@ -1893,7 +1906,7 @@ namespace Desktop_App
                                 }
                                 else if (panelDelete.Name.Contains("3"))
                                 {
-                                    ajustes.ListaImages[2].Image = Desktop_App.Properties.Resources.addNewImage; ;
+                                    ajustes.ListaImages[2].Image = Desktop_App.Properties.Resources.addNewImage;
                                     element.ButonsOptions[2].Image = null;
                                     element.ButonsOptions[2].Visible = false;
                                     ajustes.ListItems[2] = null;
@@ -1939,7 +1952,7 @@ namespace Desktop_App
                             {
                                 if (panelDelete.Name.Contains("1"))
                                 {
-                                    ajustes.ListaImages[0].Image = Desktop_App.Properties.Resources.addNewImage; ;
+                                    ajustes.ListaImages[0].Image = Desktop_App.Properties.Resources.addNewImage;
                                     element.ButonsOptions[0].Image = null;
                                     element.ButonsOptions[0].Visible = false;
                                     element.Options[0] = null;
@@ -1947,7 +1960,7 @@ namespace Desktop_App
                                 }
                                 else if (panelDelete.Name.Contains("2"))
                                 {
-                                    ajustes.ListaImages[1].Image = Desktop_App.Properties.Resources.addNewImage; ;
+                                    ajustes.ListaImages[1].Image = Desktop_App.Properties.Resources.addNewImage;
                                     element.ButonsOptions[1].Image = null;
                                     element.ButonsOptions[1].Visible = false;
                                     element.Options[1] = null;
@@ -1955,7 +1968,7 @@ namespace Desktop_App
                                 }
                                 else if (panelDelete.Name.Contains("3"))
                                 {
-                                    ajustes.ListaImages[2].Image = Desktop_App.Properties.Resources.addNewImage; ;
+                                    ajustes.ListaImages[2].Image = Desktop_App.Properties.Resources.addNewImage;
                                     element.ButonsOptions[2].Image = null;
                                     element.ButonsOptions[2].Visible = false;
                                     element.Options[2] = null;
@@ -2008,12 +2021,14 @@ namespace Desktop_App
             string title = "Text";
             List<string> options = new List<string>();
             options.Add("Text");
-            ClassCreatePanelElement panelElement = new ClassCreatePanelElement(482, 1, title, options);
+            options.Add("Text");
+            options.Add("Text");
+            ClassCreatePanelElement panelElement = new ClassCreatePanelElement(482, 3, title, options);
             flowLayoutPanelCurrentElements.Controls.Add(panelElement.PanelGol);
             panelesFlow.Add(panelElement);
             panelElement.PanelGol.Name = "Text" + panelesFlow.Count;
             panelElement.LabelTitle.Size = new Size(120, 21);
-            panelElement.LabelOptions[0].Visible = true;
+            panelElement.LabelOptions[0].Visible=true;
             panelElement.CreateAjustes = new ClassCreatePanelAjustes(410, 310, panelElement.Title, panelElement.Options);
 
             ComboBox comboBox = new ComboBox();
@@ -2023,6 +2038,7 @@ namespace Desktop_App
             comboBox.Items.Add("2 Columnas");
             comboBox.Items.Add("3 Columnas");
             comboBox.Size = new Size(149, 20);
+            comboBox.SelectedIndexChanged += ComboBox_SelectedIndexChanged;
             comboBox.DropDownStyle = ComboBoxStyle.DropDownList;
             comboBox.Location = new Point(90, 17);
             panelElement.CreateAjustes.ListaCombo.Add(comboBox);
@@ -2034,6 +2050,16 @@ namespace Desktop_App
             panelElement.CreateAjustes.ListText[0].Multiline = true;
             panelElement.CreateAjustes.ListText[0].Text = "";
             panelElement.CreateAjustes.ListText[0].Size = new Size(350, 124);
+
+            panelElement.CreateAjustes.ListText[1].Multiline = true;
+            panelElement.CreateAjustes.ListText[1].Text = "";
+            panelElement.CreateAjustes.ListText[1].Location = new Point(21,57);
+            panelElement.CreateAjustes.ListText[1].Size = new Size(350, 124);
+
+            panelElement.CreateAjustes.ListText[2].Multiline = true;
+            panelElement.CreateAjustes.ListText[2].Location = new Point(21,57);
+            panelElement.CreateAjustes.ListText[2].Text = "";
+            panelElement.CreateAjustes.ListText[2].Size = new Size(350, 124);
 
             panelElement.CreateAjustes.PanelSave.MouseClick += new System.Windows.Forms.MouseEventHandler(PanelSave_MousClick);
             panelElement.CreateAjustes.LabelSave.MouseClick += new System.Windows.Forms.MouseEventHandler(PanelSave_MousClick);
@@ -2050,6 +2076,99 @@ namespace Desktop_App
             panelElement.PanelEd.MouseClick += new System.Windows.Forms.MouseEventHandler(PanelEd_MouseClick);
             panelElement.PbEd.MouseClick += new System.Windows.Forms.MouseEventHandler(PanelEd_MouseClick);
             ordenarPaneles();
+        }
+
+        private void ComboBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            ClassCreatePanelElement element=null;
+            ComboBox combo = (ComboBox)sender;
+
+            foreach (ClassCreatePanelAjustes aju in panelesAjustes)
+            {
+                if (aju.ListaCombo.Contains(combo))
+                {
+                    foreach (ClassCreatePanelElement ele in panelesFlow)
+                    {
+                        if (ele.CreateAjustes.Equals(aju))
+                        {
+                            element = ele;
+                            break;
+                        }
+                    }
+                    break;
+                }
+            }
+            switch (combo.SelectedIndex)
+            {
+                case 0:
+                    element.LabelOptions[0].Visible = true;
+                    element.CreateAjustes.ListText[0].Multiline = true;
+                    element.CreateAjustes.ListText[0].Text = "";
+                    element.CreateAjustes.ListText[1].Location = new Point(21, 57);
+                    element.CreateAjustes.ListText[0].Size = new Size(350, 124);
+                    element.CreateAjustes.ListText[0].Visible= true;
+
+                    element.LabelOptions[1].Visible = false;
+                    element.CreateAjustes.ListText[1].Multiline = true;
+                    element.CreateAjustes.ListText[1].Text = "";
+                    element.CreateAjustes.ListText[1].Location = new Point(21, 57);
+                    element.CreateAjustes.ListText[1].Size = new Size(350, 124);
+                    element.CreateAjustes.ListText[1].Visible = false;
+
+                    element.LabelOptions[2].Visible = false;
+                    element.CreateAjustes.ListText[2].Multiline = true;
+                    element.CreateAjustes.ListText[2].Location = new Point(21, 57);
+                    element.CreateAjustes.ListText[2].Text = "";
+                    element.CreateAjustes.ListText[2].Size = new Size(350, 124);
+                    element.CreateAjustes.ListText[2].Visible= false;
+
+                    break;
+                case 1:
+                    element.LabelOptions[0].Visible = true;
+                    element.CreateAjustes.ListText[0].Multiline = true;
+                    element.CreateAjustes.ListText[0].Text = "";
+                    element.CreateAjustes.ListText[1].Location = new Point(21, 57);
+                    element.CreateAjustes.ListText[0].Size = new Size(350/2-10, 124);
+                    element.CreateAjustes.ListText[0].Visible = true;
+
+                    element.LabelOptions[1].Visible = true;
+                    element.CreateAjustes.ListText[1].Multiline = true;
+                    element.CreateAjustes.ListText[1].Text = "";
+                    element.CreateAjustes.ListText[1].Location = new Point(21+350/2, 57);
+                    element.CreateAjustes.ListText[1].Size = new Size(350/2-10, 124);
+                    element.CreateAjustes.ListText[1].Visible = true;
+
+                    element.LabelOptions[2].Visible = false;
+                    element.CreateAjustes.ListText[2].Multiline = true;
+                    element.CreateAjustes.ListText[2].Location = new Point(21, 57);
+                    element.CreateAjustes.ListText[2].Text = "";
+                    element.CreateAjustes.ListText[2].Size = new Size(350, 124);
+                    element.CreateAjustes.ListText[2].Visible = false;
+
+                    break;
+                case 2:
+                    element.LabelOptions[0].Visible = true;
+                    element.CreateAjustes.ListText[0].Multiline = true;
+                    element.CreateAjustes.ListText[0].Text = "";
+                    element.CreateAjustes.ListText[1].Location = new Point(21, 57);
+                    element.CreateAjustes.ListText[0].Size = new Size(350 / 3 - 10, 124);
+                    element.CreateAjustes.ListText[0].Visible = true;
+
+                    element.LabelOptions[1].Visible = true;
+                    element.CreateAjustes.ListText[1].Multiline = true;
+                    element.CreateAjustes.ListText[1].Text = "";
+                    element.CreateAjustes.ListText[1].Location = new Point(21 + 350 / 3, 57);
+                    element.CreateAjustes.ListText[1].Size = new Size(350 / 3 - 10, 124);
+                    element.CreateAjustes.ListText[1].Visible = true;
+
+                    element.LabelOptions[2].Visible = true;
+                    element.CreateAjustes.ListText[2].Multiline = true;
+                    element.CreateAjustes.ListText[2].Location = new Point(21+350/3*2, 57);
+                    element.CreateAjustes.ListText[2].Text = "";
+                    element.CreateAjustes.ListText[2].Size = new Size(350/3-10, 124);
+                    element.CreateAjustes.ListText[2].Visible = true;
+                    break;
+            }
         }
 
         private void panelSelectLogo_Paint(object sender, PaintEventArgs e)
