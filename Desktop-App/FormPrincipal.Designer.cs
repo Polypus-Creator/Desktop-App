@@ -574,6 +574,7 @@ namespace Desktop_App
             this.panelFinalizarWeb.Name = "panelFinalizarWeb";
             this.panelFinalizarWeb.Size = new System.Drawing.Size(188, 32);
             this.panelFinalizarWeb.TabIndex = 42;
+            this.panelFinalizarWeb.MouseClick += new System.Windows.Forms.MouseEventHandler(this.panelFinalizarWeb_MouseClick);
             this.panelFinalizarWeb.MouseEnter += new System.EventHandler(this.panelFinalizarWeb_MouseEnter);
             this.panelFinalizarWeb.MouseLeave += new System.EventHandler(this.panelFinalizarWeb_MouseLeave);
             // 
@@ -586,6 +587,7 @@ namespace Desktop_App
             this.pictureBox27.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox27.TabIndex = 2;
             this.pictureBox27.TabStop = false;
+            this.pictureBox27.MouseClick += new System.Windows.Forms.MouseEventHandler(this.panelFinalizarWeb_MouseClick);
             this.pictureBox27.MouseEnter += new System.EventHandler(this.panelFinalizarWeb_MouseEnter);
             this.pictureBox27.MouseLeave += new System.EventHandler(this.panelFinalizarWeb_MouseLeave);
             // 
@@ -599,6 +601,7 @@ namespace Desktop_App
             this.label58.Size = new System.Drawing.Size(124, 19);
             this.label58.TabIndex = 0;
             this.label58.Text = "FINALIZAR WEB";
+            this.label58.MouseClick += new System.Windows.Forms.MouseEventHandler(this.panelFinalizarWeb_MouseClick);
             this.label58.MouseEnter += new System.EventHandler(this.panelFinalizarWeb_MouseEnter);
             this.label58.MouseLeave += new System.EventHandler(this.panelFinalizarWeb_MouseLeave);
             // 
@@ -1875,7 +1878,6 @@ namespace Desktop_App
             this.panelSelectLogo.Size = new System.Drawing.Size(345, 32);
             this.panelSelectLogo.TabIndex = 38;
             this.panelSelectLogo.Click += new System.EventHandler(this.panelSelectLogo_Click);
-            this.panelSelectLogo.Paint += new System.Windows.Forms.PaintEventHandler(this.panelSelectLogo_Paint);
             // 
             // pictureBox16
             // 

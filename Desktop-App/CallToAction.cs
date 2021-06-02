@@ -15,8 +15,9 @@ namespace Desktop_App
         private string buttonText;
         private string buttonUrl;
         private string orientation;
-        
-        public CallToAction(string title, string text, Color backColor, Color buttonColor, string buttonText, string buttonUrl, string orientation)
+        private string rutaImage;
+
+        public CallToAction(string title, string text, Color backColor, Color buttonColor, string buttonText, string buttonUrl, string orientation, string rutaImage)
         {
             Elemento = "CallToAction";
             Title = title;
@@ -26,6 +27,7 @@ namespace Desktop_App
             ButtonText = buttonText;
             ButtonUrl = buttonUrl;
             Orientation = orientation;
+            RutaImage = rutaImage;
         }
 
         public string Elemento { get => elemento; set => elemento = value; }
@@ -36,7 +38,7 @@ namespace Desktop_App
         public string ButtonText { get => buttonText; set => buttonText = value; }
         public string ButtonUrl { get => buttonUrl; set => buttonUrl = value; }
         public string Orientation { get => orientation; set => orientation = value; }
-        
+        public string RutaImage { get => rutaImage; set => rutaImage = value; }
 
         private String HexConverter(System.Drawing.Color c)
         {

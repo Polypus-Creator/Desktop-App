@@ -573,8 +573,7 @@ namespace Desktop_App
 
         private void PanelDe_MouseClicked(Object sender, MouseEventArgs e)
         {
-            string typo = sender.GetType().Name;
-            if (typo == "Panel")
+            if (sender is Panel)
             {
                 Panel panel = (Panel)sender;
                 foreach (ClassCreatePanelElement element in panelesFlow)
@@ -603,7 +602,7 @@ namespace Desktop_App
 
 
             }
-            else if (typo == "PictureBox")
+            else if (sender is PictureBox)
             {
                 PictureBox picture = (PictureBox)sender;
                 foreach (ClassCreatePanelElement element in panelesFlow)
@@ -635,8 +634,7 @@ namespace Desktop_App
 
         private void PanelEd_MouseClick(Object sender, MouseEventArgs e)
         {
-            string typo = sender.GetType().Name;
-            if (typo == "Panel")
+            if (sender is Panel)
             {
                 Panel panel = (Panel)sender;
                 foreach (ClassCreatePanelElement element in panelesFlow)
@@ -648,7 +646,7 @@ namespace Desktop_App
                     }
                 }
             }
-            else if (typo == "PictureBox")
+            else if (sender is PictureBox)
             {
                 PictureBox picture = (PictureBox)sender;
                 foreach (ClassCreatePanelElement element in panelesFlow)
@@ -699,7 +697,7 @@ namespace Desktop_App
                             orientation = comboBox.SelectedItem.ToString();
                         }
                     }
-                    CallToAction callToaction = new CallToAction(panel.ListText[0].Text, panel.ListText[1].Text,backColor,buttonColor, panel.ListText[2].Text, panel.ListText[3].Text, orientation);
+                    CallToAction callToaction = new CallToAction(panel.ListText[0].Text, panel.ListText[1].Text,backColor,buttonColor, panel.ListText[2].Text, panel.ListText[3].Text, orientation, panel.ListText[4].Text);
                     DataClass.listasElementos.Add(callToaction);
                 }else if (panel.Title == "Image Text")
                 {
@@ -724,7 +722,18 @@ namespace Desktop_App
                     DataClass.listasElementos.Add(imageText);
                 }else if (panel.Title == "Footer")
                 {
-                    Footer footer = new Footer(panel.ListText[0].Text);
+                    Footer footer = null;
+                    if (panel.CheckBox.Checked)
+                    {
+                        footer = new Footer(panel.ListText[0].Text, panel.ListText[1].Text, panel.ListText[2].Text, panel.ListText[3].Text,
+                            panel.ListText[4].Text, panel.ListText[5].Text, panel.ListText[6].Text, panel.ListText[7].Text, panel.ListText[8].Text,
+                            panel.ListText[9].Text);
+                    }
+                    else
+                    {
+                        footer = new Footer(panel.ListText[0].Text);
+                    }
+
                     DataClass.listasElementos.Add(footer);
                 }else if (panel.Title == "Image")
                 {
@@ -751,7 +760,7 @@ namespace Desktop_App
                 }
                 else if (panel.Title == "Text")
                 {
-                    Text text = new Text("Text", panel.ListText[0].Text);
+                    Text text = new Text("Text", panel.ListText[0].Text, panel.ListaCombo[0].SelectedItem.ToString().Substring(0,1));
                     DataClass.listasElementos.Add(text);
                 }
                 else if (panel.Title == "Price Cards")
@@ -842,17 +851,12 @@ namespace Desktop_App
                     DataClass.listasElementos.Add(button);
                 }
             });
-                
-            
-            generateJSON(DataClass.listasElementos);
-            string obstring = JsonConvert.SerializeObject(DataClass.classListaJSON);
-            JObject googleSearch = JObject.Parse(obstring);
-            Console.WriteLine(googleSearch.ToString());
 
-            string typo = sender.GetType().Name;
+
+            
             foreach(ClassCreatePanelAjustes elem in panelesAjustes)
             {
-                if (typo.Equals("PictureBox"))
+                if (sender is PictureBox)
                 {
                     PictureBox pictureBox = (PictureBox)sender;
                     if (elem.Save.Equals(pictureBox))
@@ -860,7 +864,7 @@ namespace Desktop_App
                         elem.PanelGlo.Visible = false;
                     }
 
-                }else if (typo.Equals("Panel"))
+                }else if (sender is Panel)
                 {
                     Panel panel = (Panel)sender;
                     if (elem.PanelSave.Equals(panel))
@@ -954,7 +958,7 @@ namespace Desktop_App
             ClassCreatePanelElement elementos = null;
             foreach (ClassCreatePanelAjustes ajuste in panelesAjustes)
             {
-                if (ajuste.PanelTextos.Controls.Contains(textBox))
+                if (ajuste.ListText.Contains(textBox))
                 {
                     ajustes = ajuste;
                     break;
@@ -999,6 +1003,7 @@ namespace Desktop_App
                         }
                     }
                 }
+                
                 else
                 {
                     foreach (object objeto in elementos.PanelGol.Controls)
@@ -1025,7 +1030,17 @@ namespace Desktop_App
                         }
                     }
                 }
-            }else if (elementos.Id == "Title")
+            }
+            else if (elementos.Id == "Footer")
+            {
+                elementos.LabelOptions[Int32.Parse(textBox.Name)].Visible = true;
+                if (textBox.Text == "")
+                {
+                    elementos.LabelOptions[Int32.Parse(textBox.Name)].Visible = false;
+                }
+            }
+
+            else if (elementos.Id == "Title")
             {
                 elementos.LabelOptions[Int32.Parse(textBox.Name)].Visible = true;
                 elementos.LabelOptions[Int32.Parse(textBox.Name)].Text = textBox.Text;
@@ -1179,6 +1194,18 @@ namespace Desktop_App
             buttonColor.Visible = true;
             panelElement.PanelGol.Controls.Add(buttonColor);
 
+
+            PictureBox image1 = new PictureBox();
+            image1.BackColor = Color.LightGray;
+            image1.Size = new Size(85, 45);
+            image1.SizeMode = PictureBoxSizeMode.StretchImage;
+            image1.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            image1.Location = new Point(298, 80);
+            image1.Visible = true;
+            panelElement.PanelGol.Controls.Add(image1);
+            panelElement.ButonsOptions.Add(image1);
+
+
             List<string> optionsAjustes = new List<string>();
             for(int id = 0; id<panelElement.Options.Count-1; id++)
             {
@@ -1188,7 +1215,17 @@ namespace Desktop_App
             panel4.Controls.Add(panelElement.CreateAjustes.PanelGlo);
             panelesAjustes.Add(panelElement.CreateAjustes);
 
-            
+            TextBox text = new TextBox();
+            text.Name = "";
+            text.Text = "Path image";
+            text.Size = new Size(149, 20);
+            text.Location = new Point(193, 57 + 44 * 2);
+            text.MouseClick += clickTextBox_AjustesFoto;
+            text.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            panelElement.CreateAjustes.ListText.Add(text);
+            panelElement.CreateAjustes.PanelTextos.Controls.Add(text);
+
+
             panelElement.CreateAjustes.PanelSave.MouseClick += new System.Windows.Forms.MouseEventHandler(PanelSave_MousClick);
             panelElement.CreateAjustes.LabelSave.MouseClick += new System.Windows.Forms.MouseEventHandler(PanelSave_MousClick);
 
@@ -1212,6 +1249,7 @@ namespace Desktop_App
             comboBox.Items.Add("Middle");
             comboBox.Size = new Size(149, 20);
             comboBox.Location = new Point(21, 145);
+            comboBox.DropDownStyle = ComboBoxStyle.DropDownList;
             comboBox.SelectedValueChanged += new EventHandler(comboBoxLado_SelectedValueChanged);
             panelElement.CreateAjustes.PanelTextos.Controls.Add(comboBox);
 
@@ -1318,6 +1356,7 @@ namespace Desktop_App
             comboBox.Items.Add("Right");
             comboBox.SelectedItem = "Right";
             comboBox.Items.Add("Left");
+            comboBox.DropDownStyle = ComboBoxStyle.DropDownList;
             comboBox.Size = new Size(149, 20);
             comboBox.Location = new Point(193, 101);
             comboBox.SelectedValueChanged += new EventHandler(comboBoxLado_SelectedValueChanged);
@@ -1412,18 +1451,49 @@ namespace Desktop_App
             {
                 string title = "Footer";
                 List<string> options = new List<string>();
+                options.Add("Title");
                 options.Add("Text");
-                ClassCreatePanelElement panelElement = new ClassCreatePanelElement(482, 3, title, options);
+                options.Add("Horari");
+                options.Add("Correo");
+                options.Add("Telefono");
+                options.Add("Web");
+                options.Add("LinkTw");
+                options.Add("LinkLk");
+                options.Add("LinkIn");
+                options.Add("LinkFb");
+
+                ClassCreatePanelElement panelElement = new ClassCreatePanelElement(482, options.Count, title, options);
                 flowLayoutPanelCurrentElements.Controls.Add(panelElement.PanelGol);
                 panelesFlow.Add(panelElement);
                 panelElement.PanelGol.Name = "Footer" + panelesFlow.Count;
                 panelElement.LabelTitle.Size = new Size(120, 21);
-                panelElement.LabelOptions.ForEach(delegate (Label label)
-                {
-                    label.Visible = true;
-                });
 
-                panelElement.CreateAjustes = new ClassCreatePanelAjustes(410, 310, panelElement.Title, panelElement.Options);
+                options[0]="Text";
+                options[1]="Title";
+                panelElement.CreateAjustes = new ClassCreatePanelAjustes(410, 400, panelElement.Title, options);
+
+                panelElement.CreateAjustes.PanelTextos.Height = panelElement.CreateAjustes.PanelGlo.Height - panelElement.CreateAjustes.PanelSave.Height - 75;
+                panelElement.CreateAjustes.PanelSave.Location = new Point(panelElement.CreateAjustes.PanelSave.Location.X, panelElement.CreateAjustes.PanelGlo.Height - panelElement.CreateAjustes.PanelSave.Height - 5);
+
+                panelElement.CreateAjustes.ListText.ForEach(delegate(TextBox textBox)
+                {
+                    textBox.Visible = false;
+                    textBox.TextChanged += textBox_TextChanged;
+                });
+                panelElement.CreateAjustes.ListText[0].Visible = true;
+                panelElement.CreateAjustes.ListText[0].Name = ""+1;
+
+                CheckBox checkBox = new CheckBox();
+                checkBox.Name = "All footer";
+                checkBox.Size = new Size(120, 25);
+                checkBox.Location = new Point(193, 17);
+                checkBox.Font = new Font("Segoe UI Semibold", 11.25f, FontStyle.Bold);
+                checkBox.Text = "All Options";
+                checkBox.CheckedChanged += checkBoxFooter_CheckedChanged;
+                checkBox.ForeColor = Color.White;
+                panelElement.CreateAjustes.CheckBox = checkBox;
+                panelElement.CreateAjustes.PanelTextos.Controls.Add(checkBox);
+
                 panel4.Controls.Add(panelElement.CreateAjustes.PanelGlo);
                 panelElement.PanelGol.BackColor = Color.FromArgb(175, 175, 175);
                 panelesAjustes.Add(panelElement.CreateAjustes);
@@ -1449,21 +1519,53 @@ namespace Desktop_App
             
             
         }
-
-        private void buttonGenerarLogoAleatorio_Click(object sender, EventArgs e)
+                
+        private void checkBoxFooter_CheckedChanged(object sender, EventArgs e)
         {
-            String[] images = new string[7];
-            images[0] = @"..\..\Resources\logos\logo1.png";
-            images[1] = @"..\..\Resources\logos\logo2.png";
-            images[2] = @"..\..\Resources\logos\logo3.png";
-            images[3] = @"..\..\Resources\logos\logo4.png";
-            images[4] = @"..\..\Resources\logos\logo5.png";
-            images[5] = @"..\..\Resources\logos\logo6.png";
-            images[6] = @"..\..\Resources\logos\logo7.png";
-            Random rnd = new Random();
-            int random = rnd.Next(0, 6);
-            pictureBoxLogo.Image = Image.FromFile(images[random]);
-            MessageBox.Show("Se ha generado un logo aleatorio.");
+            CheckBox check = (CheckBox)sender;
+            foreach(ClassCreatePanelAjustes ajustes in panelesAjustes)
+            {
+                if (ajustes.PanelTextos.Controls.Contains(check))
+                {
+                    ajustes.ListItems[0] = "Title";
+                    ajustes.ListItems[1] = "Text";
+                    if (check.Checked)
+                    {
+                        string texto = ajustes.ListText[0].Text;
+                        ajustes.ListText[0].Name = "" + 0;
+                        ajustes.ListText.ForEach(delegate (TextBox text)
+                        {
+                            text.Visible = true;
+                            text.Text = ajustes.ListItems[Int32.Parse(text.Name)];
+                        });
+                        ajustes.ListText[1].Text = texto;
+                        foreach(ClassCreatePanelElement el in panelesFlow)
+                        {
+                            if (el.CreateAjustes.Equals(ajustes))
+                            {
+                                el.LabelOptions.ForEach(delegate (Label la) 
+                                {
+                                    if (!la.Text.Equals("Text")) {
+                                        la.Visible = false;
+                                    }
+                                });
+                            }
+                        }
+                    }
+                    else
+                    {   
+                        string texto= ajustes.ListText[1].Text;
+                        ajustes.ListText.ForEach(delegate (TextBox text)
+                        {
+                            text.Visible = false;
+                            text.Text = ""; 
+                        });
+                        ajustes.ListText[0].Name = "" + 1;
+                        ajustes.ListText[0].Visible = true;
+                        ajustes.ListText[0].Text = texto;
+                    }
+                }
+            }
         }
 
         private void panelSelectLogo_Click(object sender, EventArgs e)
@@ -1508,7 +1610,20 @@ namespace Desktop_App
             images[6] = @"..\..\Resources\logos\logo7.png";
             Random rnd = new Random();
             int random = rnd.Next(0, 6);
-            pictureBoxLogo.Image = Image.FromFile(images[random]);
+            string[] rutas = images[random].Split('\\');
+            String directory = Path.GetDirectoryName(images[random]) + @"\" + Path.GetFileName(images[random]);
+            String newPath = @"..\..\Polypus\YourWebsites\Images\";
+            if (!File.Exists(newPath + rutas[rutas.Length - 1]))
+            {
+                File.Copy(directory, newPath + rutas[rutas.Length - 1]);
+            }
+            else
+            {
+                MessageBox.Show("Nombre de fichero existente");
+            }
+            pictureBoxLogo.Image = Image.FromFile(newPath + rutas[rutas.Length - 1]);
+            DataClass.logoPath = "\\" + rutas[rutas.Length - 1];
+            pictureBoxLogoFinal.Image = Image.FromFile(newPath + rutas[rutas.Length - 1]);
         }
 
         private void panel35_MouseClick(object sender, MouseEventArgs e)
@@ -1900,6 +2015,19 @@ namespace Desktop_App
             panelElement.LabelTitle.Size = new Size(120, 21);
             panelElement.LabelOptions[0].Visible = true;
             panelElement.CreateAjustes = new ClassCreatePanelAjustes(410, 310, panelElement.Title, panelElement.Options);
+
+            ComboBox comboBox = new ComboBox();
+            comboBox.Items.Clear();
+            comboBox.Items.Add("1 Columnas");
+            comboBox.SelectedItem = "1 Columnas";
+            comboBox.Items.Add("2 Columnas");
+            comboBox.Items.Add("3 Columnas");
+            comboBox.Size = new Size(149, 20);
+            comboBox.DropDownStyle = ComboBoxStyle.DropDownList;
+            comboBox.Location = new Point(90, 17);
+            panelElement.CreateAjustes.ListaCombo.Add(comboBox);
+            panelElement.CreateAjustes.PanelTextos.Controls.Add(comboBox);
+
             panel4.Controls.Add(panelElement.CreateAjustes.PanelGlo);
             panelesAjustes.Add(panelElement.CreateAjustes);
 
@@ -2040,7 +2168,7 @@ namespace Desktop_App
             comboBox3.Items.Add("£");
             comboBox3.SelectedIndex = 0;
             comboBox3.DropDownStyle = ComboBoxStyle.DropDownList;
-            createAjustes.ListaMoneda.Add(comboBox3);
+            createAjustes.ListaCombo.Add(comboBox3);
             createAjustes.PanelTextos.Controls.Add(comboBox3);
 
             int y2 = y1 + textBox1.Height + marg;
@@ -2084,7 +2212,7 @@ namespace Desktop_App
             comboBox7.Items.Add("£");
             comboBox7.SelectedIndex = 0;
             comboBox7.DropDownStyle = ComboBoxStyle.DropDownList;
-            createAjustes.ListaMoneda.Add(comboBox7);
+            createAjustes.ListaCombo.Add(comboBox7);
             createAjustes.PanelTextos.Controls.Add(comboBox7);
 
             TextBox textBox8 = new TextBox();
@@ -2125,7 +2253,7 @@ namespace Desktop_App
             comboBox11.Items.Add("£");
             comboBox11.SelectedIndex = 0;
             comboBox11.DropDownStyle = ComboBoxStyle.DropDownList;
-            createAjustes.ListaMoneda.Add(comboBox11);
+            createAjustes.ListaCombo.Add(comboBox11);
             createAjustes.PanelTextos.Controls.Add(comboBox11);
 
             TextBox textBox12 = new TextBox();
@@ -2141,15 +2269,37 @@ namespace Desktop_App
         private void textBoxPrice_TextChanged(object sender, EventArgs e)
         {
             TextBox text = (TextBox)sender;
+            Boolean punto = false;
+            string inicio = text.Text;
+            string resultado = "";
             try
             {
-                Regex regexObj = new Regex(@"[^\d]");
-                text.Text = regexObj.Replace(text.Text, "");
+                Regex regexDigitos = new Regex(@"[^\d]");
+                foreach (char caracter in inicio)
+                {
+                    if (!regexDigitos.Match(caracter.ToString()).Success)
+                    {
+                        resultado += caracter.ToString();
+                    }
+                    else if (caracter.ToString().Equals(".") && !punto)
+                    {
+                        if (resultado.Length == 0)
+                        {
+                            resultado += "0" + caracter;
+                        }
+                        else
+                        {
+                            resultado += caracter.ToString();
+                        }
+                        punto = true;
+                    }
+                }
+                text.Text = resultado;
                 text.Select(text.Text.Length, 0);
             }
             catch (ArgumentException ex)
             {
-                
+
             }
         }
 
@@ -2308,13 +2458,20 @@ namespace Desktop_App
         private void PhoneValidator_LostFocus(object sender, EventArgs e)
         {
             TextBox text = (TextBox)sender;
+            string inicio = text.Text;
+            string resultado = "";
             try
             {
-                /*Regex regexObj = new Regex(@"^(\+[0-9]{9})$");
-                if (!regexObj.Match(text.Text).Success)
+                Regex regexDigitos = new Regex(@"[^\d]");
+                foreach (char caracter in inicio)
                 {
-                    MessageBox.Show("Teléfono no valido");
-                }*/
+                    if (!regexDigitos.Match(caracter.ToString()).Success && resultado.Length < 9)
+                    {
+                        resultado += caracter.ToString();
+                    }
+                }
+                text.Text = resultado;
+                text.Select(text.Text.Length, 0);
             }
             catch (ArgumentException ex)
             {
@@ -2406,130 +2563,6 @@ namespace Desktop_App
                 checkBoxWebPersonal.Enabled = true;
                 checkBoxWebPersonalizada.Enabled = false;
             }
-        }
-
-        private void hoverElementEnter(object sender, EventArgs e)
-        {
-
-        }
-
-        private void hoverElementLeave(object sender, EventArgs e)
-        {
-            panelElemNavBar.BackColor = Color.FromArgb(59, 60, 61);
-        }
-
-        private void panelElemNavBar_MouseHover(object sender, EventArgs e)
-        {
-            Panel panel = (Panel)sender;
-            panel.BackColor = Color.FromArgb(52, 152, 219);
-        }
-
-        private void panelElemSeparator_MouseEnter(object sender, EventArgs e)
-        {
-            Panel panel = (Panel)sender;
-            panel.BackColor = Color.FromArgb(52, 152, 219);
-        }
-
-        private void panelElemCallToAction_MouseEnter(object sender, EventArgs e)
-        {
-            Panel panel = (Panel)sender;
-            panel.BackColor = Color.FromArgb(52, 152, 219);
-        }
-
-        private void panelElemImageText_MouseEnter(object sender, EventArgs e)
-        {
-            Panel panel = (Panel)sender;
-            panel.BackColor = Color.FromArgb(52, 152, 219);
-        }
-
-        private void panelElemFooter_MouseEnter(object sender, EventArgs e)
-        {
-            Panel panel = (Panel)sender;
-            panel.BackColor = Color.FromArgb(52, 152, 219);
-        }
-
-        private void panelElemImage_MouseEnter(object sender, EventArgs e)
-        {
-            Panel panel = (Panel)sender;
-            panel.BackColor = Color.FromArgb(52, 152, 219);
-        }
-
-        private void panelElemText_MouseEnter(object sender, EventArgs e)
-        {
-            Panel panel = (Panel)sender;
-            panel.BackColor = Color.FromArgb(52, 152, 219);
-        }
-
-        private void panelElemPriceCards_MouseEnter(object sender, EventArgs e)
-        {
-            Panel panel = (Panel)sender;
-            panel.BackColor = Color.FromArgb(52, 152, 219);
-        }
-
-        private void panelElemButton_MouseEnter(object sender, EventArgs e)
-        {
-            Panel panel = (Panel)sender;
-            panel.BackColor = Color.FromArgb(52, 152, 219);
-        }
-
-        private void panelElemMapa_MouseEnter(object sender, EventArgs e)
-        {
-            Panel panel = (Panel)sender;
-
-            panel.BackColor = Color.FromArgb(52, 152, 219);
-        }
-
-        private void panelElemNavBar_MouseEnter(object sender, EventArgs e)
-        {
-            Panel panel = (Panel)sender;
-            panel.BackColor = Color.FromArgb(52, 152, 219);
-        }
-
-        private void panelElemTitle_MouseEnter(object sender, EventArgs e)
-        {
-            Panel panel = (Panel)sender;
-            panel.BackColor = Color.FromArgb(52, 152, 219);
-        }
-
-        private void panelElemNavBar_MouseLeave(object sender, EventArgs e)
-        {
-            Panel panel = (Panel)sender;
-            panel.BackColor = Color.FromArgb(59, 60, 61);
-        }
-
-        private void mouseEnterNavBar()
-        {
-            
-        }
-
-        private void mouseEnterNavBar(object sender, EventArgs e)
-        {
-            panelElemNavBar.BackColor = Color.FromArgb(52, 152, 219);
-            pictureBoxNavBar.BackColor = Color.FromArgb(52, 152, 219);
-        }
-
-        private void mouseLeaveNavBar(object sender, EventArgs e)
-        {
-            panelElemNavBar.BackColor = Color.FromArgb(59, 60, 61);
-            pictureBoxNavBar.BackColor = Color.FromArgb(59, 60, 61);
-        }
-
-        private void mouseEnterSeparator(object sender, EventArgs e)
-        {
-            panelElemSeparator.BackColor = Color.FromArgb(52, 152, 219);
-            pictureBoxNavBar.BackColor = Color.FromArgb(52, 152, 219);
-        }
-
-        private void mouseLeaveSeparator(object sender, EventArgs e)
-        {
-            panelElemSeparator.BackColor = Color.FromArgb(59, 60, 61);
-            pictureBoxSeparator.BackColor = Color.FromArgb(59, 60, 61);
-        }
-
-        private void mouseEnterNavBar(object sender, MouseEventArgs e)
-        {
-            
-            pictureBoxNavBar.BackColor = Color.FromArgb(52, 152, 219);
         }
 
         private void pictureBoxNavBar_MouseEnter(object sender, EventArgs e)
@@ -2679,6 +2712,14 @@ namespace Desktop_App
         private void panelAddElement_MouseLeave(object sender, EventArgs e)
         {
             panelAddElement.BackColor = Color.FromArgb(49, 48, 45);
+        }
+
+        private void panelFinalizarWeb_MouseClick(object sender, MouseEventArgs e)
+        {
+            generateJSON(DataClass.listasElementos);
+            string obstring = JsonConvert.SerializeObject(DataClass.classListaJSON);
+            JObject googleSearch = JObject.Parse(obstring);
+            Console.WriteLine(googleSearch.ToString());
         }
     }
 }
