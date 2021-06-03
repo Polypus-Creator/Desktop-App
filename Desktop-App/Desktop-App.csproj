@@ -79,6 +79,7 @@
     <Compile Include="FInfo.Designer.cs">
       <DependentUpon>FInfo.cs</DependentUpon>
     </Compile>
+    <Compile Include="FirstJSON.cs" />
     <Compile Include="Footer.cs" />
     <Compile Include="FormContrasenaOlvidada.cs">
       <SubType>Form</SubType>
@@ -215,6 +216,10 @@
     <None Include="Resources\checkLightIcon.png" />
     <None Include="Resources\CallToActionImage.png" />
     <None Include="Resources\forgotPassIcon.png" />
+    <Content Include="Resources\colorPrincipal.png" />
+    <Content Include="Resources\colorSecundario.png" />
+    <Content Include="Resources\fuenteDeLetra.png" />
+    <Content Include="Resources\fuenteDeLetraAyuda.png" />
     <Content Include="Resources\fuentes\fuenteAbel.PNG" />
     <Content Include="Resources\fuentes\fuenteFrancoisOne.PNG" />
     <Content Include="Resources\fuentes\fuenteKarla.PNG" />
