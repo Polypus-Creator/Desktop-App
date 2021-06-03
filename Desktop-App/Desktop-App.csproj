@@ -119,6 +119,7 @@
     </Compile>
     <Compile Include="Header.cs" />
     <Compile Include="ClassImage.cs" />
+    <Compile Include="HelperClassSecurity.cs" />
     <Compile Include="ImageText.cs" />
     <Compile Include="PriceCard.cs" />
     <Compile Include="Program.cs" />

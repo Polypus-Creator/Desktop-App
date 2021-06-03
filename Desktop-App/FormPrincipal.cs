@@ -12,6 +12,7 @@ using Newtonsoft.Json.Linq;
 using Newtonsoft.Json;
 using System.Text.RegularExpressions;
 using System.IO;
+using System.Net.Http;
 
 namespace Desktop_App
 {
@@ -30,7 +31,7 @@ namespace Desktop_App
         Boolean firstLogin = true;
         Boolean panelConstDetalleShow = false;
         int timerCount = 0;
-        
+        int time=0;
 
         public FormPrincipal()
         {
@@ -114,7 +115,8 @@ namespace Desktop_App
             //panelUsuario.Location = new Point(fullHeight / 2);
 
             tabControl.SelectedTab = tabPageLogin;
-
+            comboBoxAsk.SelectedIndex = 0;
+            comboBoxSesionIniciada.SelectedIndex = 0;
         }
 
         private void labelClose_Click(object sender, EventArgs e)
@@ -2938,7 +2940,7 @@ namespace Desktop_App
         private void buttonIniciarSesion_Click(object sender, EventArgs e)
         {
             string username = textBoxUsuario.Text;
-            string password = textBoxContrasena.Text;
+            string password = HelperClassSecurity.MD5Digest(textBoxContrasena.Text);
 
             if (username.Equals("") || password.Equals(""))
             {
@@ -2948,8 +2950,237 @@ namespace Desktop_App
             {
                 tabControl.SelectedTab = dashboard;
                 panelLoginTemporal.Visible = false;
+                tabControl.SelectedTab = dashboard;
+                panelLoginTemporal.Visible = false;
+                panelPrevisualizar.Visible = true;
+                panelFinalizarWeb.Visible = true;
+                panelTuUsuario.Visible = true;
+                labelSesionIniciadaCon.Visible = true;
+                pictureBoxUserAvatar.Visible = true;
+                labelUsername.Visible = true;
+                panelDesconectar.Visible = true;
                 //_= verificarAsync(username, password);
             }
+        }
+
+        private void buttonCambiarContrasena_Click(object sender, EventArgs e)
+        {
+            string username = textBoxNombreUsuario.Text;
+            string password = HelperClassSecurity.MD5Digest(textBoxNuevaContrasena.Text);
+            string passwordConfirm = HelperClassSecurity.MD5Digest(textBoxRepiteNuevaContrasena.Text);
+            string answer = textBoxRespuestaPregunta.Text;
+
+            if (username.Equals("") || password.Equals("") || passwordConfirm.Equals("") || answer.Equals(""))
+            {
+
+            }
+            else //ALL COMPLETED
+            {
+                tabControl.SelectedTab = dashboard;
+                panelLoginTemporal.Visible = false;
+                tabControl.SelectedTab = dashboard;
+                panelLoginTemporal.Visible = false;
+                panelPrevisualizar.Visible = true;
+                panelFinalizarWeb.Visible = true;
+                panelTuUsuario.Visible = true;
+                labelSesionIniciadaCon.Visible = true;
+                pictureBoxUserAvatar.Visible = true;
+                labelUsername.Visible = true;
+                panelDesconectar.Visible = true;
+                if (password.Equals(passwordConfirm))
+                {
+                    //tabControl.SelectedTab = dashboard;
+                    //panelLoginTemporal.Visible = false;
+                    //_=verificarAsync(username, password,answer);
+                }
+                else
+                {
+
+                }
+
+            }
+        }
+
+        private async Task verificarAsync(string username, string password, string answer)
+        {
+            try
+            {
+                HttpClient cliente = new HttpClient();
+                User user = new User(username, password, answer);
+                string obstring = JsonConvert.SerializeObject(user);
+                JObject objetoJSON = JObject.Parse(obstring);
+                HttpResponseMessage responsPost = await cliente.PostAsync("http://172.17.41.38:8012/JosePHP/myPHPfile2.php?state=login", new StringContent(
+                objetoJSON.ToString(),
+                Encoding.UTF8,
+                "application/json"));
+                string responsebody = await responsPost.Content.ReadAsStringAsync();
+                if (responsebody.Equals("logeado"))
+                {
+
+                }
+                else
+                {
+                    MessageBox.Show("Usuario no registrado");
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void buttonRegis_Click(object sender, EventArgs e)
+        {
+            string username = textBoxUser.Text;
+            string password = HelperClassSecurity.MD5Digest(textBoxPass.Text);
+            string passwordConfirm = HelperClassSecurity.MD5Digest(textBoxConfPass.Text);
+            string email = textBoxEmail.Text;
+            string question = comboBoxAsk.SelectedItem.ToString();
+            string answer = textBoxAnsw.Text;
+            Boolean stayLogged = false;
+            if (comboBoxSesionIniciada.SelectedItem.ToString().Equals("Si"))
+            {
+                stayLogged = true;
+            }
+
+            if (username.Equals("") || password.Equals("") || passwordConfirm.Equals("") || email.Equals("") || answer.Equals(""))
+            {
+
+            }
+            else //ALL COMPLETED
+            {
+                tabControl.SelectedTab = dashboard;
+                panelLoginTemporal.Visible = false;
+                panelPrevisualizar.Visible = true;
+                panelFinalizarWeb.Visible = true;
+                panelTuUsuario.Visible = true;
+                labelSesionIniciadaCon.Visible = true;
+                pictureBoxUserAvatar.Visible = true;
+                labelUsername.Visible = true;
+                panelDesconectar.Visible = true;
+                if (password.Equals(passwordConfirm))
+                {
+                    //tabControl.SelectedTab = dashboard;
+                    //panelLoginTemporal.Visible = false;
+                    //_=verificarAsync(username, password,email,question,answer,stayLogged);
+                }
+                else
+                {
+
+                }
+                
+            }
+        }
+
+        private async Task verificarAsync(string username, string password, string email, string question, string answer, bool stayLogged)
+        {
+            try
+            {
+                HttpClient cliente = new HttpClient();
+                User user = new User(username, password,email,question,answer,stayLogged);
+                string obstring = JsonConvert.SerializeObject(user);
+                JObject objetoJSON = JObject.Parse(obstring);
+                HttpResponseMessage responsPost = await cliente.PostAsync("http://172.17.41.38:8012/JosePHP/myPHPfile2.php?state=login", new StringContent(
+                objetoJSON.ToString(),
+                Encoding.UTF8,
+                "application/json"));
+                string responsebody = await responsPost.Content.ReadAsStringAsync();
+                if (responsebody.Equals("logeado"))
+                {
+
+                }
+                else
+                {
+                    MessageBox.Show("Usuario no registrado");
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        private async Task verificarAsync(string username, string password)
+        {
+            try
+            {
+                HttpClient cliente = new HttpClient();
+                User user = new User(username, password);
+                string obstring = JsonConvert.SerializeObject(user);
+                JObject objetoJSON = JObject.Parse(obstring);
+                HttpResponseMessage responsPost = await cliente.PostAsync("http://172.17.41.38:8012/JosePHP/myPHPfile2.php?state=login", new StringContent(
+                objetoJSON.ToString(),
+                Encoding.UTF8,
+                "application/json"));
+                string responsebody = await responsPost.Content.ReadAsStringAsync();
+                if (responsebody.Equals("logeado"))
+                {
+                    
+                }
+                else
+                {
+                    MessageBox.Show("Usuario no registrado");
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void timerOjo_Tick(object sender, EventArgs e)
+        {
+            time++;
+            if (time == 5)
+            {
+                time = 0;
+                pictureBoxOjo1.Image = Desktop_App.Properties.Resources.eyeCl;
+                pictureBoxOjo2.Image = Desktop_App.Properties.Resources.eyeCl;
+                pictureBoxOjoLogin.Image = Desktop_App.Properties.Resources.eyeCl;
+                pictureBoxOjo1Olvido.Image = Desktop_App.Properties.Resources.eyeCl;
+                pictureBoxOjo2Olvido.Image = Desktop_App.Properties.Resources.eyeCl;
+                textBoxPass.UseSystemPasswordChar = true;
+                textBoxConfPass.UseSystemPasswordChar = true;
+                textBoxNuevaContrasena.UseSystemPasswordChar = true;
+                textBoxRepiteNuevaContrasena.UseSystemPasswordChar = true;
+                textBoxContrasena.UseSystemPasswordChar = true;
+                timerOjo.Stop();
+            }
+        }
+
+        private void pictureBoxOjo1_Click(object sender, EventArgs e)
+        {
+            textBoxPass.UseSystemPasswordChar = false;
+            pictureBoxOjo1.Image = Desktop_App.Properties.Resources.eyeOp;
+            timerOjo.Start();
+        }
+
+        private void pictureBoxOjo2_Click(object sender, EventArgs e)
+        {
+            textBoxConfPass.UseSystemPasswordChar = false;
+            pictureBoxOjo2.Image = Desktop_App.Properties.Resources.eyeOp;
+            timerOjo.Start();
+        }
+
+        private void pictureBoxOjoLogin_Click(object sender, EventArgs e)
+        {
+            textBoxContrasena.UseSystemPasswordChar = false;
+            pictureBoxOjoLogin.Image = Desktop_App.Properties.Resources.eyeOp;
+            timerOjo.Start();
+        }
+
+        private void pictureBoxOjo1Olvido_Click(object sender, EventArgs e)
+        {
+            textBoxNuevaContrasena.UseSystemPasswordChar = false;
+            pictureBoxOjo1Olvido.Image = Desktop_App.Properties.Resources.eyeOp;
+            timerOjo.Start();
+        }
+
+        private void pictureBoxOjo2Olvido_Click(object sender, EventArgs e)
+        {
+            textBoxRepiteNuevaContrasena.UseSystemPasswordChar = false;
+            pictureBoxOjo2Olvido.Image = Desktop_App.Properties.Resources.eyeOp;
+            timerOjo.Start();
         }
     }
 }

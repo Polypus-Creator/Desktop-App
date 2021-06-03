@@ -17,6 +17,11 @@ namespace Desktop_App
 
         }
 
+        public User(string username, string password, string respuestaSeguridad)
+        {
+
+        }
+
         public User(string username, string password, string email, string preguntaSeguridad,
             string respuestaSeguridad, Boolean stayLogged)
         {

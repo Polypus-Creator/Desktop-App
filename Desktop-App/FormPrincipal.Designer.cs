@@ -362,12 +362,16 @@ namespace Desktop_App
             this.labelRepiteNuevaContrasena = new System.Windows.Forms.Label();
             this.textBoxRepiteNuevaContrasena = new System.Windows.Forms.TextBox();
             this.textBoxNuevaContrasena = new System.Windows.Forms.TextBox();
-            this.labelDireccionCorreo = new System.Windows.Forms.Label();
+            this.labelNombreUsuario = new System.Windows.Forms.Label();
             this.labelRespuestaPregunta = new System.Windows.Forms.Label();
             this.textBoxRespuestaPregunta = new System.Windows.Forms.TextBox();
-            this.textBoxDireccionCorreo = new System.Windows.Forms.TextBox();
+            this.textBoxNombreUsuario = new System.Windows.Forms.TextBox();
             this.tabPageAboutUs = new System.Windows.Forms.TabPage();
             this.timerPanelGuardado = new System.Windows.Forms.Timer(this.components);
+            this.timerOjo = new System.Windows.Forms.Timer(this.components);
+            this.pictureBoxOjoLogin = new System.Windows.Forms.PictureBox();
+            this.pictureBoxOjo2Olvido = new System.Windows.Forms.PictureBox();
+            this.pictureBoxOjo1Olvido = new System.Windows.Forms.PictureBox();
             this.panelSuperior.SuspendLayout();
             this.panelSavedFirsTime.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox31)).BeginInit();
@@ -519,6 +523,9 @@ namespace Desktop_App
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox36)).BeginInit();
             this.panelSabiasQue.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxBombilla)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxOjoLogin)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxOjo2Olvido)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxOjo1Olvido)).BeginInit();
             this.SuspendLayout();
             // 
             // panelSuperior
@@ -687,6 +694,7 @@ namespace Desktop_App
             this.panelFinalizarWeb.Name = "panelFinalizarWeb";
             this.panelFinalizarWeb.Size = new System.Drawing.Size(188, 32);
             this.panelFinalizarWeb.TabIndex = 42;
+            this.panelFinalizarWeb.Visible = false;
             this.panelFinalizarWeb.MouseClick += new System.Windows.Forms.MouseEventHandler(this.panelFinalizarWeb_MouseClick);
             this.panelFinalizarWeb.MouseEnter += new System.EventHandler(this.panelFinalizarWeb_MouseEnter);
             this.panelFinalizarWeb.MouseLeave += new System.EventHandler(this.panelFinalizarWeb_MouseLeave);
@@ -728,6 +736,7 @@ namespace Desktop_App
             this.panelPrevisualizar.Name = "panelPrevisualizar";
             this.panelPrevisualizar.Size = new System.Drawing.Size(188, 32);
             this.panelPrevisualizar.TabIndex = 41;
+            this.panelPrevisualizar.Visible = false;
             this.panelPrevisualizar.Click += new System.EventHandler(this.panelPrevisualizar_Click);
             this.panelPrevisualizar.MouseEnter += new System.EventHandler(this.panelPrevisualizar_MouseEnter);
             this.panelPrevisualizar.MouseLeave += new System.EventHandler(this.panelPrevisualizar_MouseLeave);
@@ -779,6 +788,7 @@ namespace Desktop_App
             this.panelTuUsuario.Name = "panelTuUsuario";
             this.panelTuUsuario.Size = new System.Drawing.Size(215, 32);
             this.panelTuUsuario.TabIndex = 40;
+            this.panelTuUsuario.Visible = false;
             // 
             // label59
             // 
@@ -801,6 +811,7 @@ namespace Desktop_App
             this.panelDesconectar.Name = "panelDesconectar";
             this.panelDesconectar.Size = new System.Drawing.Size(188, 32);
             this.panelDesconectar.TabIndex = 39;
+            this.panelDesconectar.Visible = false;
             this.panelDesconectar.Click += new System.EventHandler(this.panelDesconectar_Click);
             // 
             // pictureBoxIconDesconectar
@@ -834,6 +845,7 @@ namespace Desktop_App
             this.labelUsername.Size = new System.Drawing.Size(93, 19);
             this.labelUsername.TabIndex = 6;
             this.labelUsername.Text = "%username%";
+            this.labelUsername.Visible = false;
             // 
             // pictureBoxUserAvatar
             // 
@@ -845,6 +857,7 @@ namespace Desktop_App
             this.pictureBoxUserAvatar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBoxUserAvatar.TabIndex = 5;
             this.pictureBoxUserAvatar.TabStop = false;
+            this.pictureBoxUserAvatar.Visible = false;
             // 
             // labelSesionIniciadaCon
             // 
@@ -856,6 +869,7 @@ namespace Desktop_App
             this.labelSesionIniciadaCon.Size = new System.Drawing.Size(130, 19);
             this.labelSesionIniciadaCon.TabIndex = 4;
             this.labelSesionIniciadaCon.Text = "Sesión iniciada con";
+            this.labelSesionIniciadaCon.Visible = false;
             // 
             // panelAyuda
             // 
@@ -3837,6 +3851,7 @@ namespace Desktop_App
             // 
             // panelPrincipal
             // 
+            this.panelPrincipal.Controls.Add(this.pictureBoxOjoLogin);
             this.panelPrincipal.Controls.Add(this.pictureBox14);
             this.panelPrincipal.Controls.Add(this.linkLabelRegistrarte);
             this.panelPrincipal.Controls.Add(this.buttonIniciarSesion);
@@ -3928,8 +3943,9 @@ namespace Desktop_App
             this.textBoxContrasena.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(86)))), ((int)(((byte)(101)))), ((int)(((byte)(115)))));
             this.textBoxContrasena.Location = new System.Drawing.Point(35, 309);
             this.textBoxContrasena.Name = "textBoxContrasena";
-            this.textBoxContrasena.Size = new System.Drawing.Size(384, 35);
+            this.textBoxContrasena.Size = new System.Drawing.Size(353, 35);
             this.textBoxContrasena.TabIndex = 5;
+            this.textBoxContrasena.UseSystemPasswordChar = true;
             // 
             // textBoxUsuario
             // 
@@ -4015,22 +4031,24 @@ namespace Desktop_App
             // pictureBoxOjo2
             // 
             this.pictureBoxOjo2.Image = global::Desktop_App.Properties.Resources.eyeCl;
-            this.pictureBoxOjo2.Location = new System.Drawing.Point(351, 301);
+            this.pictureBoxOjo2.Location = new System.Drawing.Point(359, 301);
             this.pictureBoxOjo2.Name = "pictureBoxOjo2";
             this.pictureBoxOjo2.Size = new System.Drawing.Size(23, 21);
             this.pictureBoxOjo2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBoxOjo2.TabIndex = 53;
             this.pictureBoxOjo2.TabStop = false;
+            this.pictureBoxOjo2.Click += new System.EventHandler(this.pictureBoxOjo2_Click);
             // 
             // pictureBoxOjo1
             // 
             this.pictureBoxOjo1.Image = global::Desktop_App.Properties.Resources.eyeCl;
-            this.pictureBoxOjo1.Location = new System.Drawing.Point(350, 216);
+            this.pictureBoxOjo1.Location = new System.Drawing.Point(358, 216);
             this.pictureBoxOjo1.Name = "pictureBoxOjo1";
             this.pictureBoxOjo1.Size = new System.Drawing.Size(23, 21);
             this.pictureBoxOjo1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBoxOjo1.TabIndex = 52;
             this.pictureBoxOjo1.TabStop = false;
+            this.pictureBoxOjo1.Click += new System.EventHandler(this.pictureBoxOjo1_Click);
             // 
             // buttonRegis
             // 
@@ -4045,6 +4063,7 @@ namespace Desktop_App
             this.buttonRegis.TabIndex = 51;
             this.buttonRegis.Text = "REGISTRARME";
             this.buttonRegis.UseVisualStyleBackColor = false;
+            this.buttonRegis.Click += new System.EventHandler(this.buttonRegis_Click);
             // 
             // label86
             // 
@@ -4105,8 +4124,9 @@ namespace Desktop_App
             this.textBoxConfPass.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(86)))), ((int)(((byte)(101)))), ((int)(((byte)(115)))));
             this.textBoxConfPass.Location = new System.Drawing.Point(43, 294);
             this.textBoxConfPass.Name = "textBoxConfPass";
-            this.textBoxConfPass.Size = new System.Drawing.Size(341, 35);
+            this.textBoxConfPass.Size = new System.Drawing.Size(310, 35);
             this.textBoxConfPass.TabIndex = 46;
+            this.textBoxConfPass.UseSystemPasswordChar = true;
             // 
             // label91
             // 
@@ -4125,8 +4145,9 @@ namespace Desktop_App
             this.textBoxPass.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(86)))), ((int)(((byte)(101)))), ((int)(((byte)(115)))));
             this.textBoxPass.Location = new System.Drawing.Point(41, 209);
             this.textBoxPass.Name = "textBoxPass";
-            this.textBoxPass.Size = new System.Drawing.Size(341, 35);
+            this.textBoxPass.Size = new System.Drawing.Size(312, 35);
             this.textBoxPass.TabIndex = 44;
+            this.textBoxPass.UseSystemPasswordChar = true;
             // 
             // label92
             // 
@@ -4174,6 +4195,8 @@ namespace Desktop_App
             // 
             // tabPageForgtoPassword
             // 
+            this.tabPageForgtoPassword.Controls.Add(this.pictureBoxOjo2Olvido);
+            this.tabPageForgtoPassword.Controls.Add(this.pictureBoxOjo1Olvido);
             this.tabPageForgtoPassword.Controls.Add(this.label106);
             this.tabPageForgtoPassword.Controls.Add(this.pictureBox36);
             this.tabPageForgtoPassword.Controls.Add(this.buttonCambiarContrasena);
@@ -4184,10 +4207,10 @@ namespace Desktop_App
             this.tabPageForgtoPassword.Controls.Add(this.labelRepiteNuevaContrasena);
             this.tabPageForgtoPassword.Controls.Add(this.textBoxRepiteNuevaContrasena);
             this.tabPageForgtoPassword.Controls.Add(this.textBoxNuevaContrasena);
-            this.tabPageForgtoPassword.Controls.Add(this.labelDireccionCorreo);
+            this.tabPageForgtoPassword.Controls.Add(this.labelNombreUsuario);
             this.tabPageForgtoPassword.Controls.Add(this.labelRespuestaPregunta);
             this.tabPageForgtoPassword.Controls.Add(this.textBoxRespuestaPregunta);
-            this.tabPageForgtoPassword.Controls.Add(this.textBoxDireccionCorreo);
+            this.tabPageForgtoPassword.Controls.Add(this.textBoxNombreUsuario);
             this.tabPageForgtoPassword.Location = new System.Drawing.Point(4, 22);
             this.tabPageForgtoPassword.Name = "tabPageForgtoPassword";
             this.tabPageForgtoPassword.Padding = new System.Windows.Forms.Padding(3);
@@ -4235,6 +4258,7 @@ namespace Desktop_App
             this.buttonCambiarContrasena.TabIndex = 30;
             this.buttonCambiarContrasena.Text = "CAMBIAR CONTRASEÑA";
             this.buttonCambiarContrasena.UseVisualStyleBackColor = false;
+            this.buttonCambiarContrasena.Click += new System.EventHandler(this.buttonCambiarContrasena_Click);
             // 
             // labelRecuerda2
             // 
@@ -4445,8 +4469,9 @@ namespace Desktop_App
             this.textBoxRepiteNuevaContrasena.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(86)))), ((int)(((byte)(101)))), ((int)(((byte)(115)))));
             this.textBoxRepiteNuevaContrasena.Location = new System.Drawing.Point(41, 412);
             this.textBoxRepiteNuevaContrasena.Name = "textBoxRepiteNuevaContrasena";
-            this.textBoxRepiteNuevaContrasena.Size = new System.Drawing.Size(384, 35);
+            this.textBoxRepiteNuevaContrasena.Size = new System.Drawing.Size(355, 35);
             this.textBoxRepiteNuevaContrasena.TabIndex = 26;
+            this.textBoxRepiteNuevaContrasena.UseSystemPasswordChar = true;
             // 
             // textBoxNuevaContrasena
             // 
@@ -4455,18 +4480,19 @@ namespace Desktop_App
             this.textBoxNuevaContrasena.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(86)))), ((int)(((byte)(101)))), ((int)(((byte)(115)))));
             this.textBoxNuevaContrasena.Location = new System.Drawing.Point(41, 306);
             this.textBoxNuevaContrasena.Name = "textBoxNuevaContrasena";
-            this.textBoxNuevaContrasena.Size = new System.Drawing.Size(384, 35);
+            this.textBoxNuevaContrasena.Size = new System.Drawing.Size(355, 35);
             this.textBoxNuevaContrasena.TabIndex = 25;
+            this.textBoxNuevaContrasena.UseSystemPasswordChar = true;
             // 
-            // labelDireccionCorreo
+            // labelNombreUsuario
             // 
-            this.labelDireccionCorreo.AutoSize = true;
-            this.labelDireccionCorreo.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelDireccionCorreo.Location = new System.Drawing.Point(36, 86);
-            this.labelDireccionCorreo.Name = "labelDireccionCorreo";
-            this.labelDireccionCorreo.Size = new System.Drawing.Size(337, 30);
-            this.labelDireccionCorreo.TabIndex = 19;
-            this.labelDireccionCorreo.Text = "Introduce tu direccion de correo:";
+            this.labelNombreUsuario.AutoSize = true;
+            this.labelNombreUsuario.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelNombreUsuario.Location = new System.Drawing.Point(36, 86);
+            this.labelNombreUsuario.Name = "labelNombreUsuario";
+            this.labelNombreUsuario.Size = new System.Drawing.Size(334, 30);
+            this.labelNombreUsuario.TabIndex = 19;
+            this.labelNombreUsuario.Text = "Introduce tu nombre de usuario:";
             // 
             // labelRespuestaPregunta
             // 
@@ -4488,15 +4514,15 @@ namespace Desktop_App
             this.textBoxRespuestaPregunta.Size = new System.Drawing.Size(384, 35);
             this.textBoxRespuestaPregunta.TabIndex = 22;
             // 
-            // textBoxDireccionCorreo
+            // textBoxNombreUsuario
             // 
-            this.textBoxDireccionCorreo.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBoxDireccionCorreo.Font = new System.Drawing.Font("Segoe UI Light", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxDireccionCorreo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(86)))), ((int)(((byte)(101)))), ((int)(((byte)(115)))));
-            this.textBoxDireccionCorreo.Location = new System.Drawing.Point(41, 125);
-            this.textBoxDireccionCorreo.Name = "textBoxDireccionCorreo";
-            this.textBoxDireccionCorreo.Size = new System.Drawing.Size(384, 35);
-            this.textBoxDireccionCorreo.TabIndex = 21;
+            this.textBoxNombreUsuario.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.textBoxNombreUsuario.Font = new System.Drawing.Font("Segoe UI Light", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxNombreUsuario.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(86)))), ((int)(((byte)(101)))), ((int)(((byte)(115)))));
+            this.textBoxNombreUsuario.Location = new System.Drawing.Point(41, 125);
+            this.textBoxNombreUsuario.Name = "textBoxNombreUsuario";
+            this.textBoxNombreUsuario.Size = new System.Drawing.Size(384, 35);
+            this.textBoxNombreUsuario.TabIndex = 21;
             // 
             // tabPageAboutUs
             // 
@@ -4512,6 +4538,43 @@ namespace Desktop_App
             // 
             this.timerPanelGuardado.Interval = 1000;
             this.timerPanelGuardado.Tick += new System.EventHandler(this.timerPanelGuardado_Tick);
+            // 
+            // timerOjo
+            // 
+            this.timerOjo.Tick += new System.EventHandler(this.timerOjo_Tick);
+            // 
+            // pictureBoxOjoLogin
+            // 
+            this.pictureBoxOjoLogin.Image = global::Desktop_App.Properties.Resources.eyeCl;
+            this.pictureBoxOjoLogin.Location = new System.Drawing.Point(394, 316);
+            this.pictureBoxOjoLogin.Name = "pictureBoxOjoLogin";
+            this.pictureBoxOjoLogin.Size = new System.Drawing.Size(23, 21);
+            this.pictureBoxOjoLogin.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBoxOjoLogin.TabIndex = 53;
+            this.pictureBoxOjoLogin.TabStop = false;
+            this.pictureBoxOjoLogin.Click += new System.EventHandler(this.pictureBoxOjoLogin_Click);
+            // 
+            // pictureBoxOjo2Olvido
+            // 
+            this.pictureBoxOjo2Olvido.Image = global::Desktop_App.Properties.Resources.eyeCl;
+            this.pictureBoxOjo2Olvido.Location = new System.Drawing.Point(402, 419);
+            this.pictureBoxOjo2Olvido.Name = "pictureBoxOjo2Olvido";
+            this.pictureBoxOjo2Olvido.Size = new System.Drawing.Size(23, 21);
+            this.pictureBoxOjo2Olvido.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBoxOjo2Olvido.TabIndex = 55;
+            this.pictureBoxOjo2Olvido.TabStop = false;
+            this.pictureBoxOjo2Olvido.Click += new System.EventHandler(this.pictureBoxOjo2Olvido_Click);
+            // 
+            // pictureBoxOjo1Olvido
+            // 
+            this.pictureBoxOjo1Olvido.Image = global::Desktop_App.Properties.Resources.eyeCl;
+            this.pictureBoxOjo1Olvido.Location = new System.Drawing.Point(402, 313);
+            this.pictureBoxOjo1Olvido.Name = "pictureBoxOjo1Olvido";
+            this.pictureBoxOjo1Olvido.Size = new System.Drawing.Size(23, 21);
+            this.pictureBoxOjo1Olvido.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBoxOjo1Olvido.TabIndex = 54;
+            this.pictureBoxOjo1Olvido.TabStop = false;
+            this.pictureBoxOjo1Olvido.Click += new System.EventHandler(this.pictureBoxOjo1Olvido_Click);
             // 
             // FormPrincipal
             // 
@@ -4743,6 +4806,9 @@ namespace Desktop_App
             this.panelSabiasQue.ResumeLayout(false);
             this.panelSabiasQue.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxBombilla)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxOjoLogin)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxOjo2Olvido)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxOjo1Olvido)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -5082,9 +5148,13 @@ namespace Desktop_App
         private System.Windows.Forms.Label labelRepiteNuevaContrasena;
         private System.Windows.Forms.TextBox textBoxRepiteNuevaContrasena;
         private System.Windows.Forms.TextBox textBoxNuevaContrasena;
-        private System.Windows.Forms.Label labelDireccionCorreo;
+        private System.Windows.Forms.Label labelNombreUsuario;
         private System.Windows.Forms.Label labelRespuestaPregunta;
         private System.Windows.Forms.TextBox textBoxRespuestaPregunta;
-        private System.Windows.Forms.TextBox textBoxDireccionCorreo;
+        private System.Windows.Forms.TextBox textBoxNombreUsuario;
+        private System.Windows.Forms.Timer timerOjo;
+        private System.Windows.Forms.PictureBox pictureBoxOjoLogin;
+        private System.Windows.Forms.PictureBox pictureBoxOjo2Olvido;
+        private System.Windows.Forms.PictureBox pictureBoxOjo1Olvido;
     }
 }
