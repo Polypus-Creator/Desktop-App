@@ -12,20 +12,24 @@ namespace Desktop_App
         private string email, preguntaSeguridad, respuestaSeguridad;
         private Boolean stayLogged = false;
 
-        public User(string username, string password)
+        public User(string username, string password, string email, string preguntaSeguridad, string respuestaSeguridad, bool stayLogged) : this(username, password, email)
         {
-
+            PreguntaSeguridad = preguntaSeguridad;
+            RespuestaSeguridad = respuestaSeguridad;
+            StayLogged = stayLogged;
         }
 
         public User(string username, string password, string respuestaSeguridad)
         {
-
+            Username = username;
+            Password = password;
+            RespuestaSeguridad = respuestaSeguridad;
         }
 
-        public User(string username, string password, string email, string preguntaSeguridad,
-            string respuestaSeguridad, Boolean stayLogged)
+        public User(string username, string password)
         {
-
+            Username = username;
+            Password = password;
         }
 
         public string Username { get => username; set => username = value; }
