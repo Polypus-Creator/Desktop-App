@@ -19,10 +19,8 @@ namespace Desktop_App
         private Panel _panelAdd = new Panel();
         private Panel _panelGol = new Panel();
         private Panel _panelOption = new Panel();
-        private Panel _panelHe = new Panel();
         private Panel _panelEd = new Panel();
         private Panel _panelDe = new Panel();
-        private PictureBox _pbHe = new PictureBox();
         private PictureBox _pbEd = new PictureBox();
         private PictureBox _pbDe = new PictureBox();
         private List<string> _options = new List<string>();
@@ -51,10 +49,8 @@ namespace Desktop_App
         public Panel PanelAdd { get => _panelAdd; set => _panelAdd = value; }
         public Panel PanelGol { get => _panelGol; set => _panelGol = value; }
         public Panel PanelOption { get => _panelOption; set => _panelOption = value; }
-        public Panel PanelHe { get => _panelHe; set => _panelHe = value; }
         public Panel PanelEd { get => _panelEd; set => _panelEd = value; }
         public Panel PanelDe { get => _panelDe; set => _panelDe = value; }
-        public PictureBox PbHe { get => _pbHe; set => _pbHe = value; }
         public PictureBox PbEd { get => _pbEd; set => _pbEd = value; }
         public PictureBox PbDe { get => _pbDe; set => _pbDe = value; }
         public List<string> Options { get => _options; set => _options = value; }
@@ -80,8 +76,8 @@ namespace Desktop_App
             PanelGol.Controls.Add(LabelTitle);
 
 
-            PanelOption.Location = new Point(349, 0);
-            PanelOption.Size = new Size(131, 45);
+            PanelOption.Location = new Point(395, 0);
+            PanelOption.Size = new Size(88, 45);
             PanelOption.BackColor = Color.FromArgb(96, 71, 71);
             PanelOption.BorderStyle = System.Windows.Forms.BorderStyle.None;
             PanelOption.Visible = true;
@@ -95,15 +91,7 @@ namespace Desktop_App
             PanelEd.Cursor = Cursors.Hand;
             PanelOption.Controls.Add(PanelEd);
 
-            PanelHe.Location = new Point(43, 0);
-            PanelHe.Size = new Size(43, 45);
-            PanelHe.BackColor = Color.FromArgb(96, 71, 71);
-            PanelHe.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            PanelHe.Visible = true;
-            PanelHe.Cursor = Cursors.Hand;
-            PanelOption.Controls.Add(PanelHe);
-
-            PanelDe.Location = new Point(86, 0);
+            PanelDe.Location = new Point(43, 0);
             PanelDe.Size = new Size(43, 45);
             PanelDe.BackColor = Color.FromArgb(96, 71, 71);
             PanelDe.Cursor = Cursors.Hand;
@@ -120,16 +108,6 @@ namespace Desktop_App
             PbEd.Visible = true;
             PbEd.SizeMode = PictureBoxSizeMode.StretchImage;
             PanelEd.Controls.Add(PbEd);
-
-            PbHe.Location = new Point(11, 11);
-            PbHe.Size = new Size(23, 23);
-            PbHe.BackColor = Color.FromArgb(96, 71, 71);
-            PbHe.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            PbHe.Cursor = Cursors.Hand;
-            PbHe.Image = Desktop_App.Properties.Resources.settings;
-            PbHe.Visible = true;
-            PbHe.SizeMode = PictureBoxSizeMode.StretchImage;
-            PanelHe.Controls.Add(PbHe);
 
             PbDe.Location = new Point(11, 11);
             PbDe.Size = new Size(23, 23);
