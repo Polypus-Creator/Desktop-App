@@ -17,6 +17,7 @@ namespace Desktop_App
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new FormPrincipal());
+            
         }
     }
 }

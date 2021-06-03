@@ -41,6 +41,9 @@ namespace Desktop_App
             this.labelMinimize = new System.Windows.Forms.Label();
             this.labelClose = new System.Windows.Forms.Label();
             this.panelLeftBar = new System.Windows.Forms.Panel();
+            this.panelLoginTemporal = new System.Windows.Forms.Panel();
+            this.pictureBox30 = new System.Windows.Forms.PictureBox();
+            this.label51 = new System.Windows.Forms.Label();
             this.panelFinalizarWeb = new System.Windows.Forms.Panel();
             this.pictureBox27 = new System.Windows.Forms.PictureBox();
             this.label58 = new System.Windows.Forms.Label();
@@ -304,6 +307,66 @@ namespace Desktop_App
             this.showHideFaqs = new System.Windows.Forms.PictureBox();
             this.label21 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
+            this.tabPageLogin = new System.Windows.Forms.TabPage();
+            this.panelPrincipal = new System.Windows.Forms.Panel();
+            this.pictureBox14 = new System.Windows.Forms.PictureBox();
+            this.linkLabelRegistrarte = new System.Windows.Forms.LinkLabel();
+            this.buttonIniciarSesion = new System.Windows.Forms.Button();
+            this.linkLabelContasenaOlvidada = new System.Windows.Forms.LinkLabel();
+            this.labelUsuario = new System.Windows.Forms.Label();
+            this.labelContrasena = new System.Windows.Forms.Label();
+            this.textBoxContrasena = new System.Windows.Forms.TextBox();
+            this.textBoxUsuario = new System.Windows.Forms.TextBox();
+            this.tabPageRegister = new System.Windows.Forms.TabPage();
+            this.label85 = new System.Windows.Forms.Label();
+            this.comboBoxSesionIniciada = new System.Windows.Forms.ComboBox();
+            this.labelEmail = new System.Windows.Forms.Label();
+            this.textBoxEmail = new System.Windows.Forms.TextBox();
+            this.pictureBoxOjo2 = new System.Windows.Forms.PictureBox();
+            this.pictureBoxOjo1 = new System.Windows.Forms.PictureBox();
+            this.buttonRegis = new System.Windows.Forms.Button();
+            this.label86 = new System.Windows.Forms.Label();
+            this.textBoxAnsw = new System.Windows.Forms.TextBox();
+            this.label88 = new System.Windows.Forms.Label();
+            this.comboBoxAsk = new System.Windows.Forms.ComboBox();
+            this.label90 = new System.Windows.Forms.Label();
+            this.textBoxConfPass = new System.Windows.Forms.TextBox();
+            this.label91 = new System.Windows.Forms.Label();
+            this.textBoxPass = new System.Windows.Forms.TextBox();
+            this.label92 = new System.Windows.Forms.Label();
+            this.label93 = new System.Windows.Forms.Label();
+            this.textBoxUser = new System.Windows.Forms.TextBox();
+            this.pictureBoxVolver = new System.Windows.Forms.PictureBox();
+            this.tabPageForgtoPassword = new System.Windows.Forms.TabPage();
+            this.label106 = new System.Windows.Forms.Label();
+            this.pictureBox36 = new System.Windows.Forms.PictureBox();
+            this.buttonCambiarContrasena = new System.Windows.Forms.Button();
+            this.labelRecuerda2 = new System.Windows.Forms.Label();
+            this.labelRecuerda1 = new System.Windows.Forms.Label();
+            this.panelSabiasQue = new System.Windows.Forms.Panel();
+            this.label94 = new System.Windows.Forms.Label();
+            this.label95 = new System.Windows.Forms.Label();
+            this.label96 = new System.Windows.Forms.Label();
+            this.label97 = new System.Windows.Forms.Label();
+            this.label98 = new System.Windows.Forms.Label();
+            this.label99 = new System.Windows.Forms.Label();
+            this.label100 = new System.Windows.Forms.Label();
+            this.label101 = new System.Windows.Forms.Label();
+            this.label102 = new System.Windows.Forms.Label();
+            this.label103 = new System.Windows.Forms.Label();
+            this.label104 = new System.Windows.Forms.Label();
+            this.label105 = new System.Windows.Forms.Label();
+            this.labelSabiasQue = new System.Windows.Forms.Label();
+            this.pictureBoxBombilla = new System.Windows.Forms.PictureBox();
+            this.labelNuevaContrasena = new System.Windows.Forms.Label();
+            this.labelRepiteNuevaContrasena = new System.Windows.Forms.Label();
+            this.textBoxRepiteNuevaContrasena = new System.Windows.Forms.TextBox();
+            this.textBoxNuevaContrasena = new System.Windows.Forms.TextBox();
+            this.labelDireccionCorreo = new System.Windows.Forms.Label();
+            this.labelRespuestaPregunta = new System.Windows.Forms.Label();
+            this.textBoxRespuestaPregunta = new System.Windows.Forms.TextBox();
+            this.textBoxDireccionCorreo = new System.Windows.Forms.TextBox();
+            this.tabPageAboutUs = new System.Windows.Forms.TabPage();
             this.timerPanelGuardado = new System.Windows.Forms.Timer(this.components);
             this.panelSuperior.SuspendLayout();
             this.panelSavedFirsTime.SuspendLayout();
@@ -311,6 +374,8 @@ namespace Desktop_App
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.windowControlButtons.SuspendLayout();
             this.panelLeftBar.SuspendLayout();
+            this.panelLoginTemporal.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox30)).BeginInit();
             this.panelFinalizarWeb.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox27)).BeginInit();
             this.panelPrevisualizar.SuspendLayout();
@@ -443,6 +508,17 @@ namespace Desktop_App
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox32)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.showHideFaqs)).BeginInit();
+            this.tabPageLogin.SuspendLayout();
+            this.panelPrincipal.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox14)).BeginInit();
+            this.tabPageRegister.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxOjo2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxOjo1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxVolver)).BeginInit();
+            this.tabPageForgtoPassword.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox36)).BeginInit();
+            this.panelSabiasQue.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxBombilla)).BeginInit();
             this.SuspendLayout();
             // 
             // panelSuperior
@@ -549,6 +625,7 @@ namespace Desktop_App
             // panelLeftBar
             // 
             this.panelLeftBar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(48)))), ((int)(((byte)(45)))));
+            this.panelLeftBar.Controls.Add(this.panelLoginTemporal);
             this.panelLeftBar.Controls.Add(this.panelFinalizarWeb);
             this.panelLeftBar.Controls.Add(this.panelPrevisualizar);
             this.panelLeftBar.Controls.Add(this.panelUsuario);
@@ -563,6 +640,42 @@ namespace Desktop_App
             this.panelLeftBar.Size = new System.Drawing.Size(216, 724);
             this.panelLeftBar.TabIndex = 2;
             this.panelLeftBar.Paint += new System.Windows.Forms.PaintEventHandler(this.panelLeftBar_Paint);
+            // 
+            // panelLoginTemporal
+            // 
+            this.panelLoginTemporal.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(96)))), ((int)(((byte)(71)))), ((int)(((byte)(71)))));
+            this.panelLoginTemporal.Controls.Add(this.pictureBox30);
+            this.panelLoginTemporal.Controls.Add(this.label51);
+            this.panelLoginTemporal.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.panelLoginTemporal.Location = new System.Drawing.Point(0, 47);
+            this.panelLoginTemporal.Name = "panelLoginTemporal";
+            this.panelLoginTemporal.Size = new System.Drawing.Size(216, 73);
+            this.panelLoginTemporal.TabIndex = 43;
+            this.panelLoginTemporal.Click += new System.EventHandler(this.panelLoginTemporal_Click);
+            // 
+            // pictureBox30
+            // 
+            this.pictureBox30.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pictureBox30.Image = global::Desktop_App.Properties.Resources.padlockIcon;
+            this.pictureBox30.Location = new System.Drawing.Point(11, 26);
+            this.pictureBox30.Name = "pictureBox30";
+            this.pictureBox30.Size = new System.Drawing.Size(23, 23);
+            this.pictureBox30.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox30.TabIndex = 5;
+            this.pictureBox30.TabStop = false;
+            this.pictureBox30.Click += new System.EventHandler(this.panelLoginTemporal_Click);
+            // 
+            // label51
+            // 
+            this.label51.AutoSize = true;
+            this.label51.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label51.ForeColor = System.Drawing.Color.White;
+            this.label51.Location = new System.Drawing.Point(59, 24);
+            this.label51.Name = "label51";
+            this.label51.Size = new System.Drawing.Size(59, 25);
+            this.label51.TabIndex = 4;
+            this.label51.Text = "Login";
+            this.label51.Click += new System.EventHandler(this.panelLoginTemporal_Click);
             // 
             // panelFinalizarWeb
             // 
@@ -1463,6 +1576,10 @@ namespace Desktop_App
             this.tabControl.Controls.Add(this.constructor);
             this.tabControl.Controls.Add(this.ajustes);
             this.tabControl.Controls.Add(this.ayuda);
+            this.tabControl.Controls.Add(this.tabPageLogin);
+            this.tabControl.Controls.Add(this.tabPageRegister);
+            this.tabControl.Controls.Add(this.tabPageForgtoPassword);
+            this.tabControl.Controls.Add(this.tabPageAboutUs);
             this.tabControl.Location = new System.Drawing.Point(221, 60);
             this.tabControl.Name = "tabControl";
             this.tabControl.SelectedIndex = 0;
@@ -3707,6 +3824,690 @@ namespace Desktop_App
             this.label10.TabIndex = 5;
             this.label10.Text = "Ayuda";
             // 
+            // tabPageLogin
+            // 
+            this.tabPageLogin.Controls.Add(this.panelPrincipal);
+            this.tabPageLogin.Location = new System.Drawing.Point(4, 22);
+            this.tabPageLogin.Name = "tabPageLogin";
+            this.tabPageLogin.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPageLogin.Size = new System.Drawing.Size(1103, 720);
+            this.tabPageLogin.TabIndex = 5;
+            this.tabPageLogin.Text = "tabPage1";
+            this.tabPageLogin.UseVisualStyleBackColor = true;
+            // 
+            // panelPrincipal
+            // 
+            this.panelPrincipal.Controls.Add(this.pictureBox14);
+            this.panelPrincipal.Controls.Add(this.linkLabelRegistrarte);
+            this.panelPrincipal.Controls.Add(this.buttonIniciarSesion);
+            this.panelPrincipal.Controls.Add(this.linkLabelContasenaOlvidada);
+            this.panelPrincipal.Controls.Add(this.labelUsuario);
+            this.panelPrincipal.Controls.Add(this.labelContrasena);
+            this.panelPrincipal.Controls.Add(this.textBoxContrasena);
+            this.panelPrincipal.Controls.Add(this.textBoxUsuario);
+            this.panelPrincipal.Location = new System.Drawing.Point(17, 15);
+            this.panelPrincipal.Name = "panelPrincipal";
+            this.panelPrincipal.Size = new System.Drawing.Size(889, 576);
+            this.panelPrincipal.TabIndex = 10;
+            // 
+            // pictureBox14
+            // 
+            this.pictureBox14.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox14.Image")));
+            this.pictureBox14.Location = new System.Drawing.Point(44, 1);
+            this.pictureBox14.Name = "pictureBox14";
+            this.pictureBox14.Size = new System.Drawing.Size(333, 146);
+            this.pictureBox14.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox14.TabIndex = 9;
+            this.pictureBox14.TabStop = false;
+            // 
+            // linkLabelRegistrarte
+            // 
+            this.linkLabelRegistrarte.AutoSize = true;
+            this.linkLabelRegistrarte.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.linkLabelRegistrarte.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(152)))), ((int)(((byte)(219)))));
+            this.linkLabelRegistrarte.Location = new System.Drawing.Point(32, 534);
+            this.linkLabelRegistrarte.Name = "linkLabelRegistrarte";
+            this.linkLabelRegistrarte.Size = new System.Drawing.Size(307, 17);
+            this.linkLabelRegistrarte.TabIndex = 8;
+            this.linkLabelRegistrarte.TabStop = true;
+            this.linkLabelRegistrarte.Text = "Si no tienes un usuario pulsa aquí para registrarte";
+            this.linkLabelRegistrarte.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabelRegistrarte_LinkClicked);
+            // 
+            // buttonIniciarSesion
+            // 
+            this.buttonIniciarSesion.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(152)))), ((int)(((byte)(219)))));
+            this.buttonIniciarSesion.FlatAppearance.BorderSize = 0;
+            this.buttonIniciarSesion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonIniciarSesion.Font = new System.Drawing.Font("Segoe UI Black", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonIniciarSesion.ForeColor = System.Drawing.Color.White;
+            this.buttonIniciarSesion.Location = new System.Drawing.Point(35, 396);
+            this.buttonIniciarSesion.Name = "buttonIniciarSesion";
+            this.buttonIniciarSesion.Size = new System.Drawing.Size(384, 77);
+            this.buttonIniciarSesion.TabIndex = 6;
+            this.buttonIniciarSesion.Text = "INICIAR SESIÓN";
+            this.buttonIniciarSesion.UseVisualStyleBackColor = false;
+            this.buttonIniciarSesion.Click += new System.EventHandler(this.buttonIniciarSesion_Click);
+            // 
+            // linkLabelContasenaOlvidada
+            // 
+            this.linkLabelContasenaOlvidada.AutoSize = true;
+            this.linkLabelContasenaOlvidada.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.linkLabelContasenaOlvidada.LinkColor = System.Drawing.Color.Red;
+            this.linkLabelContasenaOlvidada.Location = new System.Drawing.Point(32, 494);
+            this.linkLabelContasenaOlvidada.Name = "linkLabelContasenaOlvidada";
+            this.linkLabelContasenaOlvidada.Size = new System.Drawing.Size(167, 17);
+            this.linkLabelContasenaOlvidada.TabIndex = 7;
+            this.linkLabelContasenaOlvidada.TabStop = true;
+            this.linkLabelContasenaOlvidada.Text = "He olvidado mi contraseña";
+            this.linkLabelContasenaOlvidada.Click += new System.EventHandler(this.linkLabelContasenaOlvidada_Click);
+            // 
+            // labelUsuario
+            // 
+            this.labelUsuario.AutoSize = true;
+            this.labelUsuario.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelUsuario.Location = new System.Drawing.Point(30, 163);
+            this.labelUsuario.Name = "labelUsuario";
+            this.labelUsuario.Size = new System.Drawing.Size(88, 30);
+            this.labelUsuario.TabIndex = 2;
+            this.labelUsuario.Text = "Usuario";
+            // 
+            // labelContrasena
+            // 
+            this.labelContrasena.AutoSize = true;
+            this.labelContrasena.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelContrasena.Location = new System.Drawing.Point(30, 265);
+            this.labelContrasena.Name = "labelContrasena";
+            this.labelContrasena.Size = new System.Drawing.Size(123, 30);
+            this.labelContrasena.TabIndex = 3;
+            this.labelContrasena.Text = "Contraseña";
+            // 
+            // textBoxContrasena
+            // 
+            this.textBoxContrasena.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.textBoxContrasena.Font = new System.Drawing.Font("Segoe UI Light", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxContrasena.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(86)))), ((int)(((byte)(101)))), ((int)(((byte)(115)))));
+            this.textBoxContrasena.Location = new System.Drawing.Point(35, 309);
+            this.textBoxContrasena.Name = "textBoxContrasena";
+            this.textBoxContrasena.Size = new System.Drawing.Size(384, 35);
+            this.textBoxContrasena.TabIndex = 5;
+            // 
+            // textBoxUsuario
+            // 
+            this.textBoxUsuario.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.textBoxUsuario.Font = new System.Drawing.Font("Segoe UI Light", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxUsuario.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(86)))), ((int)(((byte)(101)))), ((int)(((byte)(115)))));
+            this.textBoxUsuario.Location = new System.Drawing.Point(35, 202);
+            this.textBoxUsuario.Name = "textBoxUsuario";
+            this.textBoxUsuario.Size = new System.Drawing.Size(384, 35);
+            this.textBoxUsuario.TabIndex = 4;
+            // 
+            // tabPageRegister
+            // 
+            this.tabPageRegister.Controls.Add(this.label85);
+            this.tabPageRegister.Controls.Add(this.comboBoxSesionIniciada);
+            this.tabPageRegister.Controls.Add(this.labelEmail);
+            this.tabPageRegister.Controls.Add(this.textBoxEmail);
+            this.tabPageRegister.Controls.Add(this.pictureBoxOjo2);
+            this.tabPageRegister.Controls.Add(this.pictureBoxOjo1);
+            this.tabPageRegister.Controls.Add(this.buttonRegis);
+            this.tabPageRegister.Controls.Add(this.label86);
+            this.tabPageRegister.Controls.Add(this.textBoxAnsw);
+            this.tabPageRegister.Controls.Add(this.label88);
+            this.tabPageRegister.Controls.Add(this.comboBoxAsk);
+            this.tabPageRegister.Controls.Add(this.label90);
+            this.tabPageRegister.Controls.Add(this.textBoxConfPass);
+            this.tabPageRegister.Controls.Add(this.label91);
+            this.tabPageRegister.Controls.Add(this.textBoxPass);
+            this.tabPageRegister.Controls.Add(this.label92);
+            this.tabPageRegister.Controls.Add(this.label93);
+            this.tabPageRegister.Controls.Add(this.textBoxUser);
+            this.tabPageRegister.Controls.Add(this.pictureBoxVolver);
+            this.tabPageRegister.Location = new System.Drawing.Point(4, 22);
+            this.tabPageRegister.Name = "tabPageRegister";
+            this.tabPageRegister.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPageRegister.Size = new System.Drawing.Size(1103, 720);
+            this.tabPageRegister.TabIndex = 6;
+            this.tabPageRegister.Text = "tabPage1";
+            this.tabPageRegister.UseVisualStyleBackColor = true;
+            // 
+            // label85
+            // 
+            this.label85.AutoSize = true;
+            this.label85.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.label85.Location = new System.Drawing.Point(423, 270);
+            this.label85.Name = "label85";
+            this.label85.Size = new System.Drawing.Size(212, 21);
+            this.label85.TabIndex = 57;
+            this.label85.Text = "¿Mantener la sesión iniciada?";
+            // 
+            // comboBoxSesionIniciada
+            // 
+            this.comboBoxSesionIniciada.Font = new System.Drawing.Font("Segoe UI Light", 15.75F);
+            this.comboBoxSesionIniciada.FormattingEnabled = true;
+            this.comboBoxSesionIniciada.Items.AddRange(new object[] {
+            "Si",
+            "No"});
+            this.comboBoxSesionIniciada.Location = new System.Drawing.Point(425, 294);
+            this.comboBoxSesionIniciada.Name = "comboBoxSesionIniciada";
+            this.comboBoxSesionIniciada.Size = new System.Drawing.Size(337, 38);
+            this.comboBoxSesionIniciada.TabIndex = 56;
+            // 
+            // labelEmail
+            // 
+            this.labelEmail.AutoSize = true;
+            this.labelEmail.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.labelEmail.Location = new System.Drawing.Point(39, 359);
+            this.labelEmail.Name = "labelEmail";
+            this.labelEmail.Size = new System.Drawing.Size(48, 21);
+            this.labelEmail.TabIndex = 54;
+            this.labelEmail.Text = "Email";
+            // 
+            // textBoxEmail
+            // 
+            this.textBoxEmail.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.textBoxEmail.Font = new System.Drawing.Font("Segoe UI Light", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxEmail.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(86)))), ((int)(((byte)(101)))), ((int)(((byte)(115)))));
+            this.textBoxEmail.Location = new System.Drawing.Point(43, 393);
+            this.textBoxEmail.Name = "textBoxEmail";
+            this.textBoxEmail.Size = new System.Drawing.Size(341, 35);
+            this.textBoxEmail.TabIndex = 55;
+            // 
+            // pictureBoxOjo2
+            // 
+            this.pictureBoxOjo2.Image = global::Desktop_App.Properties.Resources.eyeCl;
+            this.pictureBoxOjo2.Location = new System.Drawing.Point(351, 301);
+            this.pictureBoxOjo2.Name = "pictureBoxOjo2";
+            this.pictureBoxOjo2.Size = new System.Drawing.Size(23, 21);
+            this.pictureBoxOjo2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBoxOjo2.TabIndex = 53;
+            this.pictureBoxOjo2.TabStop = false;
+            // 
+            // pictureBoxOjo1
+            // 
+            this.pictureBoxOjo1.Image = global::Desktop_App.Properties.Resources.eyeCl;
+            this.pictureBoxOjo1.Location = new System.Drawing.Point(350, 216);
+            this.pictureBoxOjo1.Name = "pictureBoxOjo1";
+            this.pictureBoxOjo1.Size = new System.Drawing.Size(23, 21);
+            this.pictureBoxOjo1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBoxOjo1.TabIndex = 52;
+            this.pictureBoxOjo1.TabStop = false;
+            // 
+            // buttonRegis
+            // 
+            this.buttonRegis.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(152)))), ((int)(((byte)(219)))));
+            this.buttonRegis.FlatAppearance.BorderSize = 0;
+            this.buttonRegis.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonRegis.Font = new System.Drawing.Font("Segoe UI Black", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonRegis.ForeColor = System.Drawing.Color.White;
+            this.buttonRegis.Location = new System.Drawing.Point(423, 372);
+            this.buttonRegis.Name = "buttonRegis";
+            this.buttonRegis.Size = new System.Drawing.Size(339, 71);
+            this.buttonRegis.TabIndex = 51;
+            this.buttonRegis.Text = "REGISTRARME";
+            this.buttonRegis.UseVisualStyleBackColor = false;
+            // 
+            // label86
+            // 
+            this.label86.AutoSize = true;
+            this.label86.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.label86.Location = new System.Drawing.Point(423, 180);
+            this.label86.Name = "label86";
+            this.label86.Size = new System.Drawing.Size(81, 21);
+            this.label86.TabIndex = 49;
+            this.label86.Text = "Respuesta";
+            // 
+            // textBoxAnsw
+            // 
+            this.textBoxAnsw.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.textBoxAnsw.Font = new System.Drawing.Font("Segoe UI Light", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxAnsw.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(86)))), ((int)(((byte)(101)))), ((int)(((byte)(115)))));
+            this.textBoxAnsw.Location = new System.Drawing.Point(425, 209);
+            this.textBoxAnsw.Name = "textBoxAnsw";
+            this.textBoxAnsw.Size = new System.Drawing.Size(337, 35);
+            this.textBoxAnsw.TabIndex = 50;
+            // 
+            // label88
+            // 
+            this.label88.AutoSize = true;
+            this.label88.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.label88.Location = new System.Drawing.Point(421, 81);
+            this.label88.Name = "label88";
+            this.label88.Size = new System.Drawing.Size(234, 21);
+            this.label88.TabIndex = 48;
+            this.label88.Text = "Elige una pregunta de seguridad";
+            // 
+            // comboBoxAsk
+            // 
+            this.comboBoxAsk.Font = new System.Drawing.Font("Segoe UI Light", 15.75F);
+            this.comboBoxAsk.FormattingEnabled = true;
+            this.comboBoxAsk.Items.AddRange(new object[] {
+            "Animal Favorito?",
+            "Donde hiciste primaria?"});
+            this.comboBoxAsk.Location = new System.Drawing.Point(423, 110);
+            this.comboBoxAsk.Name = "comboBoxAsk";
+            this.comboBoxAsk.Size = new System.Drawing.Size(339, 38);
+            this.comboBoxAsk.TabIndex = 47;
+            // 
+            // label90
+            // 
+            this.label90.AutoSize = true;
+            this.label90.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.label90.Location = new System.Drawing.Point(39, 270);
+            this.label90.Name = "label90";
+            this.label90.Size = new System.Drawing.Size(164, 21);
+            this.label90.TabIndex = 45;
+            this.label90.Text = "Confirmar Contraseña";
+            // 
+            // textBoxConfPass
+            // 
+            this.textBoxConfPass.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.textBoxConfPass.Font = new System.Drawing.Font("Segoe UI Light", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxConfPass.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(86)))), ((int)(((byte)(101)))), ((int)(((byte)(115)))));
+            this.textBoxConfPass.Location = new System.Drawing.Point(43, 294);
+            this.textBoxConfPass.Name = "textBoxConfPass";
+            this.textBoxConfPass.Size = new System.Drawing.Size(341, 35);
+            this.textBoxConfPass.TabIndex = 46;
+            // 
+            // label91
+            // 
+            this.label91.AutoSize = true;
+            this.label91.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.label91.Location = new System.Drawing.Point(39, 180);
+            this.label91.Name = "label91";
+            this.label91.Size = new System.Drawing.Size(89, 21);
+            this.label91.TabIndex = 43;
+            this.label91.Text = "Contraseña";
+            // 
+            // textBoxPass
+            // 
+            this.textBoxPass.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.textBoxPass.Font = new System.Drawing.Font("Segoe UI Light", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxPass.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(86)))), ((int)(((byte)(101)))), ((int)(((byte)(115)))));
+            this.textBoxPass.Location = new System.Drawing.Point(41, 209);
+            this.textBoxPass.Name = "textBoxPass";
+            this.textBoxPass.Size = new System.Drawing.Size(341, 35);
+            this.textBoxPass.TabIndex = 44;
+            // 
+            // label92
+            // 
+            this.label92.AutoSize = true;
+            this.label92.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.label92.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
+            this.label92.Location = new System.Drawing.Point(68, 39);
+            this.label92.Name = "label92";
+            this.label92.Size = new System.Drawing.Size(59, 21);
+            this.label92.TabIndex = 42;
+            this.label92.Text = "Volver";
+            this.label92.Click += new System.EventHandler(this.label106_Click);
+            // 
+            // label93
+            // 
+            this.label93.AutoSize = true;
+            this.label93.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.label93.Location = new System.Drawing.Point(39, 84);
+            this.label93.Name = "label93";
+            this.label93.Size = new System.Drawing.Size(64, 21);
+            this.label93.TabIndex = 40;
+            this.label93.Text = "Usuario";
+            // 
+            // textBoxUser
+            // 
+            this.textBoxUser.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.textBoxUser.Font = new System.Drawing.Font("Segoe UI Light", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxUser.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(86)))), ((int)(((byte)(101)))), ((int)(((byte)(115)))));
+            this.textBoxUser.Location = new System.Drawing.Point(43, 111);
+            this.textBoxUser.Name = "textBoxUser";
+            this.textBoxUser.Size = new System.Drawing.Size(339, 35);
+            this.textBoxUser.TabIndex = 41;
+            // 
+            // pictureBoxVolver
+            // 
+            this.pictureBoxVolver.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pictureBoxVolver.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxVolver.Image")));
+            this.pictureBoxVolver.Location = new System.Drawing.Point(43, 39);
+            this.pictureBoxVolver.Name = "pictureBoxVolver";
+            this.pictureBoxVolver.Size = new System.Drawing.Size(23, 21);
+            this.pictureBoxVolver.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBoxVolver.TabIndex = 39;
+            this.pictureBoxVolver.TabStop = false;
+            this.pictureBoxVolver.Click += new System.EventHandler(this.label106_Click);
+            // 
+            // tabPageForgtoPassword
+            // 
+            this.tabPageForgtoPassword.Controls.Add(this.label106);
+            this.tabPageForgtoPassword.Controls.Add(this.pictureBox36);
+            this.tabPageForgtoPassword.Controls.Add(this.buttonCambiarContrasena);
+            this.tabPageForgtoPassword.Controls.Add(this.labelRecuerda2);
+            this.tabPageForgtoPassword.Controls.Add(this.labelRecuerda1);
+            this.tabPageForgtoPassword.Controls.Add(this.panelSabiasQue);
+            this.tabPageForgtoPassword.Controls.Add(this.labelNuevaContrasena);
+            this.tabPageForgtoPassword.Controls.Add(this.labelRepiteNuevaContrasena);
+            this.tabPageForgtoPassword.Controls.Add(this.textBoxRepiteNuevaContrasena);
+            this.tabPageForgtoPassword.Controls.Add(this.textBoxNuevaContrasena);
+            this.tabPageForgtoPassword.Controls.Add(this.labelDireccionCorreo);
+            this.tabPageForgtoPassword.Controls.Add(this.labelRespuestaPregunta);
+            this.tabPageForgtoPassword.Controls.Add(this.textBoxRespuestaPregunta);
+            this.tabPageForgtoPassword.Controls.Add(this.textBoxDireccionCorreo);
+            this.tabPageForgtoPassword.Location = new System.Drawing.Point(4, 22);
+            this.tabPageForgtoPassword.Name = "tabPageForgtoPassword";
+            this.tabPageForgtoPassword.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPageForgtoPassword.Size = new System.Drawing.Size(1103, 720);
+            this.tabPageForgtoPassword.TabIndex = 7;
+            this.tabPageForgtoPassword.Text = "tabPage2";
+            this.tabPageForgtoPassword.UseVisualStyleBackColor = true;
+            this.tabPageForgtoPassword.Click += new System.EventHandler(this.tabPageForgtoPassword_Click);
+            // 
+            // label106
+            // 
+            this.label106.AutoSize = true;
+            this.label106.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.label106.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
+            this.label106.Location = new System.Drawing.Point(67, 38);
+            this.label106.Name = "label106";
+            this.label106.Size = new System.Drawing.Size(59, 21);
+            this.label106.TabIndex = 44;
+            this.label106.Text = "Volver";
+            this.label106.Click += new System.EventHandler(this.label106_Click);
+            // 
+            // pictureBox36
+            // 
+            this.pictureBox36.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pictureBox36.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox36.Image")));
+            this.pictureBox36.Location = new System.Drawing.Point(43, 38);
+            this.pictureBox36.Name = "pictureBox36";
+            this.pictureBox36.Size = new System.Drawing.Size(23, 21);
+            this.pictureBox36.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox36.TabIndex = 43;
+            this.pictureBox36.TabStop = false;
+            this.pictureBox36.Click += new System.EventHandler(this.label106_Click);
+            // 
+            // buttonCambiarContrasena
+            // 
+            this.buttonCambiarContrasena.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(152)))), ((int)(((byte)(219)))));
+            this.buttonCambiarContrasena.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.buttonCambiarContrasena.FlatAppearance.BorderSize = 0;
+            this.buttonCambiarContrasena.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonCambiarContrasena.Font = new System.Drawing.Font("Segoe UI Black", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonCambiarContrasena.ForeColor = System.Drawing.Color.White;
+            this.buttonCambiarContrasena.Location = new System.Drawing.Point(41, 463);
+            this.buttonCambiarContrasena.Name = "buttonCambiarContrasena";
+            this.buttonCambiarContrasena.Size = new System.Drawing.Size(384, 53);
+            this.buttonCambiarContrasena.TabIndex = 30;
+            this.buttonCambiarContrasena.Text = "CAMBIAR CONTRASEÑA";
+            this.buttonCambiarContrasena.UseVisualStyleBackColor = false;
+            // 
+            // labelRecuerda2
+            // 
+            this.labelRecuerda2.AutoSize = true;
+            this.labelRecuerda2.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelRecuerda2.Location = new System.Drawing.Point(38, 357);
+            this.labelRecuerda2.Name = "labelRecuerda2";
+            this.labelRecuerda2.Size = new System.Drawing.Size(171, 13);
+            this.labelRecuerda2.TabIndex = 29;
+            this.labelRecuerda2.Text = "números y caracteres especiales";
+            // 
+            // labelRecuerda1
+            // 
+            this.labelRecuerda1.AutoSize = true;
+            this.labelRecuerda1.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelRecuerda1.Location = new System.Drawing.Point(38, 344);
+            this.labelRecuerda1.Name = "labelRecuerda1";
+            this.labelRecuerda1.Size = new System.Drawing.Size(358, 13);
+            this.labelRecuerda1.TabIndex = 28;
+            this.labelRecuerda1.Text = "Recuerda que la contraseña debe contener mayusculas, minusculas,";
+            // 
+            // panelSabiasQue
+            // 
+            this.panelSabiasQue.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panelSabiasQue.Controls.Add(this.label94);
+            this.panelSabiasQue.Controls.Add(this.label95);
+            this.panelSabiasQue.Controls.Add(this.label96);
+            this.panelSabiasQue.Controls.Add(this.label97);
+            this.panelSabiasQue.Controls.Add(this.label98);
+            this.panelSabiasQue.Controls.Add(this.label99);
+            this.panelSabiasQue.Controls.Add(this.label100);
+            this.panelSabiasQue.Controls.Add(this.label101);
+            this.panelSabiasQue.Controls.Add(this.label102);
+            this.panelSabiasQue.Controls.Add(this.label103);
+            this.panelSabiasQue.Controls.Add(this.label104);
+            this.panelSabiasQue.Controls.Add(this.label105);
+            this.panelSabiasQue.Controls.Add(this.labelSabiasQue);
+            this.panelSabiasQue.Controls.Add(this.pictureBoxBombilla);
+            this.panelSabiasQue.Location = new System.Drawing.Point(477, 125);
+            this.panelSabiasQue.Name = "panelSabiasQue";
+            this.panelSabiasQue.Size = new System.Drawing.Size(245, 284);
+            this.panelSabiasQue.TabIndex = 27;
+            // 
+            // label94
+            // 
+            this.label94.AutoSize = true;
+            this.label94.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label94.Location = new System.Drawing.Point(3, 243);
+            this.label94.Name = "label94";
+            this.label94.Size = new System.Drawing.Size(219, 13);
+            this.label94.TabIndex = 27;
+            this.label94.Text = "Lorem ipsum dolor sit amet, consectetur ";
+            // 
+            // label95
+            // 
+            this.label95.AutoSize = true;
+            this.label95.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label95.Location = new System.Drawing.Point(3, 228);
+            this.label95.Name = "label95";
+            this.label95.Size = new System.Drawing.Size(219, 13);
+            this.label95.TabIndex = 26;
+            this.label95.Text = "Lorem ipsum dolor sit amet, consectetur ";
+            // 
+            // label96
+            // 
+            this.label96.AutoSize = true;
+            this.label96.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label96.Location = new System.Drawing.Point(3, 212);
+            this.label96.Name = "label96";
+            this.label96.Size = new System.Drawing.Size(219, 13);
+            this.label96.TabIndex = 25;
+            this.label96.Text = "Lorem ipsum dolor sit amet, consectetur ";
+            // 
+            // label97
+            // 
+            this.label97.AutoSize = true;
+            this.label97.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label97.Location = new System.Drawing.Point(3, 195);
+            this.label97.Name = "label97";
+            this.label97.Size = new System.Drawing.Size(219, 13);
+            this.label97.TabIndex = 24;
+            this.label97.Text = "Lorem ipsum dolor sit amet, consectetur ";
+            // 
+            // label98
+            // 
+            this.label98.AutoSize = true;
+            this.label98.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label98.Location = new System.Drawing.Point(3, 167);
+            this.label98.Name = "label98";
+            this.label98.Size = new System.Drawing.Size(219, 13);
+            this.label98.TabIndex = 23;
+            this.label98.Text = "Lorem ipsum dolor sit amet, consectetur ";
+            // 
+            // label99
+            // 
+            this.label99.AutoSize = true;
+            this.label99.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label99.Location = new System.Drawing.Point(3, 152);
+            this.label99.Name = "label99";
+            this.label99.Size = new System.Drawing.Size(219, 13);
+            this.label99.TabIndex = 22;
+            this.label99.Text = "Lorem ipsum dolor sit amet, consectetur ";
+            // 
+            // label100
+            // 
+            this.label100.AutoSize = true;
+            this.label100.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label100.Location = new System.Drawing.Point(3, 136);
+            this.label100.Name = "label100";
+            this.label100.Size = new System.Drawing.Size(219, 13);
+            this.label100.TabIndex = 21;
+            this.label100.Text = "Lorem ipsum dolor sit amet, consectetur ";
+            // 
+            // label101
+            // 
+            this.label101.AutoSize = true;
+            this.label101.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label101.Location = new System.Drawing.Point(3, 119);
+            this.label101.Name = "label101";
+            this.label101.Size = new System.Drawing.Size(219, 13);
+            this.label101.TabIndex = 20;
+            this.label101.Text = "Lorem ipsum dolor sit amet, consectetur ";
+            // 
+            // label102
+            // 
+            this.label102.AutoSize = true;
+            this.label102.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label102.Location = new System.Drawing.Point(3, 96);
+            this.label102.Name = "label102";
+            this.label102.Size = new System.Drawing.Size(219, 13);
+            this.label102.TabIndex = 19;
+            this.label102.Text = "Lorem ipsum dolor sit amet, consectetur ";
+            // 
+            // label103
+            // 
+            this.label103.AutoSize = true;
+            this.label103.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label103.Location = new System.Drawing.Point(3, 81);
+            this.label103.Name = "label103";
+            this.label103.Size = new System.Drawing.Size(219, 13);
+            this.label103.TabIndex = 18;
+            this.label103.Text = "Lorem ipsum dolor sit amet, consectetur ";
+            // 
+            // label104
+            // 
+            this.label104.AutoSize = true;
+            this.label104.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label104.Location = new System.Drawing.Point(3, 65);
+            this.label104.Name = "label104";
+            this.label104.Size = new System.Drawing.Size(219, 13);
+            this.label104.TabIndex = 17;
+            this.label104.Text = "Lorem ipsum dolor sit amet, consectetur ";
+            // 
+            // label105
+            // 
+            this.label105.AutoSize = true;
+            this.label105.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label105.Location = new System.Drawing.Point(3, 48);
+            this.label105.Name = "label105";
+            this.label105.Size = new System.Drawing.Size(219, 13);
+            this.label105.TabIndex = 16;
+            this.label105.Text = "Lorem ipsum dolor sit amet, consectetur ";
+            // 
+            // labelSabiasQue
+            // 
+            this.labelSabiasQue.AutoSize = true;
+            this.labelSabiasQue.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelSabiasQue.Location = new System.Drawing.Point(46, 4);
+            this.labelSabiasQue.Name = "labelSabiasQue";
+            this.labelSabiasQue.Size = new System.Drawing.Size(154, 30);
+            this.labelSabiasQue.TabIndex = 11;
+            this.labelSabiasQue.Text = "¿Sabias qué...?";
+            // 
+            // pictureBoxBombilla
+            // 
+            this.pictureBoxBombilla.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxBombilla.Image")));
+            this.pictureBoxBombilla.Location = new System.Drawing.Point(3, 3);
+            this.pictureBoxBombilla.Name = "pictureBoxBombilla";
+            this.pictureBoxBombilla.Size = new System.Drawing.Size(37, 31);
+            this.pictureBoxBombilla.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBoxBombilla.TabIndex = 0;
+            this.pictureBoxBombilla.TabStop = false;
+            // 
+            // labelNuevaContrasena
+            // 
+            this.labelNuevaContrasena.AutoSize = true;
+            this.labelNuevaContrasena.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelNuevaContrasena.Location = new System.Drawing.Point(36, 267);
+            this.labelNuevaContrasena.Name = "labelNuevaContrasena";
+            this.labelNuevaContrasena.Size = new System.Drawing.Size(195, 30);
+            this.labelNuevaContrasena.TabIndex = 23;
+            this.labelNuevaContrasena.Text = "Nueva contraseña:";
+            // 
+            // labelRepiteNuevaContrasena
+            // 
+            this.labelRepiteNuevaContrasena.AutoSize = true;
+            this.labelRepiteNuevaContrasena.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelRepiteNuevaContrasena.Location = new System.Drawing.Point(36, 379);
+            this.labelRepiteNuevaContrasena.Name = "labelRepiteNuevaContrasena";
+            this.labelRepiteNuevaContrasena.Size = new System.Drawing.Size(282, 30);
+            this.labelRepiteNuevaContrasena.TabIndex = 24;
+            this.labelRepiteNuevaContrasena.Text = "Repite la nueva contraseña:";
+            // 
+            // textBoxRepiteNuevaContrasena
+            // 
+            this.textBoxRepiteNuevaContrasena.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.textBoxRepiteNuevaContrasena.Font = new System.Drawing.Font("Segoe UI Light", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxRepiteNuevaContrasena.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(86)))), ((int)(((byte)(101)))), ((int)(((byte)(115)))));
+            this.textBoxRepiteNuevaContrasena.Location = new System.Drawing.Point(41, 412);
+            this.textBoxRepiteNuevaContrasena.Name = "textBoxRepiteNuevaContrasena";
+            this.textBoxRepiteNuevaContrasena.Size = new System.Drawing.Size(384, 35);
+            this.textBoxRepiteNuevaContrasena.TabIndex = 26;
+            // 
+            // textBoxNuevaContrasena
+            // 
+            this.textBoxNuevaContrasena.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.textBoxNuevaContrasena.Font = new System.Drawing.Font("Segoe UI Light", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxNuevaContrasena.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(86)))), ((int)(((byte)(101)))), ((int)(((byte)(115)))));
+            this.textBoxNuevaContrasena.Location = new System.Drawing.Point(41, 306);
+            this.textBoxNuevaContrasena.Name = "textBoxNuevaContrasena";
+            this.textBoxNuevaContrasena.Size = new System.Drawing.Size(384, 35);
+            this.textBoxNuevaContrasena.TabIndex = 25;
+            // 
+            // labelDireccionCorreo
+            // 
+            this.labelDireccionCorreo.AutoSize = true;
+            this.labelDireccionCorreo.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelDireccionCorreo.Location = new System.Drawing.Point(36, 86);
+            this.labelDireccionCorreo.Name = "labelDireccionCorreo";
+            this.labelDireccionCorreo.Size = new System.Drawing.Size(337, 30);
+            this.labelDireccionCorreo.TabIndex = 19;
+            this.labelDireccionCorreo.Text = "Introduce tu direccion de correo:";
+            // 
+            // labelRespuestaPregunta
+            // 
+            this.labelRespuestaPregunta.AutoSize = true;
+            this.labelRespuestaPregunta.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelRespuestaPregunta.Location = new System.Drawing.Point(36, 174);
+            this.labelRespuestaPregunta.Name = "labelRespuestaPregunta";
+            this.labelRespuestaPregunta.Size = new System.Drawing.Size(363, 30);
+            this.labelRespuestaPregunta.TabIndex = 20;
+            this.labelRespuestaPregunta.Text = "Respuesta a pregunta de seguridad:";
+            // 
+            // textBoxRespuestaPregunta
+            // 
+            this.textBoxRespuestaPregunta.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.textBoxRespuestaPregunta.Font = new System.Drawing.Font("Segoe UI Light", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxRespuestaPregunta.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(86)))), ((int)(((byte)(101)))), ((int)(((byte)(115)))));
+            this.textBoxRespuestaPregunta.Location = new System.Drawing.Point(41, 207);
+            this.textBoxRespuestaPregunta.Name = "textBoxRespuestaPregunta";
+            this.textBoxRespuestaPregunta.Size = new System.Drawing.Size(384, 35);
+            this.textBoxRespuestaPregunta.TabIndex = 22;
+            // 
+            // textBoxDireccionCorreo
+            // 
+            this.textBoxDireccionCorreo.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.textBoxDireccionCorreo.Font = new System.Drawing.Font("Segoe UI Light", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxDireccionCorreo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(86)))), ((int)(((byte)(101)))), ((int)(((byte)(115)))));
+            this.textBoxDireccionCorreo.Location = new System.Drawing.Point(41, 125);
+            this.textBoxDireccionCorreo.Name = "textBoxDireccionCorreo";
+            this.textBoxDireccionCorreo.Size = new System.Drawing.Size(384, 35);
+            this.textBoxDireccionCorreo.TabIndex = 21;
+            // 
+            // tabPageAboutUs
+            // 
+            this.tabPageAboutUs.Location = new System.Drawing.Point(4, 22);
+            this.tabPageAboutUs.Name = "tabPageAboutUs";
+            this.tabPageAboutUs.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPageAboutUs.Size = new System.Drawing.Size(1103, 720);
+            this.tabPageAboutUs.TabIndex = 8;
+            this.tabPageAboutUs.Text = "tabPage1";
+            this.tabPageAboutUs.UseVisualStyleBackColor = true;
+            // 
             // timerPanelGuardado
             // 
             this.timerPanelGuardado.Interval = 1000;
@@ -3734,6 +4535,9 @@ namespace Desktop_App
             this.windowControlButtons.ResumeLayout(false);
             this.windowControlButtons.PerformLayout();
             this.panelLeftBar.ResumeLayout(false);
+            this.panelLoginTemporal.ResumeLayout(false);
+            this.panelLoginTemporal.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox30)).EndInit();
             this.panelFinalizarWeb.ResumeLayout(false);
             this.panelFinalizarWeb.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox27)).EndInit();
@@ -3924,6 +4728,21 @@ namespace Desktop_App
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox32)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.showHideFaqs)).EndInit();
+            this.tabPageLogin.ResumeLayout(false);
+            this.panelPrincipal.ResumeLayout(false);
+            this.panelPrincipal.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox14)).EndInit();
+            this.tabPageRegister.ResumeLayout(false);
+            this.tabPageRegister.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxOjo2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxOjo1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxVolver)).EndInit();
+            this.tabPageForgtoPassword.ResumeLayout(false);
+            this.tabPageForgtoPassword.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox36)).EndInit();
+            this.panelSabiasQue.ResumeLayout(false);
+            this.panelSabiasQue.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxBombilla)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -4204,5 +5023,68 @@ namespace Desktop_App
         private System.Windows.Forms.PictureBox pictureBox19;
         private System.Windows.Forms.Panel panel42;
         private System.Windows.Forms.PictureBox pictureBox43;
+        private System.Windows.Forms.TabPage tabPageLogin;
+        private System.Windows.Forms.Panel panelPrincipal;
+        private System.Windows.Forms.PictureBox pictureBox14;
+        private System.Windows.Forms.LinkLabel linkLabelRegistrarte;
+        private System.Windows.Forms.Button buttonIniciarSesion;
+        private System.Windows.Forms.LinkLabel linkLabelContasenaOlvidada;
+        private System.Windows.Forms.Label labelUsuario;
+        private System.Windows.Forms.Label labelContrasena;
+        private System.Windows.Forms.TextBox textBoxContrasena;
+        private System.Windows.Forms.TextBox textBoxUsuario;
+        private System.Windows.Forms.Panel panelLoginTemporal;
+        private System.Windows.Forms.PictureBox pictureBox30;
+        private System.Windows.Forms.Label label51;
+        private System.Windows.Forms.TabPage tabPageRegister;
+        private System.Windows.Forms.TabPage tabPageForgtoPassword;
+        private System.Windows.Forms.TabPage tabPageAboutUs;
+        private System.Windows.Forms.Label label85;
+        private System.Windows.Forms.ComboBox comboBoxSesionIniciada;
+        private System.Windows.Forms.Label labelEmail;
+        private System.Windows.Forms.TextBox textBoxEmail;
+        private System.Windows.Forms.PictureBox pictureBoxOjo2;
+        private System.Windows.Forms.PictureBox pictureBoxOjo1;
+        private System.Windows.Forms.Button buttonRegis;
+        private System.Windows.Forms.Label label86;
+        private System.Windows.Forms.TextBox textBoxAnsw;
+        private System.Windows.Forms.Label label88;
+        private System.Windows.Forms.ComboBox comboBoxAsk;
+        private System.Windows.Forms.Label label90;
+        private System.Windows.Forms.TextBox textBoxConfPass;
+        private System.Windows.Forms.Label label91;
+        private System.Windows.Forms.TextBox textBoxPass;
+        private System.Windows.Forms.Label label92;
+        private System.Windows.Forms.Label label93;
+        private System.Windows.Forms.TextBox textBoxUser;
+        private System.Windows.Forms.PictureBox pictureBoxVolver;
+        private System.Windows.Forms.Label label106;
+        private System.Windows.Forms.PictureBox pictureBox36;
+        private System.Windows.Forms.Button buttonCambiarContrasena;
+        private System.Windows.Forms.Label labelRecuerda2;
+        private System.Windows.Forms.Label labelRecuerda1;
+        private System.Windows.Forms.Panel panelSabiasQue;
+        private System.Windows.Forms.Label label94;
+        private System.Windows.Forms.Label label95;
+        private System.Windows.Forms.Label label96;
+        private System.Windows.Forms.Label label97;
+        private System.Windows.Forms.Label label98;
+        private System.Windows.Forms.Label label99;
+        private System.Windows.Forms.Label label100;
+        private System.Windows.Forms.Label label101;
+        private System.Windows.Forms.Label label102;
+        private System.Windows.Forms.Label label103;
+        private System.Windows.Forms.Label label104;
+        private System.Windows.Forms.Label label105;
+        private System.Windows.Forms.Label labelSabiasQue;
+        private System.Windows.Forms.PictureBox pictureBoxBombilla;
+        private System.Windows.Forms.Label labelNuevaContrasena;
+        private System.Windows.Forms.Label labelRepiteNuevaContrasena;
+        private System.Windows.Forms.TextBox textBoxRepiteNuevaContrasena;
+        private System.Windows.Forms.TextBox textBoxNuevaContrasena;
+        private System.Windows.Forms.Label labelDireccionCorreo;
+        private System.Windows.Forms.Label labelRespuestaPregunta;
+        private System.Windows.Forms.TextBox textBoxRespuestaPregunta;
+        private System.Windows.Forms.TextBox textBoxDireccionCorreo;
     }
 }

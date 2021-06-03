@@ -32,6 +32,7 @@ namespace Desktop_App
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormLogin));
             this.panelSuperior = new System.Windows.Forms.Panel();
             this.labelIniciarSesion = new System.Windows.Forms.Label();
+            this.pictureBoxIconoIniciarSesion = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.labelMinimize = new System.Windows.Forms.Label();
             this.labelClose = new System.Windows.Forms.Label();
@@ -44,12 +45,11 @@ namespace Desktop_App
             this.linkLabelRegistrarte = new System.Windows.Forms.LinkLabel();
             this.panelPrincipal = new System.Windows.Forms.Panel();
             this.pictureBoxLogo = new System.Windows.Forms.PictureBox();
-            this.pictureBoxIconoIniciarSesion = new System.Windows.Forms.PictureBox();
             this.panelSuperior.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxIconoIniciarSesion)).BeginInit();
             this.panel2.SuspendLayout();
             this.panelPrincipal.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLogo)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxIconoIniciarSesion)).BeginInit();
             this.SuspendLayout();
             // 
             // panelSuperior
@@ -73,6 +73,17 @@ namespace Desktop_App
             this.labelIniciarSesion.Size = new System.Drawing.Size(166, 32);
             this.labelIniciarSesion.TabIndex = 3;
             this.labelIniciarSesion.Text = "Iniciar sesión";
+            // 
+            // pictureBoxIconoIniciarSesion
+            // 
+            this.pictureBoxIconoIniciarSesion.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(48)))), ((int)(((byte)(45)))));
+            this.pictureBoxIconoIniciarSesion.Image = global::Desktop_App.Properties.Resources.padlockIcon;
+            this.pictureBoxIconoIniciarSesion.Location = new System.Drawing.Point(12, 11);
+            this.pictureBoxIconoIniciarSesion.Name = "pictureBoxIconoIniciarSesion";
+            this.pictureBoxIconoIniciarSesion.Size = new System.Drawing.Size(30, 30);
+            this.pictureBoxIconoIniciarSesion.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBoxIconoIniciarSesion.TabIndex = 2;
+            this.pictureBoxIconoIniciarSesion.TabStop = false;
             // 
             // panel2
             // 
@@ -161,6 +172,7 @@ namespace Desktop_App
             this.buttonIniciarSesion.TabIndex = 6;
             this.buttonIniciarSesion.Text = "INICIAR SESIÓN";
             this.buttonIniciarSesion.UseVisualStyleBackColor = false;
+            this.buttonIniciarSesion.Click += new System.EventHandler(this.buttonIniciarSesion_Click);
             // 
             // linkLabelContasenaOlvidada
             // 
@@ -212,17 +224,6 @@ namespace Desktop_App
             this.pictureBoxLogo.TabIndex = 9;
             this.pictureBoxLogo.TabStop = false;
             // 
-            // pictureBoxIconoIniciarSesion
-            // 
-            this.pictureBoxIconoIniciarSesion.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(48)))), ((int)(((byte)(45)))));
-            this.pictureBoxIconoIniciarSesion.Image = global::Desktop_App.Properties.Resources.padlockIcon;
-            this.pictureBoxIconoIniciarSesion.Location = new System.Drawing.Point(12, 11);
-            this.pictureBoxIconoIniciarSesion.Name = "pictureBoxIconoIniciarSesion";
-            this.pictureBoxIconoIniciarSesion.Size = new System.Drawing.Size(30, 30);
-            this.pictureBoxIconoIniciarSesion.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBoxIconoIniciarSesion.TabIndex = 2;
-            this.pictureBoxIconoIniciarSesion.TabStop = false;
-            // 
             // FormLogin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -235,12 +236,12 @@ namespace Desktop_App
             this.Text = "Form";
             this.panelSuperior.ResumeLayout(false);
             this.panelSuperior.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxIconoIniciarSesion)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             this.panelPrincipal.ResumeLayout(false);
             this.panelPrincipal.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLogo)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxIconoIniciarSesion)).EndInit();
             this.ResumeLayout(false);
 
         }

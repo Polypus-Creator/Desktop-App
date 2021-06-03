@@ -168,7 +168,7 @@ namespace Desktop_App
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
-            this.label5.Location = new System.Drawing.Point(63, 63);
+            this.label5.Location = new System.Drawing.Point(128, 72);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(59, 21);
             this.label5.TabIndex = 22;
@@ -223,7 +223,7 @@ namespace Desktop_App
             // pictureBoxVolver
             // 
             this.pictureBoxVolver.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxVolver.Image")));
-            this.pictureBoxVolver.Location = new System.Drawing.Point(26, 63);
+            this.pictureBoxVolver.Location = new System.Drawing.Point(84, 72);
             this.pictureBoxVolver.Name = "pictureBoxVolver";
             this.pictureBoxVolver.Size = new System.Drawing.Size(23, 21);
             this.pictureBoxVolver.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;

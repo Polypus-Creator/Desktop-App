@@ -36,7 +36,7 @@ namespace Desktop_App
         {
             InitializeComponent();
             initConfig();
-            //checkFirstLogin();
+            checkFirstLogin();
         }
 
         private void checkFirstLogin()
@@ -82,7 +82,7 @@ namespace Desktop_App
 
         private void initConfig()
         {
-
+            
             this.MaximizedBounds = Screen.FromHandle(this.Handle).WorkingArea;
             this.WindowState = FormWindowState.Maximized;
             panelSuperior.Width = fullWidth;
@@ -112,7 +112,8 @@ namespace Desktop_App
             firstLogin = true;
             panel4.Height = panelConst.Height - 20;
             //panelUsuario.Location = new Point(fullHeight / 2);
-            
+
+            tabControl.SelectedTab = tabPageLogin;
 
         }
 
@@ -227,8 +228,21 @@ namespace Desktop_App
                 panelConstructor.BackColor = Color.FromArgb(49, 48, 45);
                 panelAjustes.BackColor = Color.FromArgb(49, 48, 45);
                 panelAyuda.BackColor = Color.FromArgb(96, 71, 71);
+                panelLoginTemporal.BackColor = Color.FromArgb(49, 48, 45);
                 tabControl.SelectedTab = ayuda;
                 panelAddElements.Visible = false;
+            }
+            if( option == 6)
+            {
+                panelLoginTemporal.BackColor = Color.FromArgb(96, 71, 71);
+                panelDashboard.BackColor = Color.FromArgb(49, 48, 45);
+                panelDisenyo.BackColor = Color.FromArgb(49, 48, 45);
+                panelConstructor.BackColor = Color.FromArgb(49, 48, 45);
+                panelAjustes.BackColor = Color.FromArgb(49, 48, 45);
+                panelAyuda.BackColor = Color.FromArgb(49, 48, 45);
+                tabControl.SelectedTab = tabPageLogin;
+                panelAddElements.Visible = false;
+
             }
 
         }
@@ -2893,6 +2907,49 @@ namespace Desktop_App
             string obstring = JsonConvert.SerializeObject(DataClass.classListaJSON);
             JObject googleSearch = JObject.Parse(obstring);
             Console.WriteLine(googleSearch.ToString());
+        }
+
+        private void panelLoginTemporal_Click(object sender, EventArgs e)
+        {
+            sideBarColors(6);
+        }
+
+        private void tabPageForgtoPassword_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label106_Click(object sender, EventArgs e)
+        {
+            tabControl.SelectedTab = tabPageLogin;
+        }
+
+        private void linkLabelContasenaOlvidada_Click(object sender, EventArgs e)
+        {
+            tabControl.SelectedTab = tabPageForgtoPassword;
+        }
+
+        private void linkLabelRegistrarte_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+
+            tabControl.SelectedTab = tabPageRegister;
+        }
+
+        private void buttonIniciarSesion_Click(object sender, EventArgs e)
+        {
+            string username = textBoxUsuario.Text;
+            string password = textBoxContrasena.Text;
+
+            if (username.Equals("") || password.Equals(""))
+            {
+
+            }
+            else //ALL COMPLETED
+            {
+                tabControl.SelectedTab = dashboard;
+                panelLoginTemporal.Visible = false;
+                //_= verificarAsync(username, password);
+            }
         }
     }
 }

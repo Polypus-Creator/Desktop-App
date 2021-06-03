@@ -132,6 +132,7 @@
     <Compile Include="Separator.cs" />
     <Compile Include="Text.cs" />
     <Compile Include="Title.cs" />
+    <Compile Include="User.cs" />
     <EmbeddedResource Include="FAboutUs.resx">
       <DependentUpon>FAboutUs.cs</DependentUpon>
     </EmbeddedResource>
