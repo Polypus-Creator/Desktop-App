@@ -19,5 +19,7 @@ namespace Desktop_App
         public static string websiteDesc = "";
         public static string logoPath = "";
         public static string websiteCategory = "";
+        public static string yourLocalWebsitePath = "";
+        public static string yourLocalWebsiteImagesFolderPath = "";
     }
 }

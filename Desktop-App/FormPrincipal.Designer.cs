@@ -228,6 +228,25 @@ namespace Desktop_App
             this.label9 = new System.Windows.Forms.Label();
             this.ayuda = new System.Windows.Forms.TabPage();
             this.panelAyud = new System.Windows.Forms.Panel();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.flowLayoutPanel4 = new System.Windows.Forms.FlowLayoutPanel();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.pictureBox44 = new System.Windows.Forms.PictureBox();
+            this.pictureBox47 = new System.Windows.Forms.PictureBox();
+            this.label114 = new System.Windows.Forms.Label();
+            this.label113 = new System.Windows.Forms.Label();
+            this.pictureBox49 = new System.Windows.Forms.PictureBox();
+            this.label117 = new System.Windows.Forms.Label();
+            this.label115 = new System.Windows.Forms.Label();
+            this.label116 = new System.Windows.Forms.Label();
+            this.pictureBox51 = new System.Windows.Forms.PictureBox();
+            this.label121 = new System.Windows.Forms.Label();
+            this.label122 = new System.Windows.Forms.Label();
+            this.label123 = new System.Windows.Forms.Label();
+            this.panel5 = new System.Windows.Forms.Panel();
+            this.pictureBox52 = new System.Windows.Forms.PictureBox();
+            this.pictureBox53 = new System.Windows.Forms.PictureBox();
+            this.label124 = new System.Windows.Forms.Label();
             this.panelConstDetalle = new System.Windows.Forms.Panel();
             this.flowLayoutPanel3 = new System.Windows.Forms.FlowLayoutPanel();
             this.panel61 = new System.Windows.Forms.Panel();
@@ -372,25 +391,6 @@ namespace Desktop_App
             this.tabPageAboutUs = new System.Windows.Forms.TabPage();
             this.timerPanelGuardado = new System.Windows.Forms.Timer(this.components);
             this.timerOjo = new System.Windows.Forms.Timer(this.components);
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.flowLayoutPanel4 = new System.Windows.Forms.FlowLayoutPanel();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.label115 = new System.Windows.Forms.Label();
-            this.label116 = new System.Windows.Forms.Label();
-            this.pictureBox51 = new System.Windows.Forms.PictureBox();
-            this.label121 = new System.Windows.Forms.Label();
-            this.label122 = new System.Windows.Forms.Label();
-            this.label123 = new System.Windows.Forms.Label();
-            this.panel5 = new System.Windows.Forms.Panel();
-            this.pictureBox52 = new System.Windows.Forms.PictureBox();
-            this.pictureBox53 = new System.Windows.Forms.PictureBox();
-            this.label124 = new System.Windows.Forms.Label();
-            this.label117 = new System.Windows.Forms.Label();
-            this.pictureBox49 = new System.Windows.Forms.PictureBox();
-            this.label113 = new System.Windows.Forms.Label();
-            this.label114 = new System.Windows.Forms.Label();
-            this.pictureBox47 = new System.Windows.Forms.PictureBox();
-            this.pictureBox44 = new System.Windows.Forms.PictureBox();
             this.panelSuperior.SuspendLayout();
             this.panelSavedFirsTime.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox31)).BeginInit();
@@ -502,6 +502,16 @@ namespace Desktop_App
             ((System.ComponentModel.ISupportInitialize)(this.radioStayLogged)).BeginInit();
             this.ayuda.SuspendLayout();
             this.panelAyud.SuspendLayout();
+            this.panel2.SuspendLayout();
+            this.flowLayoutPanel4.SuspendLayout();
+            this.panel3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox44)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox47)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox49)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox51)).BeginInit();
+            this.panel5.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox52)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox53)).BeginInit();
             this.panelConstDetalle.SuspendLayout();
             this.flowLayoutPanel3.SuspendLayout();
             this.panel61.SuspendLayout();
@@ -545,16 +555,6 @@ namespace Desktop_App
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox36)).BeginInit();
             this.panelSabiasQue.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxBombilla)).BeginInit();
-            this.panel2.SuspendLayout();
-            this.flowLayoutPanel4.SuspendLayout();
-            this.panel3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox51)).BeginInit();
-            this.panel5.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox52)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox53)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox49)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox47)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox44)).BeginInit();
             this.SuspendLayout();
             // 
             // panelSuperior
@@ -1106,7 +1106,7 @@ namespace Desktop_App
             this.panelAddElements.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(60)))), ((int)(((byte)(61)))));
             this.panelAddElements.Controls.Add(this.flowLayoutPanel1);
             this.panelAddElements.Controls.Add(this.label23);
-            this.panelAddElements.Location = new System.Drawing.Point(232, 796);
+            this.panelAddElements.Location = new System.Drawing.Point(232, 407);
             this.panelAddElements.Name = "panelAddElements";
             this.panelAddElements.Size = new System.Drawing.Size(208, 378);
             this.panelAddElements.TabIndex = 8;
@@ -1660,7 +1660,7 @@ namespace Desktop_App
             this.panelInfoDashboard.Controls.Add(this.textBoxNameFinal);
             this.panelInfoDashboard.Controls.Add(this.label67);
             this.panelInfoDashboard.Controls.Add(this.label68);
-            this.panelInfoDashboard.Location = new System.Drawing.Point(9, 180);
+            this.panelInfoDashboard.Location = new System.Drawing.Point(9, 648);
             this.panelInfoDashboard.Name = "panelInfoDashboard";
             this.panelInfoDashboard.Size = new System.Drawing.Size(698, 608);
             this.panelInfoDashboard.TabIndex = 1;
@@ -2026,6 +2026,7 @@ namespace Desktop_App
             this.label49.Size = new System.Drawing.Size(137, 19);
             this.label49.TabIndex = 0;
             this.label49.Text = "LOGO ALEATORIO";
+            this.label49.Click += new System.EventHandler(this.panelRandomLogo_Click);
             // 
             // panelSelectLogo
             // 
@@ -2184,6 +2185,7 @@ namespace Desktop_App
             this.textBoxNombre.Name = "textBoxNombre";
             this.textBoxNombre.Size = new System.Drawing.Size(461, 35);
             this.textBoxNombre.TabIndex = 22;
+            this.textBoxNombre.Leave += new System.EventHandler(this.textBoxNombre_Leave);
             // 
             // labelTitulo3
             // 
@@ -2963,6 +2965,234 @@ namespace Desktop_App
             this.panelAyud.Name = "panelAyud";
             this.panelAyud.Size = new System.Drawing.Size(839, 878);
             this.panelAyud.TabIndex = 3;
+            // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
+            this.panel2.Controls.Add(this.flowLayoutPanel4);
+            this.panel2.Location = new System.Drawing.Point(20, 256);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(736, 400);
+            this.panel2.TabIndex = 13;
+            this.panel2.Visible = false;
+            // 
+            // flowLayoutPanel4
+            // 
+            this.flowLayoutPanel4.AutoScroll = true;
+            this.flowLayoutPanel4.Controls.Add(this.panel3);
+            this.flowLayoutPanel4.Location = new System.Drawing.Point(10, 17);
+            this.flowLayoutPanel4.Name = "flowLayoutPanel4";
+            this.flowLayoutPanel4.Size = new System.Drawing.Size(723, 361);
+            this.flowLayoutPanel4.TabIndex = 0;
+            // 
+            // panel3
+            // 
+            this.panel3.Controls.Add(this.pictureBox44);
+            this.panel3.Controls.Add(this.pictureBox47);
+            this.panel3.Controls.Add(this.label114);
+            this.panel3.Controls.Add(this.label113);
+            this.panel3.Controls.Add(this.pictureBox49);
+            this.panel3.Controls.Add(this.label117);
+            this.panel3.Controls.Add(this.label115);
+            this.panel3.Controls.Add(this.label116);
+            this.panel3.Controls.Add(this.pictureBox51);
+            this.panel3.Controls.Add(this.label121);
+            this.panel3.Controls.Add(this.label122);
+            this.panel3.Controls.Add(this.label123);
+            this.panel3.Location = new System.Drawing.Point(3, 3);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(698, 1576);
+            this.panel3.TabIndex = 9;
+            // 
+            // pictureBox44
+            // 
+            this.pictureBox44.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pictureBox44.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox44.Image")));
+            this.pictureBox44.Location = new System.Drawing.Point(17, 1208);
+            this.pictureBox44.Name = "pictureBox44";
+            this.pictureBox44.Size = new System.Drawing.Size(669, 344);
+            this.pictureBox44.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox44.TabIndex = 38;
+            this.pictureBox44.TabStop = false;
+            // 
+            // pictureBox47
+            // 
+            this.pictureBox47.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pictureBox47.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox47.Image")));
+            this.pictureBox47.Location = new System.Drawing.Point(17, 904);
+            this.pictureBox47.Name = "pictureBox47";
+            this.pictureBox47.Size = new System.Drawing.Size(669, 289);
+            this.pictureBox47.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox47.TabIndex = 37;
+            this.pictureBox47.TabStop = false;
+            // 
+            // label114
+            // 
+            this.label114.AutoSize = true;
+            this.label114.BackColor = System.Drawing.Color.Transparent;
+            this.label114.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label114.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(48)))), ((int)(((byte)(45)))));
+            this.label114.Location = new System.Drawing.Point(16, 852);
+            this.label114.Name = "label114";
+            this.label114.Size = new System.Drawing.Size(623, 45);
+            this.label114.TabIndex = 36;
+            this.label114.Text = resources.GetString("label114.Text");
+            // 
+            // label113
+            // 
+            this.label113.AutoSize = true;
+            this.label113.BackColor = System.Drawing.Color.Transparent;
+            this.label113.Font = new System.Drawing.Font("Segoe UI Black", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label113.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(48)))), ((int)(((byte)(45)))));
+            this.label113.Location = new System.Drawing.Point(15, 830);
+            this.label113.Name = "label113";
+            this.label113.Size = new System.Drawing.Size(110, 17);
+            this.label113.TabIndex = 35;
+            this.label113.Text = "Fuente de letra: ";
+            // 
+            // pictureBox49
+            // 
+            this.pictureBox49.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pictureBox49.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox49.Image")));
+            this.pictureBox49.Location = new System.Drawing.Point(19, 520);
+            this.pictureBox49.Name = "pictureBox49";
+            this.pictureBox49.Size = new System.Drawing.Size(669, 289);
+            this.pictureBox49.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox49.TabIndex = 34;
+            this.pictureBox49.TabStop = false;
+            // 
+            // label117
+            // 
+            this.label117.AutoSize = true;
+            this.label117.BackColor = System.Drawing.Color.Transparent;
+            this.label117.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label117.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(48)))), ((int)(((byte)(45)))));
+            this.label117.Location = new System.Drawing.Point(16, 487);
+            this.label117.Name = "label117";
+            this.label117.Size = new System.Drawing.Size(526, 30);
+            this.label117.TabIndex = 33;
+            this.label117.Text = "Los elementos que no sean tan relevantes tendrán el color seleccionado, por ejemp" +
+    "lo, colores \r\nque acompañen a diversos elementos que tienes en la web o que no s" +
+    "on tan principales.";
+            // 
+            // label115
+            // 
+            this.label115.AutoSize = true;
+            this.label115.BackColor = System.Drawing.Color.Transparent;
+            this.label115.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label115.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(48)))), ((int)(((byte)(45)))));
+            this.label115.Location = new System.Drawing.Point(11, 635);
+            this.label115.Name = "label115";
+            this.label115.Size = new System.Drawing.Size(668, 30);
+            this.label115.TabIndex = 19;
+            this.label115.Text = "Es una sección en la que puedes añadir una imagen y al lado texto. Es totalmente " +
+    "personalizable y es de las más utilizadas\r\na la hora de crear la web.\r\n";
+            // 
+            // label116
+            // 
+            this.label116.AutoSize = true;
+            this.label116.BackColor = System.Drawing.Color.Transparent;
+            this.label116.Font = new System.Drawing.Font("Segoe UI Black", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label116.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(48)))), ((int)(((byte)(45)))));
+            this.label116.Location = new System.Drawing.Point(16, 460);
+            this.label116.Name = "label116";
+            this.label116.Size = new System.Drawing.Size(123, 17);
+            this.label116.TabIndex = 18;
+            this.label116.Text = "Color Secundario: ";
+            // 
+            // pictureBox51
+            // 
+            this.pictureBox51.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pictureBox51.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox51.Image")));
+            this.pictureBox51.Location = new System.Drawing.Point(13, 143);
+            this.pictureBox51.Name = "pictureBox51";
+            this.pictureBox51.Size = new System.Drawing.Size(671, 281);
+            this.pictureBox51.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox51.TabIndex = 11;
+            this.pictureBox51.TabStop = false;
+            // 
+            // label121
+            // 
+            this.label121.AutoSize = true;
+            this.label121.BackColor = System.Drawing.Color.Transparent;
+            this.label121.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label121.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(48)))), ((int)(((byte)(45)))));
+            this.label121.Location = new System.Drawing.Point(11, 100);
+            this.label121.Name = "label121";
+            this.label121.Size = new System.Drawing.Size(463, 30);
+            this.label121.TabIndex = 10;
+            this.label121.Text = "Es el color primario de la página web. \r\nLos elementos mas importantes y que resa" +
+    "ltan más estarán del color seleccionado. ";
+            // 
+            // label122
+            // 
+            this.label122.AutoSize = true;
+            this.label122.BackColor = System.Drawing.Color.Transparent;
+            this.label122.Font = new System.Drawing.Font("Segoe UI Black", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label122.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(48)))), ((int)(((byte)(45)))));
+            this.label122.Location = new System.Drawing.Point(11, 74);
+            this.label122.Name = "label122";
+            this.label122.Size = new System.Drawing.Size(106, 17);
+            this.label122.TabIndex = 9;
+            this.label122.Text = "Color Principal:";
+            // 
+            // label123
+            // 
+            this.label123.AutoSize = true;
+            this.label123.BackColor = System.Drawing.Color.Transparent;
+            this.label123.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label123.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(48)))), ((int)(((byte)(45)))));
+            this.label123.Location = new System.Drawing.Point(9, 14);
+            this.label123.Name = "label123";
+            this.label123.Size = new System.Drawing.Size(581, 30);
+            this.label123.TabIndex = 8;
+            this.label123.Text = "A continuación, te dejamos un breve tutorial de como utilizar la pestaña de diseñ" +
+    "o en nuestra aplicación.\r\nÉchale un vistazo si no sabes utilizarlo o si tienes a" +
+    "lguna duda: ";
+            // 
+            // panel5
+            // 
+            this.panel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(48)))), ((int)(((byte)(45)))));
+            this.panel5.Controls.Add(this.pictureBox52);
+            this.panel5.Controls.Add(this.pictureBox53);
+            this.panel5.Controls.Add(this.label124);
+            this.panel5.Location = new System.Drawing.Point(20, 209);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(736, 52);
+            this.panel5.TabIndex = 12;
+            // 
+            // pictureBox52
+            // 
+            this.pictureBox52.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pictureBox52.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox52.Image")));
+            this.pictureBox52.Location = new System.Drawing.Point(12, 14);
+            this.pictureBox52.Name = "pictureBox52";
+            this.pictureBox52.Size = new System.Drawing.Size(23, 23);
+            this.pictureBox52.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox52.TabIndex = 7;
+            this.pictureBox52.TabStop = false;
+            // 
+            // pictureBox53
+            // 
+            this.pictureBox53.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pictureBox53.Image = global::Desktop_App.Properties.Resources.arrow_down;
+            this.pictureBox53.Location = new System.Drawing.Point(695, 16);
+            this.pictureBox53.Name = "pictureBox53";
+            this.pictureBox53.Size = new System.Drawing.Size(17, 17);
+            this.pictureBox53.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox53.TabIndex = 6;
+            this.pictureBox53.TabStop = false;
+            // 
+            // label124
+            // 
+            this.label124.AutoSize = true;
+            this.label124.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label124.ForeColor = System.Drawing.Color.White;
+            this.label124.Location = new System.Drawing.Point(40, 14);
+            this.label124.Name = "label124";
+            this.label124.Size = new System.Drawing.Size(131, 21);
+            this.label124.TabIndex = 0;
+            this.label124.Text = "Diseño al Detalle";
             // 
             // panelConstDetalle
             // 
@@ -3996,7 +4226,7 @@ namespace Desktop_App
             this.textBoxUsuario.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(86)))), ((int)(((byte)(101)))), ((int)(((byte)(115)))));
             this.textBoxUsuario.Location = new System.Drawing.Point(35, 202);
             this.textBoxUsuario.Name = "textBoxUsuario";
-            this.textBoxUsuario.Size = new System.Drawing.Size(384, 35);
+            this.textBoxUsuario.Size = new System.Drawing.Size(353, 35);
             this.textBoxUsuario.TabIndex = 4;
             // 
             // tabPageRegister
@@ -4607,234 +4837,6 @@ namespace Desktop_App
             // 
             this.timerOjo.Tick += new System.EventHandler(this.timerOjo_Tick);
             // 
-            // panel2
-            // 
-            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
-            this.panel2.Controls.Add(this.flowLayoutPanel4);
-            this.panel2.Location = new System.Drawing.Point(20, 256);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(736, 400);
-            this.panel2.TabIndex = 13;
-            this.panel2.Visible = false;
-            // 
-            // flowLayoutPanel4
-            // 
-            this.flowLayoutPanel4.AutoScroll = true;
-            this.flowLayoutPanel4.Controls.Add(this.panel3);
-            this.flowLayoutPanel4.Location = new System.Drawing.Point(10, 17);
-            this.flowLayoutPanel4.Name = "flowLayoutPanel4";
-            this.flowLayoutPanel4.Size = new System.Drawing.Size(723, 361);
-            this.flowLayoutPanel4.TabIndex = 0;
-            // 
-            // panel3
-            // 
-            this.panel3.Controls.Add(this.pictureBox44);
-            this.panel3.Controls.Add(this.pictureBox47);
-            this.panel3.Controls.Add(this.label114);
-            this.panel3.Controls.Add(this.label113);
-            this.panel3.Controls.Add(this.pictureBox49);
-            this.panel3.Controls.Add(this.label117);
-            this.panel3.Controls.Add(this.label115);
-            this.panel3.Controls.Add(this.label116);
-            this.panel3.Controls.Add(this.pictureBox51);
-            this.panel3.Controls.Add(this.label121);
-            this.panel3.Controls.Add(this.label122);
-            this.panel3.Controls.Add(this.label123);
-            this.panel3.Location = new System.Drawing.Point(3, 3);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(698, 1576);
-            this.panel3.TabIndex = 9;
-            // 
-            // label115
-            // 
-            this.label115.AutoSize = true;
-            this.label115.BackColor = System.Drawing.Color.Transparent;
-            this.label115.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label115.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(48)))), ((int)(((byte)(45)))));
-            this.label115.Location = new System.Drawing.Point(11, 635);
-            this.label115.Name = "label115";
-            this.label115.Size = new System.Drawing.Size(668, 30);
-            this.label115.TabIndex = 19;
-            this.label115.Text = "Es una sección en la que puedes añadir una imagen y al lado texto. Es totalmente " +
-    "personalizable y es de las más utilizadas\r\na la hora de crear la web.\r\n";
-            // 
-            // label116
-            // 
-            this.label116.AutoSize = true;
-            this.label116.BackColor = System.Drawing.Color.Transparent;
-            this.label116.Font = new System.Drawing.Font("Segoe UI Black", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label116.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(48)))), ((int)(((byte)(45)))));
-            this.label116.Location = new System.Drawing.Point(16, 460);
-            this.label116.Name = "label116";
-            this.label116.Size = new System.Drawing.Size(123, 17);
-            this.label116.TabIndex = 18;
-            this.label116.Text = "Color Secundario: ";
-            // 
-            // pictureBox51
-            // 
-            this.pictureBox51.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pictureBox51.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox51.Image")));
-            this.pictureBox51.Location = new System.Drawing.Point(13, 143);
-            this.pictureBox51.Name = "pictureBox51";
-            this.pictureBox51.Size = new System.Drawing.Size(671, 281);
-            this.pictureBox51.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox51.TabIndex = 11;
-            this.pictureBox51.TabStop = false;
-            // 
-            // label121
-            // 
-            this.label121.AutoSize = true;
-            this.label121.BackColor = System.Drawing.Color.Transparent;
-            this.label121.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label121.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(48)))), ((int)(((byte)(45)))));
-            this.label121.Location = new System.Drawing.Point(11, 100);
-            this.label121.Name = "label121";
-            this.label121.Size = new System.Drawing.Size(463, 30);
-            this.label121.TabIndex = 10;
-            this.label121.Text = "Es el color primario de la página web. \r\nLos elementos mas importantes y que resa" +
-    "ltan más estarán del color seleccionado. ";
-            // 
-            // label122
-            // 
-            this.label122.AutoSize = true;
-            this.label122.BackColor = System.Drawing.Color.Transparent;
-            this.label122.Font = new System.Drawing.Font("Segoe UI Black", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label122.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(48)))), ((int)(((byte)(45)))));
-            this.label122.Location = new System.Drawing.Point(11, 74);
-            this.label122.Name = "label122";
-            this.label122.Size = new System.Drawing.Size(106, 17);
-            this.label122.TabIndex = 9;
-            this.label122.Text = "Color Principal:";
-            // 
-            // label123
-            // 
-            this.label123.AutoSize = true;
-            this.label123.BackColor = System.Drawing.Color.Transparent;
-            this.label123.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label123.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(48)))), ((int)(((byte)(45)))));
-            this.label123.Location = new System.Drawing.Point(9, 14);
-            this.label123.Name = "label123";
-            this.label123.Size = new System.Drawing.Size(581, 30);
-            this.label123.TabIndex = 8;
-            this.label123.Text = "A continuación, te dejamos un breve tutorial de como utilizar la pestaña de diseñ" +
-    "o en nuestra aplicación.\r\nÉchale un vistazo si no sabes utilizarlo o si tienes a" +
-    "lguna duda: ";
-            // 
-            // panel5
-            // 
-            this.panel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(48)))), ((int)(((byte)(45)))));
-            this.panel5.Controls.Add(this.pictureBox52);
-            this.panel5.Controls.Add(this.pictureBox53);
-            this.panel5.Controls.Add(this.label124);
-            this.panel5.Location = new System.Drawing.Point(20, 209);
-            this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(736, 52);
-            this.panel5.TabIndex = 12;
-            // 
-            // pictureBox52
-            // 
-            this.pictureBox52.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pictureBox52.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox52.Image")));
-            this.pictureBox52.Location = new System.Drawing.Point(12, 14);
-            this.pictureBox52.Name = "pictureBox52";
-            this.pictureBox52.Size = new System.Drawing.Size(23, 23);
-            this.pictureBox52.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox52.TabIndex = 7;
-            this.pictureBox52.TabStop = false;
-            // 
-            // pictureBox53
-            // 
-            this.pictureBox53.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pictureBox53.Image = global::Desktop_App.Properties.Resources.arrow_down;
-            this.pictureBox53.Location = new System.Drawing.Point(695, 16);
-            this.pictureBox53.Name = "pictureBox53";
-            this.pictureBox53.Size = new System.Drawing.Size(17, 17);
-            this.pictureBox53.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox53.TabIndex = 6;
-            this.pictureBox53.TabStop = false;
-            // 
-            // label124
-            // 
-            this.label124.AutoSize = true;
-            this.label124.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label124.ForeColor = System.Drawing.Color.White;
-            this.label124.Location = new System.Drawing.Point(40, 14);
-            this.label124.Name = "label124";
-            this.label124.Size = new System.Drawing.Size(131, 21);
-            this.label124.TabIndex = 0;
-            this.label124.Text = "Diseño al Detalle";
-            // 
-            // label117
-            // 
-            this.label117.AutoSize = true;
-            this.label117.BackColor = System.Drawing.Color.Transparent;
-            this.label117.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label117.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(48)))), ((int)(((byte)(45)))));
-            this.label117.Location = new System.Drawing.Point(16, 487);
-            this.label117.Name = "label117";
-            this.label117.Size = new System.Drawing.Size(526, 30);
-            this.label117.TabIndex = 33;
-            this.label117.Text = "Los elementos que no sean tan relevantes tendrán el color seleccionado, por ejemp" +
-    "lo, colores \r\nque acompañen a diversos elementos que tienes en la web o que no s" +
-    "on tan principales.";
-            // 
-            // pictureBox49
-            // 
-            this.pictureBox49.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pictureBox49.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox49.Image")));
-            this.pictureBox49.Location = new System.Drawing.Point(19, 520);
-            this.pictureBox49.Name = "pictureBox49";
-            this.pictureBox49.Size = new System.Drawing.Size(669, 289);
-            this.pictureBox49.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox49.TabIndex = 34;
-            this.pictureBox49.TabStop = false;
-            // 
-            // label113
-            // 
-            this.label113.AutoSize = true;
-            this.label113.BackColor = System.Drawing.Color.Transparent;
-            this.label113.Font = new System.Drawing.Font("Segoe UI Black", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label113.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(48)))), ((int)(((byte)(45)))));
-            this.label113.Location = new System.Drawing.Point(15, 830);
-            this.label113.Name = "label113";
-            this.label113.Size = new System.Drawing.Size(110, 17);
-            this.label113.TabIndex = 35;
-            this.label113.Text = "Fuente de letra: ";
-            // 
-            // label114
-            // 
-            this.label114.AutoSize = true;
-            this.label114.BackColor = System.Drawing.Color.Transparent;
-            this.label114.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label114.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(48)))), ((int)(((byte)(45)))));
-            this.label114.Location = new System.Drawing.Point(16, 852);
-            this.label114.Name = "label114";
-            this.label114.Size = new System.Drawing.Size(623, 45);
-            this.label114.TabIndex = 36;
-            this.label114.Text = resources.GetString("label114.Text");
-            // 
-            // pictureBox47
-            // 
-            this.pictureBox47.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pictureBox47.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox47.Image")));
-            this.pictureBox47.Location = new System.Drawing.Point(17, 904);
-            this.pictureBox47.Name = "pictureBox47";
-            this.pictureBox47.Size = new System.Drawing.Size(669, 289);
-            this.pictureBox47.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox47.TabIndex = 37;
-            this.pictureBox47.TabStop = false;
-            // 
-            // pictureBox44
-            // 
-            this.pictureBox44.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pictureBox44.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox44.Image")));
-            this.pictureBox44.Location = new System.Drawing.Point(17, 1208);
-            this.pictureBox44.Name = "pictureBox44";
-            this.pictureBox44.Size = new System.Drawing.Size(669, 344);
-            this.pictureBox44.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox44.TabIndex = 38;
-            this.pictureBox44.TabStop = false;
-            // 
             // FormPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -4846,6 +4848,7 @@ namespace Desktop_App
             this.Controls.Add(this.panelSuperior);
             this.Controls.Add(this.tabControl);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FormPrincipal";
             this.Text = " ";
             this.panelSuperior.ResumeLayout(false);
@@ -5008,6 +5011,18 @@ namespace Desktop_App
             this.ayuda.ResumeLayout(false);
             this.panelAyud.ResumeLayout(false);
             this.panelAyud.PerformLayout();
+            this.panel2.ResumeLayout(false);
+            this.flowLayoutPanel4.ResumeLayout(false);
+            this.panel3.ResumeLayout(false);
+            this.panel3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox44)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox47)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox49)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox51)).EndInit();
+            this.panel5.ResumeLayout(false);
+            this.panel5.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox52)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox53)).EndInit();
             this.panelConstDetalle.ResumeLayout(false);
             this.flowLayoutPanel3.ResumeLayout(false);
             this.panel61.ResumeLayout(false);
@@ -5068,18 +5083,6 @@ namespace Desktop_App
             this.panelSabiasQue.ResumeLayout(false);
             this.panelSabiasQue.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxBombilla)).EndInit();
-            this.panel2.ResumeLayout(false);
-            this.flowLayoutPanel4.ResumeLayout(false);
-            this.panel3.ResumeLayout(false);
-            this.panel3.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox51)).EndInit();
-            this.panel5.ResumeLayout(false);
-            this.panel5.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox52)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox53)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox49)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox47)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox44)).EndInit();
             this.ResumeLayout(false);
 
         }

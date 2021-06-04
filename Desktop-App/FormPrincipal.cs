@@ -32,12 +32,15 @@ namespace Desktop_App
         Boolean panelConstDetalleShow = false;
         int timerCount = 0;
         int time=0;
+        
 
         public FormPrincipal()
         {
             InitializeComponent();
             initConfig();
+            createFilesAndFoldersInitial();
             checkFirstLogin();
+
         }
 
         private void checkFirstLogin()
@@ -118,6 +121,35 @@ namespace Desktop_App
             comboBoxAsk.SelectedIndex = 0;
             comboBoxSesionIniciada.SelectedIndex = 0;
         }
+
+        private void createFilesAndFoldersInitial()
+        {
+            string dirWebsites = @"C:\PolypusCreator\YourWebsites";
+            // If directory does not exist, create it
+            if (!Directory.Exists(dirWebsites))
+            {
+                Directory.CreateDirectory(dirWebsites);
+                dirWebsites = @"C:\PolypusCreator\Templates";
+                Directory.CreateDirectory(dirWebsites);
+                
+            }
+        }
+
+        private void createFolder(string folderName)
+        {
+            string dirPath = @"C:\PolypusCreator\YourWebsites\"+ folderName;
+            // If directory does not exist, create it
+            if (!Directory.Exists(dirPath))
+            {
+                Directory.CreateDirectory(dirPath);
+            }
+            else
+            {
+                
+            }
+        }
+
+
 
         private void labelClose_Click(object sender, EventArgs e)
         {
@@ -1457,7 +1489,7 @@ namespace Desktop_App
             if (rutaOrigen != null) {
                 string[] rutas = rutaOrigen.Split('\\');
                 String directory = Path.GetDirectoryName(rutaOrigen) + @"\" + Path.GetFileName(rutaOrigen);
-                String newPath = @"..\..\Polypus\YourWebsites\Images\";
+                String newPath = DataClass.yourLocalWebsiteImagesFolderPath + @"\";
                 textBox.Text = "\\" + rutas[rutas.Length - 1];
                 if (!File.Exists(newPath + rutas[rutas.Length - 1]))
                 {
@@ -1646,14 +1678,14 @@ namespace Desktop_App
                 {
                     string[] rutas = rutaOrigen.Split('\\');
                     String directory = Path.GetDirectoryName(rutaOrigen) + @"\" + Path.GetFileName(rutaOrigen);
-                    String newPath = @"..\..\Polypus\YourWebsites\Images\";
+                    String newPath = DataClass.yourLocalWebsiteImagesFolderPath + @"\";
                     if (!File.Exists(newPath + rutas[rutas.Length - 1]))
                     {
                         File.Copy(directory, newPath + rutas[rutas.Length - 1]);
                     }
                     else
                     {
-                        MessageBox.Show("Nombre de fichero existente");
+                        
                     }
                     pictureBoxLogo.Image = Image.FromFile(newPath + rutas[rutas.Length - 1]);
                     DataClass.logoPath = "\\"+rutas[rutas.Length - 1];
@@ -1663,6 +1695,7 @@ namespace Desktop_App
                 textBoxNameFinal.Text = DataClass.websiteName.ToString();
                 textBoxCategoriaFinal.Text = DataClass.websiteCategory.ToString();
                 textBoxDescFinal.Text = DataClass.websiteDesc.ToString();
+                MessageBox.Show("Path de Imagenes : " + DataClass.yourLocalWebsiteImagesFolderPath);
             }
             
         }
@@ -1681,18 +1714,19 @@ namespace Desktop_App
             int random = rnd.Next(0, 6);
             string[] rutas = images[random].Split('\\');
             String directory = Path.GetDirectoryName(images[random]) + @"\" + Path.GetFileName(images[random]);
-            String newPath = @"..\..\Polypus\YourWebsites\Images\";
+            String newPath = DataClass.yourLocalWebsiteImagesFolderPath + @"\";
             if (!File.Exists(newPath + rutas[rutas.Length - 1]))
             {
                 File.Copy(directory, newPath + rutas[rutas.Length - 1]);
             }
             else
             {
-                MessageBox.Show("Nombre de fichero existente");
+                
             }
             pictureBoxLogo.Image = Image.FromFile(newPath + rutas[rutas.Length - 1]);
             DataClass.logoPath = "\\" + rutas[rutas.Length - 1];
             pictureBoxLogoFinal.Image = Image.FromFile(newPath + rutas[rutas.Length - 1]);
+            
         }
 
         private void panel35_MouseClick(object sender, MouseEventArgs e)
@@ -1881,14 +1915,14 @@ namespace Desktop_App
                 {
                     string[] rutas = rutaOrigen.Split('\\');
                     String directory = Path.GetDirectoryName(rutaOrigen) + @"\" + Path.GetFileName(rutaOrigen);
-                    String newPath = @"..\..\Polypus\YourWebsites\Images\";
+                    String newPath = DataClass.yourLocalWebsiteImagesFolderPath + @"\";
                     if (!File.Exists(newPath + rutas[rutas.Length - 1]))
                     {
                         File.Copy(directory, newPath + rutas[rutas.Length - 1]);
                     }
                     else
                     {
-                        MessageBox.Show("Nombre de fichero existente");
+                        
                     }
                     imageAjustes.Image = Image.FromFile(newPath + rutas[rutas.Length - 1]);
                     foreach(ClassCreatePanelAjustes ajustes in panelesAjustes)
@@ -2242,14 +2276,19 @@ namespace Desktop_App
             if (textBoxNombre.Text.Equals("") || textBoxBreveDescripcion.Text.Equals("") ||
                 DataClass.logoPath.Equals("") || DataClass.websiteCategory.Equals(""))
             {
-                DataClass.websiteName = textBoxNombre.Text;
-                DataClass.websiteDesc = textBoxBreveDescripcion.Text;
+                
                 MessageBox.Show("Debes completar todo el formulario para poder crear una web", "Formulario Incompleto",
                 MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             else
             {
+                DataClass.websiteName = textBoxNombre.Text;
+                DataClass.websiteDesc = textBoxBreveDescripcion.Text;
+               
+
+                
                 checkFirstLogin();
+
             }
             
             
@@ -2909,6 +2948,8 @@ namespace Desktop_App
             string obstring = JsonConvert.SerializeObject(DataClass.classListaJSON);
             JObject googleSearch = JObject.Parse(obstring);
             Console.WriteLine(googleSearch.ToString());
+            string folderName = DataClass.websiteName.ToString();
+            createFolder(folderName);
         }
 
         private void panelLoginTemporal_Click(object sender, EventArgs e)
@@ -3181,6 +3222,32 @@ namespace Desktop_App
             textBoxRepiteNuevaContrasena.UseSystemPasswordChar = false;
             pictureBoxOjo2Olvido.Image = Desktop_App.Properties.Resources.eyeOp;
             timerOjo.Start();
+        }
+
+        private void textBoxNombre_Leave(object sender, EventArgs e)
+        {
+            if (!textBoxNombre.Text.Equals(""))
+            {
+                if (!DataClass.yourLocalWebsitePath.Equals(""))
+                {
+                    Directory.Move(DataClass.yourLocalWebsitePath, @"C:\PolypusCreator\YourWebsites\" + textBoxNombre.Text);
+                }
+                DataClass.websiteName = textBoxNombre.Text.ToString();
+                createFolder(DataClass.websiteName + @"\Images");
+
+                DataClass.yourLocalWebsitePath = @"C:\PolypusCreator\YourWebsites\" +
+                   DataClass.websiteName;
+
+                
+
+                DataClass.yourLocalWebsiteImagesFolderPath = DataClass.yourLocalWebsitePath + @"\Images";
+
+                
+
+
+
+
+            }
         }
     }
 }
