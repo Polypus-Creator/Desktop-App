@@ -21,5 +21,6 @@ namespace Desktop_App
         public static string websiteCategory = "";
         public static string yourLocalWebsitePath = "";
         public static string yourLocalWebsiteImagesFolderPath = "";
+        public static string accesToken = "";
     }
 }

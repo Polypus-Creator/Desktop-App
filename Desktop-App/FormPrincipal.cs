@@ -13,6 +13,7 @@ using Newtonsoft.Json;
 using System.Text.RegularExpressions;
 using System.IO;
 using System.Net.Http;
+using System.Net.Http.Headers;
 
 namespace Desktop_App
 {
@@ -2519,9 +2520,7 @@ namespace Desktop_App
 
         private void panelDesconectar_Click(object sender, EventArgs e)
         {
-            FormLogin login = new FormLogin();
-            login.Show();
-            this.Hide();
+            _=logout();
         }
 
         private void pictureBoxFuenteAyuda_Click(object sender, EventArgs e)
@@ -2981,7 +2980,8 @@ namespace Desktop_App
         private void buttonIniciarSesion_Click(object sender, EventArgs e)
         {
             string username = textBoxUsuario.Text;
-            string password = HelperClassSecurity.MD5Digest(textBoxContrasena.Text);
+            //string password = HelperClassSecurity.MD5Digest(textBoxContrasena.Text);
+            string password = textBoxContrasena.Text;
 
             if (username.Equals("") || password.Equals(""))
             {
@@ -3000,7 +3000,8 @@ namespace Desktop_App
                 pictureBoxUserAvatar.Visible = true;
                 labelUsername.Visible = true;
                 panelDesconectar.Visible = true;
-                //_= verificarAsync(username, password);
+                _= verificarAsync(username, password);
+
             }
         }
 
@@ -3149,24 +3150,64 @@ namespace Desktop_App
                 User user = new User(username, password);
                 string obstring = JsonConvert.SerializeObject(user);
                 JObject objetoJSON = JObject.Parse(obstring);
-                HttpResponseMessage responsPost = await cliente.PostAsync("http://172.17.41.38:8012/JosePHP/myPHPfile2.php?state=login", new StringContent(
+                MessageBox.Show(objetoJSON.ToString());
+                HttpResponseMessage responsPost = await cliente.PostAsync("http://localhost/login.php", new StringContent(
                 objetoJSON.ToString(),
+                //"{'Username': 'admin1224','Password': '12345678sdgfdfg'}",
                 Encoding.UTF8,
                 "application/json"));
                 string responsebody = await responsPost.Content.ReadAsStringAsync();
+                JObject objetoJSONRecibido = JObject.Parse(responsebody);
+                DataClass.accesToken = objetoJSONRecibido["body"]["token"].ToString();
+                createTokenFile();
+
                 if (responsebody.Equals("logeado"))
                 {
                     
                 }
                 else
                 {
-                    MessageBox.Show("Usuario no registrado");
+                    //MessageBox.Show("Usuario no registrado");
                 }
             }
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
             }
+        }
+
+        private async Task logout()
+        {
+            try
+            {
+                HttpClient cliente = new HttpClient();
+                cliente.DefaultRequestHeaders.Authorization =
+                new AuthenticationHeaderValue("Bearer", DataClass.accesToken);
+                HttpResponseMessage responsPost = await cliente.GetAsync("http://localhost/logout.php");
+                string responsebody = await responsPost.Content.ReadAsStringAsync();
+                JObject objetoJSONRecibido = JObject.Parse(responsebody);
+                MessageBox.Show(responsebody);
+                //createTokenFile();
+
+                if (responsebody.Equals("logeado"))
+                {
+
+                }
+                else
+                {
+                    //MessageBox.Show("Usuario no registrado");
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void createTokenFile()
+        {
+            string path = @"C:\PolypusCreator\tokenSession.txt";
+            File.AppendAllLines(path, new[] { DataClass.accesToken });
         }
 
         private void timerOjo_Tick(object sender, EventArgs e)
