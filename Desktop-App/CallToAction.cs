@@ -22,8 +22,8 @@ namespace Desktop_App
             Elemento = "CallToAction";
             Title = title;
             Text = text;
-            BackColor = HexConverter(backColor);
-            ButtonColor = HexConverter(buttonColor);
+            BackColor = ClassString.HexConverter(backColor);
+            ButtonColor = ClassString.HexConverter(buttonColor);
             ButtonText = buttonText;
             ButtonUrl = buttonUrl;
             Orientation = orientation;
@@ -40,9 +40,5 @@ namespace Desktop_App
         public string Orientation { get => orientation; set => orientation = value; }
         public string RutaImage { get => rutaImage; set => rutaImage = value; }
 
-        private String HexConverter(System.Drawing.Color c)
-        {
-            return "#" + c.R.ToString("X2") + c.G.ToString("X2") + c.B.ToString("X2");
-        }
     }
 }

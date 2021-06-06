@@ -12,6 +12,7 @@ namespace Desktop_App
     {
         public static Color backOne = Color.Black;
         public static Color backTwo = Color.White;
+        public static string font = "Arial";
         public static Header header;
         public static List<object> listasElementos = new List<object>();
         public static ClassJSONList classListaJSON = new ClassJSONList();
@@ -22,5 +23,7 @@ namespace Desktop_App
         public static string yourLocalWebsitePath = "";
         public static string yourLocalWebsiteImagesFolderPath = "";
         public static string accesToken = "";
+        public static string userName = "";
+        public static FirstJSON firstJSON = new FirstJSON();
     }
 }

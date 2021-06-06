@@ -118,6 +118,9 @@ namespace Desktop_App
             tabControl.SelectedTab = tabPageLogin;
             comboBoxAsk.SelectedIndex = 0;
             comboBoxSesionIniciada.SelectedIndex = 0;
+
+            webBrowserAboutUs.Navigate(new Uri("https://polypuscreator.000webhostapp.com/"));
+            //tabControl.SelectedTab = tabPageForgtoPassword;
         }
 
         private void createFilesAndFoldersInitial()
@@ -1239,7 +1242,7 @@ namespace Desktop_App
                     break;
                 }
             }
-            textBox.Text = HexConverter(color);
+            textBox.Text = ClassString.HexConverter(color);
         }
         private Color changeColor()
         {
@@ -1249,11 +1252,6 @@ namespace Desktop_App
                 return colorPicker.Color;
             }
             return Color.Red;
-        }
-
-        private String HexConverter(System.Drawing.Color c)
-        {
-            return "#" + c.R.ToString("X2") + c.G.ToString("X2") + c.B.ToString("X2");
         }
 
         private void pictureBox15_MouseClick(object sender, MouseEventArgs e)
@@ -1286,7 +1284,7 @@ namespace Desktop_App
             
 
             buttonColor.Name = "buttonColor";
-            buttonColor.Location = new Point(324, 0);
+            buttonColor.Location = new Point(370, 0);
             buttonColor.Size = new Size(25, 25);
             buttonColor.BackColor = DataClass.backTwo;
             buttonColor.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
@@ -1313,7 +1311,7 @@ namespace Desktop_App
             panelElement.CreateAjustes = new ClassCreatePanelAjustes(410, 310, panelElement.Title, optionsAjustes);
             panel4.Controls.Add(panelElement.CreateAjustes.PanelGlo);
             panelesAjustes.Add(panelElement.CreateAjustes);
-
+            panelElement.CreateAjustes.LabelTitle.Size = new Size(130, 21);
             TextBox text = new TextBox();
             text.Name = "";
             text.Text = "Path image";
@@ -1442,7 +1440,7 @@ namespace Desktop_App
             panelElement.CreateAjustes = new ClassCreatePanelAjustes(410, 310, panelElement.Title, optionsAjustes);
             panel4.Controls.Add(panelElement.CreateAjustes.PanelGlo);
             panelesAjustes.Add(panelElement.CreateAjustes);
-
+            panelElement.CreateAjustes.LabelTitle.Size = new Size(130, 25);
             panelElement.CreateAjustes.ListText[1].MouseClick += clickTextBox_AjustesFoto;
 
             panelElement.CreateAjustes.ListText[1].ReadOnly = true;
@@ -2081,6 +2079,7 @@ namespace Desktop_App
             panelesFlow.Add(panelElement);
             panelElement.PanelGol.Name = "Title" + panelesFlow.Count;
             panelElement.LabelTitle.Size = new Size(120, 21);
+            panelElement.LabelOptions[0].Size = new Size(300, 21);
             panelElement.CreateAjustes = new ClassCreatePanelAjustes(410, 310, panelElement.Title, panelElement.Options);
             panel4.Controls.Add(panelElement.CreateAjustes.PanelGlo);
             panelesAjustes.Add(panelElement.CreateAjustes);
@@ -2282,11 +2281,14 @@ namespace Desktop_App
             {
                 DataClass.websiteName = textBoxNombre.Text;
                 DataClass.websiteDesc = textBoxBreveDescripcion.Text;
-               
 
-                
+                DataClass.firstJSON.Website_name = DataClass.websiteName;
+                DataClass.firstJSON.Description = DataClass.websiteDesc;
+                DataClass.firstJSON.Category = DataClass.websiteCategory;
+                DataClass.firstJSON.Primary_colour = ClassString.HexConverter(DataClass.backOne);
+                DataClass.firstJSON.Secondary_colour = ClassString.HexConverter(DataClass.backTwo);
+                DataClass.firstJSON.Font = DataClass.font ;
                 checkFirstLogin();
-
             }
             
             
@@ -2644,30 +2646,9 @@ namespace Desktop_App
         private void CorreoValidator_LostFocus(object sender, EventArgs e)
         {
             TextBox text = (TextBox)sender;
-            if (!email_bien_escrito(text.Text))
+            if (!ClassString.email_bien_escrito(text.Text))
             {
                 MessageBox.Show("Correo no valido");
-            }
-        }
-
-        private Boolean email_bien_escrito(String email)
-        {
-            String expresion;
-            expresion = "\\w+([-+.']\\w+)*@\\w+([-.]\\w+)*\\.\\w+([-.]\\w+)*";
-            if (Regex.IsMatch(email, expresion))
-            {
-                if (Regex.Replace(email, expresion, String.Empty).Length == 0)
-                {
-                    return true;
-                }
-                else
-                {
-                    return false;
-                }
-            }
-            else
-            {
-                return false;
             }
         }
 
@@ -2721,6 +2702,8 @@ namespace Desktop_App
         private void comboBox1_SelectedIndexChanged_1(object sender, EventArgs e)
         {
             timerPanelGuardado.Start();
+            DataClass.font = comboBoxFont.SelectedItem.ToString();
+            DataClass.firstJSON.Font = DataClass.font;
             labelFirstTimeSaved.Text = "La fuente es " + comboBoxFont.SelectedItem + "!";
         }
 
@@ -2937,8 +2920,35 @@ namespace Desktop_App
             string obstring = JsonConvert.SerializeObject(DataClass.classListaJSON);
             JObject googleSearch = JObject.Parse(obstring);
             Console.WriteLine(googleSearch.ToString());
-            string folderName = DataClass.websiteName.ToString();
-            createFolder(folderName);
+            _ = enviarPaginaFinalizada(googleSearch.ToString());
+        }
+
+        private async Task enviarPaginaFinalizada(string json)
+        {
+            try
+            {
+                HttpClient cliente = new HttpClient();
+                cliente.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", DataClass.accesToken);
+                HttpResponseMessage responsPost = await cliente.PostAsync("http://localhost/generate_html.php", new StringContent(
+                json,
+                Encoding.UTF8,
+                "application/json"));
+                string responsebody = await responsPost.Content.ReadAsStringAsync();
+                MessageBox.Show(responsebody);
+                JObject objetoJSONRecibido = JObject.Parse(responsebody);
+                /*if (objetoJSONRecibido["error"].ToString().Equals("False"))
+                {
+
+                }
+                else
+                {
+                    
+                }*/
+            }
+            catch (Exception ex)
+            {
+                //MessageBox.Show(ex.Message);
+            }
         }
 
         private void panelLoginTemporal_Click(object sender, EventArgs e)
@@ -3026,7 +3036,7 @@ namespace Desktop_App
         {
             if (!textBoxNombre.Text.Equals(""))
             {
-                if (!DataClass.yourLocalWebsitePath.Equals(""))
+                if (!DataClass.yourLocalWebsitePath.Equals("") && !DataClass.yourLocalWebsitePath.Equals(@"C:\PolypusCreator\YourWebsites\" + textBoxNombre.Text))
                 {
                     Directory.Move(DataClass.yourLocalWebsitePath, @"C:\PolypusCreator\YourWebsites\" + textBoxNombre.Text);
                 }
@@ -3089,6 +3099,28 @@ namespace Desktop_App
                     pictureBoxUserAvatar.Visible = true;
                     labelUsername.Visible = true;
                     panelDesconectar.Visible = true;
+                    labelUsername.Text = username;
+                    if (!DataClass.userName.Equals(textBoxUsuario.Text))
+                    {
+                        firstLogin = true;
+                        DataClass.userName = textBoxUsuario.Text;
+                        flowLayoutPanelCurrentElements.Controls.Clear();
+                        panel4.Controls.Clear();
+                        panelesAjustes.Clear();
+                        panelesFlow.Clear();
+                        isHeaderAlreadyOn = false;
+                        panelElemNavBar.Enabled = true;
+                        isFooterAlreadyOn = false;
+                        panelElemFooter.Enabled = true;
+                    }
+                    checkFirstLogin();
+                    textBoxUsuario.Text = "";
+                    textBoxContrasena.Text="";
+                    textBoxNombre.Text = "";
+                    textBoxBreveDescripcion.Text = "";
+                    checkBoxWebDeEmpresa.Checked = false;
+                    checkBoxWebPersonal.Checked = false;
+                    checkBoxWebPersonalizada.Checked = false;
                 }
                 else
                 {
@@ -3160,6 +3192,30 @@ namespace Desktop_App
                     pictureBoxUserAvatar.Visible = true;
                     labelUsername.Visible = true;
                     panelDesconectar.Visible = true;
+                    labelUsername.Text = username;
+                    if (!DataClass.userName.Equals(textBoxNombreUsuario.Text))
+                    {
+                        firstLogin = true;
+                        DataClass.userName = textBoxNombreUsuario.Text;
+                        flowLayoutPanelCurrentElements.Controls.Clear();
+                        panel4.Controls.Clear();
+                        panelesAjustes.Clear();
+                        panelesFlow.Clear();
+                        isHeaderAlreadyOn = false;
+                        panelElemNavBar.Enabled = true;
+                        isFooterAlreadyOn = false;
+                        panelElemFooter.Enabled = true;
+                    }
+                    checkFirstLogin();
+                    textBoxNombreUsuario.Text="";
+                    textBoxNuevaContrasena.Text = "";
+                    textBoxRepiteNuevaContrasena.Text = "";
+                    textBoxRespuestaPregunta.Text = "";
+                    textBoxNombre.Text = "";
+                    textBoxBreveDescripcion.Text = "";
+                    checkBoxWebDeEmpresa.Checked = false;
+                    checkBoxWebPersonal.Checked = false;
+                    checkBoxWebPersonalizada.Checked = false;
                 }
                 else
                 {
@@ -3186,7 +3242,7 @@ namespace Desktop_App
                 stayLogged = true;
             }
 
-            if (!username.Equals("") && !password.Equals("") && password.Length>=8 && !passwordConfirm.Equals("") && !email.Equals("") && !answer.Equals(""))
+            if (!username.Equals("") && !password.Equals("") && password.Length>=8 && !passwordConfirm.Equals("") && !email.Equals("") && ClassString.email_bien_escrito(email) && !answer.Equals(""))
             {
                 if (password.Equals(passwordConfirm))
                 {
@@ -3203,7 +3259,9 @@ namespace Desktop_App
                 if (password.Length < 8) {
                     MessageBox.Show("La contraseña es inferior a 8 carácteres");
                 }
-                else
+                else if (!ClassString.email_bien_escrito(email)) {
+                    MessageBox.Show("Correo inválido");
+                } else
                 {
                     MessageBox.Show("Rellena todos los campos");
                 }
@@ -3224,7 +3282,7 @@ namespace Desktop_App
                 "application/json"));
                 string responsebody = await responsPost.Content.ReadAsStringAsync();
                 JObject objetoJSONRecibido = JObject.Parse(responsebody);
-                if (objetoJSONRecibido["error"].Equals("false"))
+                if (objetoJSONRecibido["error"].ToString().Equals("False"))
                 {
                     tabControl.SelectedTab = dashboard;
                     panelLoginTemporal.Visible = false;
@@ -3235,6 +3293,28 @@ namespace Desktop_App
                     pictureBoxUserAvatar.Visible = true;
                     labelUsername.Visible = true;
                     panelDesconectar.Visible = true;
+                    labelUsername.Text = username;
+                    firstLogin = true;
+                    checkFirstLogin();
+                    DataClass.userName = textBoxUser.Text;
+                    flowLayoutPanelCurrentElements.Controls.Clear();
+                    panel4.Controls.Clear();
+                    panelesAjustes.Clear();
+                    panelesFlow.Clear();
+                    isHeaderAlreadyOn = false;
+                    panelElemNavBar.Enabled = true;
+                    isFooterAlreadyOn = false;
+                    panelElemFooter.Enabled = true;
+                    textBoxUser.Text ="";
+                    textBoxPass.Text = "";
+                    textBoxConfPass.Text = "";
+                    textBoxEmail.Text = "";
+                    textBoxAnsw.Text = "";
+                    textBoxNombre.Text = "";
+                    textBoxBreveDescripcion.Text = "";
+                    checkBoxWebDeEmpresa.Checked = false;
+                    checkBoxWebPersonal.Checked = false;
+                    checkBoxWebPersonalizada.Checked = false;
                 }
                 else
                 {
@@ -3262,9 +3342,28 @@ namespace Desktop_App
                 HttpResponseMessage responsPost = await cliente.GetAsync("http://localhost/logout.php");
                 string responsebody = await responsPost.Content.ReadAsStringAsync();
                 JObject objetoJSONRecibido = JObject.Parse(responsebody);
-                MessageBox.Show(responsebody);
                 deleteTokenFile();
+                tabControl.SelectedTab = tabPageLogin;
+                panelLoginTemporal.Visible = true;
+                panelLoginTemporal.Visible = true;
+                panelPrevisualizar.Visible = false;
+                panelFinalizarWeb.Visible = false;
+                panelTuUsuario.Visible = false;
+                labelSesionIniciadaCon.Visible = false;
+                pictureBoxUserAvatar.Visible = false;
+                labelUsername.Visible = false;
+                panelDesconectar.Visible = false;
 
+
+                panelDisenyo.Visible = false;
+
+                panelConstructor.Visible = false;
+
+                panelAjustes.Visible = false;
+                panelAyuda.Location = new Point(1, 121);
+                panelAyuda.Enabled = true;
+                panelInfoDashboard.Visible = false;
+                panelSavedFirsTime.Visible = false;
             }
             catch (Exception ex)
             {
@@ -3284,7 +3383,7 @@ namespace Desktop_App
             File.Delete(path);
         }
 
-        private void panelDesconectar_Click(object sender, MouseEventArgs e)
+        private void panelPrevisualizar_MouseClick(object sender, MouseEventArgs e)
         {
 
         }
