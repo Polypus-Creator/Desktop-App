@@ -103,6 +103,7 @@
     <Compile Include="ClassCreatePanelAjustes.cs" />
     <Compile Include="ClassCreatePanelElement.cs" />
     <Compile Include="ClassJSONList.cs" />
+    <Compile Include="ClassString.cs" />
     <Compile Include="DataClass.cs" />
     <Compile Include="FAboutUs.cs">
       <SubType>Form</SubType>

@@ -119,7 +119,7 @@ namespace Desktop_App
             comboBoxAsk.SelectedIndex = 0;
             comboBoxSesionIniciada.SelectedIndex = 0;
 
-            webBrowserAboutUs.Navigate(new Uri("https://polypuscreator.000webhostapp.com/"));
+            //webBrowserAboutUs.Navigate(new Uri("https://polypuscreator.000webhostapp.com/"));
             //tabControl.SelectedTab = tabPageForgtoPassword;
         }
 
@@ -399,6 +399,8 @@ namespace Desktop_App
             DataClass.backOne = changeColor(sender);
             timerPanelGuardado.Start();
             labelFirstTimeSaved.Text = "Color guardado!";
+            DataClass.firstJSON.Primary_colour = ClassString.HexConverter(DataClass.backOne);
+            _ = enviarInfoGeneral();
         }
 
         private Color changeColor(object sender)
@@ -420,6 +422,8 @@ namespace Desktop_App
             DataClass.backTwo = changeColor(sender);
             timerPanelGuardado.Start();
             labelFirstTimeSaved.Text = "Color guardado!";
+            DataClass.firstJSON.Secondary_colour = ClassString.HexConverter(DataClass.backTwo);
+            _ = enviarInfoGeneral();
         }
 
         private void panelDisenyo_Paint(object sender, PaintEventArgs e)
@@ -757,7 +761,7 @@ namespace Desktop_App
                             }
                         });
                     }
-                    DataClass.header = new Header(panel.ListLinks, DataClass.backOne, DataClass.backTwo);
+                    DataClass.header = new Header(panel.ListLinks, DataClass.backOne, DataClass.backTwo, DataClass.logoPath);
                     DataClass.listasElementos.Add(DataClass.header);
                 }else if (panel.Title == "Separator")
                 {
@@ -1722,6 +1726,7 @@ namespace Desktop_App
             pictureBoxLogo.Image = Image.FromFile(newPath + rutas[rutas.Length - 1]);
             DataClass.logoPath = "\\" + rutas[rutas.Length - 1];
             pictureBoxLogoFinal.Image = Image.FromFile(newPath + rutas[rutas.Length - 1]);
+
             
         }
 
@@ -2288,6 +2293,7 @@ namespace Desktop_App
                 DataClass.firstJSON.Primary_colour = ClassString.HexConverter(DataClass.backOne);
                 DataClass.firstJSON.Secondary_colour = ClassString.HexConverter(DataClass.backTwo);
                 DataClass.firstJSON.Font = DataClass.font ;
+                _ = enviarInfoGeneral();
                 checkFirstLogin();
             }
             
@@ -2705,6 +2711,7 @@ namespace Desktop_App
             DataClass.font = comboBoxFont.SelectedItem.ToString();
             DataClass.firstJSON.Font = DataClass.font;
             labelFirstTimeSaved.Text = "La fuente es " + comboBoxFont.SelectedItem + "!";
+            _ = enviarInfoGeneral();
         }
 
         private void showHideConstDetalle_Click(object sender, EventArgs e)
@@ -2914,27 +2921,20 @@ namespace Desktop_App
             panelAddElement.BackColor = Color.FromArgb(49, 48, 45);
         }
 
-        private void panelFinalizarWeb_MouseClick(object sender, MouseEventArgs e)
-        {
-            generateJSON(DataClass.listasElementos);
-            string obstring = JsonConvert.SerializeObject(DataClass.classListaJSON);
-            JObject googleSearch = JObject.Parse(obstring);
-            Console.WriteLine(googleSearch.ToString());
-            _ = enviarPaginaFinalizada(googleSearch.ToString());
-        }
-
-        private async Task enviarPaginaFinalizada(string json)
+        private async Task enviarInfoGeneral()
         {
             try
             {
+                string obstring = JsonConvert.SerializeObject(DataClass.firstJSON);
+                JObject googleSearch = JObject.Parse(obstring);
                 HttpClient cliente = new HttpClient();
                 cliente.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", DataClass.accesToken);
-                HttpResponseMessage responsPost = await cliente.PostAsync("http://localhost/generate_html.php", new StringContent(
-                json,
+                HttpResponseMessage responsPost = await cliente.PostAsync("http://localhost/update_design.php", new StringContent(
+                googleSearch.ToString(),
                 Encoding.UTF8,
                 "application/json"));
                 string responsebody = await responsPost.Content.ReadAsStringAsync();
-                MessageBox.Show(responsebody);
+                MessageBox.Show(googleSearch.ToString());
                 JObject objetoJSONRecibido = JObject.Parse(responsebody);
                 /*if (objetoJSONRecibido["error"].ToString().Equals("False"))
                 {
@@ -2948,6 +2948,59 @@ namespace Desktop_App
             catch (Exception ex)
             {
                 //MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void panelFinalizarWeb_MouseClick(object sender, MouseEventArgs e)
+        {
+            generateJSON(DataClass.listasElementos);
+            generateJSON(DataClass.listasElementos);
+            string obstring = JsonConvert.SerializeObject(DataClass.classListaJSON);
+            JObject googleSearch = JObject.Parse(obstring);
+            Console.WriteLine(googleSearch.ToString());
+            
+            _ = enviarPaginaFinalizada(googleSearch.ToString());
+
+        }
+
+        private async Task enviarPaginaFinalizada(string json)
+        {
+            try
+            {
+                HttpClient cliente = new HttpClient();
+                cliente.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", DataClass.accesToken);
+                HttpResponseMessage responsPost = await cliente.PostAsync("http://localhost/generate_html.php", new StringContent(
+                json,
+                Encoding.UTF8,
+                "application/json"));
+                string responsebody = await responsPost.Content.ReadAsStringAsync();
+                
+                JObject objetoJSONRecibido = JObject.Parse(responsebody);
+                string html = objetoJSONRecibido["html"].ToString();
+                string css = objetoJSONRecibido["css"].ToString();
+                //MessageBox.Show(html);
+                //MessageBox.Show(css);
+
+
+                string htmlpath = DataClass.yourLocalWebsitePath+"\\index.html";
+                string cssPath = DataClass.yourLocalWebsitePath + "\\stylesheet.css";
+
+                if (!File.Exists(htmlpath))
+                {
+                    File.AppendAllLines(htmlpath, new[] { html });
+                    File.AppendAllLines(cssPath, new[] { css });
+                }
+                else
+                {
+                    File.Delete(htmlpath);
+                    File.Delete(cssPath);
+                    File.AppendAllLines(htmlpath, new[] { html });
+                    File.AppendAllLines(cssPath, new[] { css });
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
             }
         }
 
@@ -3112,6 +3165,8 @@ namespace Desktop_App
                         panelElemNavBar.Enabled = true;
                         isFooterAlreadyOn = false;
                         panelElemFooter.Enabled = true;
+                        panelAddElements.Visible = false;
+                        pictureBoxLogo.Image = null;
                     }
                     checkFirstLogin();
                     textBoxUsuario.Text = "";
@@ -3248,6 +3303,7 @@ namespace Desktop_App
                 {
 
                     _ = verificarAsync(username, HelperClassSecurity.MD5Digest(password), email, question, answer, stayLogged);
+
                 }
                 else
                 {
@@ -3315,6 +3371,11 @@ namespace Desktop_App
                     checkBoxWebDeEmpresa.Checked = false;
                     checkBoxWebPersonal.Checked = false;
                     checkBoxWebPersonalizada.Checked = false;
+                    pictureBoxLogo.Image = null;
+                    checkBoxWebDeEmpresa.Enabled = true;
+                    checkBoxWebPersonal.Enabled = true;
+                    checkBoxWebPersonalizada.Enabled = true;
+                    _ = verificarAsync(username, password);
                 }
                 else
                 {
@@ -3353,6 +3414,7 @@ namespace Desktop_App
                 pictureBoxUserAvatar.Visible = false;
                 labelUsername.Visible = false;
                 panelDesconectar.Visible = false;
+                panelAddElements.Visible = false;
 
 
                 panelDisenyo.Visible = false;
@@ -3373,8 +3435,18 @@ namespace Desktop_App
 
         private void createTokenFile()
         {
+            
             string path = @"C:\PolypusCreator\tokenSession.txt";
-            File.AppendAllLines(path, new[] { DataClass.accesToken });
+            if (!File.Exists(path))
+            {
+                File.AppendAllLines(path, new[] { DataClass.accesToken });
+            }
+            else
+            {
+                File.Delete(path);
+                File.AppendAllLines(path, new[] { DataClass.accesToken });
+            }
+                
         }
 
         private void deleteTokenFile()
@@ -3384,6 +3456,11 @@ namespace Desktop_App
         }
 
         private void panelPrevisualizar_MouseClick(object sender, MouseEventArgs e)
+        {
+
+        }
+
+        private void panelLoginTemporal_Paint(object sender, PaintEventArgs e)
         {
 
         }
