@@ -525,6 +525,7 @@ namespace Desktop_App
                 textBox.TextChanged += textBox_TextChanged;
             });
             panelElement.CreateAjustes.PanelSave.MouseClick += new System.Windows.Forms.MouseEventHandler(PanelSave_MousClick);
+            panelElement.CreateAjustes.Save.MouseClick += new System.Windows.Forms.MouseEventHandler(PanelSave_MousClick);
             panelElement.CreateAjustes.LabelSave.MouseClick += new System.Windows.Forms.MouseEventHandler(PanelSave_MousClick);
 
             panelElement.PanelDe.Name = "NavBarPanelDelete" + panelesFlow.Count;
@@ -1196,6 +1197,7 @@ namespace Desktop_App
             panelElement.PanelGol.Controls.Add(colorOne);
 
             panelElement.CreateAjustes.PanelSave.MouseClick += new System.Windows.Forms.MouseEventHandler(PanelSave_MousClick);
+            panelElement.CreateAjustes.Save.MouseClick += new System.Windows.Forms.MouseEventHandler(PanelSave_MousClick);
             panelElement.CreateAjustes.LabelSave.MouseClick += new System.Windows.Forms.MouseEventHandler(PanelSave_MousClick);
 
             panelElement.PanelGol.Name = "Separator" + panelesFlow.Count;
@@ -1328,6 +1330,7 @@ namespace Desktop_App
 
 
             panelElement.CreateAjustes.PanelSave.MouseClick += new System.Windows.Forms.MouseEventHandler(PanelSave_MousClick);
+            panelElement.CreateAjustes.Save.MouseClick += new System.Windows.Forms.MouseEventHandler(PanelSave_MousClick);
             panelElement.CreateAjustes.LabelSave.MouseClick += new System.Windows.Forms.MouseEventHandler(PanelSave_MousClick);
 
             
@@ -1465,6 +1468,7 @@ namespace Desktop_App
 
 
             panelElement.CreateAjustes.PanelSave.MouseClick += new System.Windows.Forms.MouseEventHandler(PanelSave_MousClick);
+            panelElement.CreateAjustes.Save.MouseClick += new System.Windows.Forms.MouseEventHandler(PanelSave_MousClick);
             panelElement.CreateAjustes.LabelSave.MouseClick += new System.Windows.Forms.MouseEventHandler(PanelSave_MousClick);
 
             panelElement.PanelDe.Name = "ImageTextDelete" + panelesFlow.Count;
@@ -1497,7 +1501,7 @@ namespace Desktop_App
                 }
                 else
                 {
-                    MessageBox.Show("Nombre de fichero existente");
+                    
                 }
                 foreach (ClassCreatePanelAjustes ajustes in panelesAjustes)
                 {
@@ -1509,11 +1513,13 @@ namespace Desktop_App
                             {
                                 element.ButonsOptions[0].Image = Image.FromFile(newPath + rutas[rutas.Length - 1]);
                                 element.ButonsOptions[0].Visible = true;
+                                break;
                             }
-                            break;
+                            
                         }
+                        break;
                     }
-                    break;
+                    
                 }
             }
         }
@@ -1600,6 +1606,9 @@ namespace Desktop_App
                 panelesAjustes.Add(panelElement.CreateAjustes);
 
                 panelElement.CreateAjustes.PanelSave.MouseClick += new System.Windows.Forms.MouseEventHandler(PanelSave_MousClick);
+                panelElement.CreateAjustes.Save.MouseClick += new System.Windows.Forms.MouseEventHandler(PanelSave_MousClick);
+                panelElement.CreateAjustes.Save.MouseClick += new System.Windows.Forms.MouseEventHandler(PanelSave_MousClick);
+
                 panelElement.CreateAjustes.LabelSave.MouseClick += new System.Windows.Forms.MouseEventHandler(PanelSave_MousClick);
 
                 panelElement.PanelDe.Name = "FooterDelete" + panelesFlow.Count;
@@ -1695,7 +1704,7 @@ namespace Desktop_App
                 textBoxNameFinal.Text = DataClass.websiteName.ToString();
                 textBoxCategoriaFinal.Text = DataClass.websiteCategory.ToString();
                 textBoxDescFinal.Text = DataClass.websiteDesc.ToString();
-                MessageBox.Show("Path de Imagenes : " + DataClass.yourLocalWebsiteImagesFolderPath);
+                
             }
             
         }
@@ -1726,8 +1735,11 @@ namespace Desktop_App
             pictureBoxLogo.Image = Image.FromFile(newPath + rutas[rutas.Length - 1]);
             DataClass.logoPath = "\\" + rutas[rutas.Length - 1];
             pictureBoxLogoFinal.Image = Image.FromFile(newPath + rutas[rutas.Length - 1]);
+            textBoxNameFinal.Text = DataClass.websiteName.ToString();
+            textBoxCategoriaFinal.Text = DataClass.websiteCategory.ToString();
+            textBoxDescFinal.Text = DataClass.websiteDesc.ToString();
 
-            
+
         }
 
         private void panel35_MouseClick(object sender, MouseEventArgs e)
@@ -1889,6 +1901,10 @@ namespace Desktop_App
             panelDelete3.Controls.Add(labelX3);
 
             panelElement.CreateAjustes.PanelSave.MouseClick += new System.Windows.Forms.MouseEventHandler(PanelSave_MousClick);
+            panelElement.CreateAjustes.Save.MouseClick += new System.Windows.Forms.MouseEventHandler(PanelSave_MousClick);
+            panelElement.CreateAjustes.Save.MouseClick += new System.Windows.Forms.MouseEventHandler(PanelSave_MousClick);
+
+
             panelElement.CreateAjustes.LabelSave.MouseClick += new System.Windows.Forms.MouseEventHandler(PanelSave_MousClick);
 
             panelElement.PanelDe.Name = "ImageDelete" + panelesFlow.Count;
@@ -2092,6 +2108,7 @@ namespace Desktop_App
             panelElement.CreateAjustes.ListText[0].TextChanged += textBox_TextChanged;
             panelElement.CreateAjustes.ListText[0].Size = new Size(350, 20);
             panelElement.CreateAjustes.PanelSave.MouseClick += new System.Windows.Forms.MouseEventHandler(PanelSave_MousClick);
+            panelElement.CreateAjustes.Save.MouseClick += new System.Windows.Forms.MouseEventHandler(PanelSave_MousClick);
             panelElement.CreateAjustes.LabelSave.MouseClick += new System.Windows.Forms.MouseEventHandler(PanelSave_MousClick);
 
             panelElement.PanelDe.Name = "TitleDelete" + panelesFlow.Count;
@@ -2154,6 +2171,7 @@ namespace Desktop_App
             panelElement.CreateAjustes.ListText[2].Size = new Size(350, 124);
 
             panelElement.CreateAjustes.PanelSave.MouseClick += new System.Windows.Forms.MouseEventHandler(PanelSave_MousClick);
+            panelElement.CreateAjustes.Save.MouseClick += new System.Windows.Forms.MouseEventHandler(PanelSave_MousClick);
             panelElement.CreateAjustes.LabelSave.MouseClick += new System.Windows.Forms.MouseEventHandler(PanelSave_MousClick);
 
             panelElement.PanelDe.Name = "TextDelete" + panelesFlow.Count;
@@ -2334,6 +2352,7 @@ namespace Desktop_App
             CrearAjustesPriceCard(panelElement.CreateAjustes);
 
             panelElement.CreateAjustes.PanelSave.MouseClick += new System.Windows.Forms.MouseEventHandler(PanelSave_MousClick);
+            panelElement.CreateAjustes.Save.MouseClick += new System.Windows.Forms.MouseEventHandler(PanelSave_MousClick);
             panelElement.CreateAjustes.LabelSave.MouseClick += new System.Windows.Forms.MouseEventHandler(PanelSave_MousClick);
 
             panelElement.PanelDe.Name = "PriceCardsDelete" + panelesFlow.Count;
@@ -2564,6 +2583,7 @@ namespace Desktop_App
             });
 
             panelElement.CreateAjustes.PanelSave.MouseClick += new System.Windows.Forms.MouseEventHandler(PanelSave_MousClick);
+            panelElement.CreateAjustes.Save.MouseClick += new System.Windows.Forms.MouseEventHandler(PanelSave_MousClick);
             panelElement.CreateAjustes.LabelSave.MouseClick += new System.Windows.Forms.MouseEventHandler(PanelSave_MousClick);
 
             panelElement.PanelDe.Name = "ButtonDelete" + panelesFlow.Count;
@@ -2633,6 +2653,7 @@ namespace Desktop_App
             panelElement.CreateAjustes.ListText[1].LostFocus += PhoneValidator_LostFocus;
 
             panelElement.CreateAjustes.PanelSave.MouseClick += new System.Windows.Forms.MouseEventHandler(PanelSave_MousClick);
+            panelElement.CreateAjustes.Save.MouseClick += new System.Windows.Forms.MouseEventHandler(PanelSave_MousClick);
             panelElement.CreateAjustes.LabelSave.MouseClick += new System.Windows.Forms.MouseEventHandler(PanelSave_MousClick);
 
             panelElement.PanelDe.Name = "MapaDelete" + panelesFlow.Count;
@@ -2934,7 +2955,7 @@ namespace Desktop_App
                 Encoding.UTF8,
                 "application/json"));
                 string responsebody = await responsPost.Content.ReadAsStringAsync();
-                MessageBox.Show(googleSearch.ToString());
+                
                 JObject objetoJSONRecibido = JObject.Parse(responsebody);
                 /*if (objetoJSONRecibido["error"].ToString().Equals("False"))
                 {
@@ -3233,7 +3254,6 @@ namespace Desktop_App
                 "application/json"));
                 string responsebody = await responsPost.Content.ReadAsStringAsync();
                 JObject objetoJSONRecibido = JObject.Parse(responsebody);
-                MessageBox.Show(objetoJSONRecibido.ToString());
                 if (responsebody.Equals("logeado"))
                 {
                     tabControl.SelectedTab = dashboard;
@@ -3463,6 +3483,24 @@ namespace Desktop_App
         private void panelLoginTemporal_Paint(object sender, PaintEventArgs e)
         {
 
+        }
+
+        private void pictureBox53_Click(object sender, EventArgs e)
+        {
+            if (panelConstDetalleShow == false)
+            {
+                panelDiseñoDetalle.Visible = true;
+                pictureBox53.Image = Desktop_App.Properties.Resources.arrow_up;
+                panelConstDetalleShow = true;
+                panelConstDetalle.Width = 736;
+                panelConstDetalle.Height = 394;
+            }
+            else
+            {
+                panelDiseñoDetalle.Visible = false;
+                pictureBox53.Image = Desktop_App.Properties.Resources.arrow_down;
+                panelConstDetalleShow = false;
+            }
         }
     }
 }
