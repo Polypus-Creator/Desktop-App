@@ -113,6 +113,26 @@ namespace Desktop_App.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap botonCerrar {
+            get {
+                object obj = ResourceManager.GetObject("botonCerrar", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap botonMinimizar {
+            get {
+                object obj = ResourceManager.GetObject("botonMinimizar", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap browserIcon {
             get {
                 object obj = ResourceManager.GetObject("browserIcon", resourceCulture);
@@ -616,6 +636,16 @@ namespace Desktop_App.Properties {
         internal static System.Drawing.Bitmap shield {
             get {
                 object obj = ResourceManager.GetObject("shield", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap teamicon {
+            get {
+                object obj = ResourceManager.GetObject("teamicon", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

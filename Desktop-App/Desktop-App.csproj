@@ -257,6 +257,8 @@
     <None Include="Resources\checkLightIcon.png" />
     <None Include="Resources\CallToActionImage.png" />
     <None Include="Resources\forgotPassIcon.png" />
+    <None Include="Resources\botonMinimizar.png" />
+    <None Include="Resources\botonCerrar.png" />
     <Content Include="Resources\colorPrincipal.png" />
     <Content Include="Resources\colorSecundario.png" />
     <Content Include="Resources\fuenteDeLetra.png" />

@@ -41,10 +41,10 @@ namespace Desktop_App
             this.panelSuperior = new System.Windows.Forms.Panel();
             this.panelSavedFirsTime = new System.Windows.Forms.Panel();
             this.labelFirstTimeSaved = new System.Windows.Forms.Label();
+            this.labelClose = new System.Windows.Forms.Label();
+            this.labelMinimize = new System.Windows.Forms.Label();
             this.labelIniciarSesion = new System.Windows.Forms.Label();
             this.windowControlButtons = new System.Windows.Forms.Panel();
-            this.labelMinimize = new System.Windows.Forms.Label();
-            this.labelClose = new System.Windows.Forms.Label();
             this.panelLeftBar = new System.Windows.Forms.Panel();
             this.panelLoginTemporal = new System.Windows.Forms.Panel();
             this.label51 = new System.Windows.Forms.Label();
@@ -164,6 +164,7 @@ namespace Desktop_App
             this.label7 = new System.Windows.Forms.Label();
             this.constructor = new System.Windows.Forms.TabPage();
             this.panelConst = new System.Windows.Forms.Panel();
+            this.label14 = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
             this.label12 = new System.Windows.Forms.Label();
             this.flowLayoutPanelCurrentElements = new System.Windows.Forms.FlowLayoutPanel();
@@ -313,14 +314,14 @@ namespace Desktop_App
             this.textBoxRespuestaPregunta = new System.Windows.Forms.TextBox();
             this.textBoxNombreUsuario = new System.Windows.Forms.TextBox();
             this.tabPageAboutUs = new System.Windows.Forms.TabPage();
+            this.panel35 = new System.Windows.Forms.Panel();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.panel31 = new System.Windows.Forms.Panel();
+            this.label111 = new System.Windows.Forms.Label();
+            this.panel6 = new System.Windows.Forms.Panel();
             this.webBrowserAboutUs = new System.Windows.Forms.WebBrowser();
             this.timerPanelGuardado = new System.Windows.Forms.Timer(this.components);
             this.timerOjo = new System.Windows.Forms.Timer(this.components);
-            this.label14 = new System.Windows.Forms.Label();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.panel6 = new System.Windows.Forms.Panel();
-            this.panel31 = new System.Windows.Forms.Panel();
-            this.label111 = new System.Windows.Forms.Label();
             this.pictureBoxNavBar = new System.Windows.Forms.PictureBox();
             this.pictureBoxSeparator = new System.Windows.Forms.PictureBox();
             this.pictureBox15 = new System.Windows.Forms.PictureBox();
@@ -343,9 +344,11 @@ namespace Desktop_App
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.hideShowBar = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.pictureBox12 = new System.Windows.Forms.PictureBox();
             this.pictureBox31 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pictureBox46 = new System.Windows.Forms.PictureBox();
+            this.pictureBox45 = new System.Windows.Forms.PictureBox();
+            this.pictureBox12 = new System.Windows.Forms.PictureBox();
             this.pictureBox19 = new System.Windows.Forms.PictureBox();
             this.pictureBox43 = new System.Windows.Forms.PictureBox();
             this.pictureBoxImagen = new System.Windows.Forms.PictureBox();
@@ -394,11 +397,11 @@ namespace Desktop_App
             this.pictureBoxVolver = new System.Windows.Forms.PictureBox();
             this.pictureBoxOjo2Olvido = new System.Windows.Forms.PictureBox();
             this.pictureBoxOjo1Olvido = new System.Windows.Forms.PictureBox();
-            this.pictureBox36 = new System.Windows.Forms.PictureBox();
             this.pictureBoxBombilla = new System.Windows.Forms.PictureBox();
+            this.pictureBox36 = new System.Windows.Forms.PictureBox();
+            this.pictureBox48 = new System.Windows.Forms.PictureBox();
             this.pictureBox11 = new System.Windows.Forms.PictureBox();
             this.pictureBox9 = new System.Windows.Forms.PictureBox();
-            this.panel35 = new System.Windows.Forms.Panel();
             label15 = new System.Windows.Forms.Label();
             label16 = new System.Windows.Forms.Label();
             label107 = new System.Windows.Forms.Label();
@@ -491,9 +494,10 @@ namespace Desktop_App
             this.tabPageForgtoPassword.SuspendLayout();
             this.panelSabiasQue.SuspendLayout();
             this.tabPageAboutUs.SuspendLayout();
+            this.panel35.SuspendLayout();
             this.panel2.SuspendLayout();
-            this.panel6.SuspendLayout();
             this.panel31.SuspendLayout();
+            this.panel6.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxNavBar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxSeparator)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox15)).BeginInit();
@@ -516,9 +520,11 @@ namespace Desktop_App
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.hideShowBar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox12)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox31)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox46)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox45)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox12)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox19)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox43)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxImagen)).BeginInit();
@@ -567,17 +573,97 @@ namespace Desktop_App
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxVolver)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxOjo2Olvido)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxOjo1Olvido)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox36)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxBombilla)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox36)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox48)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).BeginInit();
-            this.panel35.SuspendLayout();
             this.SuspendLayout();
+            // 
+            // label15
+            // 
+            label15.AutoSize = true;
+            label15.Font = new System.Drawing.Font("Segoe UI", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            label15.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(152)))), ((int)(((byte)(219)))));
+            label15.Location = new System.Drawing.Point(10, 16);
+            label15.Name = "label15";
+            label15.Size = new System.Drawing.Size(222, 37);
+            label15.TabIndex = 11;
+            label15.Text = "Polypus Creator";
+            // 
+            // label16
+            // 
+            label16.AutoSize = true;
+            label16.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            label16.ForeColor = System.Drawing.SystemColors.ControlText;
+            label16.Location = new System.Drawing.Point(15, 60);
+            label16.Name = "label16";
+            label16.Size = new System.Drawing.Size(167, 25);
+            label16.TabIndex = 7;
+            label16.Text = "© Polypus Creator";
+            label16.Click += new System.EventHandler(this.label16_Click);
+            // 
+            // label107
+            // 
+            label107.AutoSize = true;
+            label107.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            label107.ForeColor = System.Drawing.SystemColors.ControlText;
+            label107.Location = new System.Drawing.Point(13, 35);
+            label107.Name = "label107";
+            label107.Size = new System.Drawing.Size(118, 25);
+            label107.TabIndex = 6;
+            label107.Text = "Versión 0.0.0";
+            // 
+            // label108
+            // 
+            label108.AutoSize = true;
+            label108.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            label108.ForeColor = System.Drawing.SystemColors.ControlText;
+            label108.Location = new System.Drawing.Point(13, 10);
+            label108.Name = "label108";
+            label108.Size = new System.Drawing.Size(145, 25);
+            label108.TabIndex = 5;
+            label108.Text = "Polypus Creator";
+            // 
+            // label109
+            // 
+            label109.AutoSize = true;
+            label109.Font = new System.Drawing.Font("Segoe UI", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            label109.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(152)))), ((int)(((byte)(219)))));
+            label109.Location = new System.Drawing.Point(50, 183);
+            label109.Name = "label109";
+            label109.Size = new System.Drawing.Size(143, 37);
+            label109.TabIndex = 13;
+            label109.Text = "Dev Team";
+            // 
+            // label112
+            // 
+            label112.AutoSize = true;
+            label112.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            label112.ForeColor = System.Drawing.SystemColors.ControlText;
+            label112.Location = new System.Drawing.Point(13, 10);
+            label112.Name = "label112";
+            label112.Size = new System.Drawing.Size(0, 25);
+            label112.TabIndex = 5;
+            // 
+            // label110
+            // 
+            label110.AutoSize = true;
+            label110.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            label110.ForeColor = System.Drawing.SystemColors.ControlText;
+            label110.Location = new System.Drawing.Point(13, 10);
+            label110.Name = "label110";
+            label110.Size = new System.Drawing.Size(257, 125);
+            label110.TabIndex = 8;
+            label110.Text = "Eudald Cardona Albarracín\r\nAlbert Castiñeira Aranda\r\nAlejandro Martínez Urbina\r\nJ" +
+    "ose Miguel Santos Palomera\r\nLuis Isaac Ponce Vijil";
             // 
             // panelSuperior
             // 
             this.panelSuperior.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(48)))), ((int)(((byte)(45)))));
             this.panelSuperior.Controls.Add(this.panelSavedFirsTime);
+            this.panelSuperior.Controls.Add(this.labelClose);
+            this.panelSuperior.Controls.Add(this.labelMinimize);
             this.panelSuperior.Controls.Add(this.pictureBox1);
             this.panelSuperior.Controls.Add(this.labelIniciarSesion);
             this.panelSuperior.Controls.Add(this.windowControlButtons);
@@ -607,6 +693,32 @@ namespace Desktop_App
             this.labelFirstTimeSaved.TabIndex = 7;
             this.labelFirstTimeSaved.Text = "Se ha guardado correctamente !";
             // 
+            // labelClose
+            // 
+            this.labelClose.AutoSize = true;
+            this.labelClose.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelClose.ForeColor = System.Drawing.Color.White;
+            this.labelClose.Location = new System.Drawing.Point(622, 16);
+            this.labelClose.Name = "labelClose";
+            this.labelClose.Size = new System.Drawing.Size(31, 32);
+            this.labelClose.TabIndex = 0;
+            this.labelClose.Text = "X";
+            this.labelClose.Visible = false;
+            this.labelClose.Click += new System.EventHandler(this.labelClose_Click);
+            // 
+            // labelMinimize
+            // 
+            this.labelMinimize.AutoSize = true;
+            this.labelMinimize.Font = new System.Drawing.Font("Segoe UI", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelMinimize.ForeColor = System.Drawing.Color.White;
+            this.labelMinimize.Location = new System.Drawing.Point(575, 9);
+            this.labelMinimize.Name = "labelMinimize";
+            this.labelMinimize.Size = new System.Drawing.Size(29, 40);
+            this.labelMinimize.TabIndex = 1;
+            this.labelMinimize.Text = "-";
+            this.labelMinimize.Visible = false;
+            this.labelMinimize.Click += new System.EventHandler(this.labelMinimize_Click);
+            // 
             // labelIniciarSesion
             // 
             this.labelIniciarSesion.AutoSize = true;
@@ -621,38 +733,14 @@ namespace Desktop_App
             // 
             // windowControlButtons
             // 
+            this.windowControlButtons.Controls.Add(this.pictureBox46);
+            this.windowControlButtons.Controls.Add(this.pictureBox45);
             this.windowControlButtons.Controls.Add(this.pictureBox12);
-            this.windowControlButtons.Controls.Add(this.labelMinimize);
-            this.windowControlButtons.Controls.Add(this.labelClose);
             this.windowControlButtons.Cursor = System.Windows.Forms.Cursors.Hand;
             this.windowControlButtons.Location = new System.Drawing.Point(681, 0);
             this.windowControlButtons.Name = "windowControlButtons";
             this.windowControlButtons.Size = new System.Drawing.Size(140, 51);
             this.windowControlButtons.TabIndex = 1;
-            // 
-            // labelMinimize
-            // 
-            this.labelMinimize.AutoSize = true;
-            this.labelMinimize.Font = new System.Drawing.Font("Segoe UI", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelMinimize.ForeColor = System.Drawing.Color.White;
-            this.labelMinimize.Location = new System.Drawing.Point(51, 4);
-            this.labelMinimize.Name = "labelMinimize";
-            this.labelMinimize.Size = new System.Drawing.Size(29, 40);
-            this.labelMinimize.TabIndex = 1;
-            this.labelMinimize.Text = "-";
-            this.labelMinimize.Click += new System.EventHandler(this.labelMinimize_Click);
-            // 
-            // labelClose
-            // 
-            this.labelClose.AutoSize = true;
-            this.labelClose.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelClose.ForeColor = System.Drawing.Color.White;
-            this.labelClose.Location = new System.Drawing.Point(96, 10);
-            this.labelClose.Name = "labelClose";
-            this.labelClose.Size = new System.Drawing.Size(31, 32);
-            this.labelClose.TabIndex = 0;
-            this.labelClose.Text = "X";
-            this.labelClose.Click += new System.EventHandler(this.labelClose_Click);
             // 
             // panelLeftBar
             // 
@@ -2179,6 +2267,17 @@ namespace Desktop_App
             this.panelConst.Name = "panelConst";
             this.panelConst.Size = new System.Drawing.Size(1079, 363);
             this.panelConst.TabIndex = 2;
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.BackColor = System.Drawing.Color.White;
+            this.label14.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label14.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(48)))), ((int)(((byte)(45)))));
+            this.label14.Location = new System.Drawing.Point(326, 18);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(0, 25);
+            this.label14.TabIndex = 9;
             // 
             // panel4
             // 
@@ -3915,46 +4014,19 @@ namespace Desktop_App
             this.tabPageAboutUs.Text = "tabPage1";
             this.tabPageAboutUs.UseVisualStyleBackColor = true;
             // 
-            // webBrowserAboutUs
+            // panel35
             // 
-            this.webBrowserAboutUs.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.webBrowserAboutUs.Location = new System.Drawing.Point(3, 3);
-            this.webBrowserAboutUs.Margin = new System.Windows.Forms.Padding(2);
-            this.webBrowserAboutUs.MinimumSize = new System.Drawing.Size(13, 13);
-            this.webBrowserAboutUs.Name = "webBrowserAboutUs";
-            this.webBrowserAboutUs.Size = new System.Drawing.Size(1097, 714);
-            this.webBrowserAboutUs.TabIndex = 0;
-            // 
-            // timerPanelGuardado
-            // 
-            this.timerPanelGuardado.Interval = 1000;
-            this.timerPanelGuardado.Tick += new System.EventHandler(this.timerPanelGuardado_Tick);
-            // 
-            // timerOjo
-            // 
-            this.timerOjo.Tick += new System.EventHandler(this.timerOjo_Tick);
-            // 
-            // label14
-            // 
-            this.label14.AutoSize = true;
-            this.label14.BackColor = System.Drawing.Color.White;
-            this.label14.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(48)))), ((int)(((byte)(45)))));
-            this.label14.Location = new System.Drawing.Point(326, 18);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(0, 25);
-            this.label14.TabIndex = 9;
-            // 
-            // label15
-            // 
-            label15.AutoSize = true;
-            label15.Font = new System.Drawing.Font("Segoe UI", 20.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            label15.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(152)))), ((int)(((byte)(219)))));
-            label15.Location = new System.Drawing.Point(10, 16);
-            label15.Name = "label15";
-            label15.Size = new System.Drawing.Size(220, 37);
-            label15.TabIndex = 11;
-            label15.Text = "Polypus Creator";
+            this.panel35.Controls.Add(this.pictureBox48);
+            this.panel35.Controls.Add(this.panel2);
+            this.panel35.Controls.Add(this.panel31);
+            this.panel35.Controls.Add(this.pictureBox9);
+            this.panel35.Controls.Add(this.panel6);
+            this.panel35.Controls.Add(label15);
+            this.panel35.Controls.Add(label109);
+            this.panel35.Location = new System.Drawing.Point(26, 21);
+            this.panel35.Name = "panel35";
+            this.panel35.Size = new System.Drawing.Size(412, 427);
+            this.panel35.TabIndex = 43;
             // 
             // panel2
             // 
@@ -3965,82 +4037,6 @@ namespace Desktop_App
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(213, 97);
             this.panel2.TabIndex = 10;
-            // 
-            // label16
-            // 
-            label16.AutoSize = true;
-            label16.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            label16.ForeColor = System.Drawing.SystemColors.ControlText;
-            label16.Location = new System.Drawing.Point(15, 60);
-            label16.Name = "label16";
-            label16.Size = new System.Drawing.Size(167, 25);
-            label16.TabIndex = 7;
-            label16.Text = "© Polypus Creator";
-            label16.Click += new System.EventHandler(this.label16_Click);
-            // 
-            // label107
-            // 
-            label107.AutoSize = true;
-            label107.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            label107.ForeColor = System.Drawing.SystemColors.ControlText;
-            label107.Location = new System.Drawing.Point(13, 35);
-            label107.Name = "label107";
-            label107.Size = new System.Drawing.Size(118, 25);
-            label107.TabIndex = 6;
-            label107.Text = "Versión 0.0.0";
-            // 
-            // label108
-            // 
-            label108.AutoSize = true;
-            label108.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            label108.ForeColor = System.Drawing.SystemColors.ControlText;
-            label108.Location = new System.Drawing.Point(13, 10);
-            label108.Name = "label108";
-            label108.Size = new System.Drawing.Size(145, 25);
-            label108.TabIndex = 5;
-            label108.Text = "Polypus Creator";
-            // 
-            // label109
-            // 
-            label109.AutoSize = true;
-            label109.Font = new System.Drawing.Font("Segoe UI", 20.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            label109.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(152)))), ((int)(((byte)(219)))));
-            label109.Location = new System.Drawing.Point(12, 173);
-            label109.Name = "label109";
-            label109.Size = new System.Drawing.Size(143, 37);
-            label109.TabIndex = 13;
-            label109.Text = "Dev Team";
-            // 
-            // panel6
-            // 
-            this.panel6.Controls.Add(label110);
-            this.panel6.Controls.Add(label112);
-            this.panel6.Location = new System.Drawing.Point(19, 224);
-            this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(334, 139);
-            this.panel6.TabIndex = 14;
-            // 
-            // label112
-            // 
-            label112.AutoSize = true;
-            label112.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            label112.ForeColor = System.Drawing.SystemColors.ControlText;
-            label112.Location = new System.Drawing.Point(13, 10);
-            label112.Name = "label112";
-            label112.Size = new System.Drawing.Size(0, 25);
-            label112.TabIndex = 5;
-            // 
-            // label110
-            // 
-            label110.AutoSize = true;
-            label110.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            label110.ForeColor = System.Drawing.SystemColors.ControlText;
-            label110.Location = new System.Drawing.Point(13, 10);
-            label110.Name = "label110";
-            label110.Size = new System.Drawing.Size(257, 125);
-            label110.TabIndex = 8;
-            label110.Text = "Eudald Cardona Albarracín\r\nAlbert Castiñeira Aranda\r\nAlejandro Martínez Urbina\r\nJ" +
-    "ose Miguel Santos Palomera\r\nLuis Isaac Ponce Vijil";
             // 
             // panel31
             // 
@@ -4065,6 +4061,34 @@ namespace Desktop_App
             this.label111.TabIndex = 0;
             this.label111.Text = "Ir a nuestra web";
             this.label111.MouseClick += new System.Windows.Forms.MouseEventHandler(this.panel31_MouseClick_1);
+            // 
+            // panel6
+            // 
+            this.panel6.Controls.Add(label110);
+            this.panel6.Controls.Add(label112);
+            this.panel6.Location = new System.Drawing.Point(19, 224);
+            this.panel6.Name = "panel6";
+            this.panel6.Size = new System.Drawing.Size(334, 139);
+            this.panel6.TabIndex = 14;
+            // 
+            // webBrowserAboutUs
+            // 
+            this.webBrowserAboutUs.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.webBrowserAboutUs.Location = new System.Drawing.Point(3, 3);
+            this.webBrowserAboutUs.Margin = new System.Windows.Forms.Padding(2);
+            this.webBrowserAboutUs.MinimumSize = new System.Drawing.Size(13, 13);
+            this.webBrowserAboutUs.Name = "webBrowserAboutUs";
+            this.webBrowserAboutUs.Size = new System.Drawing.Size(1097, 714);
+            this.webBrowserAboutUs.TabIndex = 0;
+            // 
+            // timerPanelGuardado
+            // 
+            this.timerPanelGuardado.Interval = 1000;
+            this.timerPanelGuardado.Tick += new System.EventHandler(this.timerPanelGuardado_Tick);
+            // 
+            // timerOjo
+            // 
+            this.timerOjo.Tick += new System.EventHandler(this.timerOjo_Tick);
             // 
             // pictureBoxNavBar
             // 
@@ -4341,18 +4365,6 @@ namespace Desktop_App
             this.pictureBox2.TabStop = false;
             this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
             // 
-            // pictureBox12
-            // 
-            this.pictureBox12.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pictureBox12.Image = global::Desktop_App.Properties.Resources.infoIcon;
-            this.pictureBox12.Location = new System.Drawing.Point(15, 16);
-            this.pictureBox12.Name = "pictureBox12";
-            this.pictureBox12.Size = new System.Drawing.Size(23, 23);
-            this.pictureBox12.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox12.TabIndex = 9;
-            this.pictureBox12.TabStop = false;
-            this.pictureBox12.Click += new System.EventHandler(this.pictureBox12_Click);
-            // 
             // pictureBox31
             // 
             this.pictureBox31.Cursor = System.Windows.Forms.Cursors.Hand;
@@ -4374,6 +4386,42 @@ namespace Desktop_App
             this.pictureBox1.TabIndex = 2;
             this.pictureBox1.TabStop = false;
             this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
+            // 
+            // pictureBox46
+            // 
+            this.pictureBox46.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pictureBox46.Image = global::Desktop_App.Properties.Resources.botonCerrar;
+            this.pictureBox46.Location = new System.Drawing.Point(102, 15);
+            this.pictureBox46.Name = "pictureBox46";
+            this.pictureBox46.Size = new System.Drawing.Size(23, 23);
+            this.pictureBox46.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox46.TabIndex = 11;
+            this.pictureBox46.TabStop = false;
+            this.pictureBox46.Click += new System.EventHandler(this.labelClose_Click);
+            // 
+            // pictureBox45
+            // 
+            this.pictureBox45.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pictureBox45.Image = global::Desktop_App.Properties.Resources.botonMinimizar;
+            this.pictureBox45.Location = new System.Drawing.Point(59, 15);
+            this.pictureBox45.Name = "pictureBox45";
+            this.pictureBox45.Size = new System.Drawing.Size(23, 23);
+            this.pictureBox45.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox45.TabIndex = 10;
+            this.pictureBox45.TabStop = false;
+            this.pictureBox45.Click += new System.EventHandler(this.labelMinimize_Click);
+            // 
+            // pictureBox12
+            // 
+            this.pictureBox12.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pictureBox12.Image = global::Desktop_App.Properties.Resources.infoIcon;
+            this.pictureBox12.Location = new System.Drawing.Point(15, 15);
+            this.pictureBox12.Name = "pictureBox12";
+            this.pictureBox12.Size = new System.Drawing.Size(23, 23);
+            this.pictureBox12.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox12.TabIndex = 9;
+            this.pictureBox12.TabStop = false;
+            this.pictureBox12.Click += new System.EventHandler(this.pictureBox12_Click);
             // 
             // pictureBox19
             // 
@@ -4897,6 +4945,16 @@ namespace Desktop_App
             this.pictureBoxOjo1Olvido.TabStop = false;
             this.pictureBoxOjo1Olvido.Click += new System.EventHandler(this.pictureBoxOjo1Olvido_Click);
             // 
+            // pictureBoxBombilla
+            // 
+            this.pictureBoxBombilla.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxBombilla.Image")));
+            this.pictureBoxBombilla.Location = new System.Drawing.Point(3, 3);
+            this.pictureBoxBombilla.Name = "pictureBoxBombilla";
+            this.pictureBoxBombilla.Size = new System.Drawing.Size(37, 31);
+            this.pictureBoxBombilla.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBoxBombilla.TabIndex = 0;
+            this.pictureBoxBombilla.TabStop = false;
+            // 
             // pictureBox36
             // 
             this.pictureBox36.Cursor = System.Windows.Forms.Cursors.Hand;
@@ -4909,15 +4967,16 @@ namespace Desktop_App
             this.pictureBox36.TabStop = false;
             this.pictureBox36.Click += new System.EventHandler(this.label106_Click);
             // 
-            // pictureBoxBombilla
+            // pictureBox48
             // 
-            this.pictureBoxBombilla.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxBombilla.Image")));
-            this.pictureBoxBombilla.Location = new System.Drawing.Point(3, 3);
-            this.pictureBoxBombilla.Name = "pictureBoxBombilla";
-            this.pictureBoxBombilla.Size = new System.Drawing.Size(37, 31);
-            this.pictureBoxBombilla.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBoxBombilla.TabIndex = 0;
-            this.pictureBoxBombilla.TabStop = false;
+            this.pictureBox48.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pictureBox48.Image = global::Desktop_App.Properties.Resources.teamicon;
+            this.pictureBox48.Location = new System.Drawing.Point(21, 187);
+            this.pictureBox48.Name = "pictureBox48";
+            this.pictureBox48.Size = new System.Drawing.Size(30, 30);
+            this.pictureBox48.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox48.TabIndex = 43;
+            this.pictureBox48.TabStop = false;
             // 
             // pictureBox11
             // 
@@ -4933,25 +4992,12 @@ namespace Desktop_App
             // pictureBox9
             // 
             this.pictureBox9.Image = global::Desktop_App.Properties.Resources.Logo;
-            this.pictureBox9.Location = new System.Drawing.Point(248, 59);
+            this.pictureBox9.Location = new System.Drawing.Point(229, 59);
             this.pictureBox9.Name = "pictureBox9";
             this.pictureBox9.Size = new System.Drawing.Size(115, 97);
             this.pictureBox9.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox9.TabIndex = 12;
             this.pictureBox9.TabStop = false;
-            // 
-            // panel35
-            // 
-            this.panel35.Controls.Add(this.panel2);
-            this.panel35.Controls.Add(this.panel31);
-            this.panel35.Controls.Add(this.pictureBox9);
-            this.panel35.Controls.Add(this.panel6);
-            this.panel35.Controls.Add(label15);
-            this.panel35.Controls.Add(label109);
-            this.panel35.Location = new System.Drawing.Point(26, 21);
-            this.panel35.Name = "panel35";
-            this.panel35.Size = new System.Drawing.Size(412, 427);
-            this.panel35.TabIndex = 43;
             // 
             // FormPrincipal
             // 
@@ -4972,7 +5018,6 @@ namespace Desktop_App
             this.panelSavedFirsTime.ResumeLayout(false);
             this.panelSavedFirsTime.PerformLayout();
             this.windowControlButtons.ResumeLayout(false);
-            this.windowControlButtons.PerformLayout();
             this.panelLeftBar.ResumeLayout(false);
             this.panelLoginTemporal.ResumeLayout(false);
             this.panelLoginTemporal.PerformLayout();
@@ -5117,12 +5162,14 @@ namespace Desktop_App
             this.panelSabiasQue.ResumeLayout(false);
             this.panelSabiasQue.PerformLayout();
             this.tabPageAboutUs.ResumeLayout(false);
+            this.panel35.ResumeLayout(false);
+            this.panel35.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
-            this.panel6.ResumeLayout(false);
-            this.panel6.PerformLayout();
             this.panel31.ResumeLayout(false);
             this.panel31.PerformLayout();
+            this.panel6.ResumeLayout(false);
+            this.panel6.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxNavBar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxSeparator)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox15)).EndInit();
@@ -5145,9 +5192,11 @@ namespace Desktop_App
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.hideShowBar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox12)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox31)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox46)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox45)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox12)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox19)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox43)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxImagen)).EndInit();
@@ -5196,12 +5245,11 @@ namespace Desktop_App
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxVolver)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxOjo2Olvido)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxOjo1Olvido)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox36)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxBombilla)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox36)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox48)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).EndInit();
-            this.panel35.ResumeLayout(false);
-            this.panel35.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -5569,5 +5617,8 @@ namespace Desktop_App
         private System.Windows.Forms.Label label111;
         private System.Windows.Forms.PictureBox pictureBox12;
         private System.Windows.Forms.Panel panel35;
+        private System.Windows.Forms.PictureBox pictureBox46;
+        private System.Windows.Forms.PictureBox pictureBox45;
+        private System.Windows.Forms.PictureBox pictureBox48;
     }
 }
