@@ -270,6 +270,7 @@
     <Content Include="Resources\fuentes\fuenteYantramanav.PNG" />
     <None Include="Resources\ImageTextImage.png" />
     <None Include="Resources\ImageImage.png" />
+    <None Include="Resources\infoIcon.png" />
     <Content Include="Resources\logos\logo1.png" />
     <Content Include="Resources\logos\logo2.png" />
     <Content Include="Resources\logos\logo3.png" />

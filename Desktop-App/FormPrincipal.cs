@@ -88,7 +88,7 @@ namespace Desktop_App
             this.MaximizedBounds = Screen.FromHandle(this.Handle).WorkingArea;
             this.WindowState = FormWindowState.Maximized;
             panelSuperior.Width = fullWidth;
-            windowControlButtons.Location = new Point(fullWidth-100, 0);
+            windowControlButtons.Location = new Point(fullWidth-140, 0);
             panelLeftBar.Height = fullHeight - 5;
             tabControl.Width = fullWidth - 225;
             tabControl.Height = fullHeight - 45;
@@ -818,11 +818,11 @@ namespace Desktop_App
                     {
                         footer = new Footer("ComplexFooter", panel.ListText[0].Text, panel.ListText[1].Text, panel.ListText[2].Text, panel.ListText[3].Text,
                             panel.ListText[4].Text, panel.ListText[5].Text, panel.ListText[6].Text, panel.ListText[7].Text, panel.ListText[8].Text,
-                            panel.ListText[9].Text);
+                            panel.ListText[9].Text, DataClass.logoPath);
                     }
                     else
                     {
-                        footer = new Footer("SimpleFooter", panel.ListText[0].Text);
+                        footer = new Footer("SimpleFooter", panel.ListText[0].Text, DataClass.logoPath);
                     }
 
                     DataClass.listasElementos.Add(footer);
@@ -1185,6 +1185,9 @@ namespace Desktop_App
                 textBox.MouseClick += textBoxSeparator_MouseClick;
                 textBox.TextChanged += textBox_TextChanged;
             });
+
+            panelElement.CreateAjustes.LabelTitle.Size = new Size(120, 25);
+            panelElement.LabelTitle.Size = new Size(120, 25);
 
             Panel colorOne = new Panel();
             colorOne.Name = "colorOne";
@@ -2313,6 +2316,9 @@ namespace Desktop_App
                 DataClass.firstJSON.Font = DataClass.font ;
                 _ = enviarInfoGeneral();
                 checkFirstLogin();
+                textBoxNameFinal.Text = DataClass.websiteName.ToString();
+                textBoxCategoriaFinal.Text = DataClass.websiteCategory.ToString();
+                textBoxDescFinal.Text = DataClass.websiteDesc.ToString();
             }
             
             
@@ -2551,6 +2557,7 @@ namespace Desktop_App
         {
             // codigo de generar la web
             //panelFinalizarWeb.Enabled = true;
+            
         }
 
         private void panelOcultarAyuda_Click_2(object sender, EventArgs e)
@@ -2950,7 +2957,7 @@ namespace Desktop_App
                 JObject googleSearch = JObject.Parse(obstring);
                 HttpClient cliente = new HttpClient();
                 cliente.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", DataClass.accesToken);
-                HttpResponseMessage responsPost = await cliente.PostAsync("http://localhost/update_design.php", new StringContent(
+                HttpResponseMessage responsPost = await cliente.PostAsync(DataClass.hostIp +"/update_design.php", new StringContent(
                 googleSearch.ToString(),
                 Encoding.UTF8,
                 "application/json"));
@@ -2990,7 +2997,7 @@ namespace Desktop_App
             {
                 HttpClient cliente = new HttpClient();
                 cliente.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", DataClass.accesToken);
-                HttpResponseMessage responsPost = await cliente.PostAsync("http://localhost/generate_html.php", new StringContent(
+                HttpResponseMessage responsPost = await cliente.PostAsync(DataClass.hostIp + "/generate_html.php", new StringContent(
                 json,
                 Encoding.UTF8,
                 "application/json"));
@@ -3018,6 +3025,8 @@ namespace Desktop_App
                     File.AppendAllLines(htmlpath, new[] { html });
                     File.AppendAllLines(cssPath, new[] { css });
                 }
+                string url = DataClass.yourLocalWebsitePath + "\\index.html";
+                System.Diagnostics.Process.Start(url);
             }
             catch (Exception ex)
             {
@@ -3150,7 +3159,7 @@ namespace Desktop_App
                 User user = new User(username, password);
                 string obstring = JsonConvert.SerializeObject(user);
                 JObject objetoJSON = JObject.Parse(obstring);
-                HttpResponseMessage responsPost = await cliente.PostAsync("http://localhost/login.php", new StringContent(
+                HttpResponseMessage responsPost = await cliente.PostAsync(DataClass.hostIp + "/login.php", new StringContent(
                 objetoJSON.ToString(),
                 //"{'Username': 'admin1224','Password': '12345678sdgfdfg'}",
                 Encoding.UTF8,
@@ -3352,7 +3361,7 @@ namespace Desktop_App
                 User user = new User(username, password, email, question, answer, stayLogged);
                 string obstring = JsonConvert.SerializeObject(user);
                 JObject objetoJSON = JObject.Parse(obstring);
-                HttpResponseMessage responsPost = await cliente.PostAsync("http://localhost/register.php", new StringContent(
+                HttpResponseMessage responsPost = await cliente.PostAsync(DataClass.hostIp + "/register.php", new StringContent(
                 objetoJSON.ToString(),
                 Encoding.UTF8,
                 "application/json"));
@@ -3420,7 +3429,7 @@ namespace Desktop_App
                 HttpClient cliente = new HttpClient();
                 cliente.DefaultRequestHeaders.Authorization =
                 new AuthenticationHeaderValue("Bearer", DataClass.accesToken);
-                HttpResponseMessage responsPost = await cliente.GetAsync("http://localhost/logout.php");
+                HttpResponseMessage responsPost = await cliente.GetAsync(DataClass.hostIp + "/logout.php");
                 string responsebody = await responsPost.Content.ReadAsStringAsync();
                 JObject objetoJSONRecibido = JObject.Parse(responsebody);
                 deleteTokenFile();
@@ -3477,7 +3486,13 @@ namespace Desktop_App
 
         private void panelPrevisualizar_MouseClick(object sender, MouseEventArgs e)
         {
+            generateJSON(DataClass.listasElementos);
+            generateJSON(DataClass.listasElementos);
+            string obstring = JsonConvert.SerializeObject(DataClass.classListaJSON);
+            JObject googleSearch = JObject.Parse(obstring);
+            Console.WriteLine(googleSearch.ToString());
 
+            _ = enviarPaginaFinalizada(googleSearch.ToString());
         }
 
         private void panelLoginTemporal_Paint(object sender, PaintEventArgs e)
@@ -3501,6 +3516,22 @@ namespace Desktop_App
                 pictureBox53.Image = Desktop_App.Properties.Resources.arrow_down;
                 panelConstDetalleShow = false;
             }
+        }
+
+        private void label16_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panel31_MouseClick_1(object sender, MouseEventArgs e)
+        {
+        
+            System.Diagnostics.Process.Start("https://polypuscreator.000webhostapp.com/");
+        }
+
+        private void pictureBox12_Click(object sender, EventArgs e)
+        {
+            tabControl.SelectedTab = tabPageAboutUs;
         }
     }
 }

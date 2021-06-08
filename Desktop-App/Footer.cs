@@ -19,12 +19,15 @@ namespace Desktop_App
         private string linkLk;
         private string linkIn;
         private string linkFb;
-        public Footer(string elemento, string text)
+        private string logoUrl;
+
+        public Footer(string elemento, string text, string logoUrl)
         {
             Elemento = elemento;
             Text = text;
+            LogoUrl = logoUrl;
         }
-        public Footer(string elemento, string title, string text, string horario, string correo, string telefono, string web, string linkTw, string linkLk, string linkIn, string linkFb)
+        public Footer(string elemento, string title, string text, string horario, string correo, string telefono, string web, string linkTw, string linkLk, string linkIn, string linkFb, string logoUrl)
         {
             Elemento = elemento;
             Text = text;
@@ -37,6 +40,7 @@ namespace Desktop_App
             LinkLk = linkLk;
             LinkIn = linkIn;
             LinkFb = linkFb;
+            LogoUrl = logoUrl;
         }
         public string Elemento { get => elemento; set => elemento = value; }
         public string Text { get => text; set => text = value; }
@@ -49,6 +53,6 @@ namespace Desktop_App
         public string LinkLk { get => linkLk; set => linkLk = value; }
         public string LinkIn { get => linkIn; set => linkIn = value; }
         public string LinkFb { get => linkFb; set => linkFb = value; }
-        
+        public string LogoUrl { get => logoUrl; set => logoUrl = value; }
     }
 }
