@@ -14,7 +14,6 @@ namespace Desktop_App
     public partial class FRegis : Form
     {
         private int time = 0;
-        GestionDB.GestionDB db;
         public FRegis()
         {
             InitializeComponent();
@@ -28,7 +27,6 @@ namespace Desktop_App
             int fullHeight = Screen.PrimaryScreen.Bounds.Height;
             this.Width = fullWidth / 2;
             this.Height = fullHeight / 2;
-            db = new GestionDB.GestionDB();
         }
 
         private void timerOjo_Tick(object sender, EventArgs e)
@@ -88,7 +86,6 @@ namespace Desktop_App
             }
 
             // ANTES DE INSERTAR DATOS HAY QUE MIRAR SI ES SU PRIMER LOGIN
-            db.insertarDatos(usuario, password, email, preguntaSeguridad, respuesta, true, sesionMantenida);
 
 
         }

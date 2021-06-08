@@ -119,8 +119,7 @@ namespace Desktop_App
             comboBoxAsk.SelectedIndex = 0;
             comboBoxSesionIniciada.SelectedIndex = 0;
 
-            //webBrowserAboutUs.Navigate(new Uri("https://polypuscreator.000webhostapp.com/"));
-            //tabControl.SelectedTab = tabPageForgtoPassword;
+            buttonCambiarConfiguracion.Enabled = false;
         }
 
         private void createFilesAndFoldersInitial()
@@ -738,6 +737,7 @@ namespace Desktop_App
         {
             DataClass.listasElementos.Clear();
             timerPanelGuardado.Start();
+            labelFirstTimeSaved.Text = "Se ha guardado correctamente !";
             panelesAjustes.ForEach(delegate (ClassCreatePanelAjustes panel) 
             {
                 if(panel.Title == "NavBar")
@@ -2319,6 +2319,13 @@ namespace Desktop_App
                 textBoxNameFinal.Text = DataClass.websiteName.ToString();
                 textBoxCategoriaFinal.Text = DataClass.websiteCategory.ToString();
                 textBoxDescFinal.Text = DataClass.websiteDesc.ToString();
+                panelPrevisualizar.Visible = true;
+                panelFinalizarWeb.Visible = true;
+                panelTuUsuario.Visible = true;
+                labelSesionIniciadaCon.Visible = true;
+                pictureBoxUserAvatar.Visible = true;
+                labelUsername.Visible = true;
+                panelDesconectar.Visible = true;
             }
             
             
@@ -2713,7 +2720,13 @@ namespace Desktop_App
 
         private void buttonCambiarConfiguracion_Click(object sender, EventArgs e)
         {
-
+            DataClass.websiteDesc = textBoxDescFinal.Text;
+            DataClass.firstJSON.Description = DataClass.websiteDesc;
+            _ = enviarInfoGeneral();
+            buttonCambiarConfiguracion.Enabled = false;
+            textBoxDescFinal.Enabled = false;
+            panelSelecLogoInfo.Visible = false;
+            panelLogoAleatorioInfo.Visible = false;
         }
 
         private void timerPanelGuardado_Tick(object sender, EventArgs e)
@@ -3175,13 +3188,7 @@ namespace Desktop_App
                     panelLoginTemporal.Visible = false;
                     tabControl.SelectedTab = dashboard;
                     panelLoginTemporal.Visible = false;
-                    panelPrevisualizar.Visible = true;
-                    panelFinalizarWeb.Visible = true;
-                    panelTuUsuario.Visible = true;
-                    labelSesionIniciadaCon.Visible = true;
-                    pictureBoxUserAvatar.Visible = true;
-                    labelUsername.Visible = true;
-                    panelDesconectar.Visible = true;
+                    
                     labelUsername.Text = username;
                     if (!DataClass.userName.Equals(textBoxUsuario.Text))
                     {
@@ -3206,6 +3213,9 @@ namespace Desktop_App
                     checkBoxWebDeEmpresa.Checked = false;
                     checkBoxWebPersonal.Checked = false;
                     checkBoxWebPersonalizada.Checked = false;
+                    checkBoxWebDeEmpresa.Enabled = true;
+                    checkBoxWebPersonal.Enabled = true;
+                    checkBoxWebPersonalizada.Enabled = true;
                 }
                 else
                 {
@@ -3300,6 +3310,9 @@ namespace Desktop_App
                     checkBoxWebDeEmpresa.Checked = false;
                     checkBoxWebPersonal.Checked = false;
                     checkBoxWebPersonalizada.Checked = false;
+                    checkBoxWebDeEmpresa.Enabled = true;
+                    checkBoxWebPersonal.Enabled = true;
+                    checkBoxWebPersonalizada.Enabled = true;
                 }
                 else
                 {
@@ -3371,13 +3384,7 @@ namespace Desktop_App
                 {
                     tabControl.SelectedTab = dashboard;
                     panelLoginTemporal.Visible = false;
-                    panelPrevisualizar.Visible = true;
-                    panelFinalizarWeb.Visible = true;
-                    panelTuUsuario.Visible = true;
-                    labelSesionIniciadaCon.Visible = true;
-                    pictureBoxUserAvatar.Visible = true;
-                    labelUsername.Visible = true;
-                    panelDesconectar.Visible = true;
+                    
                     labelUsername.Text = username;
                     firstLogin = true;
                     checkFirstLogin();
@@ -3400,6 +3407,9 @@ namespace Desktop_App
                     checkBoxWebDeEmpresa.Checked = false;
                     checkBoxWebPersonal.Checked = false;
                     checkBoxWebPersonalizada.Checked = false;
+                    checkBoxWebDeEmpresa.Enabled = true;
+                    checkBoxWebPersonal.Enabled = true;
+                    checkBoxWebPersonalizada.Enabled = true;
                     pictureBoxLogo.Image = null;
                     checkBoxWebDeEmpresa.Enabled = true;
                     checkBoxWebPersonal.Enabled = true;
@@ -3533,6 +3543,14 @@ namespace Desktop_App
         private void pictureBox12_Click(object sender, EventArgs e)
         {
             tabControl.SelectedTab = tabPageAboutUs;
+        }
+
+        private void panelVolver_Click(object sender, EventArgs e)
+        {
+            textBoxDescFinal.Enabled = true;
+            panelSelecLogoInfo.Visible = true;
+            panelLogoAleatorioInfo.Visible = true;
+            buttonCambiarConfiguracion.Enabled = true;
         }
     }
 }
