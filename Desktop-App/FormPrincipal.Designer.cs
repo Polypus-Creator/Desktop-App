@@ -130,9 +130,6 @@ namespace Desktop_App
             this.panelSelecLogoInfo = new System.Windows.Forms.Panel();
             this.pictureBox43 = new System.Windows.Forms.PictureBox();
             this.pictureBoxImagen = new System.Windows.Forms.PictureBox();
-            this.panelVolver = new System.Windows.Forms.Panel();
-            this.pictureBox29 = new System.Windows.Forms.PictureBox();
-            this.label61 = new System.Windows.Forms.Label();
             this.label62 = new System.Windows.Forms.Label();
             this.label63 = new System.Windows.Forms.Label();
             this.buttonCambiarConfiguracion = new System.Windows.Forms.Button();
@@ -402,6 +399,7 @@ namespace Desktop_App
             this.webBrowserAboutUs = new System.Windows.Forms.WebBrowser();
             this.timerPanelGuardado = new System.Windows.Forms.Timer(this.components);
             this.timerOjo = new System.Windows.Forms.Timer(this.components);
+            this.button1 = new System.Windows.Forms.Button();
             label15 = new System.Windows.Forms.Label();
             label16 = new System.Windows.Forms.Label();
             label107 = new System.Windows.Forms.Label();
@@ -473,8 +471,6 @@ namespace Desktop_App
             this.panelSelecLogoInfo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox43)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxImagen)).BeginInit();
-            this.panelVolver.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox29)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLogoFinal)).BeginInit();
             this.panelDash.SuspendLayout();
             this.panelFirstLogin.SuspendLayout();
@@ -1163,7 +1159,7 @@ namespace Desktop_App
             this.panelDisenyo.Size = new System.Drawing.Size(216, 73);
             this.panelDisenyo.TabIndex = 6;
             this.panelDisenyo.Click += new System.EventHandler(this.panelDisenyo_Click);
-            this.panelDisenyo.Paint += new System.Windows.Forms.PaintEventHandler(this.panelDisenyo_Paint);
+            this.panelDisenyo.Paint += new System.Windows.Forms.PaintEventHandler(this.panelAyuda_Paint);
             // 
             // pictureBox3
             // 
@@ -1252,7 +1248,7 @@ namespace Desktop_App
             this.panelAddElements.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(60)))), ((int)(((byte)(61)))));
             this.panelAddElements.Controls.Add(this.flowLayoutPanel1);
             this.panelAddElements.Controls.Add(this.label23);
-            this.panelAddElements.Location = new System.Drawing.Point(232, 525);
+            this.panelAddElements.Location = new System.Drawing.Point(232, 799);
             this.panelAddElements.Name = "panelAddElements";
             this.panelAddElements.Size = new System.Drawing.Size(208, 378);
             this.panelAddElements.TabIndex = 8;
@@ -1790,10 +1786,10 @@ namespace Desktop_App
             // 
             // panelInfoDashboard
             // 
+            this.panelInfoDashboard.Controls.Add(this.button1);
             this.panelInfoDashboard.Controls.Add(this.panelLogoAleatorioInfo);
             this.panelInfoDashboard.Controls.Add(this.panelSelecLogoInfo);
             this.panelInfoDashboard.Controls.Add(this.pictureBoxImagen);
-            this.panelInfoDashboard.Controls.Add(this.panelVolver);
             this.panelInfoDashboard.Controls.Add(this.label62);
             this.panelInfoDashboard.Controls.Add(this.label63);
             this.panelInfoDashboard.Controls.Add(this.buttonCambiarConfiguracion);
@@ -1806,9 +1802,9 @@ namespace Desktop_App
             this.panelInfoDashboard.Controls.Add(this.textBoxNameFinal);
             this.panelInfoDashboard.Controls.Add(this.label67);
             this.panelInfoDashboard.Controls.Add(this.label68);
-            this.panelInfoDashboard.Location = new System.Drawing.Point(9, 683);
+            this.panelInfoDashboard.Location = new System.Drawing.Point(9, 73);
             this.panelInfoDashboard.Name = "panelInfoDashboard";
-            this.panelInfoDashboard.Size = new System.Drawing.Size(698, 608);
+            this.panelInfoDashboard.Size = new System.Drawing.Size(698, 597);
             this.panelInfoDashboard.TabIndex = 1;
             // 
             // panelLogoAleatorioInfo
@@ -1820,7 +1816,6 @@ namespace Desktop_App
             this.panelLogoAleatorioInfo.Name = "panelLogoAleatorioInfo";
             this.panelLogoAleatorioInfo.Size = new System.Drawing.Size(33, 32);
             this.panelLogoAleatorioInfo.TabIndex = 45;
-            this.panelLogoAleatorioInfo.Visible = false;
             this.panelLogoAleatorioInfo.Click += new System.EventHandler(this.panelRandomLogo_Click);
             // 
             // pictureBox19
@@ -1843,7 +1838,6 @@ namespace Desktop_App
             this.panelSelecLogoInfo.Name = "panelSelecLogoInfo";
             this.panelSelecLogoInfo.Size = new System.Drawing.Size(33, 32);
             this.panelSelecLogoInfo.TabIndex = 44;
-            this.panelSelecLogoInfo.Visible = false;
             this.panelSelecLogoInfo.Click += new System.EventHandler(this.panelSelectLogo_Click);
             // 
             // pictureBox43
@@ -1866,41 +1860,6 @@ namespace Desktop_App
             this.pictureBoxImagen.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBoxImagen.TabIndex = 43;
             this.pictureBoxImagen.TabStop = false;
-            // 
-            // panelVolver
-            // 
-            this.panelVolver.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(131)))), ((int)(((byte)(72)))));
-            this.panelVolver.Controls.Add(this.pictureBox29);
-            this.panelVolver.Controls.Add(this.label61);
-            this.panelVolver.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.panelVolver.Location = new System.Drawing.Point(122, 530);
-            this.panelVolver.Name = "panelVolver";
-            this.panelVolver.Size = new System.Drawing.Size(465, 32);
-            this.panelVolver.TabIndex = 42;
-            this.panelVolver.Click += new System.EventHandler(this.panelVolver_Click);
-            // 
-            // pictureBox29
-            // 
-            this.pictureBox29.Image = global::Desktop_App.Properties.Resources.editar;
-            this.pictureBox29.Location = new System.Drawing.Point(184, 6);
-            this.pictureBox29.Name = "pictureBox29";
-            this.pictureBox29.Size = new System.Drawing.Size(20, 20);
-            this.pictureBox29.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox29.TabIndex = 1;
-            this.pictureBox29.TabStop = false;
-            this.pictureBox29.Click += new System.EventHandler(this.panelVolver_Click);
-            // 
-            // label61
-            // 
-            this.label61.AutoSize = true;
-            this.label61.Font = new System.Drawing.Font("Segoe UI Black", 10.15F, System.Drawing.FontStyle.Bold);
-            this.label61.ForeColor = System.Drawing.Color.White;
-            this.label61.Location = new System.Drawing.Point(210, 6);
-            this.label61.Name = "label61";
-            this.label61.Size = new System.Drawing.Size(63, 19);
-            this.label61.TabIndex = 0;
-            this.label61.Text = "EDITAR";
-            this.label61.Click += new System.EventHandler(this.panelVolver_Click);
             // 
             // label62
             // 
@@ -1932,9 +1891,9 @@ namespace Desktop_App
             this.buttonCambiarConfiguracion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonCambiarConfiguracion.Font = new System.Drawing.Font("Segoe UI Black", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonCambiarConfiguracion.ForeColor = System.Drawing.Color.White;
-            this.buttonCambiarConfiguracion.Location = new System.Drawing.Point(122, 477);
+            this.buttonCambiarConfiguracion.Location = new System.Drawing.Point(17, 477);
             this.buttonCambiarConfiguracion.Name = "buttonCambiarConfiguracion";
-            this.buttonCambiarConfiguracion.Size = new System.Drawing.Size(465, 41);
+            this.buttonCambiarConfiguracion.Size = new System.Drawing.Size(660, 41);
             this.buttonCambiarConfiguracion.TabIndex = 39;
             this.buttonCambiarConfiguracion.Text = "GUARDAR CAMBIOS";
             this.buttonCambiarConfiguracion.UseVisualStyleBackColor = false;
@@ -1966,7 +1925,6 @@ namespace Desktop_App
             // textBoxCategoriaFinal
             // 
             this.textBoxCategoriaFinal.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBoxCategoriaFinal.Enabled = false;
             this.textBoxCategoriaFinal.Font = new System.Drawing.Font("Segoe UI Light", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBoxCategoriaFinal.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(86)))), ((int)(((byte)(101)))), ((int)(((byte)(115)))));
             this.textBoxCategoriaFinal.Location = new System.Drawing.Point(147, 189);
@@ -1987,7 +1945,6 @@ namespace Desktop_App
             // textBoxDescFinal
             // 
             this.textBoxDescFinal.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBoxDescFinal.Enabled = false;
             this.textBoxDescFinal.Font = new System.Drawing.Font("Segoe UI Light", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBoxDescFinal.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(86)))), ((int)(((byte)(101)))), ((int)(((byte)(115)))));
             this.textBoxDescFinal.Location = new System.Drawing.Point(17, 310);
@@ -2017,6 +1974,7 @@ namespace Desktop_App
             this.textBoxNameFinal.Name = "textBoxNameFinal";
             this.textBoxNameFinal.Size = new System.Drawing.Size(276, 35);
             this.textBoxNameFinal.TabIndex = 23;
+            this.textBoxNameFinal.Leave += new System.EventHandler(this.textBoxNameFinal_Leave);
             // 
             // label67
             // 
@@ -2073,7 +2031,7 @@ namespace Desktop_App
             this.panelFirstLogin.Controls.Add(this.labelTitulo3);
             this.panelFirstLogin.Controls.Add(this.labelTitulo2);
             this.panelFirstLogin.Controls.Add(this.labelTitulo);
-            this.panelFirstLogin.Location = new System.Drawing.Point(-7, 49);
+            this.panelFirstLogin.Location = new System.Drawing.Point(-7, 58);
             this.panelFirstLogin.Name = "panelFirstLogin";
             this.panelFirstLogin.Size = new System.Drawing.Size(1111, 659);
             this.panelFirstLogin.TabIndex = 7;
@@ -5006,6 +4964,22 @@ namespace Desktop_App
             // 
             this.timerOjo.Tick += new System.EventHandler(this.timerOjo_Tick);
             // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(131)))), ((int)(((byte)(72)))));
+            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Segoe UI Black", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.ForeColor = System.Drawing.Color.White;
+            this.button1.Location = new System.Drawing.Point(17, 532);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(660, 41);
+            this.button1.TabIndex = 46;
+            this.button1.Text = "CREAR NUEVA WEB";
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click_1);
+            // 
             // FormPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -5110,9 +5084,6 @@ namespace Desktop_App
             this.panelSelecLogoInfo.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox43)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxImagen)).EndInit();
-            this.panelVolver.ResumeLayout(false);
-            this.panelVolver.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox29)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLogoFinal)).EndInit();
             this.panelDash.ResumeLayout(false);
             this.panelDash.PerformLayout();
@@ -5465,9 +5436,6 @@ namespace Desktop_App
         private System.Windows.Forms.PictureBox pictureBox28;
         private System.Windows.Forms.Panel panelInfoDashboard;
         private System.Windows.Forms.PictureBox pictureBoxImagen;
-        private System.Windows.Forms.Panel panelVolver;
-        private System.Windows.Forms.PictureBox pictureBox29;
-        private System.Windows.Forms.Label label61;
         private System.Windows.Forms.Label label62;
         private System.Windows.Forms.Label label63;
         private System.Windows.Forms.Button buttonCambiarConfiguracion;
@@ -5627,5 +5595,6 @@ namespace Desktop_App
         private System.Windows.Forms.PictureBox pictureBox46;
         private System.Windows.Forms.PictureBox pictureBox45;
         private System.Windows.Forms.PictureBox pictureBox48;
+        private System.Windows.Forms.Button button1;
     }
 }

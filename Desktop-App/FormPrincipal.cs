@@ -33,6 +33,7 @@ namespace Desktop_App
         Boolean panelConstDetalleShow = false;
         int timerCount = 0;
         int time=0;
+        Boolean hasMoreThanOnePage = false;
         
 
         public FormPrincipal()
@@ -118,8 +119,6 @@ namespace Desktop_App
             tabControl.SelectedTab = tabPageLogin;
             comboBoxAsk.SelectedIndex = 0;
             comboBoxSesionIniciada.SelectedIndex = 0;
-
-            buttonCambiarConfiguracion.Enabled = false;
         }
 
         private void createFilesAndFoldersInitial()
@@ -423,11 +422,6 @@ namespace Desktop_App
             labelFirstTimeSaved.Text = "Color guardado!";
             DataClass.firstJSON.Secondary_colour = ClassString.HexConverter(DataClass.backTwo);
             _ = enviarInfoGeneral();
-        }
-
-        private void panelDisenyo_Paint(object sender, PaintEventArgs e)
-        {
-
         }
 
         private void label19_Click(object sender, EventArgs e)
@@ -1704,9 +1698,6 @@ namespace Desktop_App
                     pictureBoxLogoFinal.Image = Image.FromFile(newPath + rutas[rutas.Length - 1]);
                     
                 }
-                textBoxNameFinal.Text = DataClass.websiteName.ToString();
-                textBoxCategoriaFinal.Text = DataClass.websiteCategory.ToString();
-                textBoxDescFinal.Text = DataClass.websiteDesc.ToString();
                 
             }
             
@@ -1738,9 +1729,7 @@ namespace Desktop_App
             pictureBoxLogo.Image = Image.FromFile(newPath + rutas[rutas.Length - 1]);
             DataClass.logoPath = "\\" + rutas[rutas.Length - 1];
             pictureBoxLogoFinal.Image = Image.FromFile(newPath + rutas[rutas.Length - 1]);
-            textBoxNameFinal.Text = DataClass.websiteName.ToString();
-            textBoxCategoriaFinal.Text = DataClass.websiteCategory.ToString();
-            textBoxDescFinal.Text = DataClass.websiteDesc.ToString();
+            
 
 
         }
@@ -2720,13 +2709,53 @@ namespace Desktop_App
 
         private void buttonCambiarConfiguracion_Click(object sender, EventArgs e)
         {
-            DataClass.websiteDesc = textBoxDescFinal.Text;
-            DataClass.firstJSON.Description = DataClass.websiteDesc;
-            _ = enviarInfoGeneral();
-            buttonCambiarConfiguracion.Enabled = false;
-            textBoxDescFinal.Enabled = false;
-            panelSelecLogoInfo.Visible = false;
-            panelLogoAleatorioInfo.Visible = false;
+
+            if (hasMoreThanOnePage)
+            {
+                firstLogin = false;
+                // guardar todos los datos introducidos
+
+
+
+                if (textBoxNombre.Text.Equals("") || textBoxBreveDescripcion.Text.Equals("") ||
+                    DataClass.logoPath.Equals("") || DataClass.websiteCategory.Equals(""))
+                {
+
+                    MessageBox.Show("Debes completar todo el formulario para poder crear una web", "Formulario Incompleto",
+                    MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                else
+                {
+                    DataClass.websiteName = textBoxNameFinal.Text;
+                    DataClass.websiteDesc = textBoxDescFinal.Text;
+                    DataClass.websiteCategory = textBoxCategoriaFinal.Text;
+
+                    DataClass.firstJSON.Website_name = DataClass.websiteName;
+                    DataClass.firstJSON.Description = DataClass.websiteDesc;
+                    DataClass.firstJSON.Category = DataClass.websiteCategory;
+                    DataClass.firstJSON.Primary_colour = ClassString.HexConverter(DataClass.backOne);
+                    DataClass.firstJSON.Secondary_colour = ClassString.HexConverter(DataClass.backTwo);
+                    DataClass.firstJSON.Font = DataClass.font;
+                    _ = enviarInfoGeneral();
+                    panelPrevisualizar.Visible = true;
+                    panelFinalizarWeb.Visible = true;
+                    panelTuUsuario.Visible = true;
+                    labelSesionIniciadaCon.Visible = true;
+                    pictureBoxUserAvatar.Visible = true;
+                    labelUsername.Visible = true;
+                    panelDesconectar.Visible = true;
+                }
+            }
+            else
+            {
+                DataClass.websiteDesc = textBoxDescFinal.Text;
+                DataClass.firstJSON.Description = DataClass.websiteDesc;
+                _ = enviarInfoGeneral();
+                buttonCambiarConfiguracion.Enabled = false;
+                textBoxDescFinal.Enabled = false;
+                panelSelecLogoInfo.Visible = false;
+                panelLogoAleatorioInfo.Visible = false;
+            }
         }
 
         private void timerPanelGuardado_Tick(object sender, EventArgs e)
@@ -3551,6 +3580,37 @@ namespace Desktop_App
             panelSelecLogoInfo.Visible = true;
             panelLogoAleatorioInfo.Visible = true;
             buttonCambiarConfiguracion.Enabled = true;
+        }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            panelLogoAleatorioInfo.Visible = true;
+            panelSelecLogoInfo.Visible = true;
+            textBoxNameFinal.Text = "";
+            textBoxCategoriaFinal.Text = "";
+            textBoxDescFinal.Text = "";
+            textBoxNameFinal.Enabled = true;
+            textBoxCategoriaFinal.Enabled = true;
+            textBoxDescFinal.Enabled = true;
+            pictureBoxLogoFinal.Image = null;
+            hasMoreThanOnePage = true;
+        }
+
+        private void textBoxNameFinal_Leave(object sender, EventArgs e)
+        {
+            if (!textBoxNameFinal.Text.Equals("")&&hasMoreThanOnePage)
+            {
+                if (!DataClass.yourLocalWebsitePath.Equals("") && !DataClass.yourLocalWebsitePath.Equals(@"C:\PolypusCreator\YourWebsites\" + textBoxNombre.Text))
+                {
+                    Directory.Move(DataClass.yourLocalWebsitePath, @"C:\PolypusCreator\YourWebsites\" + textBoxNameFinal.Text);
+                }
+                DataClass.websiteName = textBoxNameFinal.Text.ToString();
+                createFolder(DataClass.websiteName + @"\Images");
+
+                DataClass.yourLocalWebsitePath = @"C:\PolypusCreator\YourWebsites\" +
+                   DataClass.websiteName;
+                DataClass.yourLocalWebsiteImagesFolderPath = DataClass.yourLocalWebsitePath + @"\Images";
+            }
         }
     }
 }

@@ -149,7 +149,6 @@
     <Compile Include="FRegis.Designer.cs">
       <DependentUpon>FRegis.cs</DependentUpon>
     </Compile>
-    <Compile Include="GestionDB\GestionDB.cs" />
     <Compile Include="FormPrincipal.cs">
       <SubType>Form</SubType>
     </Compile>
