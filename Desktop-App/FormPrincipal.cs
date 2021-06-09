@@ -2727,7 +2727,7 @@ namespace Desktop_App
                 else
                 {
                     DataClass.websiteName = textBoxNameFinal.Text;
-                    DataClass.websiteDesc = textBoxDescFinal.Text;
+                    DataClass.websiteDesc = textBoxBreveDescripcion.Text;
                     DataClass.websiteCategory = textBoxCategoriaFinal.Text;
 
                     DataClass.firstJSON.Website_name = DataClass.websiteName;
@@ -2737,6 +2737,10 @@ namespace Desktop_App
                     DataClass.firstJSON.Secondary_colour = ClassString.HexConverter(DataClass.backTwo);
                     DataClass.firstJSON.Font = DataClass.font;
                     _ = enviarInfoGeneral();
+                    checkFirstLogin();
+                    textBoxNameFinal.Text = DataClass.websiteName.ToString();
+                    textBoxCategoriaFinal.Text = DataClass.websiteCategory.ToString();
+                    textBoxDescFinal.Text = DataClass.websiteDesc.ToString();
                     panelPrevisualizar.Visible = true;
                     panelFinalizarWeb.Visible = true;
                     panelTuUsuario.Visible = true;
@@ -2744,6 +2748,7 @@ namespace Desktop_App
                     pictureBoxUserAvatar.Visible = true;
                     labelUsername.Visible = true;
                     panelDesconectar.Visible = true;
+                    hasMoreThanOnePage = true;
                 }
             }
             else
@@ -3593,7 +3598,7 @@ namespace Desktop_App
             textBoxCategoriaFinal.Enabled = true;
             textBoxDescFinal.Enabled = true;
             pictureBoxLogoFinal.Image = null;
-            hasMoreThanOnePage = true;
+            
         }
 
         private void textBoxNameFinal_Leave(object sender, EventArgs e)
