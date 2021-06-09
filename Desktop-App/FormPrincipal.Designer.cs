@@ -125,6 +125,7 @@ namespace Desktop_App
             this.tabControl = new System.Windows.Forms.TabControl();
             this.dashboard = new System.Windows.Forms.TabPage();
             this.panelInfoDashboard = new System.Windows.Forms.Panel();
+            this.buttonCrearNuevaWeb = new System.Windows.Forms.Button();
             this.panelLogoAleatorioInfo = new System.Windows.Forms.Panel();
             this.pictureBox19 = new System.Windows.Forms.PictureBox();
             this.panelSelecLogoInfo = new System.Windows.Forms.Panel();
@@ -399,7 +400,6 @@ namespace Desktop_App
             this.webBrowserAboutUs = new System.Windows.Forms.WebBrowser();
             this.timerPanelGuardado = new System.Windows.Forms.Timer(this.components);
             this.timerOjo = new System.Windows.Forms.Timer(this.components);
-            this.button1 = new System.Windows.Forms.Button();
             label15 = new System.Windows.Forms.Label();
             label16 = new System.Windows.Forms.Label();
             label107 = new System.Windows.Forms.Label();
@@ -1786,7 +1786,7 @@ namespace Desktop_App
             // 
             // panelInfoDashboard
             // 
-            this.panelInfoDashboard.Controls.Add(this.button1);
+            this.panelInfoDashboard.Controls.Add(this.buttonCrearNuevaWeb);
             this.panelInfoDashboard.Controls.Add(this.panelLogoAleatorioInfo);
             this.panelInfoDashboard.Controls.Add(this.panelSelecLogoInfo);
             this.panelInfoDashboard.Controls.Add(this.pictureBoxImagen);
@@ -1806,6 +1806,22 @@ namespace Desktop_App
             this.panelInfoDashboard.Name = "panelInfoDashboard";
             this.panelInfoDashboard.Size = new System.Drawing.Size(698, 597);
             this.panelInfoDashboard.TabIndex = 1;
+            // 
+            // buttonCrearNuevaWeb
+            // 
+            this.buttonCrearNuevaWeb.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(131)))), ((int)(((byte)(72)))));
+            this.buttonCrearNuevaWeb.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.buttonCrearNuevaWeb.FlatAppearance.BorderSize = 0;
+            this.buttonCrearNuevaWeb.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonCrearNuevaWeb.Font = new System.Drawing.Font("Segoe UI Black", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonCrearNuevaWeb.ForeColor = System.Drawing.Color.White;
+            this.buttonCrearNuevaWeb.Location = new System.Drawing.Point(17, 532);
+            this.buttonCrearNuevaWeb.Name = "buttonCrearNuevaWeb";
+            this.buttonCrearNuevaWeb.Size = new System.Drawing.Size(660, 41);
+            this.buttonCrearNuevaWeb.TabIndex = 46;
+            this.buttonCrearNuevaWeb.Text = "CREAR NUEVA WEB";
+            this.buttonCrearNuevaWeb.UseVisualStyleBackColor = false;
+            this.buttonCrearNuevaWeb.Click += new System.EventHandler(this.button1_Click_1);
             // 
             // panelLogoAleatorioInfo
             // 
@@ -4964,22 +4980,6 @@ namespace Desktop_App
             // 
             this.timerOjo.Tick += new System.EventHandler(this.timerOjo_Tick);
             // 
-            // button1
-            // 
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(131)))), ((int)(((byte)(72)))));
-            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Segoe UI Black", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(17, 532);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(660, 41);
-            this.button1.TabIndex = 46;
-            this.button1.Text = "CREAR NUEVA WEB";
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click_1);
-            // 
             // FormPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -5595,6 +5595,6 @@ namespace Desktop_App
         private System.Windows.Forms.PictureBox pictureBox46;
         private System.Windows.Forms.PictureBox pictureBox45;
         private System.Windows.Forms.PictureBox pictureBox48;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button buttonCrearNuevaWeb;
     }
 }

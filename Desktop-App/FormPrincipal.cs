@@ -1781,6 +1781,8 @@ namespace Desktop_App
             panel4.Controls.Add(panelElement.CreateAjustes.PanelGlo);
             panelesAjustes.Add(panelElement.CreateAjustes);
 
+            panelElement.CreateAjustes.ListItems = options;
+
             PictureBox image1Ajuste = new PictureBox();
             image1Ajuste.Name = "image1Ajuste";
             image1Ajuste.BackColor = Color.Transparent;
@@ -2712,13 +2714,8 @@ namespace Desktop_App
 
             if (hasMoreThanOnePage)
             {
-                firstLogin = false;
-                // guardar todos los datos introducidos
-
-
-
-                if (textBoxNombre.Text.Equals("") || textBoxBreveDescripcion.Text.Equals("") ||
-                    DataClass.logoPath.Equals("") || DataClass.websiteCategory.Equals(""))
+                if (textBoxNameFinal.Text.Equals("") || textBoxDescFinal.Text.Equals("") ||
+                    pictureBoxLogoFinal.Image == null || textBoxCategoriaFinal.Equals(""))
                 {
 
                     MessageBox.Show("Debes completar todo el formulario para poder crear una web", "Formulario Incompleto",
@@ -2727,7 +2724,7 @@ namespace Desktop_App
                 else
                 {
                     DataClass.websiteName = textBoxNameFinal.Text;
-                    DataClass.websiteDesc = textBoxBreveDescripcion.Text;
+                    DataClass.websiteDesc = textBoxDescFinal.Text;
                     DataClass.websiteCategory = textBoxCategoriaFinal.Text;
 
                     DataClass.firstJSON.Website_name = DataClass.websiteName;
@@ -2737,7 +2734,6 @@ namespace Desktop_App
                     DataClass.firstJSON.Secondary_colour = ClassString.HexConverter(DataClass.backTwo);
                     DataClass.firstJSON.Font = DataClass.font;
                     _ = enviarInfoGeneral();
-                    checkFirstLogin();
                     textBoxNameFinal.Text = DataClass.websiteName.ToString();
                     textBoxCategoriaFinal.Text = DataClass.websiteCategory.ToString();
                     textBoxDescFinal.Text = DataClass.websiteDesc.ToString();
@@ -2749,17 +2745,19 @@ namespace Desktop_App
                     labelUsername.Visible = true;
                     panelDesconectar.Visible = true;
                     hasMoreThanOnePage = true;
+                    hasMoreThanOnePage = false;
+                    textBoxNameFinal.Enabled = false;
+                    buttonCrearNuevaWeb.Enabled = true;
                 }
+
             }
             else
             {
                 DataClass.websiteDesc = textBoxDescFinal.Text;
                 DataClass.firstJSON.Description = DataClass.websiteDesc;
+                DataClass.websiteCategory = textBoxCategoriaFinal.Text;
+                DataClass.firstJSON.Category = DataClass.websiteCategory;
                 _ = enviarInfoGeneral();
-                buttonCambiarConfiguracion.Enabled = false;
-                textBoxDescFinal.Enabled = false;
-                panelSelecLogoInfo.Visible = false;
-                panelLogoAleatorioInfo.Visible = false;
             }
         }
 
@@ -3232,6 +3230,8 @@ namespace Desktop_App
                         panel4.Controls.Clear();
                         panelesAjustes.Clear();
                         panelesFlow.Clear();
+                        DataClass.classListaJSON = new ClassJSONList();
+                        DataClass.listasElementos = new List<object>();
                         isHeaderAlreadyOn = false;
                         panelElemNavBar.Enabled = true;
                         isFooterAlreadyOn = false;
@@ -3293,71 +3293,7 @@ namespace Desktop_App
             }
         }
 
-        private async Task verificarAsync(string username, string password, string answer)
-        {
-            try
-            {
-                HttpClient cliente = new HttpClient();
-                User user = new User(username, password, answer);
-                string obstring = JsonConvert.SerializeObject(user);
-                JObject objetoJSON = JObject.Parse(obstring);
-                HttpResponseMessage responsPost = await cliente.PostAsync("http://172.17.41.38:8012/JosePHP/myPHPfile2.php?state=login", new StringContent(
-                objetoJSON.ToString(),
-                Encoding.UTF8,
-                "application/json"));
-                string responsebody = await responsPost.Content.ReadAsStringAsync();
-                JObject objetoJSONRecibido = JObject.Parse(responsebody);
-                if (responsebody.Equals("logeado"))
-                {
-                    tabControl.SelectedTab = dashboard;
-                    panelLoginTemporal.Visible = false;
-                    tabControl.SelectedTab = dashboard;
-                    panelLoginTemporal.Visible = false;
-                    panelPrevisualizar.Visible = true;
-                    panelFinalizarWeb.Visible = true;
-                    panelTuUsuario.Visible = true;
-                    labelSesionIniciadaCon.Visible = true;
-                    pictureBoxUserAvatar.Visible = true;
-                    labelUsername.Visible = true;
-                    panelDesconectar.Visible = true;
-                    labelUsername.Text = username;
-                    if (!DataClass.userName.Equals(textBoxNombreUsuario.Text))
-                    {
-                        firstLogin = true;
-                        DataClass.userName = textBoxNombreUsuario.Text;
-                        flowLayoutPanelCurrentElements.Controls.Clear();
-                        panel4.Controls.Clear();
-                        panelesAjustes.Clear();
-                        panelesFlow.Clear();
-                        isHeaderAlreadyOn = false;
-                        panelElemNavBar.Enabled = true;
-                        isFooterAlreadyOn = false;
-                        panelElemFooter.Enabled = true;
-                    }
-                    checkFirstLogin();
-                    textBoxNombreUsuario.Text="";
-                    textBoxNuevaContrasena.Text = "";
-                    textBoxRepiteNuevaContrasena.Text = "";
-                    textBoxRespuestaPregunta.Text = "";
-                    textBoxNombre.Text = "";
-                    textBoxBreveDescripcion.Text = "";
-                    checkBoxWebDeEmpresa.Checked = false;
-                    checkBoxWebPersonal.Checked = false;
-                    checkBoxWebPersonalizada.Checked = false;
-                    checkBoxWebDeEmpresa.Enabled = true;
-                    checkBoxWebPersonal.Enabled = true;
-                    checkBoxWebPersonalizada.Enabled = true;
-                }
-                else
-                {
-                    MessageBox.Show("Usuario no registrado");
-                }
-            }
-            catch (Exception ex)
-            {
-                //MessageBox.Show(ex.Message);
-            }
-        }
+        
 
         private void buttonRegis_Click(object sender, EventArgs e)
         {
@@ -3427,6 +3363,8 @@ namespace Desktop_App
                     panel4.Controls.Clear();
                     panelesAjustes.Clear();
                     panelesFlow.Clear();
+                    DataClass.classListaJSON = new ClassJSONList();
+                    DataClass.listasElementos = new List<object>();
                     isHeaderAlreadyOn = false;
                     panelElemNavBar.Enabled = true;
                     isFooterAlreadyOn = false;
@@ -3598,7 +3536,20 @@ namespace Desktop_App
             textBoxCategoriaFinal.Enabled = true;
             textBoxDescFinal.Enabled = true;
             pictureBoxLogoFinal.Image = null;
-            
+            hasMoreThanOnePage = true;
+            buttonCrearNuevaWeb.Enabled = false;
+            flowLayoutPanelCurrentElements.Controls.Clear();
+            panel4.Controls.Clear();
+            panelesAjustes.Clear();
+            panelesFlow.Clear();
+            isHeaderAlreadyOn = false;
+            panelElemNavBar.Enabled = true;
+            isFooterAlreadyOn = false;
+            panelElemFooter.Enabled = true;
+            panelAddElements.Visible = false;
+            DataClass.classListaJSON = new ClassJSONList();
+            DataClass.listasElementos = new List<object>();
+
         }
 
         private void textBoxNameFinal_Leave(object sender, EventArgs e)
