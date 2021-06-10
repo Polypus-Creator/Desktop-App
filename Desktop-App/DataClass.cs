@@ -25,6 +25,6 @@ namespace Desktop_App
         public static string accesToken = "";
         public static string userName = "";
         public static FirstJSON firstJSON = new FirstJSON();
-        public static string hostIp = "http://localhost";
+        public static string hostIp = "http://polypus-api.eudald.me";
     }
 }
