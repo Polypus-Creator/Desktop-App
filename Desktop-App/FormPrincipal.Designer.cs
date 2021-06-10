@@ -1811,6 +1811,7 @@ namespace Desktop_App
             // 
             this.buttonCrearNuevaWeb.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(131)))), ((int)(((byte)(72)))));
             this.buttonCrearNuevaWeb.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.buttonCrearNuevaWeb.Enabled = false;
             this.buttonCrearNuevaWeb.FlatAppearance.BorderSize = 0;
             this.buttonCrearNuevaWeb.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonCrearNuevaWeb.Font = new System.Drawing.Font("Segoe UI Black", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));

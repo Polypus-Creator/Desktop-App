@@ -34,7 +34,7 @@ namespace Desktop_App
         int timerCount = 0;
         int time=0;
         Boolean hasMoreThanOnePage = false;
-        
+
 
         public FormPrincipal()
         {
@@ -2747,7 +2747,6 @@ namespace Desktop_App
                     hasMoreThanOnePage = true;
                     hasMoreThanOnePage = false;
                     textBoxNameFinal.Enabled = false;
-                    buttonCrearNuevaWeb.Enabled = true;
                 }
 
             }
@@ -3031,7 +3030,7 @@ namespace Desktop_App
             string obstring = JsonConvert.SerializeObject(DataClass.classListaJSON);
             JObject googleSearch = JObject.Parse(obstring);
             Console.WriteLine(googleSearch.ToString());
-            
+            buttonCrearNuevaWeb.Enabled = true;
             _ = enviarPaginaFinalizada(googleSearch.ToString());
 
         }
