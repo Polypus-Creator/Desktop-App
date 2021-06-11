@@ -3173,6 +3173,11 @@ namespace Desktop_App
                 DataClass.yourLocalWebsitePath = @"C:\PolypusCreator\YourWebsites\" +
                    DataClass.websiteName;
                 DataClass.yourLocalWebsiteImagesFolderPath = DataClass.yourLocalWebsitePath + @"\Images";
+                panelRandomLogo.Enabled = true;
+                panelSelectLogo.Enabled = true;
+                panelLogoAleatorioInfo.Enabled = true;
+                panelSelecLogoInfo.Enabled = true;
+
             }
         }
 
@@ -3188,6 +3193,7 @@ namespace Desktop_App
             if (!username.Equals("") && !password.Equals(""))
             {
                 _ = verificarAsync(username, password);
+                
             }
             else
             {
@@ -3238,6 +3244,11 @@ namespace Desktop_App
                         panelAddElements.Visible = false;
                         pictureBoxLogo.Image = null;
                     }
+                    else
+                    {
+                        panelPrevisualizar.Visible = true;
+                        panelFinalizarWeb.Visible = true;
+                    }
                     checkFirstLogin();
                     textBoxUsuario.Text = "";
                     textBoxContrasena.Text="";
@@ -3249,6 +3260,11 @@ namespace Desktop_App
                     checkBoxWebDeEmpresa.Enabled = true;
                     checkBoxWebPersonal.Enabled = true;
                     checkBoxWebPersonalizada.Enabled = true;
+                    panelTuUsuario.Visible = true;
+                    labelSesionIniciadaCon.Visible = true;
+                    pictureBoxUserAvatar.Visible = true;
+                    labelUsername.Visible = true;
+                    panelDesconectar.Visible = true;
                 }
                 else
                 {
@@ -3548,6 +3564,10 @@ namespace Desktop_App
             panelAddElements.Visible = false;
             DataClass.classListaJSON = new ClassJSONList();
             DataClass.listasElementos = new List<object>();
+            panelRandomLogo.Enabled = true;
+            panelSelectLogo.Enabled = true;
+            panelLogoAleatorioInfo.Enabled = true;
+            panelSelecLogoInfo.Enabled = true;
 
         }
 

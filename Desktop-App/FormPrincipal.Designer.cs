@@ -1804,7 +1804,7 @@ namespace Desktop_App
             this.panelInfoDashboard.Controls.Add(this.label68);
             this.panelInfoDashboard.Location = new System.Drawing.Point(9, 73);
             this.panelInfoDashboard.Name = "panelInfoDashboard";
-            this.panelInfoDashboard.Size = new System.Drawing.Size(698, 597);
+            this.panelInfoDashboard.Size = new System.Drawing.Size(734, 597);
             this.panelInfoDashboard.TabIndex = 1;
             // 
             // buttonCrearNuevaWeb
@@ -1829,6 +1829,7 @@ namespace Desktop_App
             this.panelLogoAleatorioInfo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(131)))), ((int)(((byte)(72)))));
             this.panelLogoAleatorioInfo.Controls.Add(this.pictureBox19);
             this.panelLogoAleatorioInfo.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.panelLogoAleatorioInfo.Enabled = false;
             this.panelLogoAleatorioInfo.Location = new System.Drawing.Point(536, 192);
             this.panelLogoAleatorioInfo.Name = "panelLogoAleatorioInfo";
             this.panelLogoAleatorioInfo.Size = new System.Drawing.Size(33, 32);
@@ -1851,6 +1852,7 @@ namespace Desktop_App
             this.panelSelecLogoInfo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(131)))), ((int)(((byte)(72)))));
             this.panelSelecLogoInfo.Controls.Add(this.pictureBox43);
             this.panelSelecLogoInfo.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.panelSelecLogoInfo.Enabled = false;
             this.panelSelecLogoInfo.Location = new System.Drawing.Point(536, 154);
             this.panelSelecLogoInfo.Name = "panelSelecLogoInfo";
             this.panelSelecLogoInfo.Size = new System.Drawing.Size(33, 32);
@@ -2127,6 +2129,7 @@ namespace Desktop_App
             this.panelRandomLogo.Controls.Add(this.pictureBox17);
             this.panelRandomLogo.Controls.Add(this.label49);
             this.panelRandomLogo.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.panelRandomLogo.Enabled = false;
             this.panelRandomLogo.Location = new System.Drawing.Point(721, 252);
             this.panelRandomLogo.Name = "panelRandomLogo";
             this.panelRandomLogo.Size = new System.Drawing.Size(345, 32);
@@ -2162,6 +2165,7 @@ namespace Desktop_App
             this.panelSelectLogo.Controls.Add(this.pictureBox16);
             this.panelSelectLogo.Controls.Add(this.label48);
             this.panelSelectLogo.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.panelSelectLogo.Enabled = false;
             this.panelSelectLogo.Location = new System.Drawing.Point(721, 213);
             this.panelSelectLogo.Name = "panelSelectLogo";
             this.panelSelectLogo.Size = new System.Drawing.Size(345, 32);
