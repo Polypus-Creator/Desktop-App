@@ -1706,13 +1706,14 @@ namespace Desktop_App
         private void panelRandomLogo_Click(object sender, EventArgs e)
         {
             String[] images = new string[7];
-            images[0] = @"..\..\Resources\logos\logo1.png";
-            images[1] = @"..\..\Resources\logos\logo2.png";
-            images[2] = @"..\..\Resources\logos\logo3.png";
-            images[3] = @"..\..\Resources\logos\logo4.png";
-            images[4] = @"..\..\Resources\logos\logo5.png";
-            images[5] = @"..\..\Resources\logos\logo6.png";
-            images[6] = @"..\..\Resources\logos\logo7.png";
+            string current = Directory.GetCurrentDirectory();
+            images[0] = current + @"\Resources\logos\logo1.png";
+            images[1] = current + @"\Resources\logos\logo2.png";
+            images[2] = current + @"\Resources\logos\logo3.png";
+            images[3] = current + @"\Resources\logos\logo4.png";
+            images[4] = current + @"\Resources\logos\logo5.png";
+            images[5] = current + @"\Resources\logos\logo6.png";
+            images[6] = current + @"\Resources\logos\logo7.png";
             Random rnd = new Random();
             int random = rnd.Next(0, 6);
             string[] rutas = images[random].Split('\\');
